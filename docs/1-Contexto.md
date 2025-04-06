@@ -58,4 +58,6 @@
 > **Links Úteis**:
 > - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
 > - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
- 
+
+ # Atividade feita > [Contexto de projeto-3 (1).pdf](https://github.com/user-attachments/files/19621756/Contexto.de.projeto-3.1.pdf)
+
