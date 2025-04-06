@@ -1,21 +1,26 @@
 # Informações do Projeto
-`TÍTULO DO PROJETO`  
 
-Trabalho Interdisciplinar - Aplicacões Web
+TÍTULO DO PROJETO: Roteiro de Viagens.   
 
-`CURSO`: 
+Trabalho Interdisciplinar - Aplicacões Web.
 
-`SEMESTRE:`
+CURSO: Sistemas de Informação. 
 
-`OBJETIVO ODS:` > Inclua os numeros e a descrição do(s) objetivo(s) ODS da ONU que o Projeto vai atender. 
+SEMESTRE: Primeiro Semestre.
+
+OBJETIVO ODS: > Inclua os numeros e a descrição do(s) objetivo(s) ODS da ONU que o Projeto vai atender. 
 
 ## Participantes
 
 Os membros do grupo são: 
-- Fulano da Silva
-- Ciclano Albuquerque
-
-> Inclua a lista dos membros da equipe com seus nomes completos.
+- Bruno Marinho da Silva
+- Daniella Joanna dos Reis Santos  
+- Gabriel Alves Reis
+- Iago Dias Silva
+- Karen Dornas Oliveira
+- Lucas Loiolla Gomes
+- Lucca Caixeta Lopes Silva
+- Vinicius Henrique Antônio Oliveira
 
 # Estrutura do Projeto
 
