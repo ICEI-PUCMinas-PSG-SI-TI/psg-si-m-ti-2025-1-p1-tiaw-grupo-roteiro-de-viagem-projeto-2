@@ -17,7 +17,8 @@
 
 ## Slides
 
-Coloque aqui os slides da apresentação
+[Apresentação Roteiro de Viagens-1.pdf](https://github.com/user-attachments/files/19621732/Apresentacao.Roteiro.de.Viagens-1.pdf)
+
 
 ## Vídeo
 
