@@ -8,16 +8,21 @@
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em
-se desenvolver profissionalmente através de um mestrado fora do país,
-pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está
-buscando uma agência que o ajude a encontrar universidades na Europa
-que aceitem alunos estrangeiros.
+### Persona 1- 
+Mariana Souza, 32 anos. Analista de marketing digital. Sonha em conhecer outros os continentes, viver experiências autênticas, viajar sem precisar planejar cada detalhe
 
 
-> Enumere e detalhe as personas da sua solução. Para
-> tanto, baseie-se tanto nos documentos disponibilizados na disciplina
-> e/ou nos seguintes links:
+### Persona 2-
+José da Silva, 72 anos. Aposentado, ex-contador. Seus principais sonhos são viajar mais após aposentado e gostaria de aprender alguns outros hobbies para aproveitar cada vez mais o tempo com seus parentes amados.
+
+
+### Persona 3-
+Tiago William, 18 anos. Estagiário Analista de BI. Deseja ter realização profissional, conhecer novas culturas e começar seu próprio negócio.
+
+
+### Persona 4-
+Fernanda Kimura, 19 anos. Estudante e estagiária na área de Arquitetura e Urbanismo. Tem o desejo de construir uma família estável e conhecer cada canto do mundo com eles
+
 >
 > **Links Úteis**:
 > - [Rock Content](https://rockcontent.com/blog/personas/)
@@ -34,17 +39,23 @@ que aceitem alunos estrangeiros.
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
 
-> Apresente aqui as histórias de usuário que são relevantes para o
-> projeto de sua solução. As Histórias de Usuário consistem em uma
-> ferramenta poderosa para a compreensão e elicitação dos requisitos
-> funcionais e não funcionais da sua aplicação. Se possível, agrupe as
-> histórias de usuário por contexto, para facilitar consultas
-> recorrentes à essa parte do documento.
+Eu como: Uma viajante planejadora, busco roteiros personalizados e experiências autênticas.
+Quero: Acessar um planejamento de viagem personalizado que inclua sugestões de passeios, hospedagens, restaurantes e transportes, levando em consideração meu orçamento, preferências e estilo de viagem.
+Para: Preciso garantir que minha viagem seja bem organizada, sem imprevistos, evitar perder tempo pesquisando informações em vários sites, garantir que as sugestões estejam alinhadas com meus interesses e ter uma experiência bem organizada e imersiva no destino escolhido.
+
+Eu como: Uma pessoa que ama viajar e conhecer outros cidades, estados e países.
+Quero: Encontrar e/ou personalizar um roteiro de viagens mais em conta em lugares confortáveis, sem que eu precise me preocupar, pois trabalho muito e não tenho muito tempo para me organizar nas viagens. 
+Para: Realizar minhas viagens com segurança e tranquilidade, sem medo de não ocorrer como eu gostaria e gastar muito sem necessidade, pois acho que com um bom planejamento não há gastos imprevisíveis.
+
+Eu como: Uma pessoa que gosta de viajar pelo Brasil.
+Quero: Ter uma noção dos melhores lugares para poder visitar e conhecer. Saber as melhores hospedagens do local, ter bons roteiros de viagem para otimizar tempo além de saber quais os melhores estabelecimentos para tomar café, almoçar e jantar.
+Para: Garantir que eu tenha aproveitado o máximo do lugar e para garantir que eu não tenha me estressado na busca de estabelecimentos para fazer minhas refeições ou na busca de algum lugar para dormir.
+
+Eu como: Uma pessoa que vive para viajar e apreciar bons lugares.
+Quero: Conseguir ter um guia/roteiro de viagens do meu jeito, sem preocupações que poderiam me fazer desistir da viagem, e tirar muitas fotos dos melhores lugares do meu destino de viagem.
+Para: Que eu não precise me preocupar com planejamentos, e sim, em como vou aproveitar ao máximo minha tão esperada viagem.
+
 >
 > **Links Úteis**:
 > - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
@@ -55,50 +66,53 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
 
 ### Requisitos Funcionais
+1- O sistema deve mostrar as avaliações dos locais que recomenda. 
+2- O site deve permitir login e cadastro de usuários. 
+3- O sistema deve permitir que o usuário crie uma conta fornecendo as seguintes 
+informações: nome, endereço de e-mail, senha e confirmação de senha. 
+4- O programa deve possibilitar que o usuário use filtros para navegar entre possíveis 
+destinos. 
+5- O sistema deve manter um histórico de viagens realizadas pelo usuário, com detalhes 
+dos roteiros passados. 
+6- O sistema deve permitir que o usuário compartilhe suas viagens com amigos e família. 
+7- O sistema deve permitir salvar e editar todos os roteiros criados pelo usuário, até 
+mesmo os não utilizados por ele. 
+8- O sistema deve mostrar se a hospedagem é localizada próxima a pontos turísticos e 
+bons restaurantes. 
+9- O persona x pode definir o valor máximo que deseja gastar em cada etapa do roteiro 
+de viagem. 
+10- O persona x pode montar seu roteiro com base no veículo que pretende usar para se 
+locomover. 
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
-
-
-### Requisitos não Funcionais
-
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-> Com base nas Histórias de Usuário, enumere os requisitos da sua
-> solução. Classifique esses requisitos em dois grupos:
->
-> - [Requisitos Funcionais
->   (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
->   correspondem a uma funcionalidade que deve estar presente na
->   plataforma (ex: cadastro de usuário).
->
-> - [Requisitos Não Funcionais
->   (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
->   correspondem a uma característica técnica, seja de usabilidade,
->   desempenho, confiabilidade, segurança ou outro (ex: suporte a
->   dispositivos iOS e Android).
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma
-> característica alvo da sua solução. Além disso, certifique-se de que
-> todos os aspectos capturados nas Histórias de Usuário foram cobertos.
-
-## Restrições
-
-O projeto está restrito pelos itens apresentados na tabela a seguir.
-
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-
-> Enumere as restrições à sua solução. Lembre-se de que as restrições
-> geralmente limitam a solução candidata.
+### Requisitos Não Funcionais  
+1- O sistema deverá estar disponível 7/24 (7 dias por semana por dia). 
+2- A plataforma deverá ser hospedada em um ambiente acessível publicamente na 
+internet, como GitHub Pages, Netlify ou Vercel. 
+3- O sistema deve garantir a segurança, a usabilidade e a escalabilidade do processo de 
+criação de conta. 
+4- O programa deve responder bem aos comandos do usuário. 
+5- O sistema deve permitir que os usuários escolham o idioma para facilitar a 
+personalização de sua experiência. 
+6- O sistema deve permitir que o usuário faça uma busca por destinos com base em 
+preferências de viagem (praia, aventura, cultural). 
+7- O sistema deve ter uma interface fácil de usar para que novos usuários se registrem 
+rapidamente e para que pessoas que não possuem muita afinidade com tecnologia 
+possam utilizá-lo. 
+8- O sistema deve salvar o login do usuário no dispositivo. 
+  
+### Restrições do Projeto 
+1- O sistema deve ser desenvolvido utilizando apenas a linguagem de programação 
+JavaScript. 
+2- O sistema deve ser compatível com os navegadores Chrome, Firefox e Safari em suas 
+versões mais recentes. 
+3- O sistema deve seguir os layouts de protótipo e história de usuário como planejado. 
+4- O programa deve seguir os padrões de desenvolvimento com base no W3C. 
+5- O sistema deve possuir funcionalidades adicionais, como suporte a realidade 
+aumentada (AR) ou inteligência artificial para recomendações de viagem, podem ser 
+implementadas em versões futuras, mas não fazem parte do escopo inicial do projeto. 
+6- O sistema deve ser responsivo. 
+7- O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados (LGPD). 
+8- O sistema deve utilizar a localização do cliente com sua permissão.
 > 
 > **Links Úteis**:
 > - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)

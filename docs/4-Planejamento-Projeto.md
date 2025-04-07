@@ -4,26 +4,27 @@
 
 ## Divisão de Papéis
 
-> Apresente a divisão de papéis entre os membros do grupo em cada sprint. O desejável é que, em cada sprint, o aluno assuma papéis diferentes na disciplina. Siga o modelo do exemplo abaixo:
-
   
 ### Sprint 1
-- _Scrum master_: AlunaX
-- Protótipos: AlunoY
-- Testes: AlunoK
-- Documentação: AlunaZ
+Scrum Master: Karen  
+Product Owner: Iago 
+Documentação: Daniella, Lucas  
+Desenvolvimento Front-end: Lucas, Daniella, Karen, Vinicius  
+Desenvolvimento Back-end: Bruno, Gabriel, Iago, Lucca  
 
 ### Sprint 2
-- _Scrum master_: AlunaY
-- Desenvolvedor _front-end_: AlunoX
-- Desenvolvedor _back-end_: AlunoK
-- Testes: AlunaZ
-- 
+Scrum Master: Karen  
+Product Owner: Iago  
+Documentação: Daniella, Lucas 
+ Desenvolvimento Front-end: Lucas, Daniella, Karen, Vinicius  
+Desenvolvimento Back-end: Bruno, Gabriel, Iago, Lucca  
+
 ### Sprint 3
-- _Scrum master_: AlunaY
-- Desenvolvedor _front-end_: AlunoX
-- Desenvolvedor _back-end_: AlunoK
-- Testes: AlunaZ
+Scrum Master: Karen  
+Product Owner: Iago 
+Documentação: Daniella, Lucas  
+Desenvolvimento Front-end: Lucas, Daniella, Karen, Vinicius  
+Desenvolvimento Back-end: Bruno, Gabriel, Iago, Lucca
 
   
 ## Quadro de tarefas
@@ -34,36 +35,30 @@
 
 ## Sprint 1
 
-Atualizado em: 21/04/2024
-
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Introdução | 01/02/2024     | 07/02/2024 | ✔️    | 05/01/2005      |
-| AlunaZ        | Objetivos    | 03/02/2024     | 10/02/2024 | 📝    |                 |
-| AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
-| AlunoK        | Personas 1  |    01/01/2024        | 12/02/2005 | ❌    |       |
+| Karen        | Introdução | 01/03/2025     | 07/03/2025 | ✔️    |05/03/2025      |
+| Iago        | Divisão de tarefas  | 03/03/2025     | 10/03/2025 | ✔️    |   06/04/2025         |
+| Lucas        | Histórias de usuário  | 01/03/2025     | 07/01/2025 | ✔️     |   08/04/2025         |
+| Daniella        | Personas 1  |    01/03/2025        | 12/03/2025 | ✔️    |   10/04/2025    |
 
 ## Sprint 2
 
-Atualizado em: 21/04/2024
-
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Home-Page        | 01/02/2024     | 07/03/2024 | ✔️    | 05/01/2005      |
-| AlunaZ        | CSS Unificado    | 03/02/2024     | 10/03/2024 | 📝    |                 |
-| AlunoY        | Página de login  | 01/02/2024     | 07/03/2024 | ⌛     |                 |
-| AlunoK        | Script de login  |  01/01/2024    | 12/03/2024 | ❌    |       |
+| Karen        | Home-Page        | 28/03/2025     | 02/03/2025 | ✔️    | 02/04/2025      |
+| Daniella        | CSS Unificado    | 28/03/2025     | 10/03/2025 | ❌    | 02/04/2025        |
+| Iago        | Página de login  | 28/03/2025     | 02/03/2025 | ✔️     | 02/04/2025          |
+| Gabriel        | Script de login  |  28/03/2025    | 02/03/2025 | ❌    | 02/04/2025      |
 
 ## Sprint 3
 
-Atualizado em: 21/04/2024
-
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Introdução | 01/02/2024     | 07/02/2024 | ✔️    | 05/01/2005      |
-| AlunaZ        | Objetivos    | 03/02/2024     | 10/02/2024 | 📝    |                 |
-| AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
-| AlunoK        | Personas 1  |    01/01/2024        | 12/02/2005 | ❌    |       |
+| Bruno        | Testes de Usabilidade | 01/04/2025     | 07/02/2025 | ❌    |           |
+| Lucas        | Ajuste na Documentação    | 03/04/2025     | 10/02/2025 | ❌    |                 |
+| Lucca        | Responsividade  | 01/01/2025     | 07/01/2025 | ❌     |                 |
+| Gabriel        | Segurança de Dados  |    01/01/2025        | 12/02/2025 | ❌    |       |
 
 Legenda:
 - ✔️: terminado
@@ -73,14 +68,12 @@ Legenda:
 
 ## Ferramentas
 
-> Liste quais ferramentas foram empregadas no desenvolvimento do  projeto, justificando a escolha de cada uma delas. Use o formato abaixo como exemplo.
-
 As ferramentas empregadas no projeto são:
 
-- Editor de código.
-- Ferramentas de diagramação.
-- Frameworks 
-- Outras ferramentas externas
+- Editor de código: Visual Studio Code
+- Ferramentas de diagramação: Trello
+- Frameworks: Figma
+- Gerenciamento de Código: Github
 
 
 ## Links Úteis

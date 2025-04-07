@@ -10,12 +10,6 @@
 
 ## User Flow
 
-![Exemplo de UserFlow](images/userflow.jpg)
-
-> Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor
-> mapear todo fluxo de telas do site ou app. Essa técnica funciona
-> para alinhar os caminhos e as possíveis ações que o usuário pode
-> fazer junto com os membros de sua equipe.
 >
 > **Links Úteis**:
 > - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
@@ -24,7 +18,26 @@
 
 ## Wireframes
 
-![Exemplo de Wireframe](images/wireframe-example.png)
+### Home Page
+![Wireframe](images/1.png)
+### Busca
+![Wireframe](images/2.png)
+### Leitura roteiro
+![Wireframe](images/3.png)
+### Avaliações
+![Wireframe](images/4.png)
+### Login
+![Wireframe](images/5.png)
+### Cadastro
+![Wireframe](images/6.png)
+### Perfil
+![Wireframe](images/14.png)
+### Personalização
+![Wireframe](images/10.png)
+### Criação Roteiro
+![Wireframe](images/11.png)
+### Criação Roteiro 2
+![Wireframe](images/12.png)
 
 > São protótipos usados em design de interface para sugerir a
 > estrutura de um site web e seu relacionamentos entre suas
