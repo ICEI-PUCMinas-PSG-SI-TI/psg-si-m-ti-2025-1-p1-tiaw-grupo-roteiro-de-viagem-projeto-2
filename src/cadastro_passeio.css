@@ -54,7 +54,7 @@ main{
 }
 
 footer{
-    margin-top: 5.85%;
+    margin-top: 2%;
     margin-left: 1%;
 }
 
@@ -65,4 +65,55 @@ footer{
     justify-content: space-between;
     gap: 9px;
     align-items: center;
+}
+
+.container{
+    margin-top: 1.2%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+#botoes{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    /* background-color: red; */
+}
+
+#button_voltar{
+    margin-left: 4%;
+    color: white;
+    background-color: rgb(12, 109, 159);
+    height: 40px;
+}
+
+#button_recomen{
+    margin-left: 80%;
+    color: white;
+    background-color: rgb(12, 109, 159);
+    height: 40px;
+}
+
+.escolha_recomen{
+    align-items: center;
+}
+
+#button_enviar{
+    color: white;
+    background-color: rgb(12, 109, 159);
+    height: 40px;
+}
+
+/* Remove setas no Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove setas no Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
 }
