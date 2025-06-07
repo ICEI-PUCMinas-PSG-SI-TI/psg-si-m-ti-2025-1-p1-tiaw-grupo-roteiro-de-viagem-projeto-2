@@ -1,0 +1,18 @@
+{
+  "recomedacoes": [
+    {
+      "id": 15000,
+      "usuario": "MARTA S.",
+      "data_solicitacao": "22/05/2025",
+      "hosp_rest_pass": "HOSPEDAGEM",
+      "nome_local": "Recanto Solar",
+      "nome_estado": "MINAS GERAIS",
+      "nome_cidade": "BELO HORIZONTE",
+      "nome_rua": "RUA CURITIBA",
+      "nome_bairro": "CENTRO",
+      "num": 121,
+      "complemento": "",
+      "preco_pessoa": 250
+    }
+  ]
+}
