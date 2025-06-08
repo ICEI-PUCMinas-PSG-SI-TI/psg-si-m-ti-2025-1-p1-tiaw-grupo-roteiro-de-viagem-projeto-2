@@ -19,34 +19,34 @@
 
     <div class="titulo">
         <div class="d-flex justify-content-center mt-5">
-            <h4>CADASTRO DE RECOMENDAÇÕES</h4>
+            <h4>RECOMENDAÇÕES</h4>
         </div>
     </div>
 
     <main>
         <div id="botoes" class="container-fluid">
             <button id="button_voltar" class="btn btn-primary">VOLTAR</button>
-            <button id="button_cad" class="btn btn-primary">CADASTRAR</button>
+            <button id="button_cad" class="btn btn-primary">RECOMENDAR</button>
         </div>
 
         <div class="container">
             <div class="titulo2" style="display: flex; justify-content: center; gap: 9px; margin-top: 1%;">
-                <h4 class="text-center" style="margin-top: 1%;">SOLICITAÇÕES ENVIADAS PARA</h4>
+                <h4 class="text-center" style="margin-top: 1%;">RECOMENDAÇÕES ENVIADAS PARA</h4>
                 <h4 class="text-center" style="margin-top: 1%; background-color: #F48613; padding-left: 0.5%; padding-right: 0.5%; border-radius: 5px;">SMART TRAVEL</h4>
             </div>
         </div>
 
-        <p class="mb-2" style="margin-left: 30%; margin-top: 2%; font-size: 18px;">DATA</p>
+        <p class="mb-2" style="margin-left: 30%; margin-top: 2%; font-size: 18px;" id="data"></p>
         <div class="container text-center py-4 d-flex flex-column align-items-center" id="infor">
-            <p class="mb-2" style="margin-top: -2.5%;">HOSPEDAGEM</p>
-            <p class="mb-2" style="margin-top: 1%;">NOME</p>
+            <p class="mb-2" style="margin-top: -2.5%;" id="tipo"></p>
+            <p class="mb-2" style="margin-top: 1%;" id="nome">NÃO HÁ RECOMENDAÇÕES</p>
 
             <div class="row justify-content-center w-100" style="margin-bottom: 5%;">
                 <div class="col-12 col-md-4 mb-2">
-                    <p class="mb-0" style="margin-top: 0.5%;">ESTADO</p>
+                    <p class="mb-0" style="margin-top: 0.5%;" id="estado"></p>
                 </div>
                 <div class="col-12 col-md-4 mb-2">
-                    <p class="mb-0" style="margin-top: 0.5%;">CIDADE</p>
+                    <p class="mb-0" style="margin-top: 0.5%;" id="cidade"></p>
                 </div>
             </div>
         </div>
@@ -62,8 +62,11 @@
     </footer>
     
     <script>
-        document.getElementById("button_comentar").addEventListener("click", function () {
-            window.location.href = "detalhes.html";
+        document.getElementById("button_cad").addEventListener("click", function () {
+            window.location.href = "cadastro_hosp.html";
+        });
+        document.getElementById("button_voltar").addEventListener("click", function () {
+            window.location.href = "cadastro_hosp.html";
         });
 
     </script>

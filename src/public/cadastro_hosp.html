@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTravel</title>
+    <link rel="stylesheet" href="cadastro_hosp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- colar no google: http://localhost:3000/cadastro_rest.html -->
+    <!-- colar no terminal (dentro do src): npx json-server --watch db.json --port 3000  -->
+</head>
+<body>
+
+    <header class="d-flex cab position-relative cab container-fluid">
+        <img src="./Imagens/logo1.png" id="logo">
+        <p class="position-absolute" id="iconworld">BRL <i class="fa-solid fa-earth-americas"></i></p>
+        <p class="position-absolute py-1 px-3" id="nomelogin"><strong>MARTA</strong></p>
+        <i class="fa-regular fa-user fa-2x position-absolute" id="iconuser"></i>
+    </header>
+
+    <div class="titulo">
+        <div class="d-flex justify-content-center mt-5">
+            <h4>RECOMENDAÇÕES</h4>
+        </div>
+    </div>
+
+    <main>
+        <div id="botoes" class="container-fluid">
+            <button id="button_voltar" class="btn btn-primary">VOLTAR</button>
+            <button id="button_recomen" class="btn btn-primary">RECOMENDAÇÕES</button>
+        </div>
+
+        <div class="container">
+            <h4 class="text-center" style="margin-top: 1%;">O QUE DESEJA RECOMENDAR?</h4>
+
+            <div class="d-flex justify-content-center" style="margin-top: 1%;">
+                <div class="escolha_recomen text-start">
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="HOSPEDAGEM" checked style="cursor: pointer;">
+                    <label class="form-check-label" for="exampleRadios1">
+                        HOSPEDAGEM
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="RESTAURANTE" style="cursor: pointer;">
+                    <label class="form-check-label" for="exampleRadios2">
+                        RESTAURANTE
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="PASSEIO" style="cursor: pointer;">
+                    <label class="form-check-label" for="exampleRadios3">
+                        PASSEIO
+                    </label>
+                    </div>
+                </div>
+            </div>
+
+            <form id="formRecomendacao" class="my-4">
+                <div class="row justify-content-center" style="margin-top: 0.5%;">
+                    <div class="col-md-6 text-center">
+                        <label for="inputNome" class="form-label fw-bold">NOME DA HOSPEDAGEM</label>
+                        <input type="text" class="form-control" id="inputNome" placeholder="ESCREVA AQUI" required>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-6" style="margin-top: 1%;">
+                        <label for="inputEstado" class="form-label fw-bold">ESTADO (EX.: MINAS GERAIS)</label>
+                        <input type="text" class="form-control" id="inputEstado" placeholder="ESCREVA AQUI" required>
+                    </div>
+                    <div class="col-md-6" style="margin-top: 1%;">
+                        <label for="inputCidade" class="form-label fw-bold">CIDADE (EX.: BELO HORIZONTE)</label>
+                        <input type="text" class="form-control" id="inputCidade" placeholder="ESCREVA AQUI" required>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-4" style="margin-top: 1%;">
+                        <label for="inputRua" class="form-label fw-bold">RUA</label>
+                        <input type="text" class="form-control" id="inputRua" placeholder="ESCREVA AQUI" required>
+                    </div>
+                    <div class="col-md-3" style="margin-top: 1%;">
+                        <label for="inputBairro" class="form-label fw-bold">BAIRRO</label>
+                        <input type="text" class="form-control" id="inputBairro" placeholder="ESCREVA AQUI" required>
+                    </div>
+                    <div class="col-md-2" style="margin-top: 1%;">
+                        <label for="inputNum" class="form-label fw-bold">Nº</label>
+                        <input type="number" class="form-control" id="inputNum" placeholder="ESCREVA AQUI">
+                    </div>
+                    <div class="col-md-3" style="margin-top: 1%;">
+                        <label for="inputComple" class="form-label fw-bold">COMPLEMENTO</label>
+                        <input type="text" class="form-control" id="inputComple" placeholder="ESCREVA AQUI">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mt-3">
+                    <div class="col-md-6 text-center" style="margin-top: 1%;">
+                        <label for="inputPreco" class="form-label fw-bold">PREÇO APROXIMADO POR PESSOA (R$)</label>
+                        <input type="number" class="form-control" id="inputPreco" placeholder="ESCREVA AQUI" required>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 2%;">
+                <button id="button_enviar" type="submit" class="btn btn-primary">ENVIAR</button>
+                </div>            
+            </form>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="d-flex align-items-center">
+            <div class="rodape">
+                <i class="fa-solid fa-copyright"></i>
+                <p style="margin: 0;">Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById("button_recomen").addEventListener("click", function () {
+            window.location.href = "cadastros_recomen.html";
+        });
+        // document.getElementById("button_enviar").addEventListener("click", function () {
+        //     window.location.href = "cadastros_recomen.html";
+        // });
+
+        const radios = document.querySelectorAll('input[name="exampleRadios"]');
+
+        radios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                if (radio.checked) {
+                    if (radio.value === 'HOSPEDAGEM') {
+                        window.location.href = 'cadastro_hosp.html';
+                    } else if (radio.value === 'RESTAURANTE') {
+                        window.location.href = 'cadastro_rest.html';
+                    } else if (radio.value === 'PASSEIO') {
+                        window.location.href = 'cadastro_passeio.html';
+                    }
+                }
+            });
+        });
+
+        document.getElementById('formRecomendacao').addEventListener('submit', function(event) {
+        event.preventDefault(); // evita o recarregamento da página
+
+        fetch("http://localhost:3000/recomedacoes")
+            .then(response => response.json())
+            .then(recomedacoes => {
+            let maiorId = 15000; 
+            if (recomedacoes.length > 0) {
+                maiorId = Math.max(...recomedacoes.map(r => r.id));
+            }
+
+            const novoId = maiorId + 1;
+
+            // pegar o tipo escolhido pelo nome correto (name="exampleRadios")
+            const tipoEscolhido = document.querySelector('input[name="exampleRadios"]:checked').value;
+
+            const novaRecomendacao = {
+                id: novoId,
+                usuario: "MARTA S.",
+                data_solicitacao: new Date().toLocaleDateString("pt-BR"),
+                hosp_rest_pass: tipoEscolhido,
+                nome_local: document.getElementById('inputNome').value,
+                nome_estado: document.getElementById('inputEstado').value,
+                nome_cidade: document.getElementById('inputCidade').value,
+                nome_rua: document.getElementById('inputRua').value,
+                nome_bairro: document.getElementById('inputBairro').value,
+                num: parseInt(document.getElementById('inputNum').value),
+                complemento: document.getElementById('inputComple').value,
+                preco_pessoa: parseFloat(document.getElementById('inputPreco').value)
+            };
+
+            return fetch("http://localhost:3000/recomedacoes", {
+                method: "POST",
+                headers: {
+                "Content-Type": "application/json"
+                },
+                body: JSON.stringify(novaRecomendacao)
+            });
+            })
+            .then(response => {
+            if (response.ok) {
+                alert("Recomendação salva com sucesso!");
+                window.location.href = "cadastros_recomen.html";
+            } else {
+                alert("Erro ao salvar recomendação.");
+            }
+            })
+            .catch(error => {
+            console.error("Erro:", error);
+            alert("Erro ao conectar ao servidor.");
+            });
+        });
+    </script>
+
+</body>
+</html>
