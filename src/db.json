@@ -1,5 +1,5 @@
 {
-  "recomedacoes": [
+  "recomendacoes": [
     {
       "id": "15000",
       "usuario": "MARTA S.",
@@ -15,7 +15,7 @@
       "preco_pessoa": 250
     },
     {
-      "id": 15001,
+      "id": "15001",
       "usuario": "MARTA S.",
       "data_solicitacao": "08/06/2025",
       "hosp_rest_pass": "HOSPEDAGEM",

@@ -148,10 +148,10 @@
 
         fetch("http://localhost:3000/recomedacoes")
             .then(response => response.json())
-            .then(recomedacoes => {
+            .then(recomendacoes => {
             let maiorId = 15000; 
-            if (recomedacoes.length > 0) {
-                maiorId = Math.max(...recomedacoes.map(r => r.id));
+            if (recomendacoes.length > 0) {
+                maiorId = Math.max(...recomendacoes.map(r => r.id));
             }
 
             const novoId = maiorId + 1;
@@ -174,7 +174,7 @@
                 preco_pessoa: parseFloat(document.getElementById('inputPreco').value)
             };
 
-            return fetch("http://localhost:3000/recomedacoes", {
+            return fetch("http://localhost:3000/recomendacoes", {
                 method: "POST",
                 headers: {
                 "Content-Type": "application/json"
