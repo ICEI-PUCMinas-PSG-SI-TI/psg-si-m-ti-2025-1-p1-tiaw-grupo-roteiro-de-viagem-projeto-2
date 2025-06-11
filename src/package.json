@@ -1,0 +1,26 @@
+{
+  "name": "psg-si-m-ti-2025-1-p1-tiaw-grupo-roteiro-de-viagem-projeto-2",
+  "version": "1.0.0",
+  "description": "TÍTULO DO PROJETO: Roteiro de Viagens.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+  "start": "json-server --watch src/db/usuarios.json --port 3000 --static src/public"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ICEI-PUCMinas-PSG-SI-TI/psg-si-m-ti-2025-1-p1-tiaw-grupo-roteiro-de-viagem-projeto-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ICEI-PUCMinas-PSG-SI-TI/psg-si-m-ti-2025-1-p1-tiaw-grupo-roteiro-de-viagem-projeto-2/issues"
+  },
+  "homepage": "https://github.com/ICEI-PUCMinas-PSG-SI-TI/psg-si-m-ti-2025-1-p1-tiaw-grupo-roteiro-de-viagem-projeto-2#readme",
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}
+
