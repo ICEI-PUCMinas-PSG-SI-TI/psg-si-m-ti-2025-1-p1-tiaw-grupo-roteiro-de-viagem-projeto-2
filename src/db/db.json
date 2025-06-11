@@ -1,0 +1,113 @@
+{
+  "usuarios": [
+    {
+      "id": "0",
+      "nome": "Marta",
+      "sobrenome": "Scalzo",
+      "nome_abrev": "Marta S.",
+      "usuario": "MARTA S.",
+      "email": "marta.scalzo@gmail.com",
+      "foto_perfil": "img/foto2.jpeg",
+      "roteiros_salvos": [
+        12562458
+      ],
+      "senha": "senha1234567"
+    },
+    {
+      "id": "1",
+      "nome": "João",
+      "sobrenome": "Ferreira",
+      "nome_abrev": "João F.",
+      "usuario": "JOÃO F.",
+      "email": "joao.ferreira@gmail.com",
+      "foto_perfil": "img/foto3.jpg",
+      "roteiros_salvos": [
+        12562459,
+        12562460
+      ],
+      "senha": "joaopedefeijao"
+    },
+    {
+      "id": "2",
+      "nome": "Larissa",
+      "sobrenome": "Menezes",
+      "nome_abrev": "Larissa M.",
+      "usuario": "LARISSA M.",
+      "email": "larissa.menezes@gmail.com",
+      "foto_perfil": "img/foto.jpg",
+      "roteiros_salvos": [],
+      "senha": "lirili2014"
+    },
+    {
+      "id": "3",
+      "nome": "Carlos",
+      "sobrenome": "Oliveira",
+      "nome_abrev": "Carlos O.",
+      "usuario": "CARLOS O.",
+      "email": "carlos.oliveira@gmail.com",
+      "foto_perfil": "img/foto4.jpeg",
+      "roteiros_salvos": [
+        12562461,
+        12562462,
+        12562463
+      ],
+      "senha": "hebreus127"
+    },
+    {
+      "id": "4",
+      "nome": "Ana",
+      "sobrenome": "Pereira",
+      "nome_abrev": "Ana P.",
+      "usuario": "ANA P.",
+      "email": "ana.pereira@gmail.com",
+      "foto_perfil": "img/foto5.jpg",
+      "roteiros_salvos": [
+        12562458,
+        12562463
+      ],
+      "senha": "sahur123"
+    }
+  ],
+  "faqs": [
+        {
+            "pergunta": "Como funciona o processo de criação do roteiro?",
+            "resposta": "Após preencher o formulario, analisamos suas preferências e necessidades. Em seguida, montamos um itinerário completo com sugestões de passeios, hospedagem, transporte e restaurantes locais."
+        },
+        {
+            "pergunta": "E se eu tiver um imprevisto ou quiser mudar o roteiro durante a viagem?",
+            "resposta": "O roteiro é flexível e sugerimos sempre ter margem para adaptações. Se precisar de ajuda para ajustes de última hora, faremos o possível para auxiliar, dependendo da nossa disponibilidade."
+        },
+        {
+            "pergunta": "Vocês oferecem suporte durante a viagem?",
+            "resposta": "Oferecemos suporte pré-viagem para esclarecer dúvidas. Durante a viagem, não fazemos acompanhamento em tempo real, mas o roteiro já vem com tudo planejado para que você se sinta seguro e independente."
+        },
+        {
+            "pergunta": "Preciso seguir o roteiro à risca durante a viagem?",
+            "resposta": "Não! O roteiro é uma sugestão otimizada com base nas suas preferências. Você pode adaptar conforme o seu ritmo e imprevistos. Ele serve para facilitar, não para limitar."
+        },
+        {
+            "pergunta": "Tenho um orçamento apertado. Vale a pena fazer um roteiro personalizado?",
+            "resposta": "Sim! Um roteiro bem planejado pode te ajudar a economizar, evitar gastos desnecessários e aproveitar melhor o seu dinheiro. Adaptamos tudo ao seu orçamento."
+        },
+        {
+            "pergunta": "Quais informações preciso fornecer para começarem meu roteiro?",
+            "resposta": "Vamos precisar de dados como destino(s), datas, número de pessoas, perfil dos viajantes, interesses, orçamento aproximado, estilo de hospedagem preferido e se já tem algo reservado."
+        },
+        {
+            "pergunta": "O roteiro é adequado para quem viaja com crianças ou idosos?",
+            "resposta": "Totalmente! Levamos em conta todas as necessidades especiais, como deslocamentos tranquilos, atrações adequadas e horários mais flexíveis."
+        },
+        {
+            "pergunta": "Vocês atendem viagens internacionais e nacionais?",
+            "resposta": "Criamos roteiros apenas para destinos nacionais, sempre respeitando seu estilo de viagem e as características de cada lugar."
+        },
+        {
+            "pergunta": "Nunca viajei por conta própria. O roteiro ajuda nisso?",
+            "resposta": "Sim! Nossos roteiros são ideais para quem deseja autonomia, mas com segurança. Incluímos instruções claras, dicas práticas e todas as orientações para facilitar sua viagem."
+        },
+        {
+            "pergunta": "Como alterar minha senha?",
+            "resposta": "Vá até seu perfil e clique para alterar sua senha e salve suas alterações."
+        }
+    ]
+}
