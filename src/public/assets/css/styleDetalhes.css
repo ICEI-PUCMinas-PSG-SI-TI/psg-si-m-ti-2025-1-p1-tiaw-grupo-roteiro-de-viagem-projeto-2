@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 footer{
     margin-top: 7%;
@@ -50,6 +51,10 @@ form{
 
  width: 100px;
 
+}
+#btnfav{
+    border-width: 5px;
+    border-color: red;
 }
 .rodape{
     opacity: 70%;

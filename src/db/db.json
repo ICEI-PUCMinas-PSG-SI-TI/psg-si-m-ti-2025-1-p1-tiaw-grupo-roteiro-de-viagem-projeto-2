@@ -415,7 +415,7 @@
       "quant_estrelas": 5
     },
     {
-      "id": 1504,
+      "id": "1504",
       "usuario": "MARTA S.",
       "data_publicacao": "06/06/2025",
       "conteudo": "Lugar incrivel!!!",
@@ -471,19 +471,15 @@
     },
     {
       "id": "caf4f276-2e53-461d-aeb0-9044f7205363",
-      "login": "Lucas",
+      "login": "lucas",
       "senha": "123",
       "nomecompleto": "Lucas Loiolla Gomes",
       "email": "loiollalucas@gmail.com",
-      "admin": false
-    },
-    {
-      "id": "601fc236-efdb-4491-9357-f840ce1771e1",
-      "login": "NegoChucro",
-      "senha": "1",
-      "nomecompleto": "asdfasdf",
-      "email": "ldsjl@gmail.com",
-      "admin": false
+      "admin": false,
+      "favoritos": [
+        "1",
+        "3"
+      ]
     }
   ],
   "faqs": [

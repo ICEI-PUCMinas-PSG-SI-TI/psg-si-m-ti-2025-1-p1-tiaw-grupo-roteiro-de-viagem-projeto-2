@@ -13,6 +13,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
     <script src="assets/scripts/script.js"></script>
+
     <link rel="shortcut icon" type="imagex/png" href="assets/img/aviaoeseta.png">
 </head>
 
@@ -20,32 +21,34 @@
 
     <header class="d-flex cab position-relative container-fluid">
         <nav class="navbar ">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header"  >
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel" >Menu</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body" >
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="PerfilUsuario.html">Minha Conta</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="favoritos.html">Favoritos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="FAQ.html">Minhas Dúvidas</a>
-          </li>
-         
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav>
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link " href="PerfilUsuario.html">Minha Conta</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="favoritos.html">Favoritos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="FAQ.html">Minhas Dúvidas</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
         <img src="assets/img/logoST.PNG" id="logo">
         <p class="position-absolute" id="iconworld">BRL <i class="fa-solid fa-earth-americas"></i></p>
         <p class="position-absolute py-1 px-3" id="nomelogin">LOGIN</p>
@@ -254,119 +257,128 @@
         </section>
 
         <script>
-            fetch('http://localhost:3000/roteirosProntos')
-                .then(response => response.json())
+            let dadosCidades = [];
+            fetch("http://localhost:3000/roteirosProntos")
+                .then(res => res.json())
                 .then(data => {
-                    let roteirosProntos = data;
+                    dadosCidades = data;
+                    exibirCidades(dadosCidades);
+                })
+                .catch(err => console.error("Erro ao buscar roteiros:", err));
 
-                    let recomendados = document.getElementById("recomendados");
-                    let html = '';
-                    for (let i = 0; i < roteirosProntos.length; i++) {
-                        let roteiro = roteirosProntos[i];
-                        html += `
-            <div style="border: 1px solid black" class="justify-content-center" >
-                <a href="detalhesRot.html?id=${roteiro.id}" style="text-decoration: none; color:black;">
-                        <img src="${roteiro.imgPrinc}" class="imagemrecomendados" style="width:300px; height:200px; border-radius:">
+            function exibirCidades(lista) {
+                const usuarioCorrente = JSON.parse(sessionStorage.getItem('usuarioCorrente')) || {
+                    favoritos: []
+                };
+                const rowCidades = document.getElementById('recomendados');
+                rowCidades.innerHTML = "";
+
+                lista.forEach(roteiro => {
+                    const estaNosFavoritos = usuarioCorrente.favoritos.includes(roteiro.id.toString());
+
+                    rowCidades.innerHTML += `
+                <div style="border: 1px solid black" class="justify-content-center">
+                    <a href="detalhesRot.html?id=${roteiro.id}" style="text-decoration: none; color:black;">
+                        <img src="${roteiro.imgPrinc}" class="imagemrecomendados" style="width:300px; height:200px; border-radius:10px;">
                         <div class="position-relative d-flex justify-content-center">
                             <p class="titulorecomendados">${roteiro.nome}</p>
                         </div>
                         <p class="descricaorecomendados" style="padding: 0 5px">${roteiro.descricao}</p> 
-                        </a>  
-                        <div class="card-footer text-end">
-                        
-                    </div>
-                    </div>
-        `
-                    }
-                    recomendados.innerHTML = html;
-
-                    let goNext = document.getElementById('gonext');
-                    let goPrev = document.getElementById('goprev');
-                    let secaorecomendados = document.getElementById('secaorecomendados');
-                    goNext.addEventListener('click', function () {
-
-                        recomendados.scrollBy({
-                            left: 300
-                        })
-
-
-                    })
-                    goPrev.addEventListener('click', () => recomendados.scrollBy({
-                        left: -300
-                    }))
-
-                    function AtualizarSetas() {
-
-                        if (recomendados.scrollLeft <= 0)
-                            goPrev.style.opacity = '0';
-                        else
-                            goPrev.style.opacity = '1';
-                        if (recomendados.scrollLeft + recomendados.offsetWidth >= recomendados.scrollWidth)
-                            goNext.style.opacity = '0';
-                        else
-                            goNext.style.opacity = '1';
-
-                    }
-                    recomendados.addEventListener('scroll', AtualizarSetas)
-                    AtualizarSetas();
+                    </a>  
+                    <button id="fav-${roteiro.id}" 
+                            class="btn ${estaNosFavoritos ? 'btn-danger' : 'btn-outline-danger'} btn-sm" 
+                            onclick="alternarFavorito('${roteiro.id}')">
+                        ${estaNosFavoritos ? 'Nos Favoritos' : 'Favoritar'}
+                    </button>
+                    <div class="card-footer text-end"></div>
+                </div>
+            `;
                 });
+
+                // Scroll apenas uma vez, fora do forEach
+                const goNext = document.getElementById('gonext');
+                const goPrev = document.getElementById('goprev');
+                const recomendados = document.getElementById('recomendados');
+
+                goNext.addEventListener('click', function () {
+                    recomendados.scrollBy({
+                        left: 300
+                    });
+                });
+
+                goPrev.addEventListener('click', () => recomendados.scrollBy({
+                    left: -300
+                }));
+
+                function AtualizarSetas() {
+                    if (recomendados.scrollLeft <= 0)
+                        goPrev.style.opacity = '0';
+                    else
+                        goPrev.style.opacity = '1';
+
+                    if (recomendados.scrollLeft + recomendados.offsetWidth >= recomendados.scrollWidth)
+                        goNext.style.opacity = '0';
+                    else
+                        goNext.style.opacity = '1';
+                }
+
+                recomendados.addEventListener('scroll', AtualizarSetas);
+                AtualizarSetas();
+            };
+
+            let dados = {};
+
+            document.getElementById('buttonsearch').addEventListener('click', function () {
+                let cidade = document.getElementById('inputdestinos').value;
+                let preco = parseInt(document.getElementById('inputpreco').value);
+                let pessoas = parseInt(document.getElementById('inputpessoas').value);
+                let transporte = document.getElementById('transportechoice').value;
+                let estacao = document.getElementById('inputestacao').value;
+
+                // ✅ Validação básica antes de buscar
+                if (!cidade || isNaN(preco) || isNaN(pessoas) || !transporte || !estacao) {
+                    return alert('Favor preencher todos os campos corretamente');
+                }
+
+                // ✅ Busca os dados do JSON Server
+                fetch('http://localhost:3000/roteirosProntos')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Erro na requisição: " + response.status);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        const objeto = data.find(objeto =>
+                            objeto.cidade === cidade &&
+                            objeto.pessoas >= pessoas &&
+                            objeto.transporte === transporte &&
+                            objeto.estacao === estacao &&
+                            objeto.precoPorNoite >= preco
+                        );
+
+                        if (objeto) {
+                            dados.roteiro = objeto;
+                            // Exemplo: redireciona com o ID
+                            document.getElementById('detalheslink').setAttribute('href',
+                                `detalhesRot.html?id=${dados.roteiro.id}`);
+                        } else {
+                            alert('Roteiro não encontrado');
+                        }
+                    })
+            });
         </script>
-
-
-    </main>
-    <script>
-        let dados = {};
-
-        document.getElementById('buttonsearch').addEventListener('click', function () {
-            let cidade = document.getElementById('inputdestinos').value;
-            let preco = parseInt(document.getElementById('inputpreco').value);
-            let pessoas = parseInt(document.getElementById('inputpessoas').value);
-            let transporte = document.getElementById('transportechoice').value;
-            let estacao = document.getElementById('inputestacao').value;
-
-            // ✅ Validação básica antes de buscar
-            if (!cidade || isNaN(preco) || isNaN(pessoas) || !transporte || !estacao) {
-                return alert('Favor preencher todos os campos corretamente');
-            }
-
-            // ✅ Busca os dados do JSON Server
-            fetch('http://localhost:3000/roteirosProntos')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error("Erro na requisição: " + response.status);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    const objeto = data.find(objeto =>
-                        objeto.cidade === cidade &&
-                        objeto.pessoas >= pessoas &&
-                        objeto.transporte === transporte &&
-                        objeto.estacao === estacao &&
-                        objeto.precoPorNoite >= preco
-                    );
-
-                    if (objeto) {
-                        dados.roteiro = objeto;
-                        // Exemplo: redireciona com o ID
-                        document.getElementById('detalheslink').setAttribute('href',
-                            `detalhesRot.html?id=${dados.roteiro.id}`);
-                    } else {
-                        alert('Roteiro não encontrado');
-                    }
-                })
-        });
-    </script>
-    <footer>
-        <div class="d-flex align-items-center">
-            <div class="rodape">
-                <i class="fa-solid fa-copyright"></i>
-                <p style="margin: 0;">Todos os direitos reservados.</p>
+        <footer>
+            <div class="d-flex align-items-center">
+                <div class="rodape">
+                    <i class="fa-solid fa-copyright"></i>
+                    <p style="margin: 0;">Todos os direitos reservados.</p>
+                </div>
             </div>
-        </div>
-    </footer>
-    
-<script src="assets/scripts/usuario.js"></script>
+        </footer>
+
+        <script src="assets/scripts/usuario.js"></script>
+        <script src="assets/scripts/favoritos.js"></script>
 </body>
 
 </html>

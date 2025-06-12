@@ -98,3 +98,5 @@ function addUser(nome, login, senha, email, admin) {
 // Inicializa LoginApp
 initLoginApp();
 
+
+
