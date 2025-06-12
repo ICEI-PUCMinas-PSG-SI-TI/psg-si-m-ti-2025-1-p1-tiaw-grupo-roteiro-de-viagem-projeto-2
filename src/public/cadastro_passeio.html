@@ -81,7 +81,7 @@
                     </div>
                     <div class="col-md-6" style="margin-top: 1%;">
                         <label for="inputBairro" class="form-label fw-bold">BAIRRO</label>
-                        <input type="text" class="form-control" id="inputBairro" placeholder="ESCREVA AQUI" required>
+                        <input type="text" class="form-control" id="inputBairro" placeholder="ESCREVA AQUI">
                     </div>
                 </div>
 
@@ -134,56 +134,61 @@
         });
 
         document.getElementById('formRecomendacao').addEventListener('submit', function(event) {
-        event.preventDefault(); // evita o recarregamento da página
+            event.preventDefault(); // evita o recarregamento da página
 
-        fetch("http://localhost:3000/recomendacoes")
-            .then(response => response.json())
-            .then(recomedacoes => {
-            let maiorId = 15000; 
-            if (recomedacoes.length > 0) {
-                maiorId = Math.max(...recomedacoes.map(r => r.id));
-            }
+            fetch("http://localhost:3000/recomendacoes")
+                .then(response => response.json())
+                .then(recomendacoes => {
+                let maiorId = 15000; 
+                if (recomendacoes.length > 0) {
+                    maiorId = Math.max(...recomendacoes.map(r => r.id));
+                }
 
-            const novoId = maiorId + 1;
+                const novoId = maiorId + 1;
 
-            // pegar o tipo escolhido pelo nome correto (name="exampleRadios")
-            const tipoEscolhido = document.querySelector('input[name="exampleRadios"]:checked').value;
+                // pegar o tipo escolhido pelo nome correto (name="exampleRadios")
+                const tipoEscolhido = document.querySelector('input[name="exampleRadios"]:checked').value;
 
-            const novaRecomendacao = {
-                id: novoId,
-                usuario: "MARTA S.",
-                data_solicitacao: new Date().toLocaleDateString("pt-BR"),
-                hosp_rest_pass: tipoEscolhido,
-                nome_local: document.getElementById('inputNome').value,
-                nome_estado: document.getElementById('inputEstado').value,
-                nome_cidade: document.getElementById('inputCidade').value,
-                nome_rua: document.getElementById('inputRua').value,
-                nome_bairro: document.getElementById('inputBairro').value,
-                num: parseInt(document.getElementById('inputNum').value),
-                complemento: document.getElementById('inputComple').value,
-                preco_pessoa: parseFloat(document.getElementById('inputPreco').value)
-            };
+                // Função para converter para maiúsculas e tratar valores undefined/null
+                const toUpperCaseSafe = (value) => {
+                    return value ? value.toString().toUpperCase() : '';
+                };
 
-            return fetch("http://localhost:3000/recomendacoes", {
-                method: "POST",
-                headers: {
-                "Content-Type": "application/json"
-                },
-                body: JSON.stringify(novaRecomendacao)
-            });
-            })
-            .then(response => {
-            if (response.ok) {
-                alert("Recomendação salva com sucesso!");
-                window.location.href = "cadastros_recomen.html";
-            } else {
-                alert("Erro ao salvar recomendação.");
-            }
-            })
-            .catch(error => {
-            console.error("Erro:", error);
-            alert("Erro ao conectar ao servidor.");
-            });
+                const novaRecomendacao = {
+                    id: novoId,
+                    usuario: "MARTA S.",
+                    data_solicitacao: new Date().toLocaleDateString("pt-BR"),
+                    hosp_rest_pass: tipoEscolhido.toUpperCase(),
+                    nome_local: toUpperCaseSafe(document.getElementById('inputNome').value),
+                    nome_estado: toUpperCaseSafe(document.getElementById('inputEstado').value),
+                    nome_cidade: toUpperCaseSafe(document.getElementById('inputCidade').value),
+                    nome_rua: toUpperCaseSafe(document.getElementById('inputRua').value),
+                    nome_bairro: toUpperCaseSafe(document.getElementById('inputBairro').value),
+                    // num: parseInt(document.getElementById('inputNum').value),
+                    // complemento: toUpperCaseSafe(document.getElementById('inputComple').value),
+                    preco_pessoa: parseFloat(document.getElementById('inputPreco').value)
+                };
+
+                return fetch("http://localhost:3000/recomendacoes", {
+                    method: "POST",
+                    headers: {
+                    "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(novaRecomendacao)
+                });
+                })
+                .then(response => {
+                if (response.ok) {
+                    alert("Recomendação salva com sucesso!");
+                    window.location.href = "cadastros_recomen.html";
+                } else {
+                    alert("Erro ao salvar recomendação.");
+                }
+                })
+                .catch(error => {
+                console.error("Erro:", error);
+                alert("Erro ao conectar ao servidor.");
+                });
         });
     </script>
 

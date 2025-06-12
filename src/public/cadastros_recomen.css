@@ -54,7 +54,7 @@ main{
 }
 
 footer{
-    margin-top: 2%;
+    margin-top: 4.4%;
     margin-left: 1%;
 }
 
@@ -109,4 +109,9 @@ footer{
 
 #infor{
     font-size: 20px;
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    padding: 10px;
 }

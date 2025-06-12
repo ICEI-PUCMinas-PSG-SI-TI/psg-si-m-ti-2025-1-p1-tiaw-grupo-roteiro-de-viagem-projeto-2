@@ -36,20 +36,22 @@
             </div>
         </div>
 
-        <p class="mb-2" style="margin-left: 30%; margin-top: 2%; font-size: 18px;" id="data"></p>
-        <div class="container text-center py-4 d-flex flex-column align-items-center" id="infor">
-            <p class="mb-2" style="margin-top: -2.5%;" id="tipo"></p>
-            <p class="mb-2" style="margin-top: 1%;" id="nome">NÃO HÁ RECOMENDAÇÕES</p>
-
-            <div class="row justify-content-center w-100" style="margin-bottom: 5%;">
-                <div class="col-12 col-md-4 mb-2">
-                    <p class="mb-0" style="margin-top: 0.5%;" id="estado"></p>
-                </div>
-                <div class="col-12 col-md-4 mb-2">
-                    <p class="mb-0" style="margin-top: 0.5%;" id="cidade"></p>
+        <div id="infor" class="container text-center py-4 d-flex flex-column align-items-center">
+            <div class="recomendacao w-100 mb-4 p-3" style="border-bottom: 2px solid #ccc;">
+                <p class="data mb-2" style="font-size: 18px;"></p>
+                <p class="tipo mb-2" style="font-size: 26px;"><strong></strong></p>
+                <p class="nome mb-2"></p>
+                <div class="row justify-content-center w-100">
+                    <div class="col-12 col-md-4 mb-2">
+                        <p class="estado mb-0"></p>
+                    </div>
+                    <div class="col-12 col-md-4 mb-2">
+                        <p class="cidade mb-0"></p>
+                    </div>
                 </div>
             </div>
         </div>
+
     </main>
 
     <footer>
@@ -65,10 +67,49 @@
         document.getElementById("button_cad").addEventListener("click", function () {
             window.location.href = "cadastro_hosp.html";
         });
+
         document.getElementById("button_voltar").addEventListener("click", function () {
             window.location.href = "cadastro_hosp.html";
         });
 
+        const url = "http://localhost:3000/recomendacoes";
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById("infor");
+                const modelo = container.querySelector(".recomendacao");
+
+                // Limpa o container (para não repetir o modelo original)
+                container.innerHTML = "";
+
+                if (data.length > 0) {
+                    // Ordena pela data mais recente (decrescente)
+                    data.sort((a, b) => new Date(b.data_solicitacao) - new Date(a.data_solicitacao));
+
+                    data.forEach(rec => {
+                        const clone = modelo.cloneNode(true);
+
+                        // Preenche os campos com dados
+                        clone.querySelector(".data").textContent = rec.data_solicitacao;
+                        clone.querySelector(".tipo").textContent = rec.hosp_rest_pass;
+                        clone.querySelector(".nome").textContent = rec.nome_local;
+                        clone.querySelector(".estado").textContent = rec.nome_estado;
+                        clone.querySelector(".cidade").textContent = rec.nome_cidade;
+
+                        container.appendChild(clone);
+                    });
+                } else {
+                    const mensagem = document.createElement("p");
+                    mensagem.textContent = "NÃO HÁ RECOMENDAÇÕES";
+                    container.appendChild(mensagem);
+                }
+            })
+            .catch(error => {
+                console.error("Erro ao buscar recomendações:", error);
+                const container = document.getElementById("infor");
+                container.innerHTML = "<p>ERRO AO CARREGAR DADOS</p>";
+            });
     </script>
 
 </body>
