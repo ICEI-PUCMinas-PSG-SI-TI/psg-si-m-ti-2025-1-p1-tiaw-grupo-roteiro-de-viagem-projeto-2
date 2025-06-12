@@ -1,0 +1,545 @@
+{
+  "roteirosProntos": [
+    {
+      "id": "0",
+      "nome": "ROTEIRO - UBATUBA, SP",
+      "cidade": "Ubatuba, SP",
+      "descricao": "Ubatuba é o destino perfeito para quem busca praias paradisíacas, trilhas incríveis e contato com a natureza!",
+      "acomodacao": "Hotel Recanto das Toninhas",
+      "garagem": "Possui garagem",
+      "precoPorNoite": 680,
+      "faixa": "R$600-799,99",
+      "localizacao": "<i class='fas fa-map-marker-alt'></i> Avenida das Toninhas, 60 - Praia das Toninhas, Ubatuba - SP, próximo à Praia das Toninhas, com acesso fácil a várias praias de Ubatuba.",
+      "alimentacao": {
+        "cafe": "<i class='fas fa-coffee'></i> Café da manhã incluso com variedade de frutas tropicais, pães e bolos.",
+        "restaurante": "<i class='fa-solid fa-utensils'></i> Restaurante Ita Coffee Shop: especializado em frutos do mar frescos, massas artesanais e pizzas gourmet, com vista panorâmica para a Praia das Toninhas."
+      },
+      "quartos": "<i class='fas fa-bed'></i> Suítes com varanda, ar-condicionado, frigobar e TV a cabo. <br> <i class='fa-solid fa-circle'></i> Quartos para até 6 pessoas.",
+      "pessoas": 5,
+      "estrelas": "⭐⭐⭐⭐",
+      "estrelasN": 4,
+      "passeios": [
+        {
+          "passeio": "Praia das Toninhas",
+          "descricao": "Praia tranquila, ideal para quem busca sossego e boas opções de restaurantes.  ",
+          "endereco": "Praia das Toninhas, Ubatuba - SP"
+        },
+        {
+          "passeio": "Ilha do Cardoso",
+          "descricao": "Passeio de barco até a ilha, com praias desertas e natureza preservada.",
+          "endereco": "Saída: Píer de Ubatuba"
+        }
+      ],
+      "restaurantes": [
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Restaurante e Pizzaria Mar e Terra",
+          "servicos": "Frutos do mar, pizzas e pratos típicos brasileiros",
+          "endereco": "Av. Leovigildo Dias Vieira, 1382 - Praia do Itaguá, Ubatuba - SP",
+          "precoMedio": "R$ 75,00"
+        },
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Raízes Restaurante",
+          "servicos": "Frutos do mar, culinária caiçara e ambiente à beira-mar",
+          "endereco": "Av. Leovigildo Dias Vieira, 860 - Itaguá, Ubatuba - SP",
+          "precoMedio": "R$ 90,00"
+        }
+      ],
+      "estacao": "Verão",
+      "transporte": "Ambos",
+      "imgPrinc": "assets/img/1princ.jpg",
+      "imagem1": "assets/img/imghotelton.jpeg",
+      "descricaoimg1": "Hotel Recanto das Toninhas",
+      "imagem2": "assets/img/locubatuba.jpeg",
+      "descricaoimg2": "Hotel Recanto das Toninhas",
+      "imagem3": "assets/img/resthotelubatuba.jpg",
+      "descricaoimg3": "Restaurante Hotel Recanto das Toninhas",
+      "imagem4": "assets/img/quartotoninhas.jpeg",
+      "descricaoimg4": "Quarto Hotel Recanto das Toninhas",
+      "imagem5": "assets/img/praiatoninhas.jpg",
+      "descricaoimg5": "Praia das Toninhas",
+      "imagem6": "assets/img/ilhacardoso.jpg",
+      "descricaoimg6": "Ilha Cardoso",
+      "imagem7": "assets/img/restmareterra.jpeg",
+      "descricaoimg7": "Restaurante Mar e Terra",
+      "imagem8": "assets/img/restraizes.jpg",
+      "descricaoimg8": "Raízes Restaurante"
+    },
+    {
+      "id": "1",
+      "nome": "ROTEIRO - Curitiba, PR",
+      "cidade": "Curitiba, PR",
+      "descricao": "Curitiba encanta com seus parques, arquitetura europeia e uma gastronomia rica, unindo modernidade e natureza!",
+      "acomodacao": "Bourbon Curitiba Convention Hotel",
+      "garagem": "Possui garagem",
+      "precoPorNoite": 520,
+      "faixa": "R$400-599,99",
+      "localizacao": "<i class='fas fa-map-marker-alt'></i> Rua Cândido Lopes, 102 - Centro, Curitiba - PR, próximo ao Teatro Guaíra e Shopping Mueller.",
+      "alimentacao": {
+        "cafe": "<i class='fas fa-coffee'></i> Café da manhã incluso, servido em estilo buffet com opções regionais e internacionais.",
+        "restaurante": "<i class='fa-solid fa-utensils'></i> Tom Espaço Gastronômico: destaque para pratos da cozinha brasileira contemporânea, como barreado paranaense e carnes nobres grelhadas."
+      },
+      "quartos": "<i class='fas fa-bed'></i> Suítes com TV, Wi-Fi gratuito e frigobar. <br> <i class='fa-solid fa-circle'></i> Quartos para até 6 pessoas.",
+      "pessoas": 5,
+      "estrelas": "⭐⭐⭐⭐",
+      "estrelasN": 4,
+      "passeios": [
+        {
+          "passeio": "Jardim Botânico",
+          "descricao": "O principal cartão-postal da cidade com estufa de vidro e jardins inspirados nos franceses.",
+          "endereco": "Av. Prefeito Lothário Meissner, 3164 - Jardim Botânico, Curitiba - PR"
+        },
+        {
+          "passeio": "Ópera de Arame",
+          "descricao": "Um teatro construído com estrutura metálica em meio a um lago e vegetação.",
+          "endereco": "Rua João Gava, 920 - Abranches, Curitiba - PR"
+        }
+      ],
+      "restaurantes": [
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Bar do Alemão",
+          "servicos": "Comida típica alemã e chope artesanal",
+          "endereco": "Rua Doutor Claudino dos Santos, 63 - São Francisco, Curitiba - PR",
+          "precoMedio": "R$ 70,00"
+        },
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Bella Banoffi",
+          "servicos": "Sobremesas famosas e pratos contemporâneos",
+          "endereco": "Rua Itupava, 1091 - Alto da XV, Curitiba - PR",
+          "precoMedio": "R$ 80,00"
+        }
+      ],
+      "estacao": "Primavera",
+      "transporte": "Ambos",
+      "imgPrinc": "assets/img/2princ.jpg",
+      "imagem1": "assets/img/2hot.jpg",
+      "descricaoimg1": "Bourbon Curitiba Convention Hotel",
+      "imagem2": "assets/img/2hotcuritiba.jpg",
+      "descricaoimg2": "Bourbon Curitiba Convention Hotel",
+      "imagem3": "assets/img/2resthot.jpeg",
+      "descricaoimg3": "Restaurante Bourbon Curitiba Convention Hotel",
+      "imagem4": "assets/img/2quarto.jpeg",
+      "descricaoimg4": "Quarto Bourbon Curitiba Convention Hotel",
+      "imagem5": "assets/img/2jardim.jpg",
+      "descricaoimg5": "Jardim Botânico",
+      "imagem6": "assets/img/2opera.jpg",
+      "descricaoimg6": "Ópera de Arame",
+      "imagem7": "assets/img/2bardoal.jpeg",
+      "descricaoimg7": "Bar do Alemão",
+      "imagem8": "assets/img/2banoffi.jpg",
+      "descricaoimg8": "Bella Banoffi"
+    },
+    {
+      "id": "2",
+      "nome": "ROTEIRO - OURO PRETO, MG",
+      "cidade": "Ouro Preto, MG",
+      "descricao": "Ouro Preto é um mergulho na história do Brasil! Com suas ladeiras de pedra, igrejas barrocas e arte mineira, encanta quem busca cultura e charme colonial.",
+      "acomodacao": "Hotel Solar do Rosário",
+      "garagem": "Possui garagem",
+      "precoPorNoite": 600,
+      "faixa": "R$600-799,99",
+      "localizacao": "<i class='fas fa-map-marker-alt'></i> Rua São José, 73 - Centro, Ouro Preto - MG, próximo à Praça Tiradentes e Museu da Inconfidência.",
+      "alimentacao": {
+        "cafe": "<i class='fas fa-coffee'></i> Café da manhã mineiro incluso, com pão de queijo artesanal, quitandas típicas e doces caseiros.",
+        "restaurante": "<i class='fa-solid fa-utensils'></i> Restaurante Senhora do Rosário: cozinha contemporânea mineira, com pratos autorais como filé ao molho de jabuticaba e truta com amêndoas."
+      },
+      "quartos": "<i class='fas fa-bed'></i> Suítes históricas com vista para o centro da cidade. <br> <i class='fa-solid fa-circle'></i> Quartos para até 6 pessoas.",
+      "pessoas": 5,
+      "estrelas": "⭐⭐⭐⭐",
+      "estrelasN": 4,
+      "passeios": [
+        {
+          "passeio": "Museu da Inconfidência",
+          "descricao": "Museu instalado em prédio colonial que conta a história da Inconfidência Mineira.",
+          "endereco": "Praça Tiradentes - Centro, Ouro Preto - MG"
+        },
+        {
+          "passeio": "Mina da Passagem",
+          "descricao": "Antiga mina de ouro com passeio guiado subterrâneo.",
+          "endereco": "Rodovia MG-129 - Ouro Preto - MG"
+        }
+      ],
+      "restaurantes": [
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> O Passo Pizza Jazz",
+          "servicos": "Pizza artesanal e música ao vivo",
+          "endereco": "Rua São José, 56 - Centro, Ouro Preto - MG",
+          "precoMedio": "R$ 75,00"
+        },
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Casa do Ouvidor",
+          "servicos": "Culinária mineira em casarão histórico",
+          "endereco": "Praça Tiradentes, 30 - Centro, Ouro Preto - MG",
+          "precoMedio": "R$ 85,00"
+        }
+      ],
+      "estacao": "Outono",
+      "transporte": "Carro",
+      "imgPrinc": "assets/img/3princ.jpg",
+      "imagem1": "assets/img/3hot.jpeg",
+      "descricaoimg1": "Hotel Solar do Rosário",
+      "imagem2": "assets/img/3hotloc.jpg",
+      "descricaoimg2": "Hotel Solar do Rosário",
+      "imagem3": "assets/img/3resthot.jpg",
+      "descricaoimg3": "Restaurante Hotel Solar do Rosário",
+      "imagem4": "assets/img/3quarto.jpg",
+      "descricaoimg4": "Quarto Hotel Solar do Rosário",
+      "imagem5": "assets/img/3passeio1.jpg",
+      "descricaoimg5": "Museu da Inconfidência",
+      "imagem6": "assets/img/3passeio2.jpg",
+      "descricaoimg6": "Mina da Passagem",
+      "imagem7": "assets/img/3rest1.jpg",
+      "descricaoimg7": "O Passo Pizza Jazz",
+      "imagem8": "assets/img/3rest2.jpg",
+      "descricaoimg8": "Casa do Ouvidor"
+    },
+    {
+      "id": "3",
+      "nome": "ROTEIRO - Jericoacoara, CE",
+      "cidade": "Jericoacoara, CE",
+      "descricao": "Com dunas douradas, pôr do sol espetacular e um clima relax, Jeri é o refúgio ideal para quem quer sol, mar e boas energias o ano inteiro!",
+      "acomodacao": "Pousada Jeribá",
+      "garagem": "Não possui garagem",
+      "precoPorNoite": 720,
+      "faixa": "R$600-799,99",
+      "localizacao": "<i class='fas fa-map-marker-alt'></i> Rua da Dunas, 27 - Jericoacoara - CE, próxima à Praia Principal e Duna do Pôr do Sol.",
+      "alimentacao": {
+        "cafe": "<i class='fas fa-coffee'></i> Café da manhã incluso, com frutas da estação, tapiocas feitas na hora e sucos naturais.",
+        "restaurante": "<i class='fa-solid fa-utensils'></i> Restaurante da Pousada: especializado em frutos do mar, com camarão grelhado na manteiga de garrafa e moqueca de peixe local."
+      },
+      "quartos": "<i class='fas fa-bed'></i> Suítes elegantes com varanda e vista para o mar. <br> <i class='fa-solid fa-circle'></i> Quartos para até 6 pessoas.",
+      "pessoas": 4,
+      "estrelas": "⭐⭐⭐⭐",
+      "estrelasN": 4,
+      "passeios": [
+        {
+          "passeio": "Pedra Furada",
+          "descricao": "Formação rochosa icônica à beira-mar, acessível por caminhada ou buggy.",
+          "endereco": "Trilha pela praia ou morro, saída de Jericoacoara - CE"
+        },
+        {
+          "passeio": "Lagoa do Paraíso",
+          "descricao": "Lagoa de água cristalina com redes dentro d’água e restaurantes flutuantes.",
+          "endereco": "Vila de Jijoca de Jericoacoara - CE"
+        }
+      ],
+      "restaurantes": [
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Na Casa Dela",
+          "servicos": "Culinária brasileira em ambiente temático e aconchegante",
+          "endereco": "Rua Principal - Jijoca de Jericoacoara - CE",
+          "precoMedio": "R$ 90,00"
+        },
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Tamarindo",
+          "servicos": "Alta gastronomia com frutos do mar",
+          "endereco": "Rua da Igreja - Jijoca de Jericoacoara - CE",
+          "precoMedio": "R$ 100,00"
+        }
+      ],
+      "estacao": "Verão",
+      "transporte": "Ambos",
+      "imgPrinc": "assets/img/4princ.jpg",
+      "imagem1": "assets/img/4hot.jpg",
+      "descricaoimg1": "Pousada Jeribá",
+      "imagem2": "assets/img/4hotloc.jpg",
+      "descricaoimg2": "Pousada Jeribá",
+      "imagem3": "assets/img/4resthot.jpg",
+      "descricaoimg3": "Restaurante Pousada Jeribá",
+      "imagem4": "assets/img/4quarto.jpg",
+      "descricaoimg4": "Quarto Pousada Jeribá",
+      "imagem5": "assets/img/4passeio1.jpeg",
+      "descricaoimg5": "Pedra Furada",
+      "imagem6": "assets/img/4passeio2.jpeg",
+      "descricaoimg6": "Lagoa do Paraíso",
+      "imagem7": "assets/img/4rest1.jpg",
+      "descricaoimg7": "Restaurante Na Casa Dela",
+      "imagem8": "assets/img/4rest2.jpg",
+      "descricaoimg8": "Restaurante Tamarindo"
+    },
+    {
+      "id": "4",
+      "nome": "ROTEIRO - Chapada dos Veadeiros, GO",
+      "cidade": "Chapada dos Veadeiros, GO",
+      "descricao": "Natureza exuberante, cachoeiras deslumbrantes e uma energia única: a Chapada dos Veadeiros é um destino encantador no coração do Brasil!",
+      "acomodacao": "Pousada Sertão",
+      "garagem": "Possui garagem",
+      "precoPorNoite": 650,
+      "faixa": "R$600-799,99",
+      "localizacao": "<i class='fas fa-map-marker-alt'></i> Rua Francisco Salermo, 545 - Alto Paraíso de Goiás - GO, a menos de 1 km da Estação Rodoviária e próximo ao Parque Nacional da Chapada dos Veadeiros.",
+      "alimentacao": {
+        "cafe": "<i class='fas fa-coffee'></i> Café da manhã continental incluso, com bolos caseiros, pão de queijo e produtos orgânicos locais.",
+        "restaurante": "<i class='fa-solid fa-utensils'></i> Restaurantes regionais nas proximidades oferecem pratos típicos goianos como galinhada, arroz com pequi e opções vegetarianas."
+      },
+      "quartos": "<i class='fas fa-bed'></i> Quartos confortáveis com banheiro privativo, Wi-Fi gratuito e varanda com vista para o jardim. <br> <i class='fa-solid fa-circle'></i> Quartos para até 4 pessoas.",
+      "pessoas": 5,
+      "estrelas": "⭐⭐⭐⭐",
+      "estrelasN": 4,
+      "passeios": [
+        {
+          "passeio": "Cachoeira Santa Bárbara",
+          "descricao": "Famosa pelas águas azuis turquesa, é uma das mais lindas do Brasil.",
+          "endereco": "Comunidade Kalunga - Cavalcante - GO"
+        },
+        {
+          "passeio": "Vale da Lua",
+          "descricao": "Formações rochosas esculpidas pela água, com piscinas naturais.",
+          "endereco": "Vila de São Jorge - Alto Paraíso de Goiás - GO"
+        }
+      ],
+      "restaurantes": [
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Santo Cerrado",
+          "servicos": "Culinária goiana contemporânea e drinks autorais",
+          "endereco": "Rua Principal - Vila de São Jorge, Alto Paraíso de Goiás - GO",
+          "precoMedio": "R$ 90,00"
+        },
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Jambalaya Bistrô",
+          "servicos": "Gastronomia regional com toque internacional",
+          "endereco": "Rua Joaquim de Almeida, 18 - Centro, Alto Paraíso de Goiás - GO",
+          "precoMedio": "R$ 100,00"
+        }
+      ],
+      "estacao": "Outono",
+      "transporte": "Carro",
+      "imgPrinc": "assets/img/5princ.jpg",
+      "imagem1": "assets/img/5hot.jpg",
+      "descricaoimg1": "Pousada Sertão ",
+      "imagem2": "assets/img/5hotloc.jpeg",
+      "descricaoimg2": "Pousada Sertão ",
+      "imagem3": "assets/img/5resthot.jpg",
+      "descricaoimg3": "Restaurante Pousada Sertão",
+      "imagem4": "assets/img/5quarto.jpg",
+      "descricaoimg4": "Quarto Pousada Sertão",
+      "imagem5": "assets/img/5passeio1.jpeg",
+      "descricaoimg5": "Cachoeira Santa Bárbara ",
+      "imagem6": "assets/img/5passeio2.jpg",
+      "descricaoimg6": "Vale da Lua ",
+      "imagem7": "assets/img/5rest1.jpg",
+      "descricaoimg7": "Restaurante Santo Cerrado",
+      "imagem8": "assets/img/5rest2.jpg",
+      "descricaoimg8": "Restaurante Jambalaya Bistrô"
+    },
+    {
+      "id": "5",
+      "nome": "ROTEIRO - Gramado, RS",
+      "cidade": "Gramado, RS",
+      "descricao": "Charmosa e acolhedora, Gramado encanta com seu clima europeu, boa comida e paisagens de tirar o fôlego!",
+      "acomodacao": "Hotel Laghetto Stilo Borges",
+      "garagem": "Possui garagem",
+      "precoPorNoite": 1200,
+      "faixa": "R$1200-1499,99",
+      "localizacao": "<i class='fas fa-map-marker-alt'></i>Rua Borges de Medeiros, 3200 - Centro, Gramado - RS, próximo ao Lago Joaquina Bier e Mini Mundo.",
+      "alimentacao": {
+        "cafe": "<i class='fas fa-coffee'></i> Café da manhã colonial incluso, com variedade de queijos, embutidos, pães e geleias artesanais.",
+        "restaurante": "<i class='fa-solid fa-utensils'></i> Restaurante Maximilia: especializado em fondue suíço, carnes nobres e pratos europeus tradicionais."
+      },
+      "quartos": "<i class='fas fa-bed'></i> Suítes luxuosas com lareira, banheira de hidromassagem e vista panorâmica. <br> <i class='fa-solid fa-circle'></i> Quartos para até 4 pessoas.",
+      "pessoas": 4,
+      "estrelas": "⭐⭐⭐⭐⭐",
+      "estrelasN": 5,
+      "passeios": [
+        {
+          "passeio": "Mini Mundo",
+          "descricao": "Parque temático com réplicas em miniatura de cidades e construções do mundo.",
+          "endereco": "Rua Horácio Cardoso, 291 - Planalto, Gramado - RS"
+        },
+        {
+          "passeio": "Lago Negro",
+          "descricao": "Passeios de pedalinho e caminhada entre pinheiros importados da Alemanha.",
+          "endereco": "Rua A. J. Renner - Bairro Planalto, Gramado - RS"
+        }
+      ],
+      "restaurantes": [
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Cantina Pastasciutta",
+          "servicos": "Massas artesanais e fondues em ambiente rústico",
+          "endereco": "Avenida Borges de Medeiros, 2083 - Centro, Gramado - RS",
+          "precoMedio": "R$ 110,00"
+        },
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Belle Du Valais",
+          "servicos": "Alta gastronomia suíça com pratos sofisticados",
+          "endereco": "Rua Bela Vista, 465 - Gramado - RS",
+          "precoMedio": "R$ 160,00"
+        }
+      ],
+      "estacao": "Inverno",
+      "transporte": "Ambos",
+      "imgPrinc": "assets/img/6princ.jpg",
+      "imagem1": "assets/img/6hotloc.jpg",
+      "descricaoimg1": "Hotel Laghetto Stilo Borges",
+      "imagem2": "assets/img/6hot.jpeg",
+      "descricaoimg2": "Hotel Laghetto Stilo Borges",
+      "imagem3": "assets/img/6resthot.jpeg",
+      "descricaoimg3": "Restaurante Hotel Laghetto Stilo Borges",
+      "imagem4": "assets/img/6quarto.jpg",
+      "descricaoimg4": "Quarto Hotel Laghetto Stilo Borges",
+      "imagem5": "assets/img/6passeio1.jpeg",
+      "descricaoimg5": "Mini Mundo",
+      "imagem6": "assets/img/6passeio2.jpg",
+      "descricaoimg6": "Lago Negro",
+      "imagem7": "assets/img/6rest1.png",
+      "descricaoimg7": "Restaurante Cantina Pastasciutta ",
+      "imagem8": "assets/img/6rest2.jpg",
+      "descricaoimg8": "Restaurante Belle Du Valais"
+    }
+  ],
+  "avaliacoes": [
+    {
+      "id": "1500",
+      "usuario": "CAROLINE V.",
+      "data_publicacao": "02/01/2025",
+      "conteudo": "Fomos em 5 pessoas e ficamos numa casa na Praia da Fortaleza. Lugar tranquilo, limpo, com mar calmo e natureza por todos os lados. Melhor escolha pra descansar de verdade!",
+      "quant_estrelas": 5
+    },
+    {
+      "id": "1501",
+      "usuario": "JOÃO F.",
+      "data_publicacao": "15/03/2025",
+      "conteudo": "É uma casa de temporada super aconchegante, com vista para o mar e churrasqueira. A Praia da Fortaleza é perfeita pra quem quer sossego. Fizemos um passeio de caiaque e ainda visitamos a Gruta do Pirata!",
+      "quant_estrelas": 4
+    },
+    {
+      "id": "1502",
+      "usuario": "LETÍCIA S.",
+      "data_publicacao": "17/03/2025",
+      "conteudo": "O hotel é pé na areia, com acesso fácil à praia. A piscina é ótima e o atendimento foi muito atencioso. Fizemos trilha até o mirante da Fortaleza e o hotel nos orientou super bem.",
+      "quant_estrelas": 5
+    },
+    {
+      "id": "1503",
+      "usuario": "MARTA S.",
+      "data_publicacao": "25/05/2025",
+      "conteudo": "Muito bom!",
+      "quant_estrelas": 5
+    },
+    {
+      "id": "1504",
+      "usuario": "MARTA S.",
+      "data_publicacao": "06/06/2025",
+      "conteudo": "Lugar incrivel!!!",
+      "quant_estrelas": 5
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "1",
+      "nomecompleto": "Marta Scalzo",
+      "login": "MartaS",
+      "email": "marta.scalzo@gmail.com",
+      "favoritos": [],
+      "senha": "senha1234567",
+      "admin": false
+    },
+    {
+      "id": "2",
+      "nomecompleto": "João Ferreira",
+      "login": "João",
+      "email": "joao.ferreira@gmail.com",
+      "favoritos": [],
+      "senha": "joaopedefeijao",
+      "admin": false
+    },
+    {
+      "id": "3",
+      "nomecompleto": "Larissa Menezes",
+      "login": "Larissa",
+      "email": "larissa.menezes@gmail.com",
+      "favoritos": [],
+      "senha": "lirili2014",
+      "admin": false
+    },
+    {
+      "id": "4",
+      "nomecompleto": "Carlos Oliveira",
+      "login": "carlos",
+      "email": "carlos.oliveira@gmail.com",
+      "favoritos": [],
+      "senha": "hebreus127",
+      "admin": false
+    },
+    {
+      "id": "5",
+      "nomecompleto": "Ana Pereira",
+      "login": "Ana",
+      "email": "ana.pereira@gmail.com",
+      "foto_perfil": "img/foto5.jpg",
+      "favoritos": [],
+      "senha": "123",
+      "admin": false
+    },
+    {
+      "id": "caf4f276-2e53-461d-aeb0-9044f7205363",
+      "login": "lucas",
+      "senha": "123",
+      "nomecompleto": "Lucas Loiolla Gomes",
+      "email": "loiollalucas@gmail.com",
+      "admin": false,
+      "favoritos": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "id": "712b14c9-271a-4fc6-a618-b2ed97cbfbf9",
+      "login": "brunoms",
+      "senha": "123",
+      "nomecompleto": "bruno",
+      "email": "b",
+      "admin": false
+    }
+  ],
+  "faqs": [
+    {
+      "pergunta": "Como funciona o processo de criação do roteiro?",
+      "resposta": "Após preencher o formulario, analisamos suas preferências e necessidades. Em seguida, montamos um itinerário completo com sugestões de passeios, hospedagem, transporte e restaurantes locais.",
+      "id": "a311"
+    },
+    {
+      "pergunta": "E se eu tiver um imprevisto ou quiser mudar o roteiro durante a viagem?",
+      "resposta": "O roteiro é flexível e sugerimos sempre ter margem para adaptações. Se precisar de ajuda para ajustes de última hora, faremos o possível para auxiliar, dependendo da nossa disponibilidade.",
+      "id": "72a7"
+    },
+    {
+      "pergunta": "Vocês oferecem suporte durante a viagem?",
+      "resposta": "Oferecemos suporte pré-viagem para esclarecer dúvidas. Durante a viagem, não fazemos acompanhamento em tempo real, mas o roteiro já vem com tudo planejado para que você se sinta seguro e independente.",
+      "id": "73c8"
+    },
+    {
+      "pergunta": "Preciso seguir o roteiro à risca durante a viagem?",
+      "resposta": "Não! O roteiro é uma sugestão otimizada com base nas suas preferências. Você pode adaptar conforme o seu ritmo e imprevistos. Ele serve para facilitar, não para limitar.",
+      "id": "0fbb"
+    },
+    {
+      "pergunta": "Tenho um orçamento apertado. Vale a pena fazer um roteiro personalizado?",
+      "resposta": "Sim! Um roteiro bem planejado pode te ajudar a economizar, evitar gastos desnecessários e aproveitar melhor o seu dinheiro. Adaptamos tudo ao seu orçamento.",
+      "id": "c395"
+    },
+    {
+      "pergunta": "Quais informações preciso fornecer para começarem meu roteiro?",
+      "resposta": "Vamos precisar de dados como destino(s), datas, número de pessoas, perfil dos viajantes, interesses, orçamento aproximado, estilo de hospedagem preferido e se já tem algo reservado.",
+      "id": "fb2c"
+    },
+    {
+      "pergunta": "O roteiro é adequado para quem viaja com crianças ou idosos?",
+      "resposta": "Totalmente! Levamos em conta todas as necessidades especiais, como deslocamentos tranquilos, atrações adequadas e horários mais flexíveis.",
+      "id": "cac1"
+    },
+    {
+      "pergunta": "Vocês atendem viagens internacionais e nacionais?",
+      "resposta": "Criamos roteiros apenas para destinos nacionais, sempre respeitando seu estilo de viagem e as características de cada lugar.",
+      "id": "24b4"
+    },
+    {
+      "pergunta": "Nunca viajei por conta própria. O roteiro ajuda nisso?",
+      "resposta": "Sim! Nossos roteiros são ideais para quem deseja autonomia, mas com segurança. Incluímos instruções claras, dicas práticas e todas as orientações para facilitar sua viagem.",
+      "id": "189b"
+    },
+    {
+      "pergunta": "Como alterar minha senha?",
+      "resposta": "Vá até seu perfil e clique para alterar sua senha e salve suas alterações.",
+      "id": "66e9"
+    }
+  ]
+}
