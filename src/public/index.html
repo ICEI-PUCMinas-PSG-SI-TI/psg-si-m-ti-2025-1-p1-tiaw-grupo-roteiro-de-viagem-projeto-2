@@ -63,6 +63,17 @@
         <a href="PerfilUsuario.html"><i class="fa-regular fa-user fa-2x position-absolute" id="iconuser"></i></a>
     </header>
 
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            menu.classList.toggle('open');
+        }
+
+        document.getElementById('darkModeToggle')?.addEventListener('change', function () {
+            document.body.classList.toggle('dark-mode', this.checked);
+        });
+    </script>
+
     <div class="d-flex justify-content-center mt-5">
         <h4 id="titlesection">BUSCA POR ROTEIROS PRONTOS</h4>
     </div>
