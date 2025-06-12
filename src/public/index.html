@@ -21,6 +21,41 @@
 
     <header class="d-flex cab position-relative container-fluid">
 
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars" style="color: white;"></i>
+        </button>
+        <nav id="sideMenu" class="side-menu">
+            <div class="menu-content">
+
+                <div class="dark-mode-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="modo-escuro">Modo escuro</span>
+                </div>
+
+                <ul class="menu-list">
+                    <a href="PerfilUsuario.html"><li><i class="fa-regular fa-user"></i> Minha conta</li></a>
+                    <a href="favoritos.html"><li><i class="fa-regular fa-heart"></i> Favoritos</li></a>
+                    <a href="meusroteiros.html"><li><i class="fa-regular fa-map"></i> Meus roteiros</li></a>
+                    <li><a href="avaliacoes.html"><i class="fa-regular fa-star"></i> Avaliações</li></a>
+                    <li><a href="faq.html"><i class="fa-regular fa-circle-question"></i> FAQ</li></a>
+                    <li><a href="minhasduvidas.html"><i class="fa-regular fa-comment-dots"></i> Minhas dúvidas</li></a>
+                </ul>
+
+                <button class="recom-btn">
+                    <i class="fa-solid fa-plus"></i> Cadastrar recomendações
+                </button>
+
+                <div class="footer-menu">
+                    <button class="sair-btn" onclick="toggleMenu()">
+                        fechar
+                    </button>
+                </div>
+            </div>
+        </nav>
+
         <img src="assets/img/logoST.PNG" id="logo">
 
         <p class="position-absolute" id="iconworld">BRL <i class="fa-solid fa-earth-americas"></i></p>
