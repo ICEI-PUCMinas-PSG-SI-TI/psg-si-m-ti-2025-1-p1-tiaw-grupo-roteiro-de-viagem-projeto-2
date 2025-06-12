@@ -1,0 +1,89 @@
+body {
+  background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+
+}
+/*cabeçalho*/
+.cab{
+    background-color: #ea8613;
+}
+#logo{
+
+    height: 60px; 
+    width: 100px;
+    margin-left: 75px;
+    background-color:  white;
+
+}
+
+#iconworld{
+    right: 300px;
+    bottom: 0;
+    margin: 0;
+    color: white;
+}
+
+#nomelogin{
+    right: 130px;
+    bottom: 0;
+    margin: 0;
+    background-color: white; font-size: 18px;
+}
+
+#iconuser{
+    right: 0;
+    top: 50%; 
+    transform: translateY(-50%);
+    color: white; 
+    margin-right: 75px;
+}
+
+/*pagina FAQ*/
+.inicio{
+    color: #ea8613;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #ea8613;
+  color: white;
+}
+.accordion-button{
+    background-color: #ebebeb;
+}
+
+.btn-info {
+  background-color: #ea8613;
+  border: none;
+}
+#faqAccordion {
+  min-height: 300px; /* ou o valor que preferir */
+}
+.paginaçao{
+    background-color: #ea8613;
+    border-radius: 50px;
+    color: white;
+}
+.paginaçao:hover{
+    background-color: #ffb25a;
+}
+.enviar{
+    background-color: #ea8613;
+    color: white;
+}
+.enviar:hover{
+    background-color: #ffb25a;
+}
+/*footer*/
+footer{
+    margin-top: 7%;
+    margin-left: 1%;
+}
+
+.rodape{
+    opacity: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 9px;
+    align-items: center;
+}
