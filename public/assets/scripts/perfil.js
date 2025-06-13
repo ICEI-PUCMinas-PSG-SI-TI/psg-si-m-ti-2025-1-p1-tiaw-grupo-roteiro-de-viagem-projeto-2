@@ -1,5 +1,6 @@
 let usuarios = [];
 let usuarioCorrente = {};
+
 if (!sessionStorage.getItem("usuarioCorrente")) {
   window.location.href = "login.html";
 }
@@ -35,10 +36,6 @@ function preencherFormulario(usuario) {
   document.getElementById("avatar").src = usuario.foto_perfil || "assets/img/imglogin.png";
   document.getElementById("avatar-topo").src = usuario.foto_perfil || "assets/img/imglogin.png";
 }
-
-
-
-
 
 function preencherDropdownUsuarios() {
   const lista = document.getElementById("listaUsuarios");
@@ -81,37 +78,29 @@ function trocarUsuario() {
 function salvarAlteracoes(event) {
   event.preventDefault();
 
-  // Atualiza o objeto local
   usuarioCorrente.login = document.getElementById("login").value;
   usuarioCorrente.nomecompleto = document.getElementById("nomecompleto").value;
   usuarioCorrente.email = document.getElementById("email").value;
   usuarioCorrente.senha = document.getElementById("senha").value;
 
-  // Envia para o JSON Server
   fetch(`http://localhost:3000/usuarios/${usuarioCorrente.id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(usuarioCorrente)
-    })
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(usuarioCorrente)
+  })
     .then(res => {
       if (!res.ok) throw new Error("Erro ao salvar no servidor.");
       return res.json();
     })
     .then(data => {
-      // Atualiza a UI
       document.getElementById("usuario-nome-topo").textContent = data.login;
       document.getElementById("nome-usuario").textContent = data.login.toUpperCase();
-
-      // Atualiza também no sessionStorage
       sessionStorage.setItem("usuarioCorrente", JSON.stringify(data));
 
-      // Atualiza o nome no topo da página, se existir o elemento
       const nomelogin = document.getElementById("nomelogin");
-      if (nomelogin) {
-        nomelogin.textContent = data.login;
-      }
+      if (nomelogin) nomelogin.textContent = data.login;
 
       alert("Alterações salvas com sucesso! ✈️🧡");
     })
@@ -125,17 +114,48 @@ function sairConta() {
   sessionStorage.removeItem("usuarioCorrente");
   usuarioCorrente = null;
 
-  // Limpar os campos do formulário
   document.getElementById("login").value = "";
   document.getElementById("nomecompleto").value = "";
   document.getElementById("email").value = "";
   document.getElementById("senha").value = "";
 
-  // Limpar os textos e imagens do perfil
   document.getElementById("nome-usuario").textContent = "";
   document.getElementById("usuario-nome-topo").textContent = "";
-  document.getElementById("avatar").src = "assets/img/imglogin.png"; // imagem padrão
+  document.getElementById("avatar").src = "assets/img/imglogin.png";
   document.getElementById("avatar-topo").src = "assets/img/imglogin.png";
-  window.location.href = "index.html";
+
   alert("Você saiu da conta.");
+  window.location.href = "index.html";
+}
+
+//mudar imagem
+function mudarFotoPorURL() {
+  const novaURL = prompt("Digite a URL da nova imagem: ✈️🧡");
+
+  if (!novaURL) return;
+
+  document.getElementById("avatar").src = novaURL;
+  document.getElementById("avatar-topo").src = novaURL;
+
+  usuarioCorrente.foto_perfil = novaURL;
+
+  fetch(`http://localhost:3000/usuarios/${usuarioCorrente.id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ foto_perfil: novaURL }),
+  })
+    .then(res => {
+      if (!res.ok) throw new Error("Erro ao atualizar imagem.");
+      return res.json();
+    })
+    .then(data => {
+      sessionStorage.setItem("usuarioCorrente", JSON.stringify(data));
+      alert("Imagem de perfil atualizada com sucesso! 🧡");
+    })
+    .catch(err => {
+      console.error("Erro ao salvar imagem:", err);
+      alert("Erro ao salvar imagem de perfil.");
+    });
 }
