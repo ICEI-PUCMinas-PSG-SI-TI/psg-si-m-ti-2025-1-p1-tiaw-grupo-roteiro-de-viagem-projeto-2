@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roteiros Prontos</title>
+    <link rel="stylesheet" href="assets/css/styleDetalhes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="shortcut icon" type="imagex/png" href="assets/img/aviaoeseta.png">
+    
+
+</head>
+    
+<body>
+    
+    <header class="d-flex cab position-relative container-fluid">
+
+        <a href="index.html"><img src="assets/img/logoST.PNG" id="logo"></a>
+        <p class="position-absolute" id="iconworld">BRL <i class="fa-solid fa-earth-americas"></i></p>
+        <p class="position-absolute py-1 px-3" id="nomelogin">LOGIN</p>
+        <a href="PerfilUsuario.html"><i class="fa-regular fa-user fa-2x position-absolute" id="iconuser"></i></a>
+
+    </header>
+
+
+
+
+    <button id="button_voltar" class="btn btn-primary mt-5" style="display: none; width: 150px;">VOLTAR</button>
+    <script>
+        document.getElementById('button_voltar').addEventListener('click', function () {
+
+            document.getElementById('enviarcomentario').style.display = 'none';
+            document.getElementById('secaocomentarios').style.display = 'block';
+            document.getElementById('button_voltar').style.display = 'none';
+
+        })
+    </script>
+    <section class="d-block d-lg-flex mx-2 mt-5 " id="checkavaliacao">
+
+        <div id="conteudo-rot" class="container">
+
+        </div>
+
+        <div class="col-md-4 container" id="secaocomentarios" style="display: none;">
+
+            <div class="d-flex flex-column align-items-center">
+                <div class="d-flex-column justify-content-center mt-1">
+                    <div class="avalia">
+                        <h4>AVALIAÇÕES</h4>
+                    </div>
+                </div>
+                <div id="comentarios_container" class="mt-4">
+                    <div class="usuario_data_estrelas">
+                        <div class="usuario"><strong></strong></div>
+                        <div class="data_publicao"></div>
+                        <div class="quant_estrelas"></div>
+                    </div>
+
+                    <div class="conteudo">CARREGANDO COMENTÁRIOS...</div>
+                </div>
+
+                <button id="button_comentar" class="btn btn-primary">DEIXE SEU COMENTÁRIO</button>
+            </div>
+        </div>
+        <script>
+            document.getElementById('button_comentar').addEventListener('click', function () {
+
+                document.getElementById('button_voltar').style.display = 'block';
+                document.getElementById('secaocomentarios').style.display = 'none';
+                document.getElementById('enviarcomentario').style.display = 'block';
+
+            })
+        </script>
+        <div id="enviarcomentario" class="col-md-4" style="display: none;">
+
+            <div class="d-flex flex-column">
+                <div class="d-flex-column justify-content-center mt-2">
+                    <div id="avalia">
+                        <h4>AVALIAÇÕES</h4>
+                    </div>
+                </div>
+                <form id="form_comentario" style="width: 100%;" class="d-flex flex-column align-items-center">
+                    <div class="comentarios">
+                        <div class="usuario_estrelas">
+                            <div class="nome_usuario"><strong id="nomeUsuarioComentario"> JHJH</strong></div>
+                            <div id="avaliacao_estrelas" style="font-size: 1.5rem; cursor: pointer;">
+                                <span data-estrela="1">☆</span>
+                                <span data-estrela="2">☆</span>
+                                <span data-estrela="3">☆</span>
+                                <span data-estrela="4">☆</span>
+                                <span data-estrela="5">☆</span>
+                            </div>
+
+                            <input type="hidden" id="quant_estrelas" name="quant_estrelas" value="0">
+                        </div>
+
+                        <div class="form-group">
+                            <textarea class="form-control" id="comentario_texto" rows="7" placeholder="ESCREVA AQUI"
+                                maxlength="250"></textarea>
+                        </div>
+                    </div>
+                    <button id="button_enviar" class="btn btn-primary">ENVIAR COMENTÁRIO</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="assets/scripts/script.js"></script>
+    <script>
+        fetch('http://localhost:3000/roteirosProntos')
+            .then(res => res.json())
+            .then(roteirosProntos => {
+                let params = new URLSearchParams(location.search)
+                let id = params.get('id')
+                let cidade = roteirosProntos.find(elem => elem.id == id)
+                let tela = document.getElementById('conteudo-rot')
+                if (cidade) {
+                    tela.innerHTML = `
+            <h2 class="tituloRot m-0">${cidade.nome}</h2>
+            <article>
+                <div class="container-roteiro">
+                    <div class="conteudo">
+                    <h3 class="titulo2Rot">${cidade.nome}</h3>
+                    <div class="codigo2">CÓDIGO: #${cidade.id}</div>
+                    <div class="acomodacao">
+                        <div class="bloco">
+                            <div class="texto">
+                                <h2>ACOMODAÇÃO</h2>
+                                <text><h3 class="hotelTit">${cidade.acomodacao}  ${cidade.estrelas}</h3>
+                                <h4>Preço por noite: R$${cidade.precoPorNoite},00</h4>
+                                <h4>${cidade.garagem}</h4></text>
+                            </div>
+                            <img src="${cidade.imagem1}" alt="${cidade.descricaoimg1}">
+                        </div>
+                        <div class="bloco">
+                            <div class="texto">
+                                <h3 class="subTits">LOCALIZAÇÃO</h3>
+                                <p class="textP">${cidade.localizacao}</p>
+                            </div>
+                            <img src="${cidade.imagem2}" alt="${cidade.descricaoimg2}">
+                        </div>
+                        <div class="bloco">
+                            <div class="texto">
+                                <h3 class="subTits">ALIMENTAÇÃO</h3>
+                                <p class="textP">${cidade.alimentacao.cafe}</p>
+                                <p class="textP">${cidade.alimentacao.restaurante}</p>
+                            </div>
+                            <img src="${cidade.imagem3}" alt="${cidade.descricaoimg3}">
+                        </div>
+                        <div class="bloco">
+                            <div class="texto">
+                                <h3 class="subTits">QUARTOS</h3>
+                                <p class="textP">${cidade.quartos}</p>
+                            </div>
+                            <img src="${cidade.imagem4}" alt="${cidade.descricaoimg4}">
+                        </div>
+                    </div>
+                    <div class="passeios">
+                        <h2>PASSEIOS</h2>
+                        <div class="passeio">
+                            <div class="passeioTexto">
+                                <text><strong> ${cidade.passeios[0].passeio}</strong><br>
+                                ${cidade.passeios[0].descricao}<br>
+                                <i class='fas fa-map-marker-alt'></i> ${cidade.passeios[0].endereco}</text>
+                            </div>
+                            <img src="${cidade.imagem5}" alt="${cidade.descricaoimg5}" >
+                        </div>
+                        <div class="passeio">
+                            <div class="passeioTexto">
+                                <text><strong> ${cidade.passeios[1].passeio}</strong><br>
+                                ${cidade.passeios[1].descricao}<br>
+                                <i class='fas fa-map-marker-alt'></i> ${cidade.passeios[1].endereco}</text>
+                            </div>
+                            <img src="${cidade.imagem6}" alt="${cidade.descricaoimg6}">
+                        </div>
+                    </div>
+                    <div class="restaurantes">
+                        <h2>RESTAURANTES</h2>
+                        <div class="restaurante">
+                            <div class="restauranteTexto">
+                                <text><strong> ${cidade.restaurantes[0].restaurante}</strong><br>
+                                ${cidade.restaurantes[0].servicos}<br>
+                                <i class='fas fa-map-marker-alt'></i> ${cidade.restaurantes[0].endereco}<br>
+                                <strong>Preço Médio:</strong>${cidade.restaurantes[0].precoMedio}</text>
+                            </div>
+                            <img src="${cidade.imagem7}" alt="${cidade.descricaoimg7}" >
+                        </div>
+                        <div class="restaurante">
+                            <div class="restauranteTexto">
+                                <text><strong> ${cidade.restaurantes[1].restaurante}</strong><br>
+                                ${cidade.restaurantes[1].servicos}<br>
+                                <i class='fas fa-map-marker-alt'></i> ${cidade.restaurantes[1].endereco}<br>
+                                <strong>Preço Médio:</strong>${cidade.restaurantes[1].precoMedio}</text>
+                            </div>
+                            <img src="${cidade.imagem8}" alt="${cidade.descricaoimg8}">
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <section>
+                <div class="btns">
+                    <button id="baixapdf" class="btnBaixar"><i class="fa-solid fa-download"> </i> BAIXAR</button>
+                    <a href="#secaocomentarios"><button class="btnAvaliacoes" id="buttoncomment" >AVALIAÇÕES</button></a>
+                </div>
+            </section>
+            `;
+            
+    const usuarioCorrente = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+    const idCidade = new URLSearchParams(window.location.search).get('id');
+
+    if (usuarioCorrente) {
+        const btn = document.getElementById(`fav-${idCidade}`);
+        const favoritos = usuarioCorrente.favoritos || [];
+
+        if (btn) {
+            if (favoritos.includes(idCidade)) {
+                btn.classList.remove('btn-outline-danger');
+                btn.classList.add('btn-danger');
+                btn.innerText = "Nos Favoritos";
+            } else {
+                btn.classList.remove('btn-danger');
+                btn.classList.add('btn-outline-danger');
+                btn.innerText = "Favoritar";
+            }
+        }
+    }
+
+                    document.querySelector("#buttoncomment").addEventListener("click", function () {
+                        document.getElementById('secaocomentarios').style.display = 'block';
+                    });
+                } else {
+                    tela.innerHTML = 'Não encontrado'
+                }
+            });
+    </script>
+
+    <script>
+    const usuarioInfo = JSON.parse(localStorage.getItem('usuarioLogado'));
+    
+    fetch('http://localhost:3000/usuarios')
+        .then(res => res.json())
+        .then(usuarios => {
+            const usuario = usuarios.find(u => u.email === usuarioInfo?.login);
+            const login = usuario ? usuario.login : 'Desconhecido';
+            // console.log(login);
+
+            // Atualiza o nome do usuário na interface
+            document.getElementById('nomeUsuarioComentario').textContent = login.toUpperCase();
+        });
+</script>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id'); // ID do roteiro vindo da URL
+
+    fetch(`http://localhost:3000/roteirosProntos/${id}`)
+        .then(res => res.json())
+        .then(roteiro => {
+            const comentarios = roteiro.avaliacoes || [];
+            const container = document.getElementById('comentarios_container');
+
+            container.innerHTML = '';
+
+            if (comentarios.length === 0) {
+                container.innerHTML = '<p>Sem comentários ainda.</p>';
+                return;
+            }
+
+            comentarios.forEach(comentario => {
+                const blocoComentario = document.createElement('div');
+                blocoComentario.classList.add('mb-5');
+
+                const cabecalho = document.createElement('div');
+                cabecalho.classList.add('usuario_data_estrelas');
+
+                const divUsuario = document.createElement('div');
+                divUsuario.classList.add('usuario');
+                divUsuario.innerHTML = `<strong>${comentario.usuario}</strong>`;
+
+                const divData = document.createElement('div');
+                divData.classList.add('data_publicao');
+                divData.textContent = comentario.data_publicacao || comentario.data;
+
+                const divEstrelas = document.createElement('div');
+                divEstrelas.classList.add('quant_estrelas');
+                const estrelas = '★'.repeat(comentario.quant_estrelas) + '☆'.repeat(5 - comentario.quant_estrelas);
+                divEstrelas.innerHTML = `<span style="color: #ffc107; font-size: 1.2rem;">${estrelas}</span>`;
+
+                cabecalho.appendChild(divUsuario);
+                cabecalho.appendChild(divData);
+                cabecalho.appendChild(divEstrelas);
+
+                const divConteudo = document.createElement('div');
+                divConteudo.classList.add('conteudo');
+                divConteudo.textContent = comentario.conteudo;
+
+                blocoComentario.appendChild(cabecalho);
+                blocoComentario.appendChild(divConteudo);
+
+                container.appendChild(blocoComentario);
+            });
+
+            // Mostra a seção com os comentários
+            document.getElementById('secaocomentarios').style.display = 'block';
+        })
+    </script>
+    <script>
+        const estrelasDiv = document.getElementById('avaliacao_estrelas');
+        const inputEstrelas = document.getElementById('quant_estrelas');
+        const form = document.getElementById('form_comentario');
+
+        // Estrelas
+        estrelasDiv.addEventListener('click', function (event) {
+            if (event.target.tagName === 'SPAN') {
+                const valor = Number(event.target.getAttribute('data-estrela'));
+                inputEstrelas.value = valor;
+
+                const estrelas = estrelasDiv.querySelectorAll('span');
+                estrelas.forEach((estrela, index) => {
+                    estrela.textContent = index < valor ? '★' : '☆';
+                });
+            }
+        });
+
+        // Envio do formulário
+        form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const comentario = document.getElementById('comentario_texto').value.trim();
+    const numeroEstrelas = parseInt(document.getElementById('quant_estrelas').value);
+    const idRoteiro = new URLSearchParams(window.location.search).get('id');
+
+    if (!comentario || numeroEstrelas === 0) {
+        alert('Por favor, escreva um comentário e selecione uma quantidade de estrelas.');
+        return;
+    }
+
+    const usuarioInfo = JSON.parse(localStorage.getItem('usuarioLogado'));
+
+    fetch('http://localhost:3000/usuarios')
+        .then(res => res.json())
+        .then(usuarios => {
+            const usuario = usuarios.find(u => u.email === usuarioInfo?.email);
+            const login = usuario ? usuario.login : 'Desconhecido';
+
+            // 1. Busca o roteiro atual
+            return fetch(`http://localhost:3000/roteirosProntos/${idRoteiro}`)
+                .then(res => res.json())
+                .then(roteiro => {
+                    // 2. Gera novo ID
+                    const avaliacoes = roteiro.avaliacoes || [];
+                    const ultimoComentario = avaliacoes[avaliacoes.length - 1];
+                    const novoId = ultimoComentario ? Number(ultimoComentario.id) + 1 : 1;
+
+                    // 3. Cria novo comentário
+                    const novoComentario = {
+                        id: novoId,
+                        usuario: login,
+                        data_publicacao: new Date().toLocaleDateString('pt-BR'),
+                        conteudo: comentario,
+                        quant_estrelas: numeroEstrelas
+                    };
+
+                    // 4. Adiciona ao array e envia PUT com o roteiro atualizado
+                    const novoRoteiro = {
+                        ...roteiro,
+                        avaliacoes: [...avaliacoes, novoComentario]
+                    };
+
+                    return fetch(`http://localhost:3000/roteirosProntos/${idRoteiro}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(novoRoteiro)
+                    });
+                });
+        })
+        .then(res => {
+            if (!res.ok) throw new Error('Erro ao salvar');
+            return res.json();
+        })
+        .then(() => {
+            alert('Comentário enviado com sucesso! Recarregue a página para vê-lo.');
+        })
+        .catch(err => {
+            console.error(err);
+            alert('Erro ao enviar comentário.');
+        });
+});
+    </script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        document.querySelector('#baixapdf').addEventListener('click', function () {
+            const elemento = document.getElementById('conteudo-rot');
+
+            if (!elemento) {
+                alert("Conteúdo não encontrado para gerar o PDF.");
+                return;
+            }
+
+            // Aguarda renderização completa do DOM
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    const opt = {
+                        margin: 10,
+                        filename: 'meu-roteiro.pdf',
+                        image: {
+                            type: 'jpeg',
+                            quality: 1
+                        },
+                        html2canvas: {
+                            scale: 2,
+                            useCORS: true
+                        },
+                        jsPDF: {
+                            unit: 'mm',
+                            format: 'a4',
+                            orientation: 'portrait'
+                        },
+                        pagebreak: {
+                            mode: ['avoid-all', 'css', 'legacy']
+                        }
+                    };
+
+                    html2pdf().set(opt).from(elemento).save();
+                }, 2000); // espera 500ms para tudo estar 100% visível
+            });
+        })
+        
+        
+    
+
+    </script>
+
+
+    <footer>
+        <div class="d-flex align-items-center">
+            <div class="rodape">
+                <i class="fa-solid fa-copyright"></i>
+                <p style="margin: 0;">Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/scripts/usuario.js"></script>
+    <script src="assets/scripts/favoritos.js"></script>
+</body>
+
+</html>
