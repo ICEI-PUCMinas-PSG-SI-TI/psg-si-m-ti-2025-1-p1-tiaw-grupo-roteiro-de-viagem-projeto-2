@@ -85,7 +85,7 @@
                 <form id="form_comentario" style="width: 100%;" class="d-flex flex-column align-items-center">
                     <div class="comentarios">
                         <div class="usuario_estrelas">
-                            <div class="nome_usuario"><strong id="nomeUsuarioComentario"> JHJH</strong></div>
+                            <div class="nome_usuario"><strong id="nomeUsuarioComentario"></strong></div>
                             <div id="avaliacao_estrelas" style="font-size: 1.5rem; cursor: pointer;">
                                 <span data-estrela="1">☆</span>
                                 <span data-estrela="2">☆</span>
@@ -236,21 +236,6 @@
             });
     </script>
 
-    <script>
-    const usuarioInfo = JSON.parse(localStorage.getItem('usuarioLogado'));
-    
-    fetch('http://localhost:3000/usuarios')
-        .then(res => res.json())
-        .then(usuarios => {
-            const usuario = usuarios.find(u => u.email === usuarioInfo?.login);
-            const login = usuario ? usuario.login : 'Desconhecido';
-            // console.log(login);
-
-            // Atualiza o nome do usuário na interface
-            document.getElementById('nomeUsuarioComentario').textContent = login.toUpperCase();
-        });
-</script>
-
 <script>
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id'); // ID do roteiro vindo da URL
@@ -383,7 +368,8 @@
             return res.json();
         })
         .then(() => {
-            alert('Comentário enviado com sucesso! Recarregue a página para vê-lo.');
+            // alert('Comentário enviado com sucesso! Recarregue a página para vê-lo.');
+            location.reload();
         })
         .catch(err => {
             console.error(err);

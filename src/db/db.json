@@ -152,6 +152,13 @@
           "data_publicacao": "07/01/2025",
           "conteudo": "Adorei, com certeza voltaria!",
           "quant_estrelas": 5
+        },
+        {
+          "id": 1553,
+          "usuario": "karen",
+          "data_publicacao": "18/06/2025",
+          "conteudo": "oi",
+          "quant_estrelas": 2
         }
       ],
       "estacao": "Primavera",
@@ -333,6 +340,13 @@
           "data_publicacao": "17/06/2025",
           "conteudo": "ds",
           "quant_estrelas": 3
+        },
+        {
+          "id": 1654,
+          "usuario": "karen",
+          "data_publicacao": "18/06/2025",
+          "conteudo": "jkn",
+          "quant_estrelas": 1
         }
       ],
       "estacao": "Verão",
@@ -427,6 +441,34 @@
           "data_publicacao": "16/06/2025",
           "conteudo": "muito top",
           "quant_estrelas": 5
+        },
+        {
+          "id": 1704,
+          "usuario": "karen",
+          "data_publicacao": "18/06/2025",
+          "conteudo": "oioi",
+          "quant_estrelas": 1
+        },
+        {
+          "id": 1705,
+          "usuario": "karen",
+          "data_publicacao": "18/06/2025",
+          "conteudo": "oioii",
+          "quant_estrelas": 2
+        },
+        {
+          "id": 1706,
+          "usuario": "karen",
+          "data_publicacao": "18/06/2025",
+          "conteudo": "oi",
+          "quant_estrelas": 2
+        },
+        {
+          "id": 1707,
+          "usuario": "karen",
+          "data_publicacao": "18/06/2025",
+          "conteudo": "oi",
+          "quant_estrelas": 2
         }
       ],
       "estacao": "Outono",
