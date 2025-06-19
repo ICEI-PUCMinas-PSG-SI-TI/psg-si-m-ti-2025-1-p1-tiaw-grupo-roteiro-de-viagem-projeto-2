@@ -327,8 +327,11 @@
     fetch('http://localhost:3000/usuarios')
         .then(res => res.json())
         .then(usuarios => {
-            const usuario = usuarios.find(u => u.email === usuarioInfo?.email);
-            const login = usuario ? usuario.login : 'Desconhecido';
+            const dadosUsuario = sessionStorage.getItem("usuarioCorrente");
+            const usuario = JSON.parse(dadosUsuario);
+            const nome_login = (usuario.login).toUpperCase();
+            // const usuario = usuarios.find(u => u.email === usuarioInfo?.email);
+            // const login = usuario ? usuario.login : 'Desconhecido';
 
             // 1. Busca o roteiro atual
             return fetch(`http://localhost:3000/roteirosProntos/${idRoteiro}`)
@@ -342,7 +345,7 @@
                     // 3. Cria novo comentário
                     const novoComentario = {
                         id: novoId,
-                        usuario: login,
+                        usuario: nome_login,
                         data_publicacao: new Date().toLocaleDateString('pt-BR'),
                         conteudo: comentario,
                         quant_estrelas: numeroEstrelas

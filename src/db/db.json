@@ -152,13 +152,6 @@
           "data_publicacao": "07/01/2025",
           "conteudo": "Adorei, com certeza voltaria!",
           "quant_estrelas": 5
-        },
-        {
-          "id": 1553,
-          "usuario": "karen",
-          "data_publicacao": "18/06/2025",
-          "conteudo": "oi",
-          "quant_estrelas": 2
         }
       ],
       "estacao": "Primavera",
@@ -333,20 +326,6 @@
           "data_publicacao": "03/03/2025",
           "conteudo": "Simples, mas atendeu bem às expectativas.",
           "quant_estrelas": 4
-        },
-        {
-          "id": 1653,
-          "usuario": "Desconhecido",
-          "data_publicacao": "17/06/2025",
-          "conteudo": "ds",
-          "quant_estrelas": 3
-        },
-        {
-          "id": 1654,
-          "usuario": "karen",
-          "data_publicacao": "18/06/2025",
-          "conteudo": "jkn",
-          "quant_estrelas": 1
         }
       ],
       "estacao": "Verão",
@@ -434,41 +413,6 @@
           "data_publicacao": "12/04/2025",
           "conteudo": "Valeu a pena. Boa relação custo-benefício.",
           "quant_estrelas": 4
-        },
-        {
-          "id": 1703,
-          "usuario": "karen",
-          "data_publicacao": "16/06/2025",
-          "conteudo": "muito top",
-          "quant_estrelas": 5
-        },
-        {
-          "id": 1704,
-          "usuario": "karen",
-          "data_publicacao": "18/06/2025",
-          "conteudo": "oioi",
-          "quant_estrelas": 1
-        },
-        {
-          "id": 1705,
-          "usuario": "karen",
-          "data_publicacao": "18/06/2025",
-          "conteudo": "oioii",
-          "quant_estrelas": 2
-        },
-        {
-          "id": 1706,
-          "usuario": "karen",
-          "data_publicacao": "18/06/2025",
-          "conteudo": "oi",
-          "quant_estrelas": 2
-        },
-        {
-          "id": 1707,
-          "usuario": "karen",
-          "data_publicacao": "18/06/2025",
-          "conteudo": "oi",
-          "quant_estrelas": 2
         }
       ],
       "estacao": "Outono",
@@ -583,11 +527,12 @@
     {
       "id": "1",
       "nomecompleto": "Marta Scalzo",
-      "login": "MartaS",
+      "login": "Marta",
       "email": "marta.scalzo@gmail.com",
       "favoritos": [],
       "senha": "senha1234567",
-      "admin": false
+      "admin": false,
+      "recomendacoes": []
     },
     {
       "id": "2",
@@ -605,7 +550,8 @@
       "email": "larissa.menezes@gmail.com",
       "favoritos": [],
       "senha": "lirili2014",
-      "admin": false
+      "admin": false,
+      "recomendacoes": []
     },
     {
       "id": "4",
@@ -614,7 +560,8 @@
       "email": "carlos.oliveira@gmail.com",
       "favoritos": [],
       "senha": "hebreus127",
-      "admin": false
+      "admin": false,
+      "recomendacoes": []
     },
     {
       "id": "5",
@@ -624,7 +571,8 @@
       "foto_perfil": "img/foto5.jpg",
       "favoritos": [],
       "senha": "123",
-      "admin": false
+      "admin": false,
+      "recomendacoes": []
     },
     {
       "id": "caf4f276-2e53-461d-aeb0-9044f7205363",
@@ -636,7 +584,8 @@
       "favoritos": [
         "1",
         "3"
-      ]
+      ],
+      "recomendacoes": []
     },
     {
       "id": "712b14c9-271a-4fc6-a618-b2ed97cbfbf9",
@@ -644,7 +593,8 @@
       "senha": "123",
       "nomecompleto": "bruno",
       "email": "b",
-      "admin": false
+      "admin": false,
+      "recomendacoes": []
     },
     {
       "id": "c8a99979-ad75-44f0-92b5-a1dc9b6c146f",
@@ -710,7 +660,7 @@
   "recomendacoes": [
     {
       "id": "15000",
-      "usuario": "MARTA S.",
+      "usuario": "Marta",
       "data_solicitacao": "22/05/2025",
       "hosp_rest_pass": "HOSPEDAGEM",
       "nome_local": "RECANTO SOLAR",
@@ -724,7 +674,7 @@
     },
     {
       "id": "15001",
-      "usuario": "MARTA S.",
+      "usuario": "Marta",
       "data_solicitacao": "30/05/2025",
       "hosp_rest_pass": "RESTAURANTE",
       "nome_local": "PÔR DO SOL",
@@ -735,6 +685,20 @@
       "num": 121,
       "complemento": "",
       "preco_pessoa": 150
+    },
+    {
+      "id": 15004,
+      "usuario": "lucas",
+      "data_solicitacao": "18/06/2025",
+      "hosp_rest_pass": "HOSPEDAGEM",
+      "nome_local": "W",
+      "nome_estado": "W",
+      "nome_cidade": "W",
+      "nome_rua": "W",
+      "nome_bairro": "W",
+      "num": 4,
+      "complemento": "",
+      "preco_pessoa": 4
     }
   ]
 }

@@ -13,7 +13,7 @@
     <header class="d-flex cab position-relative cab container-fluid">
         <img src="./assets/img/logo1.png" id="logo">
         <p class="position-absolute" id="iconworld">BRL <i class="fa-solid fa-earth-americas"></i></p>
-        <p class="position-absolute py-1 px-3" id="nomelogin"><strong>MARTA</strong></p>
+        <p class="position-absolute py-1 px-3" id="nomelogin"><strong>LOGIN</strong></p>
         <i class="fa-regular fa-user fa-2x position-absolute" id="iconuser"></i>
     </header>
 
@@ -154,9 +154,13 @@
                     return value ? value.toString().toUpperCase() : '';
                 };
 
+                const dadosUsuario = sessionStorage.getItem("usuarioCorrente");
+                const usuario = JSON.parse(dadosUsuario);
+                const nome_login = usuario.login;
+
                 const novaRecomendacao = {
                     id: novoId,
-                    usuario: "MARTA S.",
+                    usuario: nome_login,
                     data_solicitacao: new Date().toLocaleDateString("pt-BR"),
                     hosp_rest_pass: tipoEscolhido.toUpperCase(),
                     nome_local: toUpperCaseSafe(document.getElementById('inputNome').value),
@@ -191,6 +195,8 @@
                 });
         });
     </script>
+
+    <script src="assets/scripts/usuario.js"></script>
 
 </body>
 </html>
