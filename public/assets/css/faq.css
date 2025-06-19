@@ -56,7 +56,7 @@ body {
   border: none;
 }
 #faqAccordion {
-  min-height: 300px; /* ou o valor que preferir */
+  min-height: 300px
 }
 .paginaçao{
     background-color: #ea8613;
@@ -67,11 +67,17 @@ body {
     background-color: #ffb25a;
 }
 .enviar{
-    background-color: #ea8613;
+    background-color: #0C6D9F;
     color: white;
 }
 .enviar:hover{
-    background-color: #ffb25a;
+    background-color: #ea8613;
+}
+.custom-buttom {
+    background-color: #ea8613;
+}
+.custom-buttom:hover{
+    background-color: #0C6D9F;
 }
 /*footer*/
 footer{
@@ -87,3 +93,25 @@ footer{
     gap: 9px;
     align-items: center;
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #ff8041 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ff8041;
+    border-radius: 20px;
+    border: 21px solid #ffffff;
+  }

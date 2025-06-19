@@ -37,28 +37,51 @@ Desenvolvimento Back-end: Bruno, Gabriel, Iago, Lucca
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Karen        | Introdução | 01/03/2025     | 07/03/2025 | ✔️    |05/03/2025      |
-| Iago        | Divisão de tarefas  | 03/03/2025     | 10/03/2025 | ✔️    |   06/04/2025         |
-| Lucas        | Histórias de usuário  | 01/03/2025     | 07/01/2025 | ✔️     |   08/04/2025         |
-| Daniella        | Personas 1  |    01/03/2025        | 12/03/2025 | ✔️    |   10/04/2025    |
+| Karen        | Visualização e Criação das Avaliações | 01/03/2025     | 07/03/2025 | ✔️    |05/03/2025      |
+| Iago        | Criação de Roteiro  | 03/03/2025     | 10/03/2025 | ✔️    |   06/04/2025         |
+| Lucas        | Visualização de Roteiro Pronto  | 01/03/2025     | 07/01/2025 | ✔️     |   08/04/2025         |
+| Daniella        | Perfil do Usuario |    01/03/2025        | 12/03/2025 | ✔️    |   10/04/2025    |
+| Vinicius       | Login e Cadastro  |    01/03/2025        | 12/03/2025 | ✔️    |   10/04/2025    |
+| Lucca       | Download de Roteiro  |    01/03/2025        | 12/03/2025 | ✔️    |   10/04/2025    |
+| Bruno        | Filtros de Roteiro  |    01/03/2025        | 12/03/2025 | ✔️    |   10/04/2025    |
+| Karen/Dani        |  Planejamento  |    01/03/2025        | 12/03/2025 | ✔️    |   10/04/2025    |
+
 
 ## Sprint 2
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Karen        | Home-Page        | 28/03/2025     | 02/03/2025 | ✔️    | 02/04/2025      |
-| Daniella        | CSS Unificado    | 28/03/2025     | 10/03/2025 | ❌    | 02/04/2025        |
-| Iago        | Página de login  | 28/03/2025     | 02/03/2025 | ✔️     | 02/04/2025          |
-| Gabriel        | Script de login  |  28/03/2025    | 02/03/2025 | ❌    | 02/04/2025      |
+| Karen        | Recomendações       | 28/05/2025     | 02/06/2025 | ✔️    | 02/06/2025      |
+| Iago       | Modo Claro/Escuro    | 28/05/2025     | 10/06/2025 | 📝    | 02/06/2025        |
+| Lucas       | Roteiros Favoritados  | 28/05/2025     | 02/06/2025 | ✔️     | 02/06/2025          |
+| Daniella     | FAQ  |  28/03/2025    | 02/05/2025 | ✔️    | 02/06/2025      |
+| Vinicius     | Enviar Dúvida  |  28/05/2025    | 02/06/2025 | ✔️    | 02/06/2025      |
+| Lucca     | Painel de Administração  |  28/05/2025    | 02/06/2025 | ✔️    | 02/06/2025      |
+| Bruno       | Nivel do Usuario/Menu  |  28/05/2025    | 02/06/2025 | ✔️    | 02/06/2025      |
+| Karen        | Planejamento       | 28/05/2025     | 02/06/2025 | ✔️    | 02/06/2025      |
 
 ## Sprint 3
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Bruno        | Testes de Usabilidade | 01/04/2025     | 07/02/2025 | ❌    |           |
-| Lucas        | Ajuste na Documentação    | 03/04/2025     | 10/02/2025 | ❌    |                 |
-| Lucca        | Responsividade  | 01/01/2025     | 07/01/2025 | ❌     |                 |
-| Gabriel        | Segurança de Dados  |    01/01/2025        | 12/02/2025 | ❌    |       |
+| Karen        | Protótipo Interativo | 01/06/2025     | 25/06/2025 | ✔️    |    22/06/2025       |
+| Karen        | Metodologia | 01/06/2025     | 25/06/2025 | ✔️    |    22/06/2025       |
+| Karen        | Revisão | 01/06/2025     | 25/06/2025 | ✔️    |     22/06/2025      |
+| Iago       | Ajuste na Documentação    | 03/06/2025     | 25/06/2025 | ✔️    |     22/06/2025            |
+| Iago       | Pré Formatação da Documentação    | 03/06/2025     | 25/06/2025 | ✔️    |    22/06/2025             |
+| Lucas       | Plano de Testes de Software  | 01/06/2025     | 25/06/2025 | ✔️     |        22/06/2025         |
+| Lucas       | Registros de Testes de Software  | 01/06/2025     | 25/06/2025 | ✔️     |      22/06/2025           |
+| Daniella       | Slide da Apresentação  |    01/06/2025        | 25/06/2025 | ✔️    |  22/06/2025     |
+| Daniella       | Documentação no README  |    01/06/2025        | 25/06/2025 | ✔️    |    22/06/2025   |
+| Vinicius      | Segurança de Dados  |    01/06/2025        | 25/06/2025 | ✔️    |    22/06/2025   |
+| Lucca      | Segurança de Dados  |    01/06/2025        | 25/06/2025 | ✔️    |    22/06/2025   |
+| Lucca      | Formatação da Documentação  |    01/06/2025        | 25/06/2025 | ✔️    |  22/06/2025     |
+| Bruno      | Envio do Projeto ZIP  |    01/06/2025        | 25/06/2025 | ✔️    | 22/06/2025      |
+| Bruno      | Hospedagem do Site  |    01/06/2025        | 25/06/2025 | ✔️    |   22/06/2025    |
+| Bruno      | Junção das Sprints  |    01/06/2025        | 25/06/2025 | ✔️    |    22/06/2025   |
+| Daniella       | Segurança de Dados  |    01/06/2025        | 25/06/2025 | ✔️    |   22/06/2025    |
+| Daniella       | Segurança de Dados  |    01/06/2025        | 25/06/2025 | ✔️    |   22/06/2025    |
+|  Karen/Iago     | Apresentação em sala  |    01/06/2025        | 25/06/2025 | ✔️    |   22/06/2025    |
 
 Legenda:
 - ✔️: terminado

@@ -1,10 +1,10 @@
-const API_URL = "faqs.json";
+const API_URL = "http://localhost:3000/faqs";
 let faqs = [];
 let paginaAtual = 1;
-const porPagina = 6;
+const porPagina = 5;
 
 async function carregarFAQs() {
-  const res = await fetch('http://localhost:3000/faqs');
+  const res = await fetch(API_URL);
   const data = await res.json();
   faqs = data.faqs || data;
   mostrarFAQs();
