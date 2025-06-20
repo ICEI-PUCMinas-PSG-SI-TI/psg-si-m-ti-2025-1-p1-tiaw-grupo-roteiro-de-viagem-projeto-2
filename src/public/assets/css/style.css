@@ -41,6 +41,9 @@ body {
 .side-menu .menu-content {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-content: stretch;
+    height: 60%;
 }
 
 .side-menu ul {
@@ -68,11 +71,10 @@ body {
 }
 
 .footer-menu {
-    margin-top: 20px;
     font-size: 14px;
     color: #f57c00;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .modo-escuro {
@@ -163,7 +165,6 @@ input[type="text"] {
     height: 60px;
     width: 100px;
     margin-left: 20px;
-    background-color: white;
 
 }
 
@@ -211,12 +212,16 @@ input[type="text"] {
     height: 80%;
 }
 
-
-
+.divfilter {
+    height: 80%;
+}
+#detalheslink{
+    width: 12%;
+}
 .plane {
     fill: white;
     fill-rule: nonzero;
-    width: 50px ;
+    width: 50px;
     height: 50px;
     transform: rotate(-135deg)
 }
@@ -601,9 +606,11 @@ footer {
 
 
 }
-.plane:HOVER{
+
+.plane:HOVER {
     scale: 1.1;
 }
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -619,28 +626,30 @@ body.dark {
     background: #000;
     color: #f2f2f2;
 }
+
 body.dark #sectionfilter {
     border: 1px solid white;
     border-radius: 10px;
 }
-body.dark .titulorecomendados{
+
+body.dark .titulorecomendados {
     color: white
 }
-body.dark .descricaorecomendados{
+
+body.dark .descricaorecomendados {
     color: white
 }
+
 body.dark .divfilter.filterborderright {
     border-right: 1px solid white;
 }
 
-body.light .plane{
+body.light .plane {
     fill: black;
 }
 
 .dark-mode-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+
     display: flex;
     align-items: center;
     gap: 10px;
@@ -689,4 +698,24 @@ input:checked+.slider {
 
 input:checked+.slider:before {
     transform: translateX(22px);
+}
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+#recomendacoes {
+  margin-top: 30px;
 }

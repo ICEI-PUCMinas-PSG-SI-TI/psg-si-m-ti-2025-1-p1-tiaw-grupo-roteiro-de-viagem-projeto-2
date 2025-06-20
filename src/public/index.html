@@ -26,15 +26,13 @@
         </button>
         <nav id="sideMenu" class="side-menu">
             <div class="menu-content">
-
-                <div class="dark-mode-toggle">
+                <div class="dark-mode-toggle menu-item">
                     <label class="switch">
                         <input type="checkbox" id="darkModeToggle">
                         <span class="slider round"></span>
                     </label>
                     <span class="modo-escuro">Modo escuro</span>
                 </div>
-
                 <script>
                     document.addEventListener("DOMContentLoaded", () => {
                         const toggleCheckbox = document.getElementById("darkModeToggle");
@@ -73,7 +71,7 @@
 
 
 
-                <ul class="menu-list">
+                <ul class="menu-list menu-item">
                     <a href="PerfilUsuario.html">
                         <li><i class="fa-regular fa-user"></i> Minha conta</li>
                     </a>
@@ -88,11 +86,11 @@
                     <li><a href="minhasduvidas.html"><i class="fa-regular fa-comment-dots"></i> Minhas dúvidas</li></a>
                 </ul>
 
-                <button class="recom-btn">
+                <button class="recom-btn menu-item">
                     <i class="fa-solid fa-plus"></i> Cadastrar recomendações
                 </button>
 
-                <div class="footer-menu">
+                <div class="footer-menu menu-item">
                     <button class="sair-btn" onclick="toggleMenu()">
                         Fechar
                     </button>
@@ -100,7 +98,7 @@
             </div>
         </nav>
 
-        <img src="assets/img/logoST.PNG" id="logo">
+        <img src="assets/img/logo2.png" id="logo">
 
         <p class="position-absolute" id="iconworld">BRL <i class="fa-solid fa-earth-americas"></i></p>
         <p class="position-absolute py-1 px-3" id="nomelogin">LOGIN</p>
@@ -132,7 +130,6 @@
                     style="position: absolute;background: white;z-index: 1000; list-style: none; padding: 0; margin: 0;">
                 </ul>
             </div>
-
         </div>
         <script>
             let destinos = [];
@@ -296,11 +293,13 @@
         <div id="compartimento1" class=" container text-center mt-5" style="position: relative;">
             <div>
                 <h4 id="titlesection" style="margin-bottom: 40px;">CRIE SEU PRÓPRIO ROTEIRO</h4>
-                <a><button id="buttoncomecar" class="mt-3" style="margin-bottom: 50px;">COMEÇAR</button></a>
-                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"  class="plane"
+                <a href="crud.html">
+                    <button id="buttoncomecar" class="mt-3" style="margin-bottom: 50px;">COMEÇAR</button>
+                </a>
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" class="plane"
                     style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"
                     viewBox="0 0 6.827 6.827">
-                    
+
                     <g id="Layer_x0020_1">
                         <g id="_678622144">
                             <path id="_678622408" class="fil0"

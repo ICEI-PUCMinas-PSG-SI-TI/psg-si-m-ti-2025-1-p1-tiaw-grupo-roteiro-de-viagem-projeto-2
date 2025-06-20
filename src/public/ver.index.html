@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Travel - Roteiro Criado</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #ff7f00;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      color: white;
+    }
+
+    header img.logo {
+      height: 40px;
+    }
+
+    header .perfil {
+      display: flex;
+      align-items: center;
+    }
+
+    header .perfil span {
+      margin-right: 10px;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .voltar,
+    .acao {
+      display: inline-block;
+      margin: 10px 10px 20px 0;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+    }
+
+    .voltar:hover,
+    .acao:hover {
+      background-color: #0056b3;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .info-grid div {
+      font-size: 16px;
+    }
+
+    /* Estilo para cards de recomendações */
+    #recomendacoes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    }
+
+    .card h3 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      color: #ff7f00;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://via.placeholder.com/100x40?text=Smart+Travel" alt="Logo" class="logo" />
+    <div class="perfil">
+      <span>MARTA</span>
+      <img src="https://via.placeholder.com/40" alt="Usuário" style="border-radius: 50%" />
+    </div>
+  </header>
+
+  <main>
+    <a href="crud.html" class="voltar">VOLTAR</a>
+    <h2>ROTEIRO CRIADO</h2>
+
+    <div class="info-grid" id="infoRoteiro">
+      <!-- Dados do roteiro aparecem aqui -->
+    </div>
+
+    <div>
+      <button class="acao" id="btnEditar">EDITAR</button>
+      <button class="acao" id="btnExcluir">EXCLUIR</button>
+    </div>
+
+    <h2>RECOMENDAÇÕES PARA ESTA CIDADE</h2>
+    <div id="recomendacoes">
+      <!-- Cards de recomendações -->
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+      if (!id) {
+        alert("ID do roteiro não fornecido");
+        window.location.href = "crud.html";
+        return;
+      }
+
+      const rotaRoteiros = 'http://localhost:3000/roteiros';
+      const rotaRecomendacoes = 'http://localhost:3000/recomendacoes';
+
+      try {
+        // Buscar roteiro pelo id
+        const resRoteiro = await fetch(`${rotaRoteiros}/${id}`);
+        if (!resRoteiro.ok) throw new Error("Roteiro não encontrado");
+        const roteiro = await resRoteiro.json();
+
+        // Função para formatar arrays ou strings para exibição
+        function formatarValor(val) {
+          if (Array.isArray(val)) return val.join(", ");
+          if (typeof val === "string") return val;
+          return JSON.stringify(val);
+        }
+
+        // Mostrar dados do roteiro
+        const infoDiv = document.getElementById("infoRoteiro");
+        infoDiv.innerHTML = `
+          <div><strong>Ida:</strong> ${roteiro.ida}</div>
+          <div><strong>Volta:</strong> ${roteiro.volta}</div>
+          <div><strong>Pessoas:</strong> ${roteiro.pessoas}</div>
+          <div><strong>Orçamento:</strong> R$ ${roteiro.orcamento}</div>
+          <div><strong>Estado:</strong> ${roteiro.estado}</div>
+          <div><strong>Cidade:</strong> ${roteiro.cidade}</div>
+          <div><strong>Pet:</strong> ${formatarValor(roteiro.pet)}</div>
+          <div><strong>Piscina:</strong> ${formatarValor(roteiro.piscina)}</div>
+          <div><strong>Quartos:</strong> ${formatarValor(roteiro.quartos)}</div>
+          <div><strong>Garagem:</strong> ${formatarValor(roteiro.garagem)}</div>
+        `;
+
+        // Buscar recomendações para a cidade do roteiro
+        const resRec = await fetch(`${rotaRecomendacoes}?cidade=${encodeURIComponent(roteiro.cidade)}`);
+        if (!resRec.ok) throw new Error("Erro ao buscar recomendações");
+        const recomendacoes = await resRec.json();
+
+        // Mostrar recomendações
+        const recDiv = document.getElementById("recomendacoes");
+        if (recomendacoes.length === 0) {
+          recDiv.innerHTML = "<p>Não há recomendações para esta cidade.</p>";
+        } else {
+          recDiv.innerHTML = recomendacoes.map(r => `
+            <div class="card">
+              <h3>${r.nome}</h3>
+              <p>Tipo: ${r.tipo.charAt(0).toUpperCase() + r.tipo.slice(1)}</p>
+            </div>
+          `).join('');
+        }
+
+        // Botões editar e excluir
+        document.getElementById("btnEditar").onclick = () => {
+          localStorage.setItem('editarRoteiro', JSON.stringify(roteiro));
+          window.location.href = "crud.html";
+        };
+
+        document.getElementById("btnExcluir").onclick = async () => {
+          if (confirm("Tem certeza que deseja excluir este roteiro?")) {
+            const del = await fetch(`${rotaRoteiros}/${id}`, { method: "DELETE" });
+            if (del.ok) {
+              alert("Roteiro excluído!");
+              window.location.href = "crud.html";
+            } else {
+              alert("Erro ao excluir.");
+            }
+          }
+        };
+
+      } catch (err) {
+        alert(err.message);
+        window.location.href = "crud.html";
+      }
+    });
+  </script>
+</body>
+</html>

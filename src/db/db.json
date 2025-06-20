@@ -512,9 +512,7 @@
       "nomecompleto": "iago Dias Silva",
       "email": "Iagosilvadiass@gmail.com",
       "admin": false
-    }
-  ],
-  "faqs": [
+    },
     {
       "pergunta": "Como funciona o processo de criação do roteiro?",
       "resposta": "Após preencher o formulario, analisamos suas preferências e necessidades. Em seguida, montamos um itinerário completo com sugestões de passeios, hospedagem, transporte e restaurantes locais.",
@@ -570,6 +568,571 @@
     {
       "id": "1",
       "theme": "dark"
+    }
+  ],
+  "roteiros": [
+    {
+      "id": 1,
+      "ida": "2025-07-01",
+      "volta": "2025-07-05",
+      "pessoas": "2",
+      "orcamento": "1500",
+      "estado": "SP",
+      "cidade": "São Paulo",
+      "pet": [
+        "sim"
+      ],
+      "piscina": [
+        "sim"
+      ],
+      "quartos": [
+        "2-3"
+      ],
+      "garagem": [
+        "sim"
+      ]
+    },
+    {
+      "id": 2,
+      "ida": "2025-07-10",
+      "volta": "2025-07-15",
+      "pessoas": "4",
+      "orcamento": "3000",
+      "estado": "RJ",
+      "cidade": "Rio de Janeiro",
+      "pet": [
+        "nao"
+      ],
+      "piscina": [
+        "sim"
+      ],
+      "quartos": [
+        "mais"
+      ],
+      "garagem": [
+        "sim"
+      ]
+    },
+    {
+      "id": 3,
+      "ida": "2025-08-01",
+      "volta": "2025-08-07",
+      "pessoas": "1",
+      "orcamento": "1000",
+      "estado": "MG",
+      "cidade": "Belo Horizonte",
+      "pet": [
+        "sim"
+      ],
+      "piscina": [
+        "nao"
+      ],
+      "quartos": [
+        "1"
+      ],
+      "garagem": [
+        "nao"
+      ]
+    },
+    {
+      "id": 4,
+      "ida": "2025-08-10",
+      "volta": "2025-08-12",
+      "pessoas": "3",
+      "orcamento": "1200",
+      "estado": "SP",
+      "cidade": "Campinas",
+      "pet": [
+        "nao"
+      ],
+      "piscina": [
+        "nao"
+      ],
+      "quartos": [
+        "2-3"
+      ],
+      "garagem": [
+        "sim"
+      ]
+    },
+    {
+      "id": 5,
+      "ida": "2025-09-01",
+      "volta": "2025-09-05",
+      "pessoas": "2",
+      "orcamento": "2000",
+      "estado": "RJ",
+      "cidade": "Niterói",
+      "pet": [
+        "sim"
+      ],
+      "piscina": [
+        "sim"
+      ],
+      "quartos": [
+        "1"
+      ],
+      "garagem": [
+        "sim"
+      ]
+    },
+    {
+      "id": 6,
+      "ida": "2025-09-10",
+      "volta": "2025-09-15",
+      "pessoas": "5",
+      "orcamento": "4500",
+      "estado": "MG",
+      "cidade": "Ouro Preto",
+      "pet": [
+        "nao"
+      ],
+      "piscina": [
+        "nao"
+      ],
+      "quartos": [
+        "mais"
+      ],
+      "garagem": [
+        "nao"
+      ]
+    },
+    {
+      "id": 7,
+      "ida": "2025-10-01",
+      "volta": "2025-10-04",
+      "pessoas": "2",
+      "orcamento": "1300",
+      "estado": "SP",
+      "cidade": "Santos",
+      "pet": [
+        "sim"
+      ],
+      "piscina": [
+        "sim"
+      ],
+      "quartos": [
+        "2-3"
+      ],
+      "garagem": [
+        "sim"
+      ]
+    },
+    {
+      "id": 8,
+      "ida": "2025-10-10",
+      "volta": "2025-10-14",
+      "pessoas": "3",
+      "orcamento": "2500",
+      "estado": "RJ",
+      "cidade": "Petrópolis",
+      "pet": [
+        "nao"
+      ],
+      "piscina": [
+        "sim"
+      ],
+      "quartos": [
+        "2-3"
+      ],
+      "garagem": [
+        "nao"
+      ]
+    },
+    {
+      "id": 9,
+      "ida": "2025-11-01",
+      "volta": "2025-11-06",
+      "pessoas": "4",
+      "orcamento": "3200",
+      "estado": "MG",
+      "cidade": "Tiradentes",
+      "pet": [
+        "sim"
+      ],
+      "piscina": [
+        "nao"
+      ],
+      "quartos": [
+        "mais"
+      ],
+      "garagem": [
+        "sim"
+      ]
+    },
+    {
+      "id": 10,
+      "ida": "2025-11-10",
+      "volta": "2025-11-15",
+      "pessoas": "2",
+      "orcamento": "1800",
+      "estado": "SP",
+      "cidade": "Ribeirão Preto",
+      "pet": [
+        "sim"
+      ],
+      "piscina": [
+        "sim"
+      ],
+      "quartos": [
+        "1"
+      ],
+      "garagem": [
+        "nao"
+      ]
+    },
+    {
+      "id": 11,
+      "ida": "2025-07-10",
+      "volta": "2025-07-12",
+      "pessoas": "1",
+      "orcamento": "900",
+      "estado": "SP",
+      "cidade": "São Paulo",
+      "pet": [
+        "nao"
+      ],
+      "piscina": [
+        "nao"
+      ],
+      "quartos": [
+        "1"
+      ],
+      "garagem": [
+        "sim"
+      ]
+    },
+    {
+      "id": 12,
+      "ida": "2025-08-05",
+      "volta": "2025-08-09",
+      "pessoas": "3",
+      "orcamento": "2100",
+      "estado": "RJ",
+      "cidade": "Angra dos Reis",
+      "pet": [
+        "sim"
+      ],
+      "piscina": [
+        "sim"
+      ],
+      "quartos": [
+        "2-3"
+      ],
+      "garagem": [
+        "nao"
+      ]
+    },
+    {
+      "id": 13,
+      "ida": "2025-09-15",
+      "volta": "2025-09-20",
+      "pessoas": "2",
+      "orcamento": "1600",
+      "estado": "MG",
+      "cidade": "Sabará",
+      "pet": [
+        "nao"
+      ],
+      "piscina": [
+        "nao"
+      ],
+      "quartos": [
+        "1"
+      ],
+      "garagem": [
+        "sim"
+      ]
+    },
+    {
+      "id": 14,
+      "ida": "2025-07-20",
+      "volta": "2025-07-25",
+      "pessoas": "5",
+      "orcamento": "5000",
+      "estado": "SP",
+      "cidade": "Ubatuba",
+      "pet": [
+        "sim"
+      ],
+      "piscina": [
+        "sim"
+      ],
+      "quartos": [
+        "mais"
+      ],
+      "garagem": [
+        "sim"
+      ]
+    },
+    {
+      "id": 15,
+      "ida": "2025-08-01",
+      "volta": "2025-08-03",
+      "pessoas": "2",
+      "orcamento": "1100",
+      "estado": "RJ",
+      "cidade": "Búzios",
+      "pet": [
+        "nao"
+      ],
+      "piscina": [
+        "sim"
+      ],
+      "quartos": [
+        "2-3"
+      ],
+      "garagem": [
+        "nao"
+      ]
+    },
+    {
+      "id": 16,
+      "ida": "2025-10-05",
+      "volta": "2025-10-10",
+      "pessoas": "4",
+      "orcamento": "3500",
+      "estado": "MG",
+      "cidade": "Poços de Caldas",
+      "pet": [
+        "sim"
+      ],
+      "piscina": [
+        "sim"
+      ],
+      "quartos": [
+        "mais"
+      ],
+      "garagem": [
+        "sim"
+      ]
+    },
+    {
+      "id": 17,
+      "ida": "2025-11-20",
+      "volta": "2025-11-25",
+      "pessoas": "2",
+      "orcamento": "1700",
+      "estado": "SP",
+      "cidade": "Ilhabela",
+      "pet": [
+        "sim"
+      ],
+      "piscina": [
+        "sim"
+      ],
+      "quartos": [
+        "2-3"
+      ],
+      "garagem": [
+        "sim"
+      ]
+    },
+    {
+      "id": 18,
+      "ida": "2025-09-25",
+      "volta": "2025-09-28",
+      "pessoas": "2",
+      "orcamento": "1400",
+      "estado": "RJ",
+      "cidade": "Paraty",
+      "pet": [
+        "nao"
+      ],
+      "piscina": [
+        "sim"
+      ],
+      "quartos": [
+        "1"
+      ],
+      "garagem": [
+        "nao"
+      ]
+    },
+    {
+      "id": 19,
+      "ida": "2025-10-15",
+      "volta": "2025-10-20",
+      "pessoas": "3",
+      "orcamento": "2600",
+      "estado": "MG",
+      "cidade": "Diamantina",
+      "pet": [
+        "sim"
+      ],
+      "piscina": [
+        "nao"
+      ],
+      "quartos": [
+        "2-3"
+      ],
+      "garagem": [
+        "sim"
+      ]
+    },
+    {
+      "id": 20,
+      "ida": "2025-12-01",
+      "volta": "2025-12-05",
+      "pessoas": "2",
+      "orcamento": "1900",
+      "estado": "SP",
+      "cidade": "Campos do Jordão",
+      "pet": [
+        "sim"
+      ],
+      "piscina": [
+        "sim"
+      ],
+      "quartos": [
+        "2-3"
+      ],
+      "garagem": [
+        "sim"
+      ]
+    },
+    {
+      "id": "dbba",
+      "ida": "2025-06-06",
+      "volta": "2025-07-09",
+      "pessoas": "1",
+      "orcamento": "3299",
+      "estado": "MG",
+      "cidade": "Belo Horizonte",
+      "pet": [
+        "sim"
+      ],
+      "piscina": [
+        "sim"
+      ],
+      "quartos": [
+        "1"
+      ],
+      "garagem": [
+        "sim"
+      ]
+    }
+  ],
+  "recomendacoes": [
+    {
+      "id": 1,
+      "cidade": "São Paulo",
+      "tipo": "restaurante",
+      "nome": "Figueira Rubaiyat"
+    },
+    {
+      "id": 2,
+      "cidade": "Rio de Janeiro",
+      "tipo": "passeio",
+      "nome": "Cristo Redentor"
+    },
+    {
+      "id": 3,
+      "cidade": "Belo Horizonte",
+      "tipo": "restaurante",
+      "nome": "Glouton"
+    },
+    {
+      "id": 4,
+      "cidade": "Campinas",
+      "tipo": "passeio",
+      "nome": "Parque Portugal"
+    },
+    {
+      "id": 5,
+      "cidade": "Niterói",
+      "tipo": "hospedagem",
+      "nome": "H Niterói Hotel"
+    },
+    {
+      "id": 6,
+      "cidade": "Ouro Preto",
+      "tipo": "passeio",
+      "nome": "Igreja São Francisco de Assis"
+    },
+    {
+      "id": 7,
+      "cidade": "Santos",
+      "tipo": "passeio",
+      "nome": "Aquário de Santos"
+    },
+    {
+      "id": 8,
+      "cidade": "Petrópolis",
+      "tipo": "hospedagem",
+      "nome": "Hotel Solar do Império"
+    },
+    {
+      "id": 9,
+      "cidade": "Tiradentes",
+      "tipo": "restaurante",
+      "nome": "Tragaluz"
+    },
+    {
+      "id": 10,
+      "cidade": "Ribeirão Preto",
+      "tipo": "passeio",
+      "nome": "Theatro Pedro II"
+    },
+    {
+      "id": 11,
+      "cidade": "São Paulo",
+      "tipo": "hospedagem",
+      "nome": "Hotel Unique"
+    },
+    {
+      "id": 12,
+      "cidade": "Angra dos Reis",
+      "tipo": "passeio",
+      "nome": "Ilha Grande"
+    },
+    {
+      "id": 13,
+      "cidade": "Sabará",
+      "tipo": "restaurante",
+      "nome": "Casa Velha"
+    },
+    {
+      "id": 14,
+      "cidade": "Ubatuba",
+      "tipo": "passeio",
+      "nome": "Praia do Félix"
+    },
+    {
+      "id": 15,
+      "cidade": "Búzios",
+      "tipo": "restaurante",
+      "nome": "Rocka Beach Lounge"
+    },
+    {
+      "id": 16,
+      "cidade": "Poços de Caldas",
+      "tipo": "passeio",
+      "nome": "Cristo Redentor de Poços"
+    },
+    {
+      "id": 17,
+      "cidade": "Ilhabela",
+      "tipo": "passeio",
+      "nome": "Cachoeira da Toca"
+    },
+    {
+      "id": 18,
+      "cidade": "Paraty",
+      "tipo": "hospedagem",
+      "nome": "Pousada do Sandi"
+    },
+    {
+      "id": 19,
+      "cidade": "Diamantina",
+      "tipo": "passeio",
+      "nome": "Centro Histórico"
+    },
+    {
+      "id": 20,
+      "cidade": "Campos do Jordão",
+      "tipo": "restaurante",
+      "nome": "Baden Baden"
     }
   ]
 }
