@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTravel</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+    <script src="assets/scripts/script.js"></script>
+
+    <link rel="shortcut icon" type="imagex/png" href="assets/img/aviaoeseta.png">
+</head>
+
+<body>
+
+    <header class="d-flex cab position-relative container-fluid">
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars" style="color: white;"></i>
+        </button>
+        <nav id="sideMenu" class="side-menu">
+            <div class="menu-content">
+
+                <div class="dark-mode-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="modo-escuro">Modo escuro</span>
+                </div>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const toggleCheckbox = document.getElementById("darkModeToggle");
+                        const userId = 1;
+
+                        function applyTheme(theme) {
+                            document.body.classList.remove("light", "dark");
+                            document.body.classList.add(theme);
+                            toggleCheckbox.checked = theme === "dark";
+                        }
+
+                        fetch(`http://localhost:3000/userPreferences/${userId}`)
+                            .then(res => res.json())
+                            .then(data => {
+                                applyTheme(data.theme || "light");
+                            })
+                            .catch(err => {
+                                console.error("Erro ao carregar tema:", err);
+                                applyTheme("light");
+                            });
+
+                        toggleCheckbox.addEventListener("change", () => {
+                            const newTheme = toggleCheckbox.checked ? "dark" : "light";
+                            applyTheme(newTheme);
+
+                            fetch(`http://localhost:3000/userPreferences/${userId}`, {
+                                method: "PATCH",
+                                headers: {
+                                    "Content-Type": "application/json"
+                                },
+                                body: JSON.stringify({ theme: newTheme })
+                            });
+                        });
+                    });
+                </script>
+
+
+
+                <ul class="menu-list">
+                    <a href="PerfilUsuario.html">
+                        <li><i class="fa-regular fa-user"></i> Minha conta</li>
+                    </a>
+                    <a href="favoritos.html">
+                        <li><i class="fa-regular fa-heart"></i> Favoritos</li>
+                    </a>
+                    <a href="meusroteiros.html">
+                        <li><i class="fa-regular fa-map"></i> Meus roteiros</li>
+                    </a>
+                    <li><a href="avaliacoes.html"><i class="fa-regular fa-star"></i> Avaliações</li></a>
+                    <li><a href="faq.html"><i class="fa-regular fa-circle-question"></i> FAQ</li></a>
+                    <li><a href="minhasduvidas.html"><i class="fa-regular fa-comment-dots"></i> Minhas dúvidas</li></a>
+                </ul>
+
+                <button class="recom-btn">
+                    <i class="fa-solid fa-plus"></i> Cadastrar recomendações
+                </button>
+
+                <div class="footer-menu">
+                    <button class="sair-btn" onclick="toggleMenu()">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <img src="assets/img/logoST.PNG" id="logo">
+
+        <p class="position-absolute" id="iconworld">BRL <i class="fa-solid fa-earth-americas"></i></p>
+        <p class="position-absolute py-1 px-3" id="nomelogin">LOGIN</p>
+        <a href="PerfilUsuario.html"><i class="fa-regular fa-user fa-2x position-absolute" id="iconuser"></i></a>
+    </header>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            menu.classList.toggle('open');
+        }
+
+        document.getElementById('darkModeToggle')?.addEventListener('change', function () {
+            document.body.classList.toggle('dark-mode', this.checked);
+        });
+    </script>
+
+    <div class="d-flex justify-content-center mt-5">
+        <h4 id="titlesection">BUSCA POR ROTEIROS PRONTOS</h4>
+    </div>
+
+    <section class="d-block d-lg-flex mt-4 py-lg-1 container d-block align-items-center" id="sectionfilter"
+        style="overflow-x: scroll; scroll-behavior: smooth;">
+        <div class="d-flex align-items-center ps-sm-3 pe-sm-3 divfilter filterborderright">
+            <i class="fa-solid fa-magnifying-glass iconfilter"></i>
+            <div class="ps-2 selectfilter">
+                <h6>DESTINOS</h6>
+                <input type="text" class="selectfilter" id="inputdestinos">
+                <ul id="sugestoes"
+                    style="position: absolute;background: white;z-index: 1000; list-style: none; padding: 0; margin: 0;">
+                </ul>
+            </div>
+
+        </div>
+        <script>
+            let destinos = [];
+
+            fetch("http://localhost:3000/roteirosProntos")
+                .then(res => res.json())
+                .then(data => {
+                    destinos = data;
+                });
+
+            const input = document.getElementById("inputdestinos");
+            const sugestoes = document.getElementById("sugestoes");
+
+            input.addEventListener("input", () => {
+                const termo = input.value.toLowerCase();
+                sugestoes.innerHTML = "";
+
+                if (termo === "") return;
+
+                const filtrados = destinos.filter(destino =>
+                    destino.cidade.toLowerCase().includes(termo)
+                );
+
+                filtrados.forEach(destino => {
+                    const li = document.createElement("li");
+                    li.textContent = destino.cidade;
+                    li.style.padding = "5px 10px";
+                    li.style.cursor = "pointer";
+
+                    li.addEventListener("click", () => {
+                        input.value = destino.cidade;
+                        sugestoes.innerHTML = "";
+                    });
+
+                    sugestoes.appendChild(li);
+                });
+            });
+        </script>
+
+        <div class="d-flex align-items-center ps-sm-3 pe-sm-3 divfilter filterborderright">
+            <i class="fa-solid fa-users iconfilter"></i>
+            <div class="ps-2 selectfilter">
+                <h6>HÓSPEDES</h6>
+                <form>
+                    <select class="selectfilter" id="inputpessoas">
+                        <option disabled selected></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center ps-sm-3 pe-sm-3 divfilter filterborderright">
+
+            <i class="fa-solid fa-plane iconfilter" style="transform: rotate(-45deg);"></i>
+            <div class="ps-2 selectfilter">
+                <h6>TRANSPORTE</h6>
+                <form>
+                    <select class="inputfilter selectfilter" id="transportechoice">
+                        <option disabled selected></option>
+                        <option>Carro</option>
+                        <option>Avião</option>
+                        <option>Ambos</option>
+                    </select>
+                </form>
+            </div>
+
+        </div>
+        <div class="d-flex align-items-center ps-sm-3 pe-sm-3 divfilter filterborderright">
+            <i class="fa-solid fa-tree iconfilter"></i>
+            <div class="ps-2 selectfilter">
+                <h6>ESTAÇÃO </h6>
+                <form action="">
+                    <select class="selectfilter" style="width: 100%;" id="inputestacao">
+                        <option disabled selected></option>
+                        <option>Verão</option>
+                        <option>Primavera</option>
+                        <option>Outono</option>
+                        <option>Inverno</option>
+                    </select>
+                </form>
+            </div>
+
+        </div>
+        <div class="d-flex align-items-center divfilter ps-sm-3 pe-sm-3">
+            <i class="fa-solid fa-dollar-sign iconfilter"></i>
+            <div class="ps-2 selectfilter">
+                <h6>PREÇO P/ NOITE</h6>
+                <input type="text" placeholder="R$" class="selectfilter" id="inputpreco">
+                <ul id="listaprecos"
+                    style="display: block; position: absolute;background: white;z-index: 1000; list-style: none; padding: 0; margin: 0; width: 100px;">
+                </ul>
+            </div>
+        </div>
+        <script>
+            const inputPreco = document.getElementById('inputpreco');
+            const listaPrecos = document.getElementById('listaprecos');
+
+            async function buscarPrecos() {
+                try {
+                    const response = await fetch('http://localhost:3000/roteirosProntos');
+                    const dados = await response.json();
+                    return dados.map(item => item.precoPorNoite); // usa 'precoPorNoite' do JSON
+                } catch (error) {
+                    console.error('Erro ao buscar preços:', error);
+                    return [];
+                }
+            }
+
+            inputPreco.addEventListener('input', async () => {
+                const valor = inputPreco.value.trim();
+                listaPrecos.innerHTML = '';
+
+                if (valor === '') return;
+
+                const precos = await buscarPrecos();
+                const precosUnicos = [...new Set(precos)];
+                const filtrados = precosUnicos.filter(p => p.toString().startsWith(valor));
+
+                if (filtrados.length === 0) {
+                    const li = document.createElement('li');
+                    li.textContent = 'Nenhum preço encontrado';
+                    li.style.padding = '5px';
+                    listaPrecos.appendChild(li);
+                    return;
+                }
+
+                filtrados.forEach(p => {
+                    const li = document.createElement('li');
+                    li.textContent = `R$ ${p},00`;
+                    li.style.padding = '5px';
+                    li.style.cursor = 'pointer';
+
+                    li.addEventListener('click', () => {
+                        inputPreco.value = p;
+                        listaPrecos.innerHTML = '';
+                    });
+
+                    listaPrecos.appendChild(li);
+                });
+            });
+        </script>
+        </script>
+
+        <a id="detalheslink"><button id="buttonsearch" class="my-2" style="width: 100%;">PESQUISAR</button></a>
+
+    </section>
+
+
+
+    <main>
+        <div id="compartimento1" class=" container text-center mt-5" style="position: relative;">
+            <div>
+                <h4 id="titlesection" style="margin-bottom: 40px;">CRIE SEU PRÓPRIO ROTEIRO</h4>
+                <a><button id="buttoncomecar" class="mt-3" style="margin-bottom: 50px;">COMEÇAR</button></a>
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"  class="plane"
+                    style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"
+                    viewBox="0 0 6.827 6.827">
+                    
+                    <g id="Layer_x0020_1">
+                        <g id="_678622144">
+                            <path id="_678622408" class="fil0"
+                                d="M5.576 3.839c-.37.162-.888.152-1.45.141-.134-.002-.27-.005-.438-.005-.756 0-1.441-.054-1.938-.141-.546-.096-.884-.252-.884-.443 0-.192.338-.347.884-.443.497-.087 1.182-.141 1.938-.141.164 0 .289-.002.41-.004.574-.009 1.103-.017 1.482.14a.778.778 0 0 1 .3.202.363.363 0 0 1 .093.241.38.38 0 0 1-.093.238.806.806 0 0 1-.304.215zM4.13 3.768c.537.01 1.033.02 1.362-.124a.6.6 0 0 0 .224-.154.173.173 0 0 0 .045-.106.158.158 0 0 0-.043-.101.573.573 0 0 0-.219-.143c-.34-.141-.846-.133-1.396-.125-.149.003-.3.005-.414.005-.744 0-1.416.053-1.902.138-.437.077-.707.16-.707.233 0 .072.27.156.707.233.486.085 1.158.138 1.902.138.128 0 .286.003.44.006z" />
+                            <path id="_678621880" class="fil0"
+                                d="M4.034 2.982 2.967 1.374l-.131-.154-.01-.014c-.012-.02-.039-.031-.075-.038a.76.76 0 0 0-.17-.004c.002.024.015.06.04.11l.004.008c.137.343.251.654.34.927.091.276.157.52.195.723l-.209.039a5.668 5.668 0 0 0-.188-.697c-.089-.271-.2-.575-.333-.907a.45.45 0 0 1-.061-.234c.008-.093.06-.152.154-.177l.02-.003a1.02 1.02 0 0 1 .247.006c.089.016.163.054.212.127l.132.156.007.01 1.07 1.613-.177.117z" />
+                            <path id="_678622000" class="fil0"
+                                d="m4.212 3.962-1.07 1.613-.008.01-.132.156a.305.305 0 0 1-.212.127 1.02 1.02 0 0 1-.247.006l-.02-.003c-.094-.025-.146-.084-.154-.178a.45.45 0 0 1 .06-.233c.133-.332.245-.636.334-.908.088-.27.152-.503.188-.696l.21.038a5.863 5.863 0 0 1-.195.724c-.09.273-.204.584-.341.926l-.004.01a.346.346 0 0 0-.04.109.76.76 0 0 0 .17-.004c.036-.007.063-.018.075-.038l.01-.014.131-.155 1.067-1.608.178.118z" />
+                            <path id="_678621784" class="fil0"
+                                d="M1.668 3.087a2.67 2.67 0 0 0-.343-.309.779.779 0 0 0-.201-.11l.085.12c.075.101.151.206.181.283l-.198.077c-.02-.05-.088-.144-.154-.235-.065-.088-.128-.175-.16-.241-.045-.096-.04-.17.05-.213l.018-.007c.164-.041.342.037.503.153.146.104.28.24.372.334l-.153.148z" />
+                            <path id="_678622024" class="fil0"
+                                d="M1.82 3.8c-.09.095-.225.23-.37.334-.162.116-.34.195-.504.153L.927 4.28C.84 4.238.833 4.163.878 4.067c.032-.066.095-.153.16-.241.066-.091.135-.184.154-.235l.198.077c-.03.078-.106.182-.18.284-.03.041-.061.082-.086.12a.779.779 0 0 0 .201-.111 2.67 2.67 0 0 0 .343-.309l.153.149z" />
+                            <path id="_678622168" class="fil0"
+                                d="M5.31 2.871c.15.341.148.682 0 1.023l-.195-.084a1.02 1.02 0 0 0 0-.853l.195-.086z" />
+                        </g>
+                    </g>
+                    <path style="fill:none" d="M0 0h6.827v6.827H0z" />
+                </svg>
+            </div>
+            <h4 id="titlesection" class="mt-3">RECOMENDAÇÕES</h4>
+        </div>
+        <section class="d-flex container-fluid mt-3 p-3 gap-4 position-relative" id="secaorecomendados">
+            <div id="recomendados" style="overflow: auto; scrollbar-width: none;" class="d-flex gap-4">
+
+            </div>
+            <div>
+                <i class="fa-solid fa-arrow-right position-absolute controls" style="right: 2%;bottom: 50%; opacity: 0;"
+                    id="gonext"></i>
+                <i class="fa-solid fa-arrow-left position-absolute controls" id="goprev"
+                    style="left: 2%; bottom: 50% ;opacity: 0;"></i>
+            </div>
+
+
+        </section>
+
+        <script>
+            let dadosCidades = [];
+            fetch("http://localhost:3000/roteirosProntos")
+                .then(res => res.json())
+                .then(data => {
+                    dadosCidades = data;
+                    exibirCidades(dadosCidades);
+                })
+                .catch(err => console.error("Erro ao buscar roteiros:", err));
+
+            function exibirCidades(lista) {
+                const usuarioCorrente = JSON.parse(sessionStorage.getItem('usuarioCorrente')) || {
+                    favoritos: []
+                };
+                const rowCidades = document.getElementById('recomendados');
+                rowCidades.innerHTML = "";
+
+                lista.forEach(roteiro => {
+                    const estaNosFavoritos = usuarioCorrente.favoritos.includes(roteiro.id.toString());
+
+                    rowCidades.innerHTML += `
+                <div style="border: 1px solid black; border-radius: 10px" class="justify-content-center">
+                    <a href="detalhesRot.html?id=${roteiro.id}" style="text-decoration: none; color:black;">
+                        <img src="${roteiro.imgPrinc}" class="imagemrecomendados" style="width:300px; height:200px; border-radius:10px;">
+                        <div class="position-relative d-flex justify-content-center">
+                            <p class="titulorecomendados">${roteiro.nome}</p>
+                        </div>
+                        <p class="descricaorecomendados" style="padding: 0 5px">${roteiro.descricao}</p> 
+                    </a>  
+                    <div class="card-footer text-end"></div>
+                </div>
+            `;
+                });
+
+                // Scroll apenas uma vez, fora do forEach
+                const goNext = document.getElementById('gonext');
+                const goPrev = document.getElementById('goprev');
+                const recomendados = document.getElementById('recomendados');
+
+                goNext.addEventListener('click', function () {
+                    recomendados.scrollBy({
+                        left: 300
+                    });
+                });
+
+                goPrev.addEventListener('click', () => recomendados.scrollBy({
+                    left: -300
+                }));
+
+                function AtualizarSetas() {
+                    if (recomendados.scrollLeft <= 0)
+                        goPrev.style.opacity = '0';
+                    else
+                        goPrev.style.opacity = '1';
+
+                    if (recomendados.scrollLeft + recomendados.offsetWidth >= recomendados.scrollWidth)
+                        goNext.style.opacity = '0';
+                    else
+                        goNext.style.opacity = '1';
+                }
+
+                recomendados.addEventListener('scroll', AtualizarSetas);
+                AtualizarSetas();
+            };
+
+            let dados = {};
+
+            document.getElementById('buttonsearch').addEventListener('click', function () {
+                let cidade = document.getElementById('inputdestinos').value;
+                let preco = parseInt(document.getElementById('inputpreco').value);
+                let pessoas = parseInt(document.getElementById('inputpessoas').value);
+                let transporte = document.getElementById('transportechoice').value;
+                let estacao = document.getElementById('inputestacao').value;
+
+                // ✅ Validação básica antes de buscar
+                if (!cidade || isNaN(preco) || isNaN(pessoas) || !transporte || !estacao) {
+                    return alert('Favor preencher todos os campos corretamente');
+                }
+
+                // ✅ Busca os dados do JSON Server
+                fetch('http://localhost:3000/roteirosProntos')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Erro na requisição: " + response.status);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        const objeto = data.find(objeto =>
+                            objeto.cidade === cidade &&
+                            objeto.pessoas >= pessoas &&
+                            objeto.transporte === transporte &&
+                            objeto.estacao === estacao &&
+                            objeto.precoPorNoite >= preco
+                        );
+
+                        if (objeto) {
+                            dados.roteiro = objeto;
+                            // Exemplo: redireciona com o ID
+                            document.getElementById('detalheslink').setAttribute('href',
+                                `detalhesRot.html?id=${dados.roteiro.id}`);
+                        } else {
+                            alert('Roteiro não encontrado');
+                        }
+                    })
+            });
+        </script>
+        <footer>
+            <div class="d-flex align-items-center">
+                <div class="rodape">
+                    <i class="fa-solid fa-copyright"></i>
+                    <p style="margin: 0;">Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="assets/scripts/usuario.js"></script>
+        <script src="assets/scripts/favoritos.js"></script>
+        <script src="assets/scripts/script.js"></script>
+</body>
+
+</html>
