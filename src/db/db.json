@@ -541,5 +541,22 @@
       "resposta": "Vá até seu perfil e clique para alterar sua senha e salve suas alterações.",
       "id": "66e9"
     }
+  ],
+  "recomendacoes": [
+    {
+      "id": "15001",
+      "usuario": "MARTA S.",
+      "data_solicitacao": "30/05/2025",
+      "hosp_rest_pass": "RESTAURANTE",
+      "nome_local": "PÔR DO SOL",
+      "nome_estado": "RIO DE JANEIRO",
+      "nome_cidade": "ANGRA DOS REIS",
+      "nome_rua": "SERRANO",
+      "nome_bairro": "CENTRO",
+      "num": 121,
+      "complemento": "",
+      "preco_pessoa": 150,
+      "status": "aceito"
+    }
   ]
 }
