@@ -44,69 +44,63 @@
 > Lembre-se que você deve ser enumerar e descrever precisamente e
 > personalizada todos os clientes ideais que sua solução almeja.
 
-## Histórias de Usuários
+## Histórias de Usuários 📋
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+Cada viajante tem uma história, um ritmo e um jeito único de explorar o mundo — e é pensando nisso que nossa plataforma foi desenhada, acolhendo diferentes perfis com suas motivações e necessidades específicas.
 
-Eu como: Uma viajante planejadora, busco roteiros personalizados e experiências autênticas.
-Quero: Acessar um planejamento de viagem personalizado que inclua sugestões de passeios, hospedagens, restaurantes e transportes, levando em consideração meu orçamento, preferências e estilo de viagem.
-Para: Preciso garantir que minha viagem seja bem organizada, sem imprevistos, evitar perder tempo pesquisando informações em vários sites, garantir que as sugestões estejam alinhadas com meus interesses e ter uma experiência bem organizada e imersiva no destino escolhido.
+Mariana Souza, analista de marketing digital de 32 anos, vive entre planilhas e sonhos de novas paisagens. Apaixonada por fotografia de viagem e pela gastronomia local, ela busca experiências autênticas sem abrir mão do planejamento. Mariana está sempre conectada, seja no laptop ou no smartphone, mergulhada em aplicativos como TripAdvisor e Skyscanner, organizando cada detalhe com antecedência. Para ela, é fundamental contar com recomendações confiáveis, bem avaliadas e compatíveis com seu orçamento — tudo isso entregue de forma clara, organizada e adaptada à sua realidade de mulher aventureira e planejadora. Detalhes como tempo de deslocamento e transparência nos preços fazem toda a diferença em sua jornada.
 
-Eu como: Uma pessoa que ama viajar e conhecer outros cidades, estados e países.
-Quero: Encontrar e/ou personalizar um roteiro de viagens mais em conta em lugares confortáveis, sem que eu precise me preocupar, pois trabalho muito e não tenho muito tempo para me organizar nas viagens. 
-Para: Realizar minhas viagens com segurança e tranquilidade, sem medo de não ocorrer como eu gostaria e gastar muito sem necessidade, pois acho que com um bom planejamento não há gastos imprevisíveis.
+Já Marta Scalzo, consultora de mercado de 39 anos, é analítica e estratégica. Seu mundo é feito de dados, aeroportos e cafés onde consegue equilibrar trabalho e prazer. Ela valoriza roteiros otimizados, com informações detalhadas sobre transporte, atrações e hospedagens, mas sem abrir mão da liberdade de descobrir algo novo no caminho. Marta gosta de sentir que tem o controle da experiência, e espera que o serviço ofereça sugestões inteligentes, práticas e alinhadas aos seus interesses — tudo com um toque de exclusividade. O que ela mais evita são informações genéricas ou um roteiro inflexível, que não respeite sua autonomia de escolha.
 
-Eu como: Uma pessoa que gosta de viajar pelo Brasil.
-Quero: Ter uma noção dos melhores lugares para poder visitar e conhecer. Saber as melhores hospedagens do local, ter bons roteiros de viagem para otimizar tempo além de saber quais os melhores estabelecimentos para tomar café, almoçar e jantar.
-Para: Garantir que eu tenha aproveitado o máximo do lugar e para garantir que eu não tenha me estressado na busca de estabelecimentos para fazer minhas refeições ou na busca de algum lugar para dormir.
+Por outro lado, temos o jovem Tiago William, um estagiário de 18 anos que sonha em desbravar culturas e abrir seu próprio negócio. Crítico e criativo, Tiago usa majoritariamente o celular para montar seus roteiros, sempre atento às avaliações em plataformas e redes sociais. Ele valoriza agilidade, clareza e uma interface intuitiva, que facilite a comparação entre opções e a personalização de sua jornada. O que ele não tolera são sites desorganizados, com filtros confusos ou que não entregam o resultado esperado. Para Tiago, tudo precisa ser funcional, rápido e direto ao ponto.
 
-Eu como: Uma pessoa que vive para viajar e apreciar bons lugares.
-Quero: Conseguir ter um guia/roteiro de viagens do meu jeito, sem preocupações que poderiam me fazer desistir da viagem, e tirar muitas fotos dos melhores lugares do meu destino de viagem.
-Para: Que eu não precise me preocupar com planejamentos, e sim, em como vou aproveitar ao máximo minha tão esperada viagem.
+Já na fase de aproveitar a vida com mais calma, José da Silva, de 72 anos, é um aposentado curioso e sábio, que agora deseja viajar mais e viver novas experiências com conforto e segurança. Ex-contador, ele utiliza o computador e o celular principalmente para se informar, e espera um serviço que respeite seu ritmo e ofereça explicações claras, com passo a passo simples e acessível. José precisa sentir confiança na navegação e ser tratado com paciência e empatia — o que mais o afasta de uma plataforma é sentir-se inferiorizado ou tratado com impaciência. Para ele, clareza, acolhimento e funcionalidade são indispensáveis.
 
->
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
+Com um espírito livre e apaixonada por paisagens naturais, Maria dos Santos, de 62 anos, é empresária e já realizou muitos de seus sonhos — agora, quer apenas viver bem, sem complicações. Ela está conectada às redes sociais e adora descobrir novos destinos por meio do Instagram. Porém, quando a escolha do destino se torna complicada, Maria simplesmente desiste. Por isso, praticidade é sua prioridade. Ela valoriza uma plataforma clara, objetiva e de fácil entendimento, que lhe permita decidir rapidamente onde ir, onde ficar e o que visitar, sem a necessidade de múltiplas buscas. O que ela mais detesta é quando a comunicação é dificultada — quanto mais direto e amigável, melhor.
+
+Essas personas representam diferentes gerações, perfis e expectativas. A missão do sistema é justamente unir todas essas necessidades em uma experiência fluida, confiável e acolhedora — onde cada viajante se sinta respeitado, compreendido e motivado a viver o melhor de sua jornada.
+
 
 ## Requisitos
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
 
-|Requisitos Funcionais|
-|:--|
-|1- O sistema deve mostrar as avaliações dos locais que recomenda. |
-|2- O site deve permitir login e cadastro de usuários. |
-|3- O sistema deve permitir que o usuário crie uma conta fornecendo as seguintes informações: nome, endereço de e-mail, senha e confirmação de senha. |
-|4- O programa deve possibilitar que o usuário use filtros para navegar entre possíveis destinos. |
-|5- O sistema deve manter um histórico de viagens realizadas pelo usuário, com detalhes dos roteiros passados. |
-|6- O sistema deve permitir que o usuário compartilhe suas viagens com amigos e família. |
-|7- O sistema deve permitir salvar e editar todos os roteiros criados pelo usuário, até mesmo os não utilizados por ele. |
-|8- O sistema deve mostrar se a hospedagem é localizada próxima a pontos turísticos e bons restaurantes. |
-|9- O persona x pode definir o valor máximo que deseja gastar em cada etapa do roteiro de viagem. |
-|10- O persona x pode montar seu roteiro com base no veículo que pretende usar para se locomover. |
+### Requisitos Funcionais ✈️
 
-|Requisitos Não Funcionais|
-|:--|
-|1- O sistema deverá estar disponível 7/24 (7 dias por semana por dia). |
-|2- A plataforma deverá ser hospedada em um ambiente acessível publicamente na internet, como GitHub Pages, Netlify ou Vercel. |
-|3- O sistema deve garantir a segurança, a usabilidade e a escalabilidade do processo de criação de conta. |
-|4- O programa deve responder bem aos comandos do usuário. |
-|5- O sistema deve permitir que os usuários escolham o idioma para facilitar a personalização de sua experiência. |
-|6- O sistema deve permitir que o usuário faça uma busca por destinos com base em preferências de viagem (praia, aventura, cultural). |
-|7- O sistema deve ter uma interface fácil de usar para que novos usuários se registrem rapidamente e para que pessoas que não possuem muita afinidade com tecnologia possam utilizá-lo. |
-|8- O sistema deve salvar o login do usuário no dispositivo. |
+O sistema foi idealizado para proporcionar uma experiência completa, intuitiva e agradável a quem deseja planejar suas viagens com praticidade. Desde o primeiro acesso, o usuário pode realizar seu cadastro com informações básicas como nome, e-mail e senha, criando assim um perfil personalizado onde todas as suas atividades e preferências serão registradas.
+
+Uma vez logado, o viajante terá à disposição uma série de recursos que o ajudam a organizar seus roteiros com facilidade. É possível visualizar roteiros já criados por outros usuários, além de elaborar seus próprios itinerários, incluindo hospedagens, atividades, datas e meios de transporte. Esses roteiros podem ser editados a qualquer momento, baixados para consulta offline e até mesmo favoritados para uso futuro.
+
+Para garantir a qualidade das informações compartilhadas na plataforma, os usuários podem cadastrar recomendações de hospedagens, restaurantes e pontos turísticos que conheceram, enquanto um painel de administração garante o controle e a curadoria dessas sugestões, aceitando ou recusando o que for enviado.
+
+A experiência de navegação é enriquecida por filtros personalizados que ajudam o usuário a encontrar roteiros e locais de acordo com suas preferências, tornando a busca mais rápida e eficiente. Além disso, a plataforma conta com um sistema de avaliações, permitindo que os usuários visualizem e escrevam feedbacks sobre os locais recomendados, facilitando a tomada de decisão de outros viajantes.
+
+Pensando na acessibilidade e no conforto visual, o site oferece a opção de alternar entre modo claro e escuro, adaptando-se às preferências de cada pessoa. Para auxiliar ainda mais, existe uma seção de Perguntas Frequentes (FAQ), e, caso surja alguma dúvida específica, o usuário pode enviar diretamente sua pergunta por meio de um formulário simples e acessível.
+
+Todo o conteúdo é organizado por meio de um menu funcional e intuitivo, que garante a fácil localização de todas as ferramentas disponíveis. Assim, o sistema se apresenta como uma solução completa, segura e flexível para quem deseja explorar o mundo de forma planejada, conectada e personalizada.
+
+
+### Requisitos Não Funcionais ✈️
+
+O sistema foi projetado para oferecer uma experiência estável, acessível e intuitiva, estando disponível 24 horas por dia, 7 dias por semana. Para garantir que qualquer usuário possa acessá-lo com facilidade, a plataforma será hospedada em ambientes públicos e confiáveis, como GitHub Pages, Netlify ou Vercel.
+
+Desde o primeiro acesso, o sistema prioriza a segurança, usabilidade e escalabilidade, especialmente no processo de criação de conta, assegurando que usuários de diferentes perfis possam se registrar com facilidade e tranquilidade. A interface amigável e responsiva facilita o uso por pessoas com pouca familiaridade com tecnologia, tornando o processo simples e acolhedor.
+
+A navegação é fluida e o sistema responde bem aos comandos do usuário, permitindo, por exemplo, a busca por destinos com base nas preferências pessoais.
+
+Para maior praticidade, o sistema também permite que o login seja salvo no dispositivo, facilitando o acesso contínuo sem a necessidade de digitar as credenciais a cada visita. Tudo isso com o objetivo de entregar uma solução eficiente, intuitiva e pronta para atender às diversas necessidades dos viajantes modernos.
+
   
-|Restrições do Projeto|
-|:--|
-|1- O sistema deve ser desenvolvido utilizando apenas a linguagem de programação JavaScript.| 
-|2- O sistema deve ser compatível com os navegadores Chrome, Firefox e Safari em suas versões mais recentes. |
-|3- O sistema deve seguir os layouts de protótipo e história de usuário como planejado. 
-|4- O programa deve seguir os padrões de desenvolvimento com base no W3C. |
-|5- O sistema deve possuir funcionalidades adicionais, como suporte a realidade aumentada (AR) ou inteligência artificial para recomendações de viagem, podem ser implementadas em versões futuras, mas não fazem parte do escopo inicial do projeto. |
-|6- O sistema deve ser responsivo. |
-|7- O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados (LGPD).| 
-|8- O sistema deve utilizar a localização do cliente com sua permissão.|
+### Restrições do Projeto ✈️
+
+O sistema será desenvolvido exclusivamente com a linguagem de programação JavaScript, garantindo leveza e compatibilidade com diferentes ambientes web. Ele será totalmente funcional nos principais navegadores modernos, como Chrome, Firefox e Safari, sempre em suas versões mais recentes, oferecendo uma experiência consistente para os usuários independentemente da plataforma escolhida.
+
+Durante o desenvolvimento, serão seguidos rigorosamente os layouts definidos nos protótipos e as diretrizes estabelecidas nas histórias de usuário, garantindo fidelidade ao planejamento e às necessidades dos usuários finais. Além disso, o sistema obedecerá aos padrões de desenvolvimento recomendados pelo W3C, promovendo acessibilidade, organização e boas práticas de codificação.
+
+Embora funcionalidades mais avançadas, como integração com realidade aumentada ou inteligência artificial para recomendações de viagem, estejam previstas para futuras versões, elas não farão parte do escopo inicial do projeto. Neste momento, o foco será garantir uma base sólida, com um sistema totalmente responsivo e adaptável a diferentes dispositivos e tamanhos de tela.
+
+Também será dada atenção especial à privacidade e segurança dos dados, com o sistema desenvolvido em conformidade com a Lei Geral de Proteção de Dados (LGPD). O uso da localização do cliente será possível apenas mediante sua autorização, permitindo a personalização da experiência sem comprometer sua privacidade.
+
 > 
 > **Links Úteis**:
 > - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)

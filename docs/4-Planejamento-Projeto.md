@@ -1,36 +1,30 @@
 # Planejamento do Projeto
 
-> Aqui será feito o gerenciamento das tarefas de implementação do projeto.
+## Divisão de Papéis - Smart-Travel✈️
 
-## Divisão de Papéis
-
-  
 ### Sprint 1
-Scrum Master: Karen  
-Product Owner: Iago 
-Documentação: Daniella, Lucas  
-Desenvolvimento Front-end: Lucas, Daniella, Karen, Vinicius  
-Desenvolvimento Back-end: Bruno, Gabriel, Iago, Lucca  
+- **Scrum Master:** Karen  
+- **Product Owner:** Iago 
+- **Documentação:** Daniella, Lucas  
+- **Desenvolvimento Front-end:** Lucas, Daniella, Karen, Vinicius  
+- **Desenvolvimento Back-end:** Bruno, Iago  
 
 ### Sprint 2
-Scrum Master: Karen  
-Product Owner: Iago  
-Documentação: Daniella, Lucas 
- Desenvolvimento Front-end: Lucas, Daniella, Karen, Vinicius  
-Desenvolvimento Back-end: Bruno, Gabriel, Iago, Lucca  
+- **Scrum Master:** Karen  
+- **Product Owner:** Iago 
+- **Documentação:** Daniella, Karen 
+- **Desenvolvimento Front-end:** Lucas, Daniella, Karen, Vinicius  
+- **Desenvolvimento Back-end:** Lucas, Bruno  
 
 ### Sprint 3
-Scrum Master: Karen  
-Product Owner: Iago 
-Documentação: Daniella, Lucas  
-Desenvolvimento Front-end: Lucas, Daniella, Karen, Vinicius  
-Desenvolvimento Back-end: Bruno, Gabriel, Iago, Lucca
+- **Scrum Master:** Karen  
+- **Product Owner:** Iago 
+- **Documentação:** Daniella  
+- **Desenvolvimento Front-end:** Lucas, Daniella, Karen, Vinicius  
+- **Desenvolvimento Back-end:** Bruno, Iago, Lucas 
 
   
-## Quadro de tarefas
-
-> Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme exemplo abaixo.
-
+## Quadro de tarefas 📋
 
 
 ## Sprint 1
@@ -89,14 +83,14 @@ Legenda:
 - ⌛: atrasado
 - ❌: não iniciado
 
-## Ferramentas
+## Ferramentas 🔧
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código: Visual Studio Code
-- Ferramentas de diagramação: Trello
-- Frameworks: Figma
-- Gerenciamento de Código: Github
+- **Editor de código:** Visual Studio Code
+- **Ferramentas de diagramação:** Trello
+- **Frameworks:** Figma
+- **Gerenciamento de Código:** Github
 
 
 ## Links Úteis

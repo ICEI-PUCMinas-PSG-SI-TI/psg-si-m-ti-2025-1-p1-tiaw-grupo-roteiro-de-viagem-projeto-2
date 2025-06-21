@@ -46,19 +46,12 @@ O planejamento de viagens pode ser um processo complexo e demorado, exigindo pes
 
 ## Público-Alvo
 
-> O público-alvo de um site de roteiro de viagens é composto por pessoas que buscam uma experiência personalizada, prática e enriquecedora ao 
-> planejar suas viagens. Esse público inclui tanto viajantes individuais quanto famílias, casais e grupos de amigos, com idades variando entre 18 
-> e 55 anos, que desejam explorar novos destinos de forma eficiente e informada. Esse grupo costuma valorizar a facilidade no acesso a 
-> informações, a personalização dos roteiros e a possibilidade de otimizar seu tempo durante a viagem.
-> Esses viajantes podem ser tanto iniciantes quanto experientes, mas todos compartilham o desejo de explorar o mundo de maneira mais independente, 
-> evitando os pacotes turísticos tradicionais. O público também inclui profissionais e empreendedores, que possuem uma agenda mais apertada, mas 
-> desejam planejar viagens que maximizem o aproveitamento de suas férias ou compromissos de negócios.
-> Além disso, muitos deles estão em busca de uma experiência mais autêntica, longe das rotas turísticas convencionais, valorizando dicas locais, 
-> experiências culturais imersivas e opções de turismo sustentável. A faixa etária jovem-adulta (entre 20 e 35 anos) é um segmento-chave, pois tem 
-> maior propensão a usar tecnologias digitais e se interessa por viagens que oferecem aventura, novas experiências e o uso de plataformas online 
-> para otimizar sua jornada.
-> Esse público também valoriza conteúdos como blogs, vídeos e avaliações de outros viajantes, buscando sempre informações atualizadas e de 
-> confiança, além de ferramentas que ajudem na organização do itinerário de forma fácil e ágil.
+O público-alvo de um site de roteiros de viagens é composto por indivíduos que buscam soluções personalizadas, práticas e eficientes para o planejamento de suas viagens, abrangendo viajantes individuais, casais, famílias e grupos de amigos, com faixa etária predominante entre 18 e 55 anos. Um segmento de destaque são os jovens adultos entre 20 e 35 anos, que demonstram maior afinidade com tecnologias digitais e tendência a utilizar plataformas online para organização de viagens. Esse perfil valoriza experiências diferenciadas, com ênfase em aventura, cultura local e opções fora dos roteiros turísticos tradicionais.
+
+Além dos viajantes de lazer, o público inclui profissionais e empreendedores com agendas reduzidas, que buscam otimizar seu tempo disponível para viagens, seja a lazer ou a trabalho. Esses usuários demandam ferramentas ágeis, organizadas e flexíveis para a criação de itinerários. Outro aspecto relevante é a crescente procura por experiências autênticas e sustentáveis, com preferência por atividades imersivas, contato com a cultura local e práticas de turismo responsável.
+
+A credibilidade e a atualização de conteúdo são fatores decisivos para esse público, que valoriza blogs, vídeos, avaliações de outros viajantes e guias digitais confiáveis. Há também uma preferência por plataformas interativas, que ofereçam personalização de roteiros, integração de avaliações e sugestões baseadas em recomendações locais e preferências individuais, garantindo uma experiência de planejamento eficiente e adaptável às necessidades do usuário.
+
 > 
 > **Links Úteis**:
 > - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
