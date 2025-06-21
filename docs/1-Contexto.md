@@ -38,22 +38,8 @@
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 ## Justificativa
-
-> O planejamento de viagens pode ser um processo complexo e demorado, exigindo pesquisas detalhadas sobre destinos, transporte, hospedagem e 
-> atrações turísticas. Muitas pessoas enfrentam dificuldades para organizar suas viagens de forma eficiente, especialmente ao tentar conciliar 
-> orçamento, tempo disponível e preferências pessoais.
-> Atualmente, há diversas plataformas de turismo, mas muitas delas são fragmentadas, oferecendo informações dispersas e pouco personalizáveis. 
-> Esse cenário justifica a criação de um site de roteiros de viagens, que centralize todas as informações relevantes em um só lugar e permita que 
-> os usuários montem e compartilhem seus itinerários de forma intuitiva.
-> Os principais fatores que justificam o desenvolvimento deste projeto são:
-> Facilidade no planejamento: O site ajudará viajantes a organizar suas viagens com mais eficiência, evitando pesquisas demoradas e dispersas.
-> Personalização dos roteiros: Diferente de sites genéricos, a plataforma permitirá que os usuários personalizem seus itinerários conforme suas 
-> necessidades e interesses.
-> Interação e troca de experiências: Usuários poderão compartilhar seus roteiros, receber sugestões e contribuir com avaliações e dicas para 
-> outros viajantes.
-> Acessibilidade e democratização da informação: O projeto visa tornar o planejamento de viagens mais acessível, reunindo informações confiáveis e 
-> atualizadas de forma gratuita e fácil de usar.
-> Com essa solução, espera-se melhorar a experiência dos viajantes, proporcionando um serviço que une praticidade, confiabilidade e interação.
+>
+O planejamento de viagens pode ser um processo complexo e demorado, exigindo pesquisas detalhadas sobre destinos, transporte, hospedagem e atrações turísticas. Muitas pessoas enfrentam dificuldades para organizar suas viagens de forma eficiente, especialmente ao tentar conciliar orçamento, tempo disponível e preferências pessoais. Atualmente, há diversas plataformas de turismo, mas muitas delas são fragmentadas, oferecendo informações dispersas e pouco personalizáveis. Esse cenário justifica a criação de um site de roteiros de viagens, que centralize todas as informações relevantes em um só lugar e permita que os usuários montem e compartilhem seus itinerários de forma intuitiva. Os principais fatores que justificam o desenvolvimento deste projeto são: Facilidade no planejamento: O site ajudará viajantes a organizar suas viagens com mais eficiência, evitando pesquisas demoradas e dispersas. Personalização dos roteiros: Diferente de sites genéricos, a plataforma permitirá que os usuários personalizem seus itinerários conforme suas necessidades e interesses. Interação e troca de experiências: Usuários poderão receber sugestões e contribuir com avaliações e dicas para outros viajantes. Acessibilidade e democratização da informação: O projeto visa tornar o planejamento de viagens mais acessível, reunindo informações confiáveis e atualizadas de forma gratuita e fácil de usar. Com essa solução, espera-se melhorar a experiência dos viajantes, proporcionando um serviço que une praticidade, confiabilidade e interação.
 >
 > **Links Úteis**:
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)

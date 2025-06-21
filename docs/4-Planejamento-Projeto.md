@@ -64,24 +64,24 @@ Desenvolvimento Back-end: Bruno, Gabriel, Iago, Lucca
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Karen        | Protótipo Interativo | 01/06/2025     | 25/06/2025 | ✔️    |    22/06/2025       |
-| Karen        | Metodologia | 01/06/2025     | 25/06/2025 | ✔️    |    22/06/2025       |
-| Karen        | Revisão | 01/06/2025     | 25/06/2025 | ✔️    |     22/06/2025      |
-| Iago       | Ajuste na Documentação    | 03/06/2025     | 25/06/2025 | ✔️    |     22/06/2025            |
-| Iago       | Pré Formatação da Documentação    | 03/06/2025     | 25/06/2025 | ✔️    |    22/06/2025             |
-| Lucas       | Plano de Testes de Software  | 01/06/2025     | 25/06/2025 | ✔️     |        22/06/2025         |
-| Lucas       | Registros de Testes de Software  | 01/06/2025     | 25/06/2025 | ✔️     |      22/06/2025           |
-| Daniella       | Slide da Apresentação  |    01/06/2025        | 25/06/2025 | ✔️    |  22/06/2025     |
-| Daniella       | Documentação no README  |    01/06/2025        | 25/06/2025 | ✔️    |    22/06/2025   |
-| Vinicius      | Segurança de Dados  |    01/06/2025        | 25/06/2025 | ✔️    |    22/06/2025   |
-| Lucca      | Segurança de Dados  |    01/06/2025        | 25/06/2025 | ✔️    |    22/06/2025   |
-| Lucca      | Formatação da Documentação  |    01/06/2025        | 25/06/2025 | ✔️    |  22/06/2025     |
-| Bruno      | Envio do Projeto ZIP  |    01/06/2025        | 25/06/2025 | ✔️    | 22/06/2025      |
-| Bruno      | Hospedagem do Site  |    01/06/2025        | 25/06/2025 | ✔️    |   22/06/2025    |
-| Bruno      | Junção das Sprints  |    01/06/2025        | 25/06/2025 | ✔️    |    22/06/2025   |
-| Daniella       | Segurança de Dados  |    01/06/2025        | 25/06/2025 | ✔️    |   22/06/2025    |
-| Daniella       | Segurança de Dados  |    01/06/2025        | 25/06/2025 | ✔️    |   22/06/2025    |
-|  Karen/Iago     | Apresentação em sala  |    01/06/2025        | 25/06/2025 | ✔️    |   22/06/2025    |
+| Karen        | Protótipo Interativo | 01/06/2025     | 25/06/2025 | 📝    |    22/06/2025       |
+| Karen        | Metodologia | 01/06/2025     | 25/06/2025 | 📝    |    22/06/2025       |
+| Karen        | Revisão | 01/06/2025     | 25/06/2025 | 📝    |     22/06/2025      |
+| Iago       | Ajuste na Documentação    | 03/06/2025     | 25/06/2025 | 📝    |     22/06/2025            |
+| Iago       | Pré Formatação da Documentação    | 03/06/2025     | 25/06/2025 | 📝    |    22/06/2025             |
+| Lucas       | Plano de Testes de Software  | 01/06/2025     | 25/06/2025 | 📝     |        22/06/2025         |
+| Lucas       | Registros de Testes de Software  | 01/06/2025     | 25/06/2025 | 📝     |      22/06/2025           |
+| Daniella       | Slide da Apresentação  |    01/06/2025        | 25/06/2025 | 📝    |  22/06/2025     |
+| Daniella       | Documentação no README  |    01/06/2025        | 25/06/2025 | 📝    |    22/06/2025   |
+| Vinicius      | Segurança de Dados  |    01/06/2025        | 25/06/2025 | 📝    |    22/06/2025   |
+| Lucca      | Segurança de Dados  |    01/06/2025        | 25/06/2025 | 📝    |    22/06/2025   |
+| Lucca      | Formatação da Documentação  |    01/06/2025        | 25/06/2025 | 📝    |  22/06/2025     |
+| Bruno      | Envio do Projeto ZIP  |    01/06/2025        | 25/06/2025 | 📝    | 22/06/2025      |
+| Bruno      | Hospedagem do Site  |    01/06/2025        | 25/06/2025 | 📝    |   22/06/2025    |
+| Bruno      | Junção das Sprints  |    01/06/2025        | 25/06/2025 | 📝    |    22/06/2025   |
+| Daniella       | Segurança de Dados  |    01/06/2025        | 25/06/2025 | 📝    |   22/06/2025    |
+| Daniella       | Segurança de Dados  |    01/06/2025        | 25/06/2025 | 📝    |   22/06/2025    |
+|  Karen/Iago     | Apresentação em sala  |    01/06/2025        | 25/06/2025 | 📝    |   22/06/2025    |
 
 Legenda:
 - ✔️: terminado

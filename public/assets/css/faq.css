@@ -79,6 +79,12 @@ body {
 .custom-buttom:hover{
     background-color: #0C6D9F;
 }
+#button_voltar{
+    margin-left: 4%;
+    color: white;
+    background-color: rgb(12, 109, 159);
+    height: 40px;
+}
 /*footer*/
 footer{
     margin-top: 7%;

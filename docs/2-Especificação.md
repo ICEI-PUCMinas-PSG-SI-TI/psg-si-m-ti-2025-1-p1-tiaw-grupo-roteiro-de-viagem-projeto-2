@@ -8,20 +8,29 @@
 
 ## Personas
 
-### Persona 1- 
-Mariana Souza, 32 anos. Analista de marketing digital. Sonha em conhecer outros os continentes, viver experiências autênticas, viajar sem precisar planejar cada detalhe
+### Persona 1
+
+|Mariana Souza|
+|:--|
+|32 anos. Analista de marketing digital. Sonha em conhecer outros os continentes, viver experiências autênticas, viajar sem precisar planejar cada detalhe|
 
 
-### Persona 2-
-José da Silva, 72 anos. Aposentado, ex-contador. Seus principais sonhos são viajar mais após aposentado e gostaria de aprender alguns outros hobbies para aproveitar cada vez mais o tempo com seus parentes amados.
+### Persona 2
+|José da Silva|
+|:--|
+|72 anos. Aposentado, ex-contador. Seus principais sonhos são viajar mais após aposentado e gostaria de aprender alguns outros hobbies para aproveitar cada vez mais o tempo com seus parentes amados.|
 
 
-### Persona 3-
-Tiago William, 18 anos. Estagiário Analista de BI. Deseja ter realização profissional, conhecer novas culturas e começar seu próprio negócio.
+### Persona 3
+|Tiago William|
+|:--|
+|18 anos. Estagiário Analista de BI. Deseja ter realização profissional, conhecer novas culturas e começar seu próprio negócio.|
 
 
-### Persona 4-
-Fernanda Kimura, 19 anos. Estudante e estagiária na área de Arquitetura e Urbanismo. Tem o desejo de construir uma família estável e conhecer cada canto do mundo com eles
+### Persona 4
+|Fernanda Kimura| 
+|:--|
+|19 anos. Estudante e estagiária na área de Arquitetura e Urbanismo. Tem o desejo de construir uma família estável e conhecer cada canto do mundo com eles|
 
 >
 > **Links Úteis**:
@@ -38,7 +47,6 @@ Fernanda Kimura, 19 anos. Estudante e estagiária na área de Arquitetura e Urba
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
-
 
 Eu como: Uma viajante planejadora, busco roteiros personalizados e experiências autênticas.
 Quero: Acessar um planejamento de viagem personalizado que inclua sugestões de passeios, hospedagens, restaurantes e transportes, levando em consideração meu orçamento, preferências e estilo de viagem.
@@ -65,54 +73,40 @@ Para: Que eu não precise me preocupar com planejamentos, e sim, em como vou apr
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
 
-### Requisitos Funcionais
-1- O sistema deve mostrar as avaliações dos locais que recomenda. 
-2- O site deve permitir login e cadastro de usuários. 
-3- O sistema deve permitir que o usuário crie uma conta fornecendo as seguintes 
-informações: nome, endereço de e-mail, senha e confirmação de senha. 
-4- O programa deve possibilitar que o usuário use filtros para navegar entre possíveis 
-destinos. 
-5- O sistema deve manter um histórico de viagens realizadas pelo usuário, com detalhes 
-dos roteiros passados. 
-6- O sistema deve permitir que o usuário compartilhe suas viagens com amigos e família. 
-7- O sistema deve permitir salvar e editar todos os roteiros criados pelo usuário, até 
-mesmo os não utilizados por ele. 
-8- O sistema deve mostrar se a hospedagem é localizada próxima a pontos turísticos e 
-bons restaurantes. 
-9- O persona x pode definir o valor máximo que deseja gastar em cada etapa do roteiro 
-de viagem. 
-10- O persona x pode montar seu roteiro com base no veículo que pretende usar para se 
-locomover. 
+|Requisitos Funcionais|
+|:--|
+|1- O sistema deve mostrar as avaliações dos locais que recomenda. |
+|2- O site deve permitir login e cadastro de usuários. |
+|3- O sistema deve permitir que o usuário crie uma conta fornecendo as seguintes informações: nome, endereço de e-mail, senha e confirmação de senha. |
+|4- O programa deve possibilitar que o usuário use filtros para navegar entre possíveis destinos. |
+|5- O sistema deve manter um histórico de viagens realizadas pelo usuário, com detalhes dos roteiros passados. |
+|6- O sistema deve permitir que o usuário compartilhe suas viagens com amigos e família. |
+|7- O sistema deve permitir salvar e editar todos os roteiros criados pelo usuário, até mesmo os não utilizados por ele. |
+|8- O sistema deve mostrar se a hospedagem é localizada próxima a pontos turísticos e bons restaurantes. |
+|9- O persona x pode definir o valor máximo que deseja gastar em cada etapa do roteiro de viagem. |
+|10- O persona x pode montar seu roteiro com base no veículo que pretende usar para se locomover. |
 
-### Requisitos Não Funcionais  
-1- O sistema deverá estar disponível 7/24 (7 dias por semana por dia). 
-2- A plataforma deverá ser hospedada em um ambiente acessível publicamente na 
-internet, como GitHub Pages, Netlify ou Vercel. 
-3- O sistema deve garantir a segurança, a usabilidade e a escalabilidade do processo de 
-criação de conta. 
-4- O programa deve responder bem aos comandos do usuário. 
-5- O sistema deve permitir que os usuários escolham o idioma para facilitar a 
-personalização de sua experiência. 
-6- O sistema deve permitir que o usuário faça uma busca por destinos com base em 
-preferências de viagem (praia, aventura, cultural). 
-7- O sistema deve ter uma interface fácil de usar para que novos usuários se registrem 
-rapidamente e para que pessoas que não possuem muita afinidade com tecnologia 
-possam utilizá-lo. 
-8- O sistema deve salvar o login do usuário no dispositivo. 
+|Requisitos Não Funcionais|
+|:--|
+|1- O sistema deverá estar disponível 7/24 (7 dias por semana por dia). |
+|2- A plataforma deverá ser hospedada em um ambiente acessível publicamente na internet, como GitHub Pages, Netlify ou Vercel. |
+|3- O sistema deve garantir a segurança, a usabilidade e a escalabilidade do processo de criação de conta. |
+|4- O programa deve responder bem aos comandos do usuário. |
+|5- O sistema deve permitir que os usuários escolham o idioma para facilitar a personalização de sua experiência. |
+|6- O sistema deve permitir que o usuário faça uma busca por destinos com base em preferências de viagem (praia, aventura, cultural). |
+|7- O sistema deve ter uma interface fácil de usar para que novos usuários se registrem rapidamente e para que pessoas que não possuem muita afinidade com tecnologia possam utilizá-lo. |
+|8- O sistema deve salvar o login do usuário no dispositivo. |
   
-### Restrições do Projeto 
-1- O sistema deve ser desenvolvido utilizando apenas a linguagem de programação 
-JavaScript. 
-2- O sistema deve ser compatível com os navegadores Chrome, Firefox e Safari em suas 
-versões mais recentes. 
-3- O sistema deve seguir os layouts de protótipo e história de usuário como planejado. 
-4- O programa deve seguir os padrões de desenvolvimento com base no W3C. 
-5- O sistema deve possuir funcionalidades adicionais, como suporte a realidade 
-aumentada (AR) ou inteligência artificial para recomendações de viagem, podem ser 
-implementadas em versões futuras, mas não fazem parte do escopo inicial do projeto. 
-6- O sistema deve ser responsivo. 
-7- O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados (LGPD). 
-8- O sistema deve utilizar a localização do cliente com sua permissão.
+|Restrições do Projeto|
+|:--|
+|1- O sistema deve ser desenvolvido utilizando apenas a linguagem de programação JavaScript.| 
+|2- O sistema deve ser compatível com os navegadores Chrome, Firefox e Safari em suas versões mais recentes. |
+|3- O sistema deve seguir os layouts de protótipo e história de usuário como planejado. 
+|4- O programa deve seguir os padrões de desenvolvimento com base no W3C. |
+|5- O sistema deve possuir funcionalidades adicionais, como suporte a realidade aumentada (AR) ou inteligência artificial para recomendações de viagem, podem ser implementadas em versões futuras, mas não fazem parte do escopo inicial do projeto. |
+|6- O sistema deve ser responsivo. |
+|7- O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados (LGPD).| 
+|8- O sistema deve utilizar a localização do cliente com sua permissão.|
 > 
 > **Links Úteis**:
 > - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
