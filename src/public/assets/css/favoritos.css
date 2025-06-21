@@ -11,6 +11,8 @@ body {
 h2{
     color: black;
     font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #ea8613;
 }
 
 .cab{
@@ -39,6 +41,16 @@ h2{
     transform: translateY(-50%);
     color: white; 
     margin-right: 75px;
+}
+#button_voltar{
+    margin-left: 4%;
+    color: white;
+    background-color: rgb(12, 109, 159);
+    height: 40px;  
+    border: none;
+    border-radius: 5px; 
+    margin-bottom: 60px;
+    padding: 10px;
 }
 
 footer{
