@@ -30,12 +30,12 @@
   </header>
   
 <section id="section1">
-    <div class="container d-flex flex-column justify-content-center align-items-center" style="margin-top: 7%;">
+    <div class="container d-flex flex-column justify-content-center align-items-center">
 
     <div class="row w-100 justify-content-center align-items-center g-5 flex-column flex-lg-row text-center text-lg-start">
 
       <!-- Texto -->
-      <div class="col-lg-6 px-4" style="margin-top: 0%;">
+      <div class="col-lg-6 px-4" style="margin-right: 2%;">
         <p class="fs-5 fw-medium text-center">
           A SmartTravel é a plataforma ideal para<br />
           quem quer explorar o mundo sem<br />
@@ -61,9 +61,22 @@
 
       <!-- Login -->
       <div class="col-lg-4 px-4" style="flex: 0 0 auto; width: auto;">
-        <div class="login-box mx-auto" style="width: 550px; height: 450px;">
+        <div class="login-box mx-auto" style="max-width: 500px; height: 640px;">
           <img src="assets/img/logoST.PNG" alt="Logo SmartTravel" />
-          <h5 class="text-white text-center mt-4">LOGIN</h5>
+          <h5 class="text-white text-center mt-4">CADASTRO</h5>
+
+          <div class="nome_sobrenome  d-flex justify-content-between gap-3">
+            <div id="nome_cad" class="mt-4">
+            <label class="text-white mb-1">NOME</label>
+            <input style="margin-right: 20%;" type="text" />
+          </div>
+
+          <div class="mt-4">
+            <label id="sobrenome_cad" class="text-white mb-1">SOBRENOME</label>
+            <input type="text" />
+          </div>
+          </div>
+
 
           <div class="mt-4">
             <label class="text-white mb-1">EMAIL</label>
@@ -75,15 +88,20 @@
             <input type="password" />
           </div>
 
+          <div class="mt-4">
+            <label class="text-white mb-1">CONFIRME SUA SENHA</label>
+            <input type="password" />
+          </div>
+
           <div class="text-center">
-            <button id="botao_entrar">ENTRAR</button>
+            <button id="botao_cadastrar">CADASTRAR</button>
           </div>
         </div>
 
     <div class="text-center mt-3">
-      <div class="mb-1" style="color: black;">AINDA NÃO TEM CONTA?</div>
-      <button id="botao_cadastrar" style="width: 120px; border-radius: 10px; background-color: #f57c00; color: white; border: none;">
-        CADASTRE-SE
+      <div class="mb-1" style="color: black;">JÁ TEM UMA CONTA?</div>
+      <button id="botao_entre" style="width: 80px; border-radius: 10px; background-color: #f57c00; color: white; border: none;">
+        ENTRE
       </button>
     </div>
 
@@ -102,8 +120,8 @@
   <script src="assets/scripts/usuario.js"></script>
 
   <script>
-      document.getElementById('botao_cadastrar').addEventListener('click', function() {
-    window.location.href = 'cadastro.html';
+      document.getElementById('botao_entre').addEventListener('click', function() {
+    window.location.href = 'login.html';
   });
 
   document.getElementById('botao_semlogin').addEventListener('click', function() {
