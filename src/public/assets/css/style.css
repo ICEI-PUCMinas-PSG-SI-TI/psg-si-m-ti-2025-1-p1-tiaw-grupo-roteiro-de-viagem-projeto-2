@@ -511,6 +511,7 @@ footer{
 
     }
     
+    
 }
 @media screen and (max-width: 450px){
 
@@ -542,6 +543,7 @@ footer{
 
 
     }
+
 
 
 }
@@ -611,4 +613,20 @@ footer{
     flex-direction: row;
     justify-content: space-around;
 }
+@media (max-width: 1400px) {
+    #section1 .col-lg-6 {
+      margin-top: 30px !important;
+      margin-right: 0 !important;
+      padding-left: 15px;
+      padding-right: 15px;
+      text-align: center !important;
 
+    }
+    
+}
+  
+@media (max-width: 400px){
+    #tituloHeaderlogcad{
+        font-size: 1rem;
+    }
+}

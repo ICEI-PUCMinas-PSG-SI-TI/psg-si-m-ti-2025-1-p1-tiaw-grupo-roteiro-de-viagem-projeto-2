@@ -23,7 +23,7 @@
 
     <img src="assets/img/logoST.PNG" id="logo">
     <div class="container" id="container_cabe">
-      <h4 class="text-white text-center text-md-start m-0">
+      <h4 class="text-white text-center text-md-start m-0" id="tituloHeaderlogcad">
         O JEITO <span class="text-primary">INTELIGENTE</span> DE VIAJAR
       </h4>
     </div> 
@@ -60,39 +60,43 @@
       </div>
 
       <!-- Login -->
-      <div class="col-lg-4 px-4" style="flex: 0 0 auto; width: auto;">
-        <div class="login-box mx-auto" style="width: 550px; height: 450px;">
-          <img src="assets/img/logoST.PNG" alt="Logo SmartTravel" />
-          <h5 class="text-white text-center mt-4">LOGIN</h5>
+       <!-- Login -->
+<div class="col-lg-5 px-4" style="flex: 0 0 auto; width: auto;">
+  <div class="login-box mx-auto" style="width: 500px; height: 450px;">
+    <img src="assets/img/logoST.PNG" alt="Logo SmartTravel" />
+    <h5 class="text-white text-center mt-4">LOGIN</h5>
 
-          <div class="mt-4">
-            <label class="text-white mb-1">EMAIL</label>
-            <input type="text" />
-          </div>
+    <form id="login-form">
+      <div class="mt-4">
+        <label class="text-white mb-1">EMAIL</label>
+        <input type="text" id="email" />
+      </div>
 
-          <div class="mt-4">
-            <label class="text-white mb-1">SENHA</label>
-            <input type="password" />
-          </div>
+      <div class="mt-4">
+        <label class="text-white mb-1">SENHA</label>
+        <input type="password" id="password" />
+      </div>
 
-          <div class="text-center">
-            <button id="botao_entrar">ENTRAR</button>
-          </div>
-        </div>
+      <div class="text-center">
+        <button type="submit" id="botao_entrar">ENTRAR</button>
+      </div>
+    </form>
+  </div>
 
-    <div class="text-center mt-3">
-      <div class="mb-1" style="color: black;">AINDA NÃO TEM CONTA?</div>
-      <button id="botao_cadastrar" style="width: 120px; border-radius: 10px; background-color: #f57c00; color: white; border: none;">
-        CADASTRE-SE
-      </button>
-    </div>
+  <div class="text-center mt-3">
+    <div class="mb-1" style="color: black;">AINDA NÃO TEM CONTA?</div>
+    <button id="botao_cadastrar" style="width: 120px; border-radius: 10px; background-color: #f57c00; color: white; border: none;">
+      CADASTRE-SE
+    </button>
+  </div>
 
-<div class="text-center mt-3">
-  <button id="botao_semlogin" style="width: auto; min-width: 160px; white-space: nowrap; color: black; background-color: transparent; padding: 6px 12px; border: none; font-size: 0.9rem;">
-    CONTINUAR SEM LOGIN
-  </button>
+  <div class="text-center mt-3">
+    <button id="botao_semlogin" style="width: auto; min-width: 160px; white-space: nowrap; color: black; background-color: transparent; padding: 6px 12px; border: none; font-size: 0.9rem;">
+      CONTINUAR SEM LOGIN
+    </button>
+  </div>
 </div>
-  </div> <!-- Fechamento correto da login-box -->
+
 </div>
 
   </div>
@@ -100,16 +104,38 @@
   </section>
 
   <script src="assets/scripts/usuario.js"></script>
-
+  <script src="assets/scripts/login.js"></script>
   <script>
-      document.getElementById('botao_cadastrar').addEventListener('click', function() {
-    window.location.href = 'cadastro.html';
-  });
+    document.getElementById('botao_cadastrar').addEventListener('click', function() {
+      window.location.href = 'cadastro.html';
+    });
 
-  document.getElementById('botao_semlogin').addEventListener('click', function() {
+    document.getElementById('botao_semlogin').addEventListener('click', function() {
+      window.location.href = 'index.html';
+    });
+
+    // Função para processar o login
+    function processaFormLogin(event) {
+  event.preventDefault();
+
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+
+  resultadoLogin = loginUser(email, password);
+  if (resultadoLogin) {
     window.location.href = 'index.html';
-  });
+  } else {
+    alert('Email ou senha incorretos');
+  }
+}
+
+document.getElementById('login-form').addEventListener('submit', processaFormLogin);
+
+    document.getElementById('login-form').addEventListener('submit', processaFormLogin);
   </script>
+
+
+  
 </body>
 
 </html>

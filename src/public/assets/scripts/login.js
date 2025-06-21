@@ -1,5 +1,5 @@
 const LOGIN_URL = "login.html";
-const apiUrl = '/usuarios';
+const apiUrl = "http://localhost:3000/usuarios";
 
 var db_usuarios = [];
 var usuarioCorrente = null;
@@ -52,48 +52,52 @@ function initLoginApp(callback) {
 }
 
 // Função de login
-function loginUser(login, senha) {
-    for (var i = 0; i < db_usuarios.length; i++) {
-        var usuario = db_usuarios[i];
-        if (login == usuario.login && senha == usuario.senha) {
-            usuarioCorrente = {
-                id: usuario.id,
-                login: usuario.login,
-                email: usuario.email,
-                nomecompleto: usuario.nome,
-                admin: usuario.admin,
-                favoritos: usuario.favoritos || []
-            };
-        sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
-        return true;
-        }
+function loginUser(email, senha) {
+  for (var i = 0; i < db_usuarios.length; i++) {
+    var usuario = db_usuarios[i];
+    if (email == usuario.email && senha == usuario.senha) {
+      usuarioCorrente = {
+        id: usuario.id,
+        login: usuario.login,
+        email: usuario.email,
+        nomecompleto: usuario.nomecompleto,
+        admin: usuario.admin,
+        favoritos: usuario.favoritos || []
+      };
+      sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
+      return true;
     }
-    return false;
+  }
+  return false;
 }
+
 
 
 // Função para adicionar novo usuário
 function addUser(nome, login, senha, email, admin) {
-    let newId = generateUUID();
-    let usuario = { "id": newId, "login": login, "senha": senha, "nomecompleto": nome, "email": email, "admin": admin };
+  let newId = generateUUID();
+  let usuario = { "id": newId, "login": login, "senha": senha, "nomecompleto": nome, "email": email, "admin": admin, favoritos: [] };
 
-    fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(usuario),
-    })
-        .then(response => response.json())
-        .then(data => {
-            db_usuarios.push(usuario);
-            displayMessage("Usuário inserido com sucesso");
-        })
-        .catch(error => {
-            console.error('Erro ao inserir usuário via API JSONServer:', error);
-            displayMessage("Erro ao inserir usuário");
-        });
+  fetch(apiUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(usuario),
+  })
+  .then(response => {
+    if (!response.ok) throw new Error("Erro ao inserir usuário");
+    return response.json();
+  })
+  .then(data => {
+    db_usuarios.push(data);
+  })
+  .catch(error => {
+    console.error('Erro ao inserir usuário via API JSONServer:', error);
+    alert("Erro ao inserir usuário");
+  });
 }
+
 
 // Inicializa LoginApp
 initLoginApp();

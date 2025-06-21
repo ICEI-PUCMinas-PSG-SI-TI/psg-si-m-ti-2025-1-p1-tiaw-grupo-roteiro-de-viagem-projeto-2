@@ -482,12 +482,13 @@
       ]
     },
     {
-      "id": "712b14c9-271a-4fc6-a618-b2ed97cbfbf9",
-      "login": "brunoms",
+      "id": "2df2b8a8-8c59-45ba-878c-669998b1ff7b",
+      "login": "Lionel",
       "senha": "123",
-      "nomecompleto": "bruno",
-      "email": "b",
-      "admin": false
+      "nomecompleto": "Lionel Messi",
+      "email": "messi@gmail.com",
+      "admin": false,
+      "favoritos": []
     }
   ],
   "faqs": [
