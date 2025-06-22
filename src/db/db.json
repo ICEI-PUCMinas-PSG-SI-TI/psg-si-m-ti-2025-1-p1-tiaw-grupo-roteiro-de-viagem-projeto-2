@@ -488,6 +488,22 @@
       "nomecompleto": "bruno",
       "email": "b",
       "admin": false
+    },
+    {
+      "id": "1f4d3fe7-0cd1-449d-9114-f03a9938fca4",
+      "login": "karen",
+      "senha": "123",
+      "nomecompleto": "karen dornas",
+      "email": "karen@gmail.com",
+      "admin": false
+    },
+    {
+      "id": "442061cd-1abd-4907-b9b2-6b5c34e25d2f",
+      "login": "karen",
+      "senha": "123",
+      "nomecompleto": "karen dornas",
+      "email": "karen@gmail.com",
+      "admin": false
     }
   ],
   "faqs": [
@@ -542,14 +558,5 @@
       "id": "66e9"
     }
   ],
-  
-  "duvidas": [
-    {
-      "id": "a7e1",
-      "texto": "panela",
-      "contato": "antaoMaria@gmail.com",
-      "data": "2025-06-17T20:15:04.204Z"
-    }
-  ]
-
+  "duvidas": []
 }

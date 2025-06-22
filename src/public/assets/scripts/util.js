@@ -1,36 +1,92 @@
 const API_URL = "http://localhost:3000/duvidas";
 
-// Carrega e exibe os comentários
+// Carrega e exibe os comentários do usuário logado
 async function carregarComentarios() {
     const container = document.getElementById("comentarios");
     if (!container) return;
 
-    container.innerHTML = "<p>Carregando comentários...</p>";
+    container.innerHTML = "<p>Carregando dúvidas...</p>";
 
     try {
         const resposta = await fetch(API_URL);
-        const comentarios = await resposta.json();
+        const duvidas = await resposta.json();
 
         container.innerHTML = "";
 
-        if (comentarios.length === 0) {
-            container.innerHTML = "<p>Nenhum comentário encontrado.</p>";
+        if (duvidas.length === 0) {
+            container.innerHTML = "<p>Nenhuma dúvida encontrada.</p>";
             return;
         }
 
-        comentarios.forEach((comentario) => {
+        // Obter usuário logado do sessionStorage
+        const usuarioSalvo = sessionStorage.getItem("usuarioCorrente");
+        let usuario = null;
+        
+        if (usuarioSalvo) {
+            usuario = JSON.parse(usuarioSalvo);
+        }
+
+        // Filtrar apenas as dúvidas do usuário logado
+        const duvidasUsuario = usuario 
+            ? duvidas.filter(duvida => duvida.usuario && duvida.usuario.id === usuario.id)
+            : [];
+
+        if (duvidasUsuario.length === 0) {
+            container.innerHTML = "<p>Você ainda não enviou nenhuma dúvida.</p>";
+            return;
+        }
+
+        // Ordena por data (mais recente primeiro)
+        duvidasUsuario.sort((a, b) => new Date(b.data) - new Date(a.data));
+        
+        duvidasUsuario.forEach((duvida) => {
             const div = document.createElement('div');
-            div.className = 'comentario mb-3 p-3 border rounded';
+            div.className = 'comentario';
+            
             div.innerHTML = `
-                <p><strong>Comentário:</strong> ${comentario.texto}</p>
-                <p><strong>Contato:</strong> ${comentario.contato || 'Não informado'}</p>
-                <p><small><strong>Data:</strong> ${new Date(comentario.data).toLocaleString('pt-BR')}</small></p>
+                <p><strong>ENVIADO POR:</strong> ${duvida.usuario.nome.toUpperCase()}</p>
+                <p><strong>DÚVIDA:</strong> ${duvida.texto}</p>
+                ${duvida.contato ? `<p><strong>CONTATO:</strong> ${duvida.contato}</p>` : ''}
+                <p class="text-muted"><small>${new Date(duvida.data).toLocaleString('pt-BR')}</small></p>
+                <button class="btn btn-danger btn-sm btn-excluir" data-id="${duvida.id}">Excluir</button>
             `;
             container.appendChild(div);
         });
+
+        // Adiciona eventos aos botões de excluir
+        document.querySelectorAll('.btn-excluir').forEach(btn => {
+            btn.addEventListener('click', async function() {
+                const id = this.getAttribute('data-id');
+                await excluirComentario(id);
+            });
+        });
+
     } catch (erro) {
-        console.error("Erro ao carregar comentários:", erro);
-        container.innerHTML = "<p class='text-danger'>Erro ao carregar comentários. Verifique se o servidor está rodando.</p>";
+        console.error("Erro ao carregar dúvidas:", erro);
+        container.innerHTML = `<p class="text-danger">Erro ao carregar dúvidas: ${erro.message}</p>`;
+    }
+}
+
+// Função para excluir um comentário específico
+async function excluirComentario(id) {
+    if (!confirm('Tem certeza que deseja excluir esta dúvida?')) {
+        return;
+    }
+
+    try {
+        const resposta = await fetch(`${API_URL}/${id}`, {
+            method: "DELETE"
+        });
+
+        if (resposta.ok) {
+            carregarComentarios();
+            alert('Dúvida excluída com sucesso!');
+        } else {
+            throw new Error('Erro ao excluir dúvida');
+        }
+    } catch (erro) {
+        console.error("Erro ao excluir dúvida:", erro);
+        alert('Erro ao excluir dúvida. Tente novamente.');
     }
 }
 
@@ -44,19 +100,27 @@ async function adicionarComentario() {
     const contato = inputContato.value.trim();
 
     if (!texto) {
-        alert('Por favor, digite um comentário.');
+        alert('Por favor, digite sua dúvida.');
         return;
     }
 
-    if (!contato) {
-        alert('Por favor, informe seu contato.');
-        return;
+    // Obter usuário logado do sessionStorage
+    const usuarioSalvo = sessionStorage.getItem("usuarioCorrente");
+    let usuario = null;
+    
+    if (usuarioSalvo) {
+        usuario = JSON.parse(usuarioSalvo);
     }
 
-    const novoComentario = {
+    const novaDuvida = {
         texto: texto,
         contato: contato,
-        data: new Date().toISOString()
+        data: new Date().toISOString(),
+        usuario: usuario ? {
+            id: usuario.id,
+            nome: usuario.nomecompleto || usuario.login || "Anônimo",
+            login: usuario.login
+        } : null
     };
 
     try {
@@ -65,121 +129,51 @@ async function adicionarComentario() {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(novoComentario)
+            body: JSON.stringify(novaDuvida)
         });
 
         if (resposta.ok) {
             inputTexto.value = '';
             inputContato.value = '';
             carregarComentarios();
-            alert('Comentário adicionado com sucesso!');
+            alert('Dúvida enviada com sucesso!');
         } else {
-            throw new Error('Erro ao adicionar comentário');
+            throw new Error('Erro ao enviar dúvida');
         }
     } catch (erro) {
-        console.error("Erro ao adicionar comentário:", erro);
-        alert('Erro ao adicionar comentário. Tente novamente.');
+        console.error("Erro ao enviar dúvida:", erro);
+        alert('Erro ao enviar dúvida. Tente novamente.');
     }
 }
 
-// Função para apagar todos os comentários
-async function apagarTodosComentarios() {
-    if (!confirm('Tem certeza que deseja apagar TODOS os comentários?')) {
-        return;
-    }
-
-    try {
-        const resposta = await fetch(API_URL);
-        const comentarios = await resposta.json();
-
-        for (const comentario of comentarios) {
-            await fetch(`${API_URL}/${comentario.id}`, { method: "DELETE" });
-        }
-
-        carregarComentarios();
-        alert('Todos os comentários foram apagados!');
-    } catch (erro) {
-        console.error("Erro ao apagar todos os comentários:", erro);
-        alert('Erro ao apagar todos os comentários.');
+// Atualiza o nome do usuário no cabeçalho
+function atualizarNomeUsuario() {
+    const usuarioSalvo = sessionStorage.getItem("usuarioCorrente");
+    const nomeLoginElement = document.getElementById("nomelogin");
+    
+    if (usuarioSalvo && nomeLoginElement) {
+        const usuario = JSON.parse(usuarioSalvo);
+        // Convertendo para maiúsculas
+        nomeLoginElement.textContent = (usuario.nomecompleto || usuario.login).toUpperCase();
     }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const comentariosDiv = document.getElementById('comentarios');
-    const btnVer = document.querySelector('.btn-ver');
-    const btnEnviar = document.querySelector('.btn-enviar');
-    const btnApagar = document.querySelector('.btn-apagar');
-    const isIndex3 = window.location.pathname.endsWith("index3.htm");
+    // Atualiza o nome do usuário no cabeçalho
+    atualizarNomeUsuario();
 
-    // Só carrega comentários automaticamente se NÃO for a index.htm e NÃO for index3.htm
-    if (comentariosDiv && window.location.pathname !== "/index.htm" && !isIndex3) {
-        carregarComentarios();
-    }
+    // Configura o botão de voltar
+    document.getElementById('button_voltar')?.addEventListener('click', function() {
+        window.history.back();
+    });
 
-    // Se existe o botão de enviar, adiciona evento
-    if (btnEnviar) {
-        btnEnviar.addEventListener('click', adicionarComentario);
-    }
+    document.getElementById('logo')?.addEventListener('click', function() {
+        window.history.back();
+    });
 
-    // Se está no index.htm, botão redireciona
-    if (btnVer && window.location.pathname.endsWith("index.htm")) {
-        btnVer.addEventListener('click', function() {
-            window.location.href = "index3.htm";
-        });
-    }
+    // Configura o botão de enviar
+    document.querySelector('.btn-enviar')?.addEventListener('click', adicionarComentario);
 
-    // Se está no index3.htm, oculta comentários e só mostra ao clicar no botão
-    if (comentariosDiv && btnVer && isIndex3) {
-        comentariosDiv.style.display = "none";
-        btnVer.addEventListener('click', function() {
-            comentariosDiv.style.display = "block";
-            carregarComentarios();
-        });
-    }
-
-    // Se está no index3.htm, ativa o botão apagar
-    if (btnApagar && isIndex3) {
-        btnApagar.addEventListener('click', apagarTodosComentarios);
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const comentariosDiv = document.getElementById('comentarios');
-    const btnVer = document.querySelector('.btn-ver');
-    const btnEnviar = document.querySelector('.btn-enviar');
-    const btnApagar = document.querySelector('.btn-apagar');
-    const btnArzenamentos = document.querySelector('.btn-arzenamentos');
-    const isIndex2 = window.location.pathname.endsWith("index2.htm");
-    const isIndex3 = window.location.pathname.endsWith("index3.htm");
-
-    // Só carrega comentários automaticamente se NÃO for a index.htm, index2.htm ou index3.htm
-    if (comentariosDiv && !window.location.pathname.endsWith("index.htm") && !isIndex2 && !isIndex3) {
-        carregarComentarios();
-    }
-
-    // Se existe o botão de enviar, adiciona evento
-    if (btnEnviar) {
-        btnEnviar.addEventListener('click', adicionarComentario);
-    }
-
-    // Botão ARMAZENAMENTOS leva para index3.htm
-    if (btnArzenamentos) {
-        btnArzenamentos.addEventListener('click', function() {
-            window.location.href = "index3.htm";
-        });
-    }
-
-    // Se está no index2.htm ou index3.htm, oculta comentários e só mostra ao clicar no botão
-    if (comentariosDiv && btnVer && (isIndex2 || isIndex3)) {
-        comentariosDiv.style.display = "none";
-        btnVer.addEventListener('click', function() {
-            comentariosDiv.style.display = "block";
-            carregarComentarios();
-        });
-    }
-
-    // Se está no index2.htm ou index3.htm, ativa o botão apagar
-    if (btnApagar && (isIndex2 || isIndex3)) {
-        btnApagar.addEventListener('click', apagarTodosComentarios);
-    }
+    // Carrega os comentários do usuário
+    carregarComentarios();
 });

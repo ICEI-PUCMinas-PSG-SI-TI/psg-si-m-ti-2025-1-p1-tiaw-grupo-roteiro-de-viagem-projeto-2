@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTravel</title>
+    <link rel="stylesheet" href="./assets/css/duvida.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="shortcut icon" type="imagex/png" href="./assets/img/aviaoeseta.png">
+
+</head>
+<body>
+
+ <header class="d-flex cab position-relative container-fluid">
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars" style="color: white;"></i>
+        </button>
+        <nav id="sideMenu" class="side-menu">
+            <div class="menu-content">
+
+                <div class="dark-mode-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="modo-escuro">Modo escuro</span>
+                </div>
+
+                <ul class="menu-list">
+                    <a href="PerfilUsuario.html"><li><i class="fa-regular fa-user"></i> Minha conta</li></a>
+                    <a href="favoritos.html"><li><i class="fa-regular fa-heart"></i> Favoritos</li></a>
+                    <a href="meusroteiros.html"><li><i class="fa-regular fa-map"></i> Meus roteiros</li></a>
+                    <li><a href="avaliacoes.html"><i class="fa-regular fa-star"></i> Avaliações</li></a>
+                    <li><a href="faq.html"><i class="fa-regular fa-circle-question"></i> FAQ</li></a>
+                    <li><a href="minhasduvidas.html"><i class="fa-regular fa-comment-dots"></i> Minhas dúvidas</li></a>
+                </ul>
+
+                <a href="painel.html"><button class="recom-btn"><i class="fa-solid fa-plus"></i> CADASTRAR RECOMENDAÇÕES
+                </button></a>
+
+                <div class="footer-menu">
+                    <button class="sair-btn" onclick="toggleMenu()">
+                        FECHAR MENU
+                    </button>
+                </div>
+                <div class="footer-menu">
+                    <button id="sair_conta" style="background-color: #f57c00; color: black; margin-top: 15%;" class="sair-btn" onclick="toggleMenu()">
+                        SAIR DA CONTA
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <img src="./assets/img/logoST.PNG" id="logo">
+
+        <!-- <p class="position-absolute" id="iconworld">BRL <i class="fa-solid fa-earth-americas"></i></p> -->
+        <p class="position-absolute py-1 px-3" id="nomelogin">LOGIN</p>
+        <a href="PerfilUsuario.html"><i class="fa-regular fa-user fa-2x position-absolute" id="iconuser"></i></a>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            menu.classList.toggle('open');
+        }
+
+        document.getElementById('darkModeToggle')?.addEventListener('change', function () {
+            document.body.classList.toggle('dark-mode', this.checked);
+        });
+
+        document.getElementById("sair_conta").addEventListener("click", function () {
+            window.location.href = "login.html";
+        });
+
+    </script>
+
+    <div class="titulo">
+        <div class="d-flex justify-content-center mt-5">
+        </div>
+    </div>
+
+    <main>
+        
+        <button id="button_voltar" class="btn btn-primary">VOLTAR</button>
+        <h3 style="text-align: center; margin-bottom: 1.5%;">DEIXE SUA DÚVIDA</h3>
+
+        <div class="form-container">
+            <textarea id="inputComentario" placeholder="ESCREVA AQUI"></textarea>
+            <div class="contato">
+                <label>CONTATO</label>
+                <input id="inputContato" type="number" placeholder="INFORME SEU NÚMERO PARA CONTATO">
+            </div>
+<div class="d-flex flex-column align-items-center gap-2">
+<button class="btn btn-primary btn-enviar" style="background-color: #007abf; margin-top: 4%;">ENVIAR DÚVIDA</button>
+
+  <!-- <button class="btn btn-outline-secondary" id="minhasdu" style="background-color: #f57c00; color: white; margin-top: 5%;">VER MINHAS DÚVIDAS</button> -->
+</div>
+
+        </div>
+        <div id="comentarios" class="mt-4"></div>
+    </main>
+
+    <footer>
+        <div class="d-flex align-items-center">
+            <div class="rodape">
+                <i class="fa-solid fa-copyright"></i>
+                <p style="margin: 0;">Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/scripts/util.js"></script>
+</body>
+</html>
