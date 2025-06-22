@@ -1,6 +1,11 @@
 // Seleciona o corpo da tabela
 const tabelaBody = document.querySelector("tbody");
 
+voltarBtn.addEventListener('click', () => {
+  console.log("Botão voltar clicado!");
+  history.back();
+});
+
 // Carrega as recomendações da API
 function carregarRecomendacoes() {
   fetch("http://localhost:3000/recomendacoes")

@@ -10,29 +10,25 @@
 <body>
 
     <!-- Cabeçalho -->
-    <header class="d-flex cab position-relative container-fluid">
-    <img src="assets/img/logo.png" id="logo"/>
+    <header class="cab position-relative" style="height: 60px; display: flex; align-items: center;">
+    <button id="menu-btn" class="menu-btn" aria-label="Abrir menu">
+    ☰
+    </button>
+    <!-- Logo -->
+    <img src="assets/img/logoST.PNG" id="logo" alt="Logo Smart Travel">
 
-    <p id="iconworld">BRL <i class="fa-solid fa-earth-americas ml-1"></i></p>
-    <p id="nomelogin">LOGIN</p>
+    <!-- Botão Login -->
+    <p id="nomelogin" class="position-absolute">LOGIN</p>
 
-    <a href="PerfilUsuario.html"><i id="iconuser" class="fa-regular fa-user fa-2x ml-1 mr-1 position-absolute"></i></a>
-    </header>
+    <!-- Ícone usuário -->
+    <a href="PerfilUsuario.html">
+        <i class="fa-regular fa-user fa-2x position-absolute" id="iconuser"></i>
+    </a>
+</header>
 
     <div class="voltar-container">
         <button id="voltarBtn">VOLTAR</button>
     </div>
-
-    <main class="container">
-    <nav class="sidebar">
-    <h2>DASHBOARD</h2><!-- Título Dashboard -->
-    <ul>
-        <li><a href="#" class="botao-menu"><i class="fa-solid fa-users"></i> CADASTROS</a></li>
-        <li><a href="#" class="botao-menu"><i class="fa-regular fa-star"></i> RECOMENDAÇÕES</a></li>
-        <li><a href="#" class="botao-menu"><i class="fa-solid fa-headset"></i> DÚVIDAS</a></li>
-    </ul>
-    <a href="#" class="botao-menu configuracoes"><i class="fa-solid fa-cog"></i> CONFIGURAÇÕES</a>
-    </nav>
 
         <section class="painel">
             <h3>PAINEL DE ADMINISTRAÇÃO</h3>
@@ -59,5 +55,13 @@
     </footer>
 
     <script src="assets/scripts/app.js"></script>
+    <script>
+  const menuBtn = document.getElementById('menuToggle');
+  const sideMenu = document.getElementById('sideMenu');
+
+  menuBtn.addEventListener('click', () => {
+    sideMenu.classList.toggle('open');
+  });
+</script>
 </body>
 </html>

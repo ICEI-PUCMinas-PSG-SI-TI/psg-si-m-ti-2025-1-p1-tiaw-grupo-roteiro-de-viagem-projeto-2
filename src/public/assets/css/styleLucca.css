@@ -1,112 +1,239 @@
-body {
+/* Reset e configurações globais */
+html, body {
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     font-family: Arial, sans-serif;
 }
 
+/* Cabeçalho */
 header.cab {
-  background: #f58220;
-  padding: 20px;
-  color: #fff;
-  align-items: center;
-  position: relative;
+    background-color: #ea8613;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 20px;
 }
 
-header.cab #logo {
-  height: 40px;
-}
-
-header.cab #iconworld {
-  position: absolute;
-  right: 180px;
-  top: 18px;
-  font-weight: bold;
-  background: #fff;
-  color: #f58220;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-header.cab #nomelogin {
-  position: absolute;
-  right: 110px;
-  top: 18px;
-  background: #fff;
-  color: #f58220;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-header.cab #iconuser {
-  position: absolute;
-  right: 50px;
-  top: 18px;
-  color: #fff;
-  cursor: pointer;
-}
-
-header.cab #iconuser:hover {
-  color: #ff933d;
-}
-
+/* Logo */
 #logo {
-    height: 40px;
-}
-
-.btn.green {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 5px;
-  margin-right: 5px;
-  cursor: pointer;
-}
-
-.btn.red {
-  background-color: #F44336;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#iconworld, #nomelogin, #iconuser {
-    top: 18px;
-    color: #000;
-    font-weight: bold;
-}
-
-#iconworld {
-    right: 180px;
-}
-
-#nomelogin {
-    right: 110px;
+    height: 60px; 
+    width: 100px;
+    margin-left: 20px;
     background-color: white;
+}
+
+/* Texto BRL + globo */
+#iconworld {
+    display: none;
+}
+
+/* Botão LOGIN */
+#nomelogin {
+    position: absolute;
+    right: 130px;
+    bottom: 0;
+    margin: 0;
+    background-color: white;
+    color: #f58220;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 15px;
     border-radius: 5px;
 }
 
+/* Ícone de usuário */
 #iconuser {
-    right: 50px;
-    color: white;
-}
-
-main.container {
-    display: flex;
-}
-
-#voltarBtn {
     position: absolute;
-    top: 80px;
-    left: 20px;
-    background-color: #0069d9;
+    right: 0;
+    top: 50%; 
+    transform: translateY(-50%);
+    color: white; 
+    margin-right: 75px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Menu lateral (caso você utilize) */
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin-left: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    padding: 20px;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    padding: 20px;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu .menu-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.side-menu ul li {
+    margin: 15px 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Botões e elementos */
+.recom-btn {
+    background-color: #007bff;
     color: white;
     border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #f57c00;
+    justify-content: space-between;
+}
+
+.modo-escuro {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px; width: 14px;
+    left: 3px; bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+.sair-btn {
+    color: #f57c00;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+}
+
+.sair-btn:hover {
+    text-decoration: underline;
+}
+
+h6 {
+    margin-bottom: 3px !important;
+}
+
+.selectfilter {
+    width: 100%;
+}
+
+input[type="text"] {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+/* Botões redondos */
+.btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.btn.green {
+    background-color: limegreen;
+}
+
+.btn.red {
+    background-color: red;
+}
+
+/* Painel e layout */
+main.container {
+    display: flex;
 }
 
 .sidebar {
@@ -125,6 +252,7 @@ main.container {
 .sidebar ul {
     list-style: none;
     padding: 0;
+    margin-bottom: 40px;
 }
 
 .sidebar ul li {
@@ -135,11 +263,36 @@ main.container {
     gap: 10px;
 }
 
+.botao-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: #ff933d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.botao-menu:hover,
+.configuracoes:hover {
+    background: #f57c20;
+}
+
 .configuracoes {
-    margin-top: 40px;
+    display: block;
+    padding: 10px 20px;
+    background: #ff933d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: background 0.3s ease;
     font-weight: bold;
 }
 
+/* Painel de conteúdo */
 .painel {
     flex-grow: 1;
     padding: 30px;
@@ -170,23 +323,25 @@ th, td {
     border-bottom: 1px solid #ccc;
 }
 
-.btn {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+/* Botão Voltar */
+.voltar-container {
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+#voltarBtn {
+    background-color: #007bff;
+    color: #fff;
     border: none;
-    margin: 0 5px;
+    padding: 8px 16px;
+    border-radius: 5px;
     cursor: pointer;
+    position: absolute;
+    top: 80px;
+    left: 20px;
 }
 
-.btn.green {
-    background-color: limegreen;
-}
-
-.btn.red {
-    background-color: red;
-}
-
+/* Rodapé */
 footer {
     text-align: left;
     padding: 10px 20px;
@@ -195,57 +350,4 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-}
-.voltar-container {
-  padding: 20px;
-  background: #f9f9f9;
-}
-
-#voltarBtn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 40px;
-}
-
-.sidebar ul li {
-  margin: 20px 0;
-}
-
-.botao-menu {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 20px;
-  background: #ff933d;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.botao-menu:hover {
-  background: #f57c20;
-}
-
-.configuracoes {
-  display: block;
-  padding: 10px 20px;
-  background: #ff933d;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  transition: background 0.3s ease;
-}
-
-.configuracoes:hover {
-  background: #f57c20;
 }
