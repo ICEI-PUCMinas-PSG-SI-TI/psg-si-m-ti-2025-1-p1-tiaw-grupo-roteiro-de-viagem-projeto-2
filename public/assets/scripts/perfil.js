@@ -1,6 +1,7 @@
 let usuarios = [];
 let usuarioCorrente = {};
 
+// Verifica se há usuário logado ao carregar a página
 if (!sessionStorage.getItem("usuarioCorrente")) {
   window.location.href = "login.html";
 }
@@ -31,10 +32,21 @@ function preencherFormulario(usuario) {
   document.getElementById("nomecompleto").value = usuario.nomecompleto || "";
   document.getElementById("email").value = usuario.email || "";
   document.getElementById("senha").value = usuario.senha || "";
-  document.getElementById("nome-usuario").textContent = (usuario.nomecompleto || usuario.login).toUpperCase();
-  document.getElementById("usuario-nome-topo").textContent = usuario.login || "";
-  document.getElementById("avatar").src = usuario.foto_perfil || "assets/img/imglogin.png";
-  document.getElementById("avatar-topo").src = usuario.foto_perfil || "assets/img/imglogin.png";
+  document.getElementById("nome-usuario").textContent = (usuario.nomecompleto || usuario.login || "").toUpperCase();
+  
+  const avatarSrc = usuario.foto_perfil || "assets/img/imglogin.png";
+  document.getElementById("avatar").src = avatarSrc;
+  if (document.getElementById("avatar-topo")) {
+    document.getElementById("avatar-topo").src = avatarSrc;
+  }
+
+  if (document.getElementById("usuario-nome-topo")) {
+    document.getElementById("usuario-nome-topo").textContent = usuario.login || "";
+  }
+
+  if (document.getElementById("nomelogin")) {
+    document.getElementById("nomelogin").textContent = usuario.login || "";
+  }
 }
 
 function preencherDropdownUsuarios() {
@@ -54,30 +66,23 @@ function preencherDropdownUsuarios() {
 }
 
 function carregarPerfilPorId(id) {
-  const usuario = usuarios.find(u => u.id == id);
+  const usuario = usuarios.find(u => u.id === id);
   if (!usuario) return;
 
   usuarioCorrente = usuario;
-  sessionStorage.setItem("usuarioCorrente", JSON.stringify(usuario));
-
-  document.getElementById("login").value = usuario.login;
-  document.getElementById("nomecompleto").value = usuario.nomecompleto;
-  document.getElementById("email").value = usuario.email;
-  document.getElementById("senha").value = usuario.senha || "";
-  document.getElementById("nome-usuario").textContent = (usuario.nomecompleto || usuario.nome || usuario.login).toUpperCase();
-  document.getElementById("usuario-nome-topo").textContent = usuario.login;
-  document.getElementById("avatar").src = usuario.foto_perfil;
-  document.getElementById("avatar-topo").src = usuario.foto_perfil;
+  sessionStorage.setItem("usuarioCorrente", JSON.stringify(usuarioCorrente));
+  preencherFormulario(usuario);
 }
 
 function trocarUsuario() {
-  const idSelecionado = parseInt(document.getElementById("usuario-seletor").value);
+  const idSelecionado = parseInt(document.getElementById("usuario-seletor").value, 10);
   carregarPerfilPorId(idSelecionado);
 }
 
 function salvarAlteracoes(event) {
   event.preventDefault();
 
+  // Atualiza o objeto com os dados do formulário
   usuarioCorrente.login = document.getElementById("login").value;
   usuarioCorrente.nomecompleto = document.getElementById("nomecompleto").value;
   usuarioCorrente.email = document.getElementById("email").value;
@@ -95,13 +100,9 @@ function salvarAlteracoes(event) {
       return res.json();
     })
     .then(data => {
-      document.getElementById("usuario-nome-topo").textContent = data.login;
-      document.getElementById("nome-usuario").textContent = data.login.toUpperCase();
+      usuarioCorrente = data;
       sessionStorage.setItem("usuarioCorrente", JSON.stringify(data));
-
-      const nomelogin = document.getElementById("nomelogin");
-      if (nomelogin) nomelogin.textContent = data.login;
-
+      preencherFormulario(data);
       alert("Alterações salvas com sucesso! ✈️🧡");
     })
     .catch(error => {
@@ -114,44 +115,48 @@ function sairConta() {
   sessionStorage.removeItem("usuarioCorrente");
   usuarioCorrente = null;
 
+  // Limpa o formulário
   document.getElementById("login").value = "";
   document.getElementById("nomecompleto").value = "";
   document.getElementById("email").value = "";
   document.getElementById("senha").value = "";
-
   document.getElementById("nome-usuario").textContent = "";
-  document.getElementById("usuario-nome-topo").textContent = "";
+  
+  if (document.getElementById("usuario-nome-topo")) {
+    document.getElementById("usuario-nome-topo").textContent = "";
+  }
+
   document.getElementById("avatar").src = "assets/img/imglogin.png";
-  document.getElementById("avatar-topo").src = "assets/img/imglogin.png";
+  if (document.getElementById("avatar-topo")) {
+    document.getElementById("avatar-topo").src = "assets/img/imglogin.png";
+  }
 
   alert("Você saiu da conta.");
   window.location.href = "index.html";
 }
 
-//mudar imagem
 function mudarFotoPorURL() {
   const novaURL = prompt("Digite a URL da nova imagem: ✈️🧡");
 
   if (!novaURL) return;
-
-  document.getElementById("avatar").src = novaURL;
-  document.getElementById("avatar-topo").src = novaURL;
 
   usuarioCorrente.foto_perfil = novaURL;
 
   fetch(`http://localhost:3000/usuarios/${usuarioCorrente.id}`, {
     method: "PATCH",
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "application/json"
     },
-    body: JSON.stringify({ foto_perfil: novaURL }),
+    body: JSON.stringify({ foto_perfil: novaURL })
   })
     .then(res => {
       if (!res.ok) throw new Error("Erro ao atualizar imagem.");
       return res.json();
     })
     .then(data => {
+      usuarioCorrente = data;
       sessionStorage.setItem("usuarioCorrente", JSON.stringify(data));
+      preencherFormulario(data);
       alert("Imagem de perfil atualizada com sucesso! 🧡");
     })
     .catch(err => {
