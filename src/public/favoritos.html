@@ -13,14 +13,54 @@
     </head>
 
     <body>
-        <header class="d-flex cab position-relative cab container-fluid">
+        <header class="d-flex cab position-relative container-fluid">
 
-            <a href="index.html"><img src="assets/img/logoST.PNG" id="logo"></a>
-            
-            <p class="position-absolute py-1 px-3" id="nomelogin">LOGIN</p>
-            <a href="PerfilUsuario.html"><i class="fa-regular fa-user fa-2x position-absolute" id="iconuser"></i></a>
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars" style="color: white;"></i>
+        </button>
+        <nav id="sideMenu" class="side-menu">
+            <div class="menu-content">
 
-        </header>
+                <div class="dark-mode-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="modo-escuro">Modo escuro</span>
+                </div>
+
+                <ul class="menu-list">
+                    <a href="PerfilUsuario.html"><li><i class="fa-regular fa-user"></i> Minha conta</li></a>
+                    <a href="favoritos.html"><li><i class="fa-regular fa-heart"></i> Favoritos</li></a>
+                    <a href="meusroteiros.html"><li><i class="fa-regular fa-map"></i> Meus roteiros</li></a>
+                    <li><a href="avaliacoes.html"><i class="fa-regular fa-star"></i> Avaliações</li></a>
+                    <li><a href="faq.html"><i class="fa-regular fa-circle-question"></i> FAQ</li></a>
+                    <li><a href="minhasduvidas.html"><i class="fa-regular fa-comment-dots"></i> Minhas dúvidas</li></a>
+                </ul>
+
+                <a href="painel.html"><button class="recom-btn"><i class="fa-solid fa-plus"></i> CADASTRAR RECOMENDAÇÕES
+                </button></a>
+
+                <div class="footer-menu">
+                    <button class="sair-btn" onclick="toggleMenu()">
+                        FECHAR MENU
+                    </button>
+                </div>
+                <div class="footer-menu">
+                    <button id="sair_conta" style="background-color: #f57c00; color: black; margin-top: 15%;" class="sair-btn" onclick="toggleMenu()">
+                        SAIR DA CONTA
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- MUDANÇAS!!!!!!!!! ALTERAR O CAMINHO DA IMAGEM -->
+        <img src="assets/img/logoST.PNG" id="logo">
+
+        
+        <p class="position-absolute py-1 px-3" id="nomelogin">LOGIN</p>
+        <a href="PerfilUsuario.html"><i class="fa-regular fa-user fa-2x position-absolute" id="iconuser"></i></a>
+    </header>
         <div id="msgFav"></div>
         <div id="divbtnvoltar">
             <button onclick="window.location.href = 'index.html'" id="button_voltar" class="btn-btn-primary">VOLTAR</button>
@@ -101,6 +141,50 @@
 
             
         </script>
+        <script>
+function sairConta() {
+  // Verificar se existe um usuário logado
+  const usuario = sessionStorage.getItem("usuarioCorrente");
+
+  if (!usuario) {
+    alert("Nenhum usuário está logado no momento.");
+    return;
+  }
+
+  // Limpar o sessionStorage e variáveis
+  sessionStorage.removeItem("usuarioCorrente");
+  usuarioCorrente = null;
+
+  // Limpar campos se existirem
+  if (document.getElementById("login")) document.getElementById("login").value = "";
+  if (document.getElementById("nomecompleto")) document.getElementById("nomecompleto").value = "";
+  if (document.getElementById("email")) document.getElementById("email").value = "";
+  if (document.getElementById("senha")) document.getElementById("senha").value = "";
+
+  // Limpar textos e imagens do perfil, se existirem
+  if (document.getElementById("nome-usuario")) document.getElementById("nome-usuario").textContent = "";
+  if (document.getElementById("usuario-nome-topo")) document.getElementById("usuario-nome-topo").textContent = "";
+  if (document.getElementById("avatar")) document.getElementById("avatar").src = "assets/img/imglogin.png";
+  if (document.getElementById("avatar-topo")) document.getElementById("avatar-topo").src = "assets/img/imglogin.png";
+
+  alert("Você saiu da conta.");
+  window.location.href = "index.html";
+}
+
+function toggleMenu() {
+  const menu = document.getElementById('sideMenu');
+  menu.classList.toggle('open');
+}
+
+document.getElementById('darkModeToggle')?.addEventListener('change', function () {
+  document.body.classList.toggle('dark-mode', this.checked);
+});
+
+const botaoSair = document.getElementById("sair_conta");
+if (botaoSair) {
+  botaoSair.addEventListener("click", sairConta);
+}
+</script>
         <script src="assets/scripts/usuario.js"></script>
     </body>
 
