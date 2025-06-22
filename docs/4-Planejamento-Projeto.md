@@ -88,9 +88,9 @@ Legenda:
 As ferramentas empregadas no projeto são:
 
 - **Editor de código:** Visual Studio Code
-- **Ferramentas de diagramação:** Trello
+- **Ferramentas de diagramação:** Trello e Monday
 - **Frameworks:** Figma
-- **Gerenciamento de Código:** Github
+- **Gerenciamento de Código:** Github/git
 
 
 ## Links Úteis

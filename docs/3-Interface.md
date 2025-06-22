@@ -39,13 +39,4 @@
 ### Criação Roteiro 2
 ![Wireframe](images/12.png)
 
-> São protótipos usados em design de interface para sugerir a
-> estrutura de um site web e seu relacionamentos entre suas
-> páginas. Um wireframe web é uma ilustração semelhante do
-> layout de elementos fundamentais na interface.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/).
-
 # Atividade feita > https://www.figma.com/design/IsuGRdMmtuFW54bjVKJ3cV/Smart-Travel?node-id=0-1&t=3srgTWUo7lG5HAUw-1
