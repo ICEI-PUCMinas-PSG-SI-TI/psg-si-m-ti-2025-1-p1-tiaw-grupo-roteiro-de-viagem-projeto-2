@@ -2,14 +2,13 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Smart Travel - Roteiro Criado</title>
+  <title>Smart Travel - Ver Roteiro</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       background-color: #f9f9f9;
     }
-
     header {
       background-color: #ff7f00;
       display: flex;
@@ -18,31 +17,25 @@
       padding: 10px 20px;
       color: white;
     }
-
     header img.logo {
       height: 40px;
     }
-
     header .perfil {
       display: flex;
       align-items: center;
     }
-
     header .perfil span {
       margin-right: 10px;
     }
-
     main {
       padding: 20px;
       max-width: 900px;
       margin: auto;
     }
-
     h2 {
       text-align: center;
       margin-bottom: 20px;
     }
-
     .voltar,
     .acao {
       display: inline-block;
@@ -55,12 +48,10 @@
       cursor: pointer;
       border: none;
     }
-
     .voltar:hover,
     .acao:hover {
       background-color: #0056b3;
     }
-
     .info-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -70,32 +61,26 @@
       border-radius: 10px;
       margin-bottom: 30px;
     }
-
     .info-grid div {
       font-size: 16px;
     }
-
-    /* Estilo para cards de recomendações */
     #recomendacoes {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 15px;
       margin-top: 30px;
     }
-
     .card {
       background: white;
       border-radius: 10px;
       padding: 15px;
-      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-
     .card h3 {
       margin: 0 0 10px 0;
       font-size: 18px;
       color: #ff7f00;
     }
-
     .card p {
       margin: 0;
       font-size: 16px;
@@ -115,9 +100,7 @@
     <a href="crud.html" class="voltar">VOLTAR</a>
     <h2>ROTEIRO CRIADO</h2>
 
-    <div class="info-grid" id="infoRoteiro">
-      <!-- Dados do roteiro aparecem aqui -->
-    </div>
+    <div class="info-grid" id="infoRoteiro"></div>
 
     <div>
       <button class="acao" id="btnEditar">EDITAR</button>
@@ -125,90 +108,84 @@
     </div>
 
     <h2>RECOMENDAÇÕES PARA ESTA CIDADE</h2>
-    <div id="recomendacoes">
-      <!-- Cards de recomendações -->
-    </div>
+    <div id="recomendacoes"></div>
   </main>
 
   <script>
     document.addEventListener("DOMContentLoaded", async () => {
       const params = new URLSearchParams(window.location.search);
       const id = params.get("id");
+
       if (!id) {
-        alert("ID do roteiro não fornecido");
+        alert("ID do roteiro não fornecido.");
         window.location.href = "crud.html";
         return;
       }
 
-      const rotaRoteiros = 'http://localhost:3000/roteiros';
+      const rotaRoteiros = 'http://localhost:3000/roteirosProntos'; // Atualize para a rota correta
       const rotaRecomendacoes = 'http://localhost:3000/recomendacoes';
 
       try {
-        // Buscar roteiro pelo id
         const resRoteiro = await fetch(`${rotaRoteiros}/${id}`);
-        if (!resRoteiro.ok) throw new Error("Roteiro não encontrado");
+        if (!resRoteiro.ok) throw new Error("Roteiro não encontrado.");
         const roteiro = await resRoteiro.json();
 
-        // Função para formatar arrays ou strings para exibição
-        function formatarValor(val) {
-          if (Array.isArray(val)) return val.join(", ");
-          if (typeof val === "string") return val;
-          return JSON.stringify(val);
-        }
-
-        // Mostrar dados do roteiro
         const infoDiv = document.getElementById("infoRoteiro");
+
+        const mostrar = val => (Array.isArray(val) ? val.join(", ") : val);
+
         infoDiv.innerHTML = `
+          <div><strong>Nome:</strong> ${roteiro.nome}</div>
           <div><strong>Ida:</strong> ${roteiro.ida}</div>
           <div><strong>Volta:</strong> ${roteiro.volta}</div>
           <div><strong>Pessoas:</strong> ${roteiro.pessoas}</div>
           <div><strong>Orçamento:</strong> R$ ${roteiro.orcamento}</div>
           <div><strong>Estado:</strong> ${roteiro.estado}</div>
           <div><strong>Cidade:</strong> ${roteiro.cidade}</div>
-          <div><strong>Pet:</strong> ${formatarValor(roteiro.pet)}</div>
-          <div><strong>Piscina:</strong> ${formatarValor(roteiro.piscina)}</div>
-          <div><strong>Quartos:</strong> ${formatarValor(roteiro.quartos)}</div>
-          <div><strong>Garagem:</strong> ${formatarValor(roteiro.garagem)}</div>
+          <div><strong>Pet:</strong> ${mostrar(roteiro.pet)}</div>
+          <div><strong>Piscina:</strong> ${mostrar(roteiro.piscina)}</div>
+          <div><strong>Quartos:</strong> ${mostrar(roteiro.quartos)}</div>
+          <div><strong>Garagem:</strong> ${mostrar(roteiro.garagem)}</div>
         `;
 
         // Buscar recomendações para a cidade do roteiro
         const resRec = await fetch(`${rotaRecomendacoes}?cidade=${encodeURIComponent(roteiro.cidade)}`);
-        if (!resRec.ok) throw new Error("Erro ao buscar recomendações");
+        if (!resRec.ok) throw new Error("Erro ao buscar recomendações.");
         const recomendacoes = await resRec.json();
 
-        // Mostrar recomendações
         const recDiv = document.getElementById("recomendacoes");
-        if (recomendacoes.length === 0) {
-          recDiv.innerHTML = "<p>Não há recomendações para esta cidade.</p>";
-        } else {
+        if (recomendacoes.length) {
           recDiv.innerHTML = recomendacoes.map(r => `
             <div class="card">
               <h3>${r.nome}</h3>
-              <p>Tipo: ${r.tipo.charAt(0).toUpperCase() + r.tipo.slice(1)}</p>
+              <p>Tipo: ${r.tipo}</p>
             </div>
           `).join('');
+        } else {
+          recDiv.innerHTML = "<p>Sem recomendações para esta cidade.</p>";
         }
 
-        // Botões editar e excluir
+        // Botão editar
         document.getElementById("btnEditar").onclick = () => {
-          localStorage.setItem('editarRoteiro', JSON.stringify(roteiro));
+          localStorage.setItem("editarRoteiro", JSON.stringify(roteiro));
           window.location.href = "crud.html";
         };
 
+        // Botão excluir
         document.getElementById("btnExcluir").onclick = async () => {
-          if (confirm("Tem certeza que deseja excluir este roteiro?")) {
-            const del = await fetch(`${rotaRoteiros}/${id}`, { method: "DELETE" });
-            if (del.ok) {
-              alert("Roteiro excluído!");
+          if (confirm("Deseja realmente excluir este roteiro?")) {
+            const resDel = await fetch(`${rotaRoteiros}/${id}`, { method: "DELETE" });
+            if (resDel.ok) {
+              alert("Roteiro excluído com sucesso!");
               window.location.href = "crud.html";
             } else {
-              alert("Erro ao excluir.");
+              alert("Erro ao excluir o roteiro.");
             }
           }
         };
 
       } catch (err) {
-        alert(err.message);
+        alert("Erro: " + err.message);
         window.location.href = "crud.html";
       }
     });
