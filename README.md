@@ -28,14 +28,14 @@ Os membros do grupo são:
 
 
 
-## Pasta docs
+## Pasta docs 📄
 
 Esta pasta arquiva a documentação dos projetos.
 
 1. [documentação](./docs)
 
 
-## Pasta src
+## Pasta src 🖥️
 
 Este diretório armazena o código fonte do projeto e adota uma hierarquia
 básica de projetos Web simples, que utilizam as tecnologias HTML, CSS e

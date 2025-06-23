@@ -1,33 +1,28 @@
 # Especificações Do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Contexto.md"> Documentação de Contexto</a></span>
-
-
-## Personas
-
-### Persona 1
+### Persona 1 👤
 
 |Mariana Souza|
 |:--|
-|32 anos. Analista de marketing digital. Sonha em conhecer outros os continentes, viver experiências autênticas, viajar sem precisar planejar cada detalhe|
+|32 anos. Analista de marketing digital. Sonha em conhecer outros continentes e viver experiências autênticas, sem precisar se preocupar com o planejamento de cada detalhe da viagem.|
 
 
-### Persona 2
+### Persona 2 👤
 |José da Silva|
 |:--|
-|72 anos. Aposentado, ex-contador. Seus principais sonhos são viajar mais após aposentado e gostaria de aprender alguns outros hobbies para aproveitar cada vez mais o tempo com seus parentes amados.|
+|72 anos. Aposentado, ex-contador. Quer aproveitar a aposentadoria viajando mais e aprendendo novos hobbies, valorizando o tempo com a família e criando novas memórias com quem ama.|
 
 
-### Persona 3
+### Persona 3 👤
 |Tiago William|
 |:--|
-|18 anos. Estagiário Analista de BI. Deseja ter realização profissional, conhecer novas culturas e começar seu próprio negócio.|
+|18 anos. Estagiário como Analista de BI. Tem o desejo de crescer profissionalmente, viajar para conhecer novas culturas e, futuramente, abrir o próprio negócio em outra cidade ou país.|
 
 
-### Persona 4
+### Persona 4 👤
 |Fernanda Kimura| 
 |:--|
-|19 anos. Estudante e estagiária na área de Arquitetura e Urbanismo. Tem o desejo de construir uma família estável e conhecer cada canto do mundo com eles|
+|19 anos. Estudante e estagiária de Arquitetura e Urbanismo. Sonha em construir uma família estável e descobrir o mundo ao lado deles, conhecendo novas culturas e paisagens inspiradoras.|
 
 
 ## Histórias de Usuários 📋
@@ -87,9 +82,5 @@ Embora funcionalidades mais avançadas, como integração com realidade aumentad
 
 Também será dada atenção especial à privacidade e segurança dos dados, com o sistema desenvolvido em conformidade com a Lei Geral de Proteção de Dados (LGPD). O uso da localização do cliente será possível apenas mediante sua autorização, permitindo a personalização da experiência sem comprometer sua privacidade.
 
-> 
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 # Atividade feita > [Especificação do projeto_organized-3 (1).pdf](https://github.com/user-attachments/files/19621762/Especificacao.do.projeto_organized-3.1.pdf)

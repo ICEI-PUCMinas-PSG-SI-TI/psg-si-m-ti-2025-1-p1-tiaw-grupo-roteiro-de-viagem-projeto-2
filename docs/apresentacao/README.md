@@ -17,8 +17,3 @@
 ![alt text](../images/slide/11.png)
 ![alt text](../images/slide/12.png)
 ![alt text](../images/slide/14.png)
-
-
-## Vídeo
-
-No caso de apresentação gravada, insira aqui o link do vídeo de apresentação.
