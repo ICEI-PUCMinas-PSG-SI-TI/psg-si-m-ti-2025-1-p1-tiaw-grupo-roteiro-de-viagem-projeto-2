@@ -1,21 +1,15 @@
 # Informações do Projeto
 
-TÍTULO DO PROJETO: Roteiro de Viagens.   
-
-Trabalho Interdisciplinar - Aplicacões Web.
-
-CURSO: Sistemas de Informação. 
-
-SEMESTRE: Primeiro Semestre.
-
-OBJETIVO ODS: > Inclua os numeros e a descrição do(s) objetivo(s) ODS da ONU que o Projeto vai atender. 
+|`TÍTULO DO PROJETO:` Roteiro de Viagens. |  
+|:--|
+|`CURSO:` Sistemas de Informação.| 
+|`SEMESTRE:` Primeiro Semestre.|
 
 ## Participantes
 
 Os membros do grupo são: 
 - Bruno Marinho da Silva
 - Daniella Joanna dos Reis Santos  
-- Gabriel Alves Reis
 - Iago Dias Silva
 - Karen Dornas Oliveira
 - Lucas Loiolla Gomes
@@ -38,9 +32,7 @@ Os membros do grupo são:
 
 Esta pasta arquiva a documentação dos projetos.
 
-
-Na pasta `docs`, há uma subpasta `images` que deve arquivar todas as
-imagens utilizadas para a elaboração do documento.
+1. [documentação](./docs)
 
 
 ## Pasta src
@@ -49,10 +41,6 @@ Este diretório armazena o código fonte do projeto e adota uma hierarquia
 básica de projetos Web simples, que utilizam as tecnologias HTML, CSS e
 JavaScript.
 
-### Links Úteis:
+1. [código fonte](./src)
 
-Aprenda Markdown e use-o para documentar o projeto  
 
-> [Sintaxe básica de gravação e formatação no GitHub](https://guides.github.com/features/mastering-markdown/)
-
-> [Suporte Github](https://help.github.com/pt/github/writing-on-github/getting-started-with-writing-and-formatting-on-github)

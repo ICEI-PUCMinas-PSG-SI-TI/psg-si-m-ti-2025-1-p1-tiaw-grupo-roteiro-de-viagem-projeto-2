@@ -10,11 +10,11 @@
 
 ## User Flow
 
->
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
+![alt text](images/slide/11.png)
 
+### Imagem Real do FIGMA
+
+![alt text](images/slide/15.png)
 
 ## Wireframes
 
