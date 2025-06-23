@@ -1,37 +1,442 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Smart Travel - Criar Roteiro</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; }
-    header { background: #ff7f00; display: flex; align-items: center; justify-content: space-between; padding: 10px 20px; color: white; }
-    header img.logo { height: 40px; }
-    header .perfil { display: flex; align-items: center; }
-    header .perfil span { margin-right: 10px; }
-    main { padding: 20px; max-width: 1000px; margin: auto; }
-    h2 { text-align: center; margin-bottom: 20px; }
-    form { background: #fff; padding: 20px; border-radius: 10px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 30px; }
-    label { font-weight: bold; margin-bottom: 5px; display: block; }
-    input, select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px; }
-    .checkbox-group { display: flex; gap: 10px; flex-wrap: wrap; }
-    button { grid-column: span 2; padding: 10px; background: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer; }
-    button:hover { background: #0056b3; }
-    #listaRoteiros { list-style: none; padding: 0; }
-    #listaRoteiros li { background: white; margin-bottom: 10px; padding: 10px; border-radius: 5px; display: flex; justify-content: space-between; align-items: center; }
-    #listaRoteiros li span { flex: 1; }
-    .acao { margin-left: 5px; padding: 5px 10px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
-    .acao:hover { background: #0056b3; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartTravel</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+  <script src="assets/scripts/script.js"></script>
+
+  <!-- MUDANÇAS!!!!!!!!! INSERIR NO CÓDIGO E ALTERAR O CAMINHO DA IMAGEM -->
+  <link rel="shortcut icon" type="imagex/png" href="aviaoeseta.png">
 </head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f9f9f9;
+  }
+
+  header {
+    background: #ff7f00;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: white;
+  }
+
+  header img.logo {
+    height: 40px;
+  }
+
+  header .perfil {
+    display: flex;
+    align-items: center;
+  }
+
+  header .perfil span {
+    margin-right: 10px;
+  }
+
+  main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .checkbox-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  button {
+    grid-column: span 2;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #0056b3;
+  }
+
+  #listaRoteiros {
+    list-style: none;
+    padding: 0;
+  }
+
+  #listaRoteiros li {
+    background: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #listaRoteiros li span {
+    flex: 1;
+  }
+
+  .acao {
+    margin-left: 5px;
+    padding: 5px 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .acao:hover {
+    background: #0056b3;
+  }
+
+  html,
+  body {
+
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .cab {
+
+    background-color: #ea8613;
+
+  }
+
+  .menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .side-menu.open {
+    left: 0;
+  }
+
+  .side-menu .menu-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .side-menu ul li {
+    margin: 15px 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .recom-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .footer-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #f57c00;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .modo-escuro {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  input:checked+.slider {
+    background-color: #2196F3;
+  }
+
+  .sair-btn {
+    color: #f57c00;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+  }
+
+  .sair-btn:hover {
+    text-decoration: underline;
+  }
+
+  input:checked+.slider:before {
+    transform: translateX(14px);
+  }
+
+  h6 {
+
+    margin-bottom: 3px !important;
+
+  }
+
+  .selectfilter {
+
+    width: 100%;
+
+  }
+
+  input[type="text"] {
+
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding-left: 10px;
+
+  }
+
+  #logo {
+
+    height: 60px;
+    width: 100px;
+    margin-left: 20px;
+    background-color: white;
+
+  }
+
+  #iconworld {
+
+    right: 300px;
+    bottom: 0;
+    margin: 0;
+    color: white;
+
+  }
+
+  #nomelogin {
+
+    right: 130px;
+    bottom: 0;
+    margin: 0;
+    background-color: white;
+    font-size: 18px;
+
+  }
+
+  #iconuser {
+
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    margin-right: 75px;
+
+  }
+</style>
+</head>
+
 <body>
-  <header>
-    <img src="https://via.placeholder.com/100x40?text=Smart+Travel" alt="Logo" class="logo" />
-    <div class="perfil">
-      <span>MARTA</span>
-      <img src="https://via.placeholder.com/40" alt="Usuário" style="border-radius: 50%;" />
-    </div>
+  <header class="d-flex cab position-relative container-fluid">
+
+    <button class="menu-btn" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars" style="color: white;"></i>
+    </button>
+    <nav id="sideMenu" class="side-menu">
+      <div class="menu-content">
+
+        <div class="dark-mode-toggle">
+          <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider round"></span>
+          </label>
+          <span class="modo-escuro">Modo escuro</span>
+        </div>
+
+        <ul class="menu-list">
+          <a href="PerfilUsuario.html">
+            <li><i class="fa-regular fa-user"></i> Minha conta</li>
+          </a>
+          <a href="favoritos.html">
+            <li><i class="fa-regular fa-heart"></i> Favoritos</li>
+          </a>
+          <a href="meusroteiros.html">
+            <li><i class="fa-regular fa-map"></i> Meus roteiros</li>
+          </a>
+          <li><a href="avaliacoes.html"><i class="fa-regular fa-star"></i> Avaliações</li></a>
+          <li><a href="faq.html"><i class="fa-regular fa-circle-question"></i> FAQ</li></a>
+          <li><a href="minhasduvidas.html"><i class="fa-regular fa-comment-dots"></i> Minhas dúvidas</li></a>
+        </ul>
+
+        <a href="painel.html"><button class="recom-btn"><i class="fa-solid fa-plus"></i> CADASTRAR RECOMENDAÇÕES
+          </button></a>
+
+        <div class="footer-menu">
+          <button class="sair-btn" onclick="toggleMenu()">
+            FECHAR MENU
+          </button>
+        </div>
+        <div class="footer-menu">
+          <button id="sair_conta" style="background-color: #f57c00; color: black; margin-top: 15%;" class="sair-btn"
+            onclick="toggleMenu()">
+            SAIR DA CONTA
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MUDANÇAS!!!!!!!!! ALTERAR O CAMINHO DA IMAGEM -->
+    <img src="assets/img/logo2.png" id="logo">
+
+    <p class="position-absolute py-1 px-3" id="nomelogin">LOGIN</p>
+    <a href="PerfilUsuario.html"><i class="fa-regular fa-user fa-2x position-absolute" id="iconuser"></i></a>
   </header>
+
+  <script>
+    function sairConta() {
+      // Verificar se existe um usuário logado
+      const usuario = sessionStorage.getItem("usuarioCorrente");
+
+      if (!usuario) {
+        alert("Nenhum usuário está logado no momento.");
+        return;
+      }
+
+      // Limpar o sessionStorage e variáveis
+      sessionStorage.removeItem("usuarioCorrente");
+      usuarioCorrente = null;
+
+      // Limpar campos se existirem
+      if (document.getElementById("login")) document.getElementById("login").value = "";
+      if (document.getElementById("nomecompleto")) document.getElementById("nomecompleto").value = "";
+      if (document.getElementById("email")) document.getElementById("email").value = "";
+      if (document.getElementById("senha")) document.getElementById("senha").value = "";
+
+      // Limpar textos e imagens do perfil, se existirem
+      if (document.getElementById("nome-usuario")) document.getElementById("nome-usuario").textContent = "";
+      if (document.getElementById("usuario-nome-topo")) document.getElementById("usuario-nome-topo").textContent = "";
+      if (document.getElementById("avatar")) document.getElementById("avatar").src = "assets/img/imglogin.png";
+      if (document.getElementById("avatar-topo")) document.getElementById("avatar-topo").src = "assets/img/imglogin.png";
+
+      alert("Você saiu da conta.");
+      window.location.href = "index.html";
+    }
+
+    function toggleMenu() {
+      const menu = document.getElementById('sideMenu');
+      menu.classList.toggle('open');
+    }
+
+    document.getElementById('darkModeToggle')?.addEventListener('change', function () {
+      document.body.classList.toggle('dark-mode', this.checked);
+    });
+
+    const botaoSair = document.getElementById("sair_conta");
+    if (botaoSair) {
+      botaoSair.addEventListener("click", sairConta);
+    }
+  </script>
 
   <main>
     <h2>CRIE OU EDITE SEU ROTEIRO</h2>
@@ -60,8 +465,10 @@
           <option value="SP">SP</option>
           <option value="RJ">RJ</option>
           <option value="MG">MG</option>
-          <option value="GO">GO</option>
-          <option value="RS">RS</option>
+          <option value="BA">BA</option>
+          <option value="BA">ES</option>
+          <option value="BA">PE</option>
+        
         </select>
       </div>
       <div>
@@ -105,93 +512,112 @@
   </main>
 
   <script>
-    const rota = 'http://localhost:3000/roteiros'; // URL da API
-    const form = document.getElementById('roteiroForm');
-    const list = document.getElementById('listaRoteiros');
+  const rota = 'http://localhost:3000/roteiros';
+  const form = document.getElementById('roteiroForm');
+  const list = document.getElementById('listaRoteiros');
 
-    async function loadList() {
-      const res = await fetch(rota);
-      const dados = await res.json();
-      list.innerHTML = dados.map(r => `
-        <li>
-          <span>${r.cidade}, ${r.estado} — ${r.ida} a ${r.volta}</span>
-          <button class="acao" onclick="ver(${r.id})">Ver</button>
-          <button class="acao" onclick="edit(${r.id})">Editar</button>
-          <button class="acao" onclick="excl(${r.id})">Excluir</button>
-        </li>
-      `).join('');
-    }
+  async function loadList() {
+    const res = await fetch(rota);
+    const dados = await res.json();
+    list.innerHTML = dados.map(r => `
+      <li>
+        <span>${r.cidade}, ${r.estado} — ${r.ida} a ${r.volta}</span>
+        <button class="acao" onclick="ver('${r.id}')">Ver</button>
+        <button class="acao" onclick="edit('${r.id}')">Editar</button>
+        <button class="acao" onclick="excl('${r.id}')">Excluir</button>
+      </li>
+    `).join('');
+  }
 
-    window.ver = (id) => {
-      // Aqui você pode implementar a lógica para visualizar os detalhes do roteiro
-      window.location.href = `ver.index.html?id=${id}`
-    };
+  // Gera uma string aleatória como "4f11", "a12b", etc.
+  function gerarIdAleatorio() {
+    return Math.random().toString(36).substring(2, 6);
+  }
 
-    window.excl = async (id) => {
-      if (confirm('Deseja excluir o roteiro?')) {
-        const res = await fetch(`${rota}/${id}`, { method: 'DELETE' });
-        if (res.ok) {
-          alert('Roteiro excluído!');
-          loadList();
-        } else {
-          alert('Erro ao excluir roteiro.');
-        }
-      }
-    };
+  window.ver = (id) => {
+    window.location.href = `ver.index.html?id=${id}`;
+  };
 
-    window.edit = async (id) => {
-      const res = await fetch(`${rota}/${id}`);
-      const r = await res.json();
-      form.id.value = r.id;
-      form.ida.value = r.ida;
-      form.volta.value = r.volta;
-      form.pessoas.value = r.pessoas;
-      form.orcamento.value = r.orcamento;
-      form.estado.value = r.estado;
-      form.cidade.value = r.cidade;
-
-      ['pet', 'piscina', 'quartos', 'garagem'].forEach(name => {
-        const radio = form.querySelector(`input[name="${name}"][value="${r[name]}"]`);
-        if (radio) radio.checked = true;
-      });
-
-      window.scrollTo(0, 0);
-    };
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      const dados = {
-        ida: form.ida.value,
-        volta: form.volta.value,
-        pessoas: form.pessoas.value,
-        orcamento: form.orcamento.value,
-        estado: form.estado.value,
-        cidade: form.cidade.value,
-        pet: form.pet.value,
-        piscina: form.piscina.value,
-        quartos: form.quartos.value,
-        garagem: form.garagem.value
-      };
-
-      const id = form.id.value;
-
-      const res = await fetch(id ? `${rota}/${id}` : rota, {
-        method: id ? 'PUT' : 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(dados)
-      });
-
+  window.excl = async (id) => {
+    if (confirm('Deseja excluir o roteiro?')) {
+      const res = await fetch(`${rota}/${id}`, { method: 'DELETE' });
       if (res.ok) {
-        alert(id ? 'Roteiro atualizado!' : 'Roteiro criado!');
-        form.reset();
+        alert('Roteiro excluído!');
         loadList();
       } else {
-        alert('Erro ao salvar.');
+        alert('Erro ao excluir roteiro.');
       }
+    }
+  };
+
+  window.edit = async (id) => {
+    const res = await fetch(`${rota}/${id}`);
+    const r = await res.json();
+    form.id.value = r.id;
+    form.ida.value = r.ida;
+    form.volta.value = r.volta;
+    form.pessoas.value = r.pessoas;
+    form.orcamento.value = r.orcamento;
+    form.estado.value = r.estado;
+    form.cidade.value = r.cidade;
+
+    ['pet', 'piscina', 'quartos', 'garagem'].forEach(name => {
+      const radio = form.querySelector(`input[name="${name}"][value="${r[name]}"]`);
+      if (radio) radio.checked = true;
     });
 
-    loadList();
-  </script>
+    window.scrollTo(0, 0);
+  };
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const id = form.id.value;
+
+    const dados = {
+      ida: form.ida.value,
+      volta: form.volta.value,
+      pessoas: form.pessoas.value,
+      orcamento: form.orcamento.value,
+      estado: form.estado.value,
+      cidade: form.cidade.value,
+      pet: form.pet.value,
+      piscina: form.piscina.value,
+      quartos: form.quartos.value,
+      garagem: form.garagem.value
+    };
+
+    let url = rota;
+    let method = 'POST';
+
+    if (id) {
+      dados.id = id;
+      url = `${rota}/${id}`;
+      method = 'PUT';
+    } else {
+      dados.id = gerarIdAleatorio(); // 🔧 Gera ID tipo "4f11"
+    }
+
+    const res = await fetch(url, {
+      method,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(dados)
+    });
+
+    if (res.ok) {
+      alert(id ? 'Roteiro atualizado!' : 'Roteiro criado!');
+      form.reset();
+      loadList();
+    } else {
+      alert('Erro ao salvar.');
+    }
+  });
+
+  loadList();
+</script>
+
+
+
 </body>
+
 </html>
