@@ -316,17 +316,56 @@
   ],
   "roteiros": [
     {
-      "id": "3x1g",
-      "ida": "2025-06-28",
-      "volta": "2025-07-12",
-      "pessoas": "3",
-      "orcamento": "3000",
-      "estado": "RJ",
-      "cidade": "Arraial do Cabo",
+      "id": "g8bq",
+      "ida": "2025-07-12",
+      "volta": "2025-07-08",
+      "pessoas": "4",
+      "orcamento": "7000",
+      "estado": "BA",
+      "cidade": "Guarapari",
+      "pet": "nao",
+      "piscina": "sim",
+      "quartos": "2-3",
+      "garagem": "sim"
+    },
+    {
+      "id": "i9e2",
+      "ida": "2025-07-12",
+      "volta": "2025-07-08",
+      "pessoas": "2",
+      "orcamento": "7000",
+      "estado": "BA",
+      "cidade": "Guarapari",
       "pet": "nao",
       "piscina": "sim",
       "quartos": "1",
       "garagem": "nao"
+    },
+    {
+      "id": "mk90",
+      "ida": "2025-06-24",
+      "volta": "2025-07-12",
+      "pessoas": "2",
+      "orcamento": "5000",
+      "estado": "BA",
+      "cidade": "Vitoria",
+      "pet": "sim",
+      "piscina": "nao",
+      "quartos": "1",
+      "garagem": "sim"
+    },
+    {
+      "id": "k354",
+      "ida": "2025-06-24",
+      "volta": "2025-07-12",
+      "pessoas": "2",
+      "orcamento": "5700",
+      "estado": "BA",
+      "cidade": "Porto Seguro",
+      "pet": "nao",
+      "piscina": "sim",
+      "quartos": "1",
+      "garagem": "sim"
     }
   ],
   "recomendacoes": [
