@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendações de Viagem</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="shortcut icon" type="imagex/png" href="assets/img/aviaoeseta.png">
+        <style>
+    
+    /* AQUIIIIIIIII */
+    body {
+      font-family: Arial;
+      background-color: white;
+      color: black;
+    }
+
+    #botao-modo {
+      /* position: fixed; */
+      display: flex;
+
+      top: 10px;
+      right: 10px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        /* Reset e Estilos Gerais */
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Cabeçalho (igual ao seu exemplo) */
+        .cab {
+            background-color: #ea8613;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+        }
+
+        #button_voltar{
+    margin-left: 4%;
+    color: white;
+    background-color: rgb(12, 109, 159);
+    height: 40px;
+}
+        #logo {
+            height: 40px;
+            margin-left: 20px;
+        }
+
+        #nomelogin {
+            right: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #iconuser {
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+        }
+
+        /* Menu Lateral */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100vh;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+            padding: 20px;
+            z-index: 1000;
+            transition: left 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .side-menu.open {
+            left: 0;
+        }
+
+        .menu-content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .menu-list li {
+            margin: 15px 0;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .menu-list a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .recom-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .footer-menu {
+            margin-top: auto;
+        }
+
+        .sair-btn {
+            background: none;
+            border: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+        }
+
+        /* Dark Mode Toggle */
+        .dark-mode-toggle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        /* Conteúdo Principal */
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #ea8613;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 30px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #ea8613;
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Cards de Recomendações */
+        .recomendacao-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .recomendacao-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .recomendacao-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .recomendacao-header h3 {
+            margin: 0;
+            color: #333;
+            font-size: 1.2rem;
+        }
+
+        .tipo-passeio, .tipo-restaurante, .tipo-hospedagem {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .tipo-passeio {
+            background-color: #4CAF50;
+        }
+
+        .tipo-restaurante {
+            background-color: #f57c00;
+        }
+
+        .tipo-hospedagem {
+            background-color: #1976D2;
+        }
+
+        .recomendacao-detalhes p {
+            margin: 8px 0;
+            color: #555;
+        }
+
+        .recomendacao-detalhes strong {
+            color: #333;
+        }
+
+        /* Mensagem quando não há recomendações */
+        .sem-recomendacoes {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .sem-recomendacoes i {
+            font-size: 3rem;
+            color: #ea8613;
+            margin-bottom: 20px;
+        }
+
+        .sem-recomendacoes h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .sem-recomendacoes p {
+            color: #666;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .recomendacao-card,
+        body.dark-mode .sem-recomendacoes {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .recomendacao-header h3,
+        body.dark-mode .recomendacao-detalhes strong,
+        body.dark-mode h1,
+        body.dark-mode h2 {
+            color: #ffffff;
+        }
+
+        body.dark-mode .recomendacao-detalhes p {
+            color: #b0b0b0;
+        }
+
+        body.dark-mode .side-menu {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .menu-list a,
+        body.dark-mode .sair-btn {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .menu-list li {
+            border-bottom: 1px solid #333;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            main {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.2rem;
+            }
+            
+            .recomendacao-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+   <header class="sem-tema d-flex justify-content-between align-items-center container-fluid"
+        style="height: 60px; background-color: #f57c00; padding: 0;">
+
+    <!-- Menu + Logo lado a lado -->
+    <div class="d-flex align-items-center" style="height: 100%; padding: 0 10px;">
+        <button class="menu-btn" onclick="toggleMenu()" style="background: none; ">
+            <i class="fa-solid fa-bars" style="color: white; font-size: 18px;"></i>
+        </button>
+        <img src="assets/img/logoST.PNG" id="logo" style="height: 60px; width: 100px;">
+    </div>
+
+    <!-- Menu lateral (sem alterações) -->
+    <nav id="sideMenu" class="side-menu">
+        <div class="menu-content">
+                <div class="dark-mode-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="modo-escuro">Modo escuro</span>
+                </div>
+        <div class="menu-content">
+            <ul class="menu-list">
+                            <button id="botao-modo" class="btn btn-primary">MODO ESCURO</button>
+
+                <a href="PerfilUsuario.html"><li><i class="fa-regular fa-user"></i> Minha conta</li></a>
+                <a href="favoritos.html"><li><i class="fa-regular fa-heart"></i> Favoritos</li></a>
+                <a href="ver.index.html"><li><i class="fa-regular fa-map"></i> Meus roteiros</li></a>
+                <li><a href="faq.html"><i class="fa-regular fa-circle-question"></i> FAQ</li></a>
+                <li><a href="duvida.html"><i class="fa-regular fa-comment-dots"></i> Minhas dúvidas</li></a>
+                <li id="painellink"><a href="painel.html"><i class="fa-regular fa-star"></i> Painel administrador</a></li>
+            </ul>
+            <a href="duvida.html"><button class="recom-btn"><i class="fa-solid fa-plus"></i> CADASTRAR RECOMENDAÇÕES</button></a>
+
+            <div class="footer-menu">
+                <button class="sair-btn" onclick="toggleMenu()">FECHAR MENU</button>
+                <button id="sair_conta" style="background-color: #f57c00; color: black; margin-top: 15%;" class="sair-btn" onclick="toggleMenu()">SAIR DA CONTA</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Nome e ícone do usuário -->
+    <div class="d-flex align-items-center" style="height: 100%; padding-right: 10px;">
+        <p id="nomelogin"
+            style="background-color: white; color: black; font-family: Arial, sans-serif; font-size: 14px;
+                   font-weight: 500; padding: 6px 14px; margin: 0; border-radius: 2px;">
+            LOGIN
+        </p>
+        <a href="PerfilUsuario.html" style="margin-left: 50px;">
+            <i class="fa-regular fa-user fa-lg" style="color: white;"></i>
+        </a>
+    </div>
+</header>
+<script>
+window.addEventListener('DOMContentLoaded', async () => {
+  // 1. Elementos e Variáveis Iniciais
+  const botao = document.getElementById('botao-modo');
+  if (!botao) {
+    console.error('Botão não encontrado! Verifique o ID "botao-modo" no HTML.');
+    return;
+  }
+
+  // 2. Obter dados do usuário
+  const usuario = JSON.parse(sessionStorage.getItem("usuarioCorrente")) || {};
+  const login = usuario?.login?.toLowerCase();
+
+  if (!login) {
+    console.warn('Nenhum usuário logado encontrado.');
+    return;
+  }
+
+  // 3. Variável para armazenar preferência
+  let prefUsuario = null;
+
+  // 4. Função para aplicar tema (versão melhorada)
+  function aplicarModo(tema) {
+    const estiloId = 'modo-escuro-estilos';
+    const body = document.body;
+
+    // Remove estilo existente para evitar duplicação
+    const estiloExistente = document.getElementById(estiloId);
+    if (estiloExistente) estiloExistente.remove();
+
+    if (tema === 'dark') {
+      // Cria novo estilo
+      const estiloEscuro = document.createElement('style');
+      estiloEscuro.id = estiloId;
+estiloEscuro.textContent = `
+  body.dark-mode {
+    background-color: #121212 !important;
+    color: #f0f0f0 !important;
+    transition: all 0.3s ease;
+  }
+
+  body.dark-mode a {
+    color: #90caf9 !important;
+  }
+
+  body.dark-mode button {
+    background-color: #333 !important;
+    color: white !important;
+    border-color: #555 !important;
+  }
+
+  body.dark-mode input,
+  body.dark-mode select,
+  body.dark-mode textarea {
+    background-color: #252525 !important;
+    color: white !important;
+    border-color: #444 !important;
+  }
+
+  /* Exclusão do modo escuro na área "sem-tema" */
+  body.dark-mode .sem-tema,
+  body.dark-mode .sem-tema * {
+    background-color: white !important;
+    color: black !important;
+    border-color: #ccc !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+
+
+
+`;
+
+      document.head.appendChild(estiloEscuro);
+      body.classList.add('dark-mode');
+      botao.textContent = 'MODO CLARO';
+      console.log('Modo escuro ativado');
+    } else {
+      body.classList.remove('dark-mode');
+      botao.textContent = 'MODO ESCURO';
+      console.log('Modo claro ativado');
+    }
+  }
+
+  // 5. Função para salvar preferência (com tratamento de erro)
+  async function salvarPreferencia(tema) {
+    try {
+      if (!login) {
+        console.error('Tentativa de salvar preferência sem login');
+        return;
+      }
+
+      const payload = {
+        login: login,
+        theme: tema
+      };
+
+      if (prefUsuario) {
+        // Atualização existente
+        const response = await fetch(`http://localhost:3000/DarkLight/${prefUsuario.id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...payload, id: prefUsuario.id })
+        });
+        
+        if (!response.ok) throw new Error('Falha ao atualizar preferência');
+        console.log('Preferência atualizada com sucesso');
+      } else {
+        // Nova entrada
+        const response = await fetch('http://localhost:3000/DarkLight', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        
+        if (!response.ok) throw new Error('Falha ao criar preferência');
+        prefUsuario = await response.json();
+        console.log('Preferência criada com sucesso');
+      }
+    } catch (error) {
+      console.error('Erro ao salvar preferência:', error);
+    }
+  }
+
+  // 6. Carregar preferência inicial (com fallback)
+  async function carregarPreferenciaInicial() {
+    try {
+      const response = await fetch(`http://localhost:3000/DarkLight?login=${login}`);
+      if (!response.ok) throw new Error('Falha na requisição');
+      
+      const prefs = await response.json();
+      console.log('Preferências encontradas:', prefs);
+
+      if (prefs.length > 0 && prefs[0].theme) {
+        prefUsuario = prefs[0];
+        aplicarModo(prefUsuario.theme);
+      } else {
+        // Fallback: usar preferência do sistema ou light mode
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        aplicarModo(prefersDark ? 'dark' : 'light');
+        console.log('Usando preferência do sistema:', prefersDark ? 'dark' : 'light');
+      }
+    } catch (error) {
+      console.error('Erro ao carregar preferência:', error);
+      aplicarModo('light'); // Fallback seguro
+    }
+  }
+
+  // 7. Evento do botão (com tratamento de erro)
+  botao.addEventListener('click', async () => {
+    try {
+      const modoAtual = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      const novoTema = modoAtual === 'dark' ? 'light' : 'dark';
+      
+      aplicarModo(novoTema);
+      await salvarPreferencia(novoTema);
+    } catch (error) {
+      console.error('Erro ao alternar modo:', error);
+    }
+  });
+
+  // 8. Inicialização
+  await carregarPreferenciaInicial();
+});
+</script>
+<!-- Script para mostrar nome do usuário -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const nomeLogin = document.getElementById("nomelogin");
+    const usuarioCorrente = sessionStorage.getItem("usuarioCorrente");
+
+    if (usuarioCorrente) {
+      try {
+        const userObj = JSON.parse(usuarioCorrente);
+        if (userObj && userObj.login) {
+          nomeLogin.textContent = userObj.login.toUpperCase();
+        }
+      } catch (e) {
+        console.error("Erro ao carregar usuário:", e);
+        nomeLogin.textContent = "LOGIN";
+      }
+    } else {
+      nomeLogin.textContent = "LOGIN";
+    }
+  });
+</script>
+
+    <main>
+                
+        <h1>Recomendações para sua viagem</h1>
+        <div id="botoes" class="container-fluid">
+            <button id="button_voltar" class="btn btn-primary" onclick="history.back()">VOLTAR</button>
+        </div>
+        <div id="recomendacoes-container"></div>
+    </main>
+
+    <script>
+
+        document.getElementById("button_voltar").addEventListener("click", function () {
+            window.location.href = "ver.index.html";
+        });
+        // Seus scripts JavaScript aqui (os mesmos que você já tem)
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleCheckbox = document.getElementById("darkModeToggle");
+            const userId = 1;
+
+            function applyTheme(theme) {
+                document.body.classList.remove("light", "dark");
+                document.body.classList.add(theme);
+                toggleCheckbox.checked = theme === "dark";
+            }
+
+            fetch(`http://localhost:3000/userPreferences/${userId}`)
+                .then(res => res.json())
+                .then(data => {
+                    applyTheme(data.theme || "light");
+                })
+                .catch(err => {
+                    console.error("Erro ao carregar tema:", err);
+                    applyTheme("light");
+                });
+
+            toggleCheckbox.addEventListener("change", () => {
+                const newTheme = toggleCheckbox.checked ? "dark" : "light";
+                applyTheme(newTheme);
+
+                fetch(`http://localhost:3000/userPreferences/${userId}`, {
+                    method: "PATCH",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ theme: newTheme })
+                });
+            });
+
+            // Carregar recomendações
+            carregarRecomendacoes();
+        });
+
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            menu.classList.toggle('open');
+        }
+
+        function sairConta() {
+            const usuario = sessionStorage.getItem("usuarioCorrente");
+            if (!usuario) {
+                alert("Nenhum usuário está logado no momento.");
+                return;
+            }
+
+            sessionStorage.removeItem("usuarioCorrente");
+            alert("Você saiu da conta.");
+            window.location.href = "index.html";
+        }
+
+        // Função para carregar as recomendações
+        async function carregarRecomendacoes() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const cidade = urlParams.get('cidade');
+            const idRoteiro = urlParams.get('id');
+            
+            if (!cidade) {
+                document.getElementById('recomendacoes-container').innerHTML = 
+                    '<div class="sem-recomendacoes"><i class="fas fa-exclamation-circle"></i><h3>Cidade não especificada</h3><p>Não foi possível identificar a cidade do roteiro.</p></div>';
+                return;
+            }
+
+            try {
+                // Carrega o roteiro para mostrar informações adicionais
+                let roteiro = null;
+                if (idRoteiro) {
+                    const resRoteiro = await fetch(`http://localhost:3000/roteiros/${idRoteiro}`);
+                    if (resRoteiro.ok) {
+                        roteiro = await resRoteiro.json();
+                    }
+                }
+
+                // Carrega as recomendações
+                const resRecomendacoes = await fetch('http://localhost:3000/recomendacoes_crud');
+                const todasRecomendacoes = await resRecomendacoes.json();
+                
+                // Filtra por cidade
+                const recomendacoes = todasRecomendacoes.filter(r => 
+                    r.cidade.toLowerCase() === cidade.toLowerCase()
+                );
+
+                const container = document.getElementById('recomendacoes-container');
+                
+                if (recomendacoes.length === 0) {
+                    container.innerHTML = `
+                        <div class="sem-recomendacoes">
+                            <i class="far fa-compass"></i>
+                            <h3>Nenhuma recomendação encontrada para ${cidade}</h3>
+                            <p>Parece que ainda não temos recomendações cadastradas para esta cidade.</p>
+                            <a href="cadastros_recomen.html" class="recom-btn" style="margin-top: 20px; display: inline-block;">
+                                <i class="fa-solid fa-plus"></i> Cadastrar Recomendações
+                            </a>
+                        </div>
+                    `;
+                    return;
+                }
+
+                // Agrupa por tipo
+                const porTipo = {
+                    passeio: recomendacoes.filter(r => r.tipo === 'passeio'),
+                    restaurante: recomendacoes.filter(r => r.tipo === 'restaurante'),
+                    hospedagem: recomendacoes.filter(r => r.tipo === 'hospedagem')
+                };
+
+                let html = '';
+                
+                // Se existir roteiro, mostra informações
+                if (roteiro) {
+                    html += `
+                        <div class="roteiro-info">
+                            <h2><i class="fas fa-map-marked-alt"></i> Seu Roteiro para ${roteiro.cidade}, ${roteiro.estado}</h2>
+                            <div class="recomendacao-card">
+                                <p><strong>Data:</strong> ${roteiro.ida} a ${roteiro.volta}</p>
+                                <p><strong>Viajantes:</strong> ${roteiro.pessoas} pessoa(s)</p>
+                                <p><strong>Orçamento:</strong> R$ ${roteiro.orcamento}</p>
+                                <p><strong>Preferências:</strong> 
+                                    ${roteiro.pet === 'sim' ? 'Aceita pets, ' : ''}
+                                    ${roteiro.piscina === 'sim' ? 'Com piscina, ' : ''}
+                                    ${roteiro.quartos} quarto(s),
+                                    ${roteiro.garagem === 'sim' ? 'com garagem' : 'sem garagem'}
+                                </p>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                // Monta as seções de recomendações
+                if (porTipo.passeio.length > 0) {
+                    html += '<h2><i class="fas fa-umbrella-beach"></i> Passeios</h2>';
+                    html += porTipo.passeio.map(passeio => `
+                        <div class="recomendacao-card">
+                            <div class="recomendacao-header">
+                                <h3>${passeio.nome}</h3>
+                                <span class="tipo-passeio">Passeio</span>
+                            </div>
+                            ${passeio.descricao ? `<p class="recomendacao-descricao">${passeio.descricao}</p>` : ''}
+                            <div class="recomendacao-detalhes">
+                                ${passeio.endereco ? `<p><strong><i class="fas fa-map-marker-alt"></i> Endereço:</strong> ${passeio.endereco}</p>` : ''}
+                                ${passeio.preco ? `<p><strong><i class="fas fa-tag"></i> Preço:</strong> ${passeio.preco}</p>` : ''}
+                                ${passeio.horario ? `<p><strong><i class="fas fa-clock"></i> Horário:</strong> ${passeio.horario}</p>` : ''}
+                            </div>
+                            
+                        </div>
+                    `).join('');
+                }
+
+                if (porTipo.restaurante.length > 0) {
+                    html += '<h2><i class="fas fa-utensils"></i> Restaurantes</h2>';
+                    html += porTipo.restaurante.map(restaurante => `
+                        <div class="recomendacao-card">
+                            <div class="recomendacao-header">
+                                <h3>${restaurante.nome}</h3>
+                                <span class="tipo-restaurante">Restaurante</span>
+                            </div>
+                            ${restaurante.descricao ? `<p class="recomendacao-descricao">${restaurante.descricao}</p>` : ''}
+                            <div class="recomendacao-detalhes">
+                                ${restaurante.endereco ? `<p><strong><i class="fas fa-map-marker-alt"></i> Endereço:</strong> ${restaurante.endereco}</p>` : ''}
+                                ${restaurante.preco ? `<p><strong><i class="fas fa-tag"></i> Faixa de preço:</strong> ${restaurante.preco}</p>` : ''}
+                                ${restaurante.horario ? `<p><strong><i class="fas fa-clock"></i> Horário de funcionamento:</strong> ${restaurante.horario}</p>` : ''}
+                                ${restaurante.culinaria ? `<p><strong><i class="fas fa-utensil-spoon"></i> Tipo de culinária:</strong> ${restaurante.culinaria}</p>` : ''}
+                            </div>
+                            
+                        </div>
+                    `).join('');
+                }
+
+                if (porTipo.hospedagem.length > 0) {
+                    html += '<h2><i class="fas fa-hotel"></i> Hospedagens</h2>';
+                    html += porTipo.hospedagem.map(hospedagem => `
+                        <div class="recomendacao-card">
+                            <div class="recomendacao-header">
+                                <h3>${hospedagem.nome}</h3>
+                                <span class="tipo-hospedagem">Hospedagem</span>
+                            </div>
+                            ${hospedagem.descricao ? `<p class="recomendacao-descricao">${hospedagem.descricao}</p>` : ''}
+                            <div class="recomendacao-detalhes">
+                                ${hospedagem.endereco ? `<p><strong><i class="fas fa-map-marker-alt"></i> Endereço:</strong> ${hospedagem.endereco}</p>` : ''}
+                                ${hospedagem.preco ? `<p><strong><i class="fas fa-tag"></i> Faixa de preço:</strong> ${hospedagem.preco}</p>` : ''}
+                                ${hospedagem.quartos ? `<p><strong><i class="fas fa-bed"></i> Quartos:</strong> ${hospedagem.quartos}</p>` : ''}
+                                ${hospedagem.comodidades ? `<p><strong><i class="fas fa-check-circle"></i> Comodidades:</strong> ${hospedagem.comodidades}</p>` : ''}
+                            </div>
+                            
+                        </div>
+                    `).join('');
+                }
+
+                container.innerHTML = html;
+            } catch (erro) {
+                console.error("Erro ao carregar recomendações:", erro);
+                document.getElementById('recomendacoes-container').innerHTML = `
+                    <div class="sem-recomendacoes">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Erro ao carregar recomendações</h3>
+                        <p>Ocorreu um problema ao carregar as recomendações para esta cidade.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // function adicionarFavorito(id) {
+        //     const usuario = sessionStorage.getItem("usuarioCorrente");
+        //     if (!usuario) {
+        //         alert("Você precisa estar logado para adicionar aos favoritos.");
+        //         window.location.href = "login.html";
+        //         return;
+        //     }
+            
+        //     // Aqui você implementaria a lógica para adicionar aos favoritos
+        //     alert(`Recomendação ${id} adicionada aos favoritos!`);
+        //     // Implemente a chamada à API para salvar nos favoritos do usuário
+        // }
+    </script>
+</body>
+</html>
