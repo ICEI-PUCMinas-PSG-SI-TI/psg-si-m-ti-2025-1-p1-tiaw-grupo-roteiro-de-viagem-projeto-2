@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Travel - Criar Roteiro</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+    <script src="assets/scripts/script.js"></script>
+
+    <link rel="shortcut icon" type="imagex/png" href="assets/img/aviaoeseta.png">
+  <link rel="shortcut icon" type="imagex/png" href="assets/img/aviaoeseta.png">
+  
+      <style>
+    
+    /* AQUIIIIIIIII */
+    body {
+      font-family: Arial;
+      background-color: white;
+      color: black;
+    }
+
+    #botao-modo {
+      /* position: fixed; */
+      display: flex;
+
+      top: 10px;
+      right: 10px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+  <style>
+html, body{
+
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.cab{
+
+    background-color: #ea8613;
+
+}
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    padding: 20px;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu .menu-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.side-menu ul li {
+    margin: 15px 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.recom-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #f57c00;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .modo-escuro {
+      font-weight: bold;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 34px;
+      height: 20px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 14px;
+      width: 14px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked+.slider {
+      background-color: #2196F3;
+    }
+
+    .sair-btn {
+      color: #f57c00;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+      border: none;
+      background: none;
+      text-align: left;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: all 0.3s;
+    }
+
+    .sair-btn:hover {
+      background-color: #f0f0f0;
+      text-decoration: none;
+    }
+
+    input:checked+.slider:before {
+      transform: translateX(14px);
+    }
+
+    .selectfilter {
+      width: 100%;
+    }
+
+    #button_voltar {
+      color: white;
+      background-color: rgb(12, 109, 159);
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      padding: 10px 20px;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #button_voltar:hover {
+      background-color: #0a5a8a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #button_voltar i {
+      font-size: 14px;
+    }
+
+        #button_rot {
+      color: white;
+      background-color: rgb(12, 109, 159);
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      padding: 10px 20px;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #button_rot:hover {
+      background-color: #0a5a8a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #button_rot i {
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    select {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 15px;
+      transition: all 0.3s;
+      width: 100%;
+      background-color: #fff;
+    }
+
+    input[type="text"]:focus,
+    input[type="date"]:focus,
+    input[type="number"]:focus,
+    select:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+      outline: none;
+    }
+
+    #logo {
+      height: 60px;
+      width: 100px;
+      margin-left: 20px;
+      background-color: white;
+      border-radius: 4px;
+      padding: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #nomelogin {
+      right: 130px;
+      bottom: 0;
+      margin: 0;
+      background-color: white;
+      font-size: 18px;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-weight: 600;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #iconuser {
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      margin-right: 75px;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 8px;
+      border-radius: 50%;
+      transition: all 0.3s;
+    }
+
+    #iconuser:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    main {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      /* background-color: #ea8613; */
+    }
+
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin-bottom: 40px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-section {
+      grid-column: span 2;
+      margin-bottom: 15px;
+    }
+
+    .form-section h3 {
+      margin-bottom: 15px;
+      color: #555;
+      font-size: 18px;
+      font-weight: 600;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .checkbox-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #f5f7fa;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: 1px solid #ddd;
+    }
+
+    .checkbox-option:hover {
+      background-color: #e9f0f8;
+      border-color: #cce0ff;
+    }
+
+    .checkbox-option input[type="radio"] {
+      margin: 0;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #aaa;
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s;
+    }
+
+    .checkbox-option input[type="radio"]:checked {
+      border-color: #007bff;
+      background-color: #007bff;
+    }
+
+    .checkbox-option input[type="radio"]:checked::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: white;
+      border-radius: 50%;
+      top: 2px;
+      left: 2px;
+    }
+
+    button[type="submit"] {
+      grid-column: span 2;
+      padding: 12px;
+      background: linear-gradient(to right, #007bff, #0062cc);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s;
+      margin-top: 10px;
+      box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    }
+
+    button[type="submit"]:hover {
+      background: linear-gradient(to right, #0069d9, #005cbf);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 123, 255, 0.25);
+    }
+
+    #listaRoteiros {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    #listaRoteiros li {
+      background: white;
+      margin-bottom: 15px;
+      padding: 15px 20px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s;
+    }
+
+    #listaRoteiros li:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #listaRoteiros li span {
+      flex: 1;
+      font-weight: 500;
+      color: #444;
+    }
+
+    .acao {
+      margin-left: 10px;
+      padding: 8px 15px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .acao:hover {
+      background: #0069d9;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .acao:nth-child(2) {
+      background: #28a745;
+    }
+
+    .acao:nth-child(2):hover {
+      background: #218838;
+    }
+
+    .acao:nth-child(3) {
+      background: #dc3545;
+    }
+
+    .acao:nth-child(3):hover {
+      background: #c82333;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      button[type="submit"] {
+        grid-column: span 1;
+      }
+
+      #listaRoteiros li {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .acao {
+        margin: 5px 0 0 0;
+        width: 100%;
+      }
+    }
+
+    /* Modo escuro */
+    body.dark-mode {
+      background-color: #1a1a1a;
+      color: #f0f0f0;
+    }
+
+    body.dark-mode form,
+    body.dark-mode #listaRoteiros li {
+      background-color: #2d2d2d;
+      color: #f0f0f0;
+    }
+
+    body.dark-mode label {
+      color: #ddd;
+    }
+
+    body.dark-mode input,
+    body.dark-mode select {
+      background-color: #333;
+      border-color: #444;
+      color: #f0f0f0;
+    }
+
+    body.dark-mode .checkbox-option {
+      background-color: #333;
+      border-color: #444;
+    }
+
+    body.dark-mode .side-menu {
+      background-color: #2d2d2d;
+      color: #f0f0f0;
+    }
+
+    body.dark-mode .side-menu ul li:hover {
+      background-color: #3d3d3d;
+    }
+
+    body.dark-mode h2 {
+      color: #f0f0f0;
+    }
+
+    .botoes{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+
+    }
+  </style>
+</head>
+
+<body>
+ 
+ <header class="sem-tema d-flex justify-content-between align-items-center container-fluid"
+        style="height: 60px; background-color: #f57c00; padding: 0;">
+
+    <!-- Menu + Logo lado a lado -->
+    <div class="d-flex align-items-center" style="height: 100%; padding: 0 10px;">
+        <button class="menu-btn" onclick="toggleMenu()" style="background: none; ">
+            <i class="fa-solid fa-bars" style="color: white; font-size: 18px;"></i>
+        </button>
+        <img src="assets/img/logoST.PNG" id="logo" style="height: 60px; width: 100px;">
+    </div>
+
+    <!-- Menu lateral (sem alterações) -->
+    <nav id="sideMenu" class="side-menu">
+        <div class="menu-content">
+            <ul class="menu-list">
+                          <button id="botao-modo" class="btn btn-primary">MODO ESCURO</button>
+
+                <a href="PerfilUsuario.html"><li><i class="fa-regular fa-user"></i> Minha conta</li></a>
+                <a href="favoritos.html"><li><i class="fa-regular fa-heart"></i> Favoritos</li></a>
+                <a href="ver.index.html"><li><i class="fa-regular fa-map"></i> Meus roteiros</li></a>
+                <li><a href="faq.html"><i class="fa-regular fa-circle-question"></i> FAQ</li></a>
+                <li><a href="duvida.html"><i class="fa-regular fa-comment-dots"></i> Minhas dúvidas</li></a>
+                <li id="painellink"><a href="painel.html"><i class="fa-regular fa-star"></i> Painel administrador</a></li>
+            </ul>
+            <a href="cadastros_recomen.html"><button class="recom-btn"><i class="fa-solid fa-plus"></i> CADASTRAR RECOMENDAÇÕES</button></a>
+            <div class="footer-menu">
+                <button class="sair-btn" onclick="toggleMenu()">FECHAR MENU</button>
+                <button id="sair_conta" style="background-color: #f57c00; color: black; margin-top: 15%;" class="sair-btn" onclick="toggleMenu()">SAIR DA CONTA</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Nome e ícone do usuário -->
+    <div class="d-flex align-items-center" style="height: 100%; padding-right: 10px;">
+        <p id="nomelogin"
+            style="background-color: white; color: black; font-family: Arial, sans-serif; font-size: 14px;
+                   font-weight: 500; padding: 6px 14px; margin: 0; border-radius: 2px;">
+            LOGIN
+        </p>
+        <a href="PerfilUsuario.html" style="margin-left: 50px;">
+            <i class="fa-regular fa-user fa-lg" style="color: white;"></i>
+        </a>
+    </div>
+</header>
+<script>
+window.addEventListener('DOMContentLoaded', async () => {
+  // 1. Elementos e Variáveis Iniciais
+  const botao = document.getElementById('botao-modo');
+  if (!botao) {
+    console.error('Botão não encontrado! Verifique o ID "botao-modo" no HTML.');
+    return;
+  }
+
+  // 2. Obter dados do usuário
+  const usuario = JSON.parse(sessionStorage.getItem("usuarioCorrente")) || {};
+  const login = usuario?.login?.toLowerCase();
+
+  if (!login) {
+    console.warn('Nenhum usuário logado encontrado.');
+    return;
+  }
+
+  // 3. Variável para armazenar preferência
+  let prefUsuario = null;
+
+  // 4. Função para aplicar tema (versão melhorada)
+  function aplicarModo(tema) {
+    const estiloId = 'modo-escuro-estilos';
+    const body = document.body;
+
+    // Remove estilo existente para evitar duplicação
+    const estiloExistente = document.getElementById(estiloId);
+    if (estiloExistente) estiloExistente.remove();
+
+    if (tema === 'dark') {
+      // Cria novo estilo
+      const estiloEscuro = document.createElement('style');
+      estiloEscuro.id = estiloId;
+estiloEscuro.textContent = `
+  body.dark-mode {
+    background-color: #121212 !important;
+    color: #f0f0f0 !important;
+    transition: all 0.3s ease;
+  }
+
+  body.dark-mode a {
+    color: #90caf9 !important;
+  }
+
+  body.dark-mode button {
+    background-color: #333 !important;
+    color: white !important;
+    border-color: #555 !important;
+  }
+
+  body.dark-mode input,
+  body.dark-mode select,
+  body.dark-mode textarea {
+    background-color: #252525 !important;
+    color: white !important;
+    border-color: #444 !important;
+  }
+
+  /* Exclusão do modo escuro na área "sem-tema" */
+  body.dark-mode .sem-tema,
+  body.dark-mode .sem-tema * {
+    background-color: white !important;
+    color: black !important;
+    border-color: #ccc !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+
+
+
+`;
+
+      document.head.appendChild(estiloEscuro);
+      body.classList.add('dark-mode');
+      botao.textContent = 'MODO CLARO';
+      console.log('Modo escuro ativado');
+    } else {
+      body.classList.remove('dark-mode');
+      botao.textContent = 'MODO ESCURO';
+      console.log('Modo claro ativado');
+    }
+  }
+
+  // 5. Função para salvar preferência (com tratamento de erro)
+  async function salvarPreferencia(tema) {
+    try {
+      if (!login) {
+        console.error('Tentativa de salvar preferência sem login');
+        return;
+      }
+
+      const payload = {
+        login: login,
+        theme: tema
+      };
+
+      if (prefUsuario) {
+        // Atualização existente
+        const response = await fetch(`http://localhost:3000/DarkLight/${prefUsuario.id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...payload, id: prefUsuario.id })
+        });
+        
+        if (!response.ok) throw new Error('Falha ao atualizar preferência');
+        console.log('Preferência atualizada com sucesso');
+      } else {
+        // Nova entrada
+        const response = await fetch('http://localhost:3000/DarkLight', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        
+        if (!response.ok) throw new Error('Falha ao criar preferência');
+        prefUsuario = await response.json();
+        console.log('Preferência criada com sucesso');
+      }
+    } catch (error) {
+      console.error('Erro ao salvar preferência:', error);
+    }
+  }
+
+  // 6. Carregar preferência inicial (com fallback)
+  async function carregarPreferenciaInicial() {
+    try {
+      const response = await fetch(`http://localhost:3000/DarkLight?login=${login}`);
+      if (!response.ok) throw new Error('Falha na requisição');
+      
+      const prefs = await response.json();
+      console.log('Preferências encontradas:', prefs);
+
+      if (prefs.length > 0 && prefs[0].theme) {
+        prefUsuario = prefs[0];
+        aplicarModo(prefUsuario.theme);
+      } else {
+        // Fallback: usar preferência do sistema ou light mode
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        aplicarModo(prefersDark ? 'dark' : 'light');
+        console.log('Usando preferência do sistema:', prefersDark ? 'dark' : 'light');
+      }
+    } catch (error) {
+      console.error('Erro ao carregar preferência:', error);
+      aplicarModo('light'); // Fallback seguro
+    }
+  }
+
+  // 7. Evento do botão (com tratamento de erro)
+  botao.addEventListener('click', async () => {
+    try {
+      const modoAtual = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      const novoTema = modoAtual === 'dark' ? 'light' : 'dark';
+      
+      aplicarModo(novoTema);
+      await salvarPreferencia(novoTema);
+    } catch (error) {
+      console.error('Erro ao alternar modo:', error);
+    }
+  });
+
+  // 8. Inicialização
+  await carregarPreferenciaInicial();
+});
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const nomeLogin = document.getElementById("nomelogin");
+    const usuarioCorrente = sessionStorage.getItem("usuarioCorrente");
+
+    if (usuarioCorrente) {
+      try {
+        const userObj = JSON.parse(usuarioCorrente);
+        if (userObj && userObj.login) {
+          nomeLogin.textContent = userObj.login.toUpperCase();
+        }
+      } catch (e) {
+        nomeLogin.textContent = "LOGIN";
+      }
+    } else {
+      nomeLogin.textContent = "LOGIN";
+    }
+  });
+</script>
+
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleCheckbox = document.getElementById("darkModeToggle");
+      const userId = 1;
+
+      function applyTheme(theme) {
+        document.body.classList.remove("light", "dark");
+        document.body.classList.add(theme);
+        toggleCheckbox.checked = theme === "dark";
+      }
+
+      fetch(`http://localhost:3000/userPreferences/${userId}`)
+        .then(res => res.json())
+        .then(data => {
+          applyTheme(data.theme || "light");
+        })
+        .catch(err => {
+          console.error("Erro ao carregar tema:", err);
+          applyTheme("light");
+        });
+
+      toggleCheckbox.addEventListener("change", () => {
+        const newTheme = toggleCheckbox.checked ? "dark" : "light";
+        applyTheme(newTheme);
+
+        fetch(`http://localhost:3000/userPreferences/${userId}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ theme: newTheme })
+        });
+      });
+    });
+  </script>
+
+  <script>
+    function sairConta() {
+      // Verificar se existe um usuário logado
+      const usuario = sessionStorage.getItem("usuarioCorrente");
+
+      if (!usuario) {
+        alert("Nenhum usuário está logado no momento.");
+        return;
+      }
+
+      // Limpar o sessionStorage e variáveis
+      sessionStorage.removeItem("usuarioCorrente");
+      usuarioCorrente = null;
+
+      // Limpar campos se existirem
+      if (document.getElementById("login")) document.getElementById("login").value = "";
+      if (document.getElementById("nomecompleto")) document.getElementById("nomecompleto").value = "";
+      if (document.getElementById("email")) document.getElementById("email").value = "";
+      if (document.getElementById("senha")) document.getElementById("senha").value = "";
+
+      // Limpar textos e imagens do perfil, se existirem
+      if (document.getElementById("nome-usuario")) document.getElementById("nome-usuario").textContent = "";
+      if (document.getElementById("usuario-nome-topo")) document.getElementById("usuario-nome-topo").textContent = "";
+      if (document.getElementById("avatar")) document.getElementById("avatar").src = "assets/img/imglogin.png";
+      if (document.getElementById("avatar-topo")) document.getElementById("avatar-topo").src = "assets/img/imglogin.png";
+
+      alert("Você saiu da conta.");
+      window.location.href = "index.html";
+    }
+
+    function toggleMenu() {
+      const menu = document.getElementById('sideMenu');
+      menu.classList.toggle('open');
+    }
+
+    document.getElementById('darkModeToggle')?.addEventListener('change', function () {
+      document.body.classList.toggle('dark-mode', this.checked);
+    });
+
+    const botaoSair = document.getElementById("sair_conta");
+    if (botaoSair) {
+      botaoSair.addEventListener("click", sairConta);
+    }
+  </script>
+
+  <main>
+    <h2>CRIE SEU ROTEIRO</h2>
+    <div class="botoes">
+  <div id="botoes" class="container-fluid">
+            <button id="button_voltar" class="btn btn-primary">VOLTAR</button>
+        </div>
+      <div id="botoes" class="container-fluid" style="margin-left: 50%;">
+            <button id="button_rot" class="btn btn-primary">ROTEIROS</button>
+        </div>
+        </div>
+
+    
+
+    
+    <form id="roteiroForm" style="margin-top: 7%;">
+      <input type="hidden" name="id" />
+      
+      <div class="form-section">
+        <h3>INFORMAÇÕES BÁSICAS</h3>
+      </div>
+      
+      <div>
+        <label for="ida">DATA DE IDA:</label>
+        <input type="date" name="ida" id="ida" required />
+      </div>
+      
+      <div>
+        <label for="volta">DATA DE VOLTA:</label>
+        <input type="date" name="volta" id="volta" required />
+      </div>
+      
+      <div>
+        <label for="pessoas">NÚMERO DE PESSOAS:</label>
+        <input type="number" name="pessoas" id="pessoas" min="1" required />
+      </div>
+      
+      <div>
+        <label for="orcamento">ORÇAMENTO ESTIMADO (R$):</label>
+        <input type="number" name="orcamento" id="orcamento" min="0" required />
+      </div>
+      
+      <div class="form-section">
+        <h3>LOCALIZAÇÃO</h3>
+      </div>
+      
+      <div>
+        <label for="estado">ESTADO:</label>
+        <select name="estado" id="estado" required onchange="atualizarCidades()">
+          <option value="">SELECIONE</option>
+          <option value="AC">Acre (AC)</option>
+          <option value="AL">Alagoas (AL)</option>
+          <option value="AP">Amapá (AP)</option>
+          <option value="AM">Amazonas (AM)</option>
+          <option value="BA">Bahia (BA)</option>
+          <option value="CE">Ceará (CE)</option>
+          <option value="DF">Distrito Federal (DF)</option>
+          <option value="ES">Espírito Santo (ES)</option>
+          <option value="GO">Goiás (GO)</option>
+          <option value="MA">Maranhão (MA)</option>
+          <option value="MT">Mato Grosso (MT)</option>
+          <option value="MS">Mato Grosso do Sul (MS)</option>
+          <option value="MG">Minas Gerais (MG)</option>
+          <option value="PA">Pará (PA)</option>
+          <option value="PB">Paraíba (PB)</option>
+          <option value="PR">Paraná (PR)</option>
+          <option value="PE">Pernambuco (PE)</option>
+          <option value="PI">Piauí (PI)</option>
+          <option value="RJ">Rio de Janeiro (RJ)</option>
+          <option value="RN">Rio Grande do Norte (RN)</option>
+          <option value="RS">Rio Grande do Sul (RS)</option>
+          <option value="RO">Rondônia (RO)</option>
+          <option value="RR">Roraima (RR)</option>
+          <option value="SC">Santa Catarina (SC)</option>
+          <option value="SP">São Paulo (SP)</option>
+          <option value="SE">Sergipe (SE)</option>
+          <option value="TO">Tocantins (TO)</option>
+        </select>
+      </div>
+      
+      <div>
+        <label for="cidade">CIDADE:</label>
+        <select name="cidade" id="cidade" required>
+          <option value="">Selecione um estado primeiro</option>
+        </select>
+      </div>
+      
+      <div class="form-section">
+        <h3>Preferências de Hospedagem</h3>
+      </div>
+      
+      <div>
+        <label>LEVAR PET?</label>
+        <div class="checkbox-group">
+          <label class="checkbox-option">
+            <input type="radio" name="pet" value="sim" required />
+            <span>Sim</span>
+          </label>
+          <label class="checkbox-option">
+            <input type="radio" name="pet" value="nao" />
+            <span>Não</span>
+          </label>
+        </div>
+      </div>
+      
+      <div>
+        <label>PISCINA?</label>
+        <div class="checkbox-group">
+          <label class="checkbox-option">
+            <input type="radio" name="piscina" value="sim" required />
+            <span>Sim</span>
+          </label>
+          <label class="checkbox-option">
+            <input type="radio" name="piscina" value="nao" />
+            <span>Não</span>
+          </label>
+        </div>
+      </div>
+      
+      <div>
+        <label>QUARTOS:</label>
+        <div class="checkbox-group">
+          <label class="checkbox-option">
+            <input type="radio" name="quartos" value="1" required />
+            <span>1 Quarto</span>
+          </label>
+          <label class="checkbox-option">
+            <input type="radio" name="quartos" value="2-3" />
+            <span>2-3 Quartos</span>
+          </label>
+          <label class="checkbox-option">
+            <input type="radio" name="quartos" value="mais" />
+            <span>Mais de 4</span>
+          </label>
+        </div>
+      </div>
+      
+      <div>
+        <label>GARAGEM?</label>
+        <div class="checkbox-group">
+          <label class="checkbox-option">
+            <input type="radio" name="garagem" value="sim" required />
+            <span>Sim</span>
+          </label>
+          <label class="checkbox-option">
+            <input type="radio" name="garagem" value="nao" />
+            <span>Não</span>
+          </label>
+        </div>
+      </div>
+      
+      <button type="submit">
+        <i class="fas fa-save"></i> SALVAR ROTEIRO
+      </button>
+    </form>
+
+              <!-- <div id="divbtnvoltar">
+      <button id="button_rot" class="btn btn-primary" onclick="history.back()">
+        <i class=""></i> ROTEIROS -->
+      <!-- </button> -->
+    <!-- </div> -->
+    </div>
+
+    <!-- <h2>MEUS ROTEIROS</h2>
+    <ul id="listaRoteiros"></ul> -->
+  </main>
+
+<script>
+  document.getElementById("button_voltar").addEventListener("click", function () {
+            window.location.href = "index.html";
+        });
+        document.getElementById("button_rot").addEventListener("click", function () {
+            window.location.href = "ver.index.html";
+        });
+
+        // 1. Primeiro as constantes e variáveis globais
+        const rota = 'http://localhost:3000/roteiros';
+        const form = document.getElementById('roteiroForm');
+        const list = document.getElementById('listaRoteiros');
+
+        // 2. Função para pegar o usuário logado
+        function getLoggedInUser() {
+            const usuarioSalvo = sessionStorage.getItem("usuarioCorrente");
+            if (!usuarioSalvo) {
+                alert("Você precisa estar logado para acessar esta funcionalidade.");
+                window.location.href = "login.html";
+                return null;
+            }
+            return JSON.parse(usuarioSalvo);
+        }
+
+        // 3. Funções CRUD
+        async function loadList() {
+            const usuario = getLoggedInUser();
+            if (!usuario) return;
+
+            try {
+                const res = await fetch(rota);
+                const arr = await res.json();
+                const roteirosDoUsuario = arr.filter(r => r.login === usuario.login);
+
+                if (list) {
+                    list.innerHTML = roteirosDoUsuario.map(r => `
+                        <li>
+                            <span>${r.cidade}, ${r.estado} — ${r.ida} a ${r.volta}</span>
+                            <div>
+                                <button onclick="ver(${r.id})"><i class="fas fa-eye"></i> Ver</button>
+                                <button onclick="edit(${r.id})"><i class="fas fa-edit"></i> Editar</button>
+                                <button onclick="excl(${r.id})"><i class="fas fa-trash"></i> Excluir</button>
+                            </div>
+                        </li>
+                    `).join('');
+                }
+            } catch (error) {
+                console.error("Erro ao carregar roteiros:", error);
+            }
+        }
+
+        window.ver = (id) => {
+            window.location.href = `ver.index.html?id=${id}`;
+        };
+
+        window.edit = async (id) => {
+            const usuario = getLoggedInUser();
+            if (!usuario) return;
+
+            try {
+                const res = await fetch(`${rota}/${id}`);
+                if (!res.ok) throw new Error('Roteiro não encontrado');
+                
+                const r = await res.json();
+                
+                if (r.login !== usuario.login) {
+                    alert("Você não tem permissão para editar este roteiro.");
+                    return;
+                }
+
+                // Preenche o formulário
+                form.id.value = r.id;
+                form.ida.value = r.ida;
+                form.volta.value = r.volta;
+                form.pessoas.value = r.pessoas;
+                form.orcamento.value = r.orcamento;
+                form.estado.value = r.estado;
+                atualizarCidades();
+                setTimeout(() => form.cidade.value = r.cidade, 100);
+
+                ['pet', 'piscina', 'quartos', 'garagem'].forEach(name => {
+                    const value = Array.isArray(r[name]) ? r[name][0] : r[name];
+                    document.querySelector(`input[name="${name}"][value="${value}"]`).checked = true;
+                });
+
+                window.scrollTo(0, 0);
+            } catch (error) {
+                alert(error.message);
+            }
+        };
+
+        window.excl = async (id) => {
+            const usuario = getLoggedInUser();
+            if (!usuario) return;
+
+            if (!confirm('Deseja realmente excluir este roteiro?')) return;
+
+            try {
+                const resRoteiro = await fetch(`${rota}/${id}`);
+                if (!resRoteiro.ok) throw new Error("Roteiro não encontrado");
+                
+                const roteiro = await resRoteiro.json();
+                
+                if (roteiro.login !== usuario.login) {
+                    alert("Você não tem permissão para excluir este roteiro.");
+                    return;
+                }
+
+                const res = await fetch(`${rota}/${id}`, { method: 'DELETE' });
+                if (!res.ok) throw new Error('Erro ao excluir roteiro');
+                
+                alert('Roteiro excluído!');
+                loadList();
+                form.reset();
+            } catch (error) {
+                alert(error.message);
+            }
+        };
+
+        // 4. Event Listener do formulário
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const usuario = getLoggedInUser();
+            if (!usuario) return;
+
+            const id = form.id.value ? Number(form.id.value) : null;
+            const dados = {
+                ida: form.ida.value,
+                volta: form.volta.value,
+                pessoas: Number(form.pessoas.value),
+                orcamento: Number(form.orcamento.value),
+                estado: form.estado.value,
+                cidade: form.cidade.value,
+                pet: form.pet.value,
+                piscina: form.piscina.value,
+                quartos: form.quartos.value,
+                garagem: form.garagem.value,
+                login: usuario.login
+            };
+
+            try {
+                const url = id ? `${rota}/${id}` : rota;
+                const method = id ? 'PUT' : 'POST';
+                
+                const res = await fetch(url, {
+                    method,
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(dados)
+                });
+
+                if (!res.ok) throw new Error(id ? 'Erro ao atualizar' : 'Erro ao criar');
+
+                alert(id ? 'Roteiro atualizado!' : 'Roteiro criado!');
+                form.reset();
+                loadList();
+            } catch (error) {
+                alert(error.message);
+            }
+        });
+
+        // 5. Funções auxiliares (como atualizarCidades)
+        function atualizarCidades() {
+            // Sua implementação existente
+        }
+
+        // 6. Inicialização
+        document.addEventListener('DOMContentLoaded', () => {
+            loadList();
+            // Outras inicializações necessárias
+        });
+    </script>
+  
+  <script>
+    const cidadesPorEstado = {
+      AC: ["Rio Branco", "Cruzeiro do Sul", "Sena Madureira", "Tarauacá", "Feijó"],
+      AL: ["Maceió", "Arapiraca", "Palmeira dos Índios", "Rio Largo", "Penedo"],
+      AP: ["Macapá", "Santana", "Laranjal do Jari", "Oiapoque", "Mazagão"],
+      AM: ["Manaus", "Parintins", "Itacoatiara", "Manacapuru", "Coari"],
+      BA: ["Salvador", "Feira de Santana", "Vitória da Conquista", "Itabuna", "Ilhéus"],
+      CE: ["Fortaleza", "Caucaia", "Juazeiro do Norte", "Maracanaú", "Sobral"],
+      DF: ["Brasília", "Ceilândia", "Taguatinga", "Samambaia", "Planaltina"],
+      ES: ["Vitória", "Vila Velha", "Serra", "Cariacica", "Cachoeiro de Itapemirim"],
+      GO: ["Goiânia", "Aparecida de Goiânia", "Anápolis", "Rio Verde", "Luziânia"],
+      MA: ["São Luís", "Imperatriz", "Caxias", "Timon", "Bacabal"],
+      MT: ["Cuiabá", "Várzea Grande", "Rondonópolis", "Sinop", "Tangará da Serra"],
+      MS: ["Campo Grande", "Dourados", "Três Lagoas", "Corumbá", "Ponta Porã"],
+      MG: ["Belo Horizonte", "Contagem", "Uberlândia", "Juiz de Fora", "Montes Claros"],
+      PA: ["Belém", "Ananindeua", "Santarém", "Marabá", "Castanhal"],
+      PB: ["João Pessoa", "Campina Grande", "Santa Rita", "Patos", "Bayeux"],
+      PR: ["Curitiba", "Londrina", "Maringá", "Ponta Grossa", "Cascavel"],
+      PE: ["Recife", "Jaboatão", "Olinda", "Caruaru", "Petrolina"],
+      PI: ["Teresina", "Parnaíba", "Picos", "Floriano", "Piripiri"],
+      RJ: ["Rio de Janeiro", "Niterói", "Duque de Caxias", "Nova Iguaçu", "Petrópolis"],
+      RN: ["Natal", "Mossoró", "Parnamirim", "Caicó", "Assu"],
+      RS: ["Porto Alegre", "Caxias do Sul", "Pelotas", "Santa Maria", "Canoas"],
+      RO: ["Porto Velho", "Ji-Paraná", "Ariquemes", "Vilhena", "Cacoal"],
+      RR: ["Boa Vista", "Rorainópolis", "Caracaraí", "Alto Alegre", "Mucajaí"],
+      SC: ["Florianópolis", "Joinville", "Blumenau", "Chapecó", "Criciúma"],
+      SP: ["São Paulo", "Campinas", "Santos", "São Bernardo", "Ribeirão Preto"],
+      SE: ["Aracaju", "Nossa Senhora do Socorro", "Lagarto", "Itabaiana", "Estância"],
+      TO: ["Palmas", "Araguaína", "Gurupi", "Porto Nacional", "Paraíso do Tocantins"]
+    };
+
+    function atualizarCidades() {
+      const estado = document.getElementById("estado").value;
+      const cidadeSelect = document.getElementById("cidade");
+      cidadeSelect.innerHTML = "";
+
+      if (estado && cidadesPorEstado[estado]) {
+        cidadeSelect.innerHTML = '<option value="">SELECIONE</option>';
+        cidadesPorEstado[estado].forEach(cidade => {
+          const opt = document.createElement("option");
+          opt.value = cidade;
+          opt.textContent = cidade;
+          cidadeSelect.appendChild(opt);
+        });
+      } else {
+        cidadeSelect.innerHTML = '<option value="">Selecione um estado primeiro</option>';
+      }
+    }
+  </script>
+</body>
+
+</html>

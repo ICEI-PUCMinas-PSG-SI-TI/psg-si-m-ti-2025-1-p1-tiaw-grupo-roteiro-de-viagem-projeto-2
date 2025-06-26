@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roteiros Prontos</title>
+    <link rel="stylesheet" href="assets/css/styleDetalhes.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+        
+    <link rel="shortcut icon" type="imagex/png" href="assets/img/aviaoeseta.png">
+             <link rel="shortcut icon" type="imagex/png" href="./assets/img/aviaoeseta.png">
+<style>
+  .hide-pdf {
+    display: none !important;
+  }
+
+  #conteudo-rot,
+  .container-roteiro,
+  .bloco,
+  .passeio,
+  .restaurante {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    overflow: visible;
+  }
+</style>
+    <style>
+    
+    /* AQUIIIIIIIII */
+    body {
+      font-family: Arial;
+      background-color: white;
+      color: black;
+    }
+
+    #botao-modo {
+      /* position: fixed; */
+      display: flex;
+
+      top: 10px;
+      right: 10px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+    
+<body>
+    
+<header class="sem-tema d-flex cab position-relative container-fluid">
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars" style="color: white;"></i>
+        </button>
+        <nav id="sideMenu" class="side-menu">
+            <div class="menu-content">
+
+                <!-- <div class="dark-mode-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="modo-escuro" style="color: black;">Modo escuro</span>
+                </div> -->
+
+
+                <ul class="menu-list">
+                                <button id="botao-modo" class="btn btn-primary">MODO ESCURO</button>
+
+                    <a href="index.html">
+                        <li>Página inicial</li>
+                    </a>
+                    <a href="PerfilUsuario.html">
+                        <li><i class="fa-regular fa-user"></i> Minha conta</li>
+                    </a>
+                    <a href="favoritos.html">
+                        <li><i class="fa-regular fa-heart"></i> Favoritos</li>
+                    </a>
+                    <a href="ver.index.html">
+                        <li><i class="fa-regular fa-map"></i> Meus roteiros</li>
+                    </a>
+                    <li><a href="faq.html"><i class="fa-regular fa-circle-question"></i> FAQ</li></a>
+                    <li><a href="duvida.html"><i class="fa-regular fa-comment-dots"></i> Minhas dúvidas</li></a>
+                    <li id="painellink"><a href="painel.html"><i class="fa-regular fa-star"></i> Painel adminstrador
+                    </li></a>
+
+                </ul>
+
+                <a href="cadastros_recomen.html"><button class="recom-btn"><i class="fa-solid fa-plus"></i> CADASTRAR
+                        RECOMENDAÇÕES
+                    </button></a>
+
+                <div class="footer-menu">
+                    <button class="sair-btn" onclick="toggleMenu()">
+                        FECHAR MENU
+                    </button>
+                </div>
+                <div class="footer-menu">
+                    <button id="sair_conta" style="background-color: #f57c00; color: black; margin-top: 15%;"
+                        class="sair-btn" onclick="toggleMenu()">
+                        SAIR DA CONTA
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- MUDANÇAS!!!!!!!!! ALTERAR O CAMINHO DA IMAGEM -->
+        <img src="assets/img/logoST.PNG" id="logo">
+
+
+        <p class="position-absolute py-1 px-3" id="nomelogin" style="color: black;">LOGIN</p>
+        <a href="PerfilUsuario.html"><i class="fa-regular fa-user fa-2x position-absolute" id="iconuser"></i></a>
+    </header>
+    <button id="button_voltar" class="btn btn-primary mt-5" style="display: none; width: 150px;">VOLTAR</button>
+    <script>
+        document.getElementById('button_voltar').addEventListener('click', function () {
+
+            document.getElementById('enviarcomentario').style.display = 'none';
+            document.getElementById('secaocomentarios').style.display = 'block';
+            document.getElementById('button_voltar').style.display = 'none';
+
+        })
+    </script>
+<script>
+window.addEventListener('DOMContentLoaded', async () => {
+  // 1. Elementos e Variáveis Iniciais
+  const botao = document.getElementById('botao-modo');
+  if (!botao) {
+    console.error('Botão não encontrado! Verifique o ID "botao-modo" no HTML.');
+    return;
+  }
+
+  // 2. Obter dados do usuário
+  const usuario = JSON.parse(sessionStorage.getItem("usuarioCorrente")) || {};
+  const login = usuario?.login?.toLowerCase();
+
+  if (!login) {
+    console.warn('Nenhum usuário logado encontrado.');
+    return;
+  }
+
+  // 3. Variável para armazenar preferência
+  let prefUsuario = null;
+
+  // 4. Função para aplicar tema (versão melhorada)
+  function aplicarModo(tema) {
+    const estiloId = 'modo-escuro-estilos';
+    const body = document.body;
+
+    // Remove estilo existente para evitar duplicação
+    const estiloExistente = document.getElementById(estiloId);
+    if (estiloExistente) estiloExistente.remove();
+
+    if (tema === 'dark') {
+      // Cria novo estilo
+      const estiloEscuro = document.createElement('style');
+      estiloEscuro.id = estiloId;
+estiloEscuro.textContent = `
+  body.dark-mode {
+    background-color: #121212 !important;
+    color: #f0f0f0 !important;
+    transition: all 0.3s ease;
+  }
+
+  body.dark-mode a {
+    color: #90caf9 !important;
+  }
+
+  body.dark-mode button {
+    background-color: #333 !important;
+    color: white !important;
+    border-color: #555 !important;
+  }
+
+  body.dark-mode input,
+  body.dark-mode select,
+  body.dark-mode textarea {
+    background-color: #252525 !important;
+    color: white !important;
+    border-color: #444 !important;
+  }
+
+  /* Exclusão do modo escuro na área "sem-tema" */
+  body.dark-mode .sem-tema,
+  body.dark-mode .sem-tema * {
+    background-color: white !important;
+    color: black !important;
+    border-color: #ccc !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+
+
+
+`;
+
+      document.head.appendChild(estiloEscuro);
+      body.classList.add('dark-mode');
+      botao.textContent = 'MODO CLARO';
+      console.log('Modo escuro ativado');
+    } else {
+      body.classList.remove('dark-mode');
+      botao.textContent = 'MODO ESCURO';
+      console.log('Modo claro ativado');
+    }
+  }
+
+  // 5. Função para salvar preferência (com tratamento de erro)
+  async function salvarPreferencia(tema) {
+    try {
+      if (!login) {
+        console.error('Tentativa de salvar preferência sem login');
+        return;
+      }
+
+      const payload = {
+        login: login,
+        theme: tema
+      };
+
+      if (prefUsuario) {
+        // Atualização existente
+        const response = await fetch(`http://localhost:3000/DarkLight/${prefUsuario.id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...payload, id: prefUsuario.id })
+        });
+        
+        if (!response.ok) throw new Error('Falha ao atualizar preferência');
+        console.log('Preferência atualizada com sucesso');
+      } else {
+        // Nova entrada
+        const response = await fetch('http://localhost:3000/DarkLight', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        
+        if (!response.ok) throw new Error('Falha ao criar preferência');
+        prefUsuario = await response.json();
+        console.log('Preferência criada com sucesso');
+      }
+    } catch (error) {
+      console.error('Erro ao salvar preferência:', error);
+    }
+  }
+
+  // 6. Carregar preferência inicial (com fallback)
+  async function carregarPreferenciaInicial() {
+    try {
+      const response = await fetch(`http://localhost:3000/DarkLight?login=${login}`);
+      if (!response.ok) throw new Error('Falha na requisição');
+      
+      const prefs = await response.json();
+      console.log('Preferências encontradas:', prefs);
+
+      if (prefs.length > 0 && prefs[0].theme) {
+        prefUsuario = prefs[0];
+        aplicarModo(prefUsuario.theme);
+      } else {
+        // Fallback: usar preferência do sistema ou light mode
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        aplicarModo(prefersDark ? 'dark' : 'light');
+        console.log('Usando preferência do sistema:', prefersDark ? 'dark' : 'light');
+      }
+    } catch (error) {
+      console.error('Erro ao carregar preferência:', error);
+      aplicarModo('light'); // Fallback seguro
+    }
+  }
+
+  // 7. Evento do botão (com tratamento de erro)
+  botao.addEventListener('click', async () => {
+    try {
+      const modoAtual = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      const novoTema = modoAtual === 'dark' ? 'light' : 'dark';
+      
+      aplicarModo(novoTema);
+      await salvarPreferencia(novoTema);
+    } catch (error) {
+      console.error('Erro ao alternar modo:', error);
+    }
+  });
+
+  // 8. Inicialização
+  await carregarPreferenciaInicial();
+});
+</script>
+<script>
+function sairConta() {
+  // Verificar se existe um usuário logado
+  const usuario = sessionStorage.getItem("usuarioCorrente");
+
+  if (!usuario) {
+    alert("Nenhum usuário está logado no momento.");
+    return;
+  }
+
+  // Limpar o sessionStorage e variáveis
+  sessionStorage.removeItem("usuarioCorrente");
+  usuarioCorrente = null;
+
+  // Limpar campos se existirem
+  if (document.getElementById("login")) document.getElementById("login").value = "";
+  if (document.getElementById("nomecompleto")) document.getElementById("nomecompleto").value = "";
+  if (document.getElementById("email")) document.getElementById("email").value = "";
+  if (document.getElementById("senha")) document.getElementById("senha").value = "";
+
+  // Limpar textos e imagens do perfil, se existirem
+  if (document.getElementById("nome-usuario")) document.getElementById("nome-usuario").textContent = "";
+  if (document.getElementById("usuario-nome-topo")) document.getElementById("usuario-nome-topo").textContent = "";
+  if (document.getElementById("avatar")) document.getElementById("avatar").src = "assets/img/imglogin.png";
+  if (document.getElementById("avatar-topo")) document.getElementById("avatar-topo").src = "assets/img/imglogin.png";
+
+  alert("Você saiu da conta.");
+  window.location.href = "index.html";
+}
+
+function toggleMenu() {
+  const menu = document.getElementById('sideMenu');
+  menu.classList.toggle('open');
+}
+
+document.getElementById('darkModeToggle')?.addEventListener('change', function () {
+  document.body.classList.toggle('dark-mode', this.checked);
+});
+
+const botaoSair = document.getElementById("sair_conta");
+if (botaoSair) {
+  botaoSair.addEventListener("click", sairConta);
+}
+</script>
+
+
+
+
+    <button id="button_voltar" class="btn btn-primary mt-5" style="display: none; width: 150px;">VOLTAR</button>
+    <script>
+        document.getElementById('button_voltar').addEventListener('click', function () {
+
+            document.getElementById('enviarcomentario').style.display = 'none';
+            document.getElementById('secaocomentarios').style.display = 'block';
+            document.getElementById('button_voltar').style.display = 'none';
+
+        })
+    </script>
+    <section class="d-block d-lg-flex mx-2 mt-5 " id="checkavaliacao">
+
+        <div id="conteudo-rot" class="container">
+
+        </div>
+
+        <div class="col-md-4 container" id="secaocomentarios" style="display: none;">
+
+            <div class="d-flex flex-column align-items-center">
+                <div class="d-flex-column justify-content-center mt-1">
+                    <!-- <div class="avalia">
+                        <h4>AVALIAÇÕES</h4>
+                    </div> -->
+                </div>
+                <div id="comentarios_container" class="mt-4 container">
+                    <div class="usuario_data_estrelas">
+                        <div class="usuario"><strong></strong></div>
+                        <div class="data_publicao"></div>
+                        <div class="quant_estrelas"></div>
+                    </div>
+
+                    <div class="conteudo">CARREGANDO COMENTÁRIOS...</div>
+                </div>
+
+                <button id="button_comentar" class="btn btn-primary">DEIXE SEU COMENTÁRIO</button>
+            </div>
+        </div>
+        <script>
+            document.getElementById('button_comentar').addEventListener('click', function () {
+
+                document.getElementById('button_voltar').style.display = 'block';
+                document.getElementById('secaocomentarios').style.display = 'none';
+                document.getElementById('enviarcomentario').style.display = 'block';
+
+            })
+        </script>
+        <div id="enviarcomentario" class="col-md-4" style="display: none;">
+
+            <div class="d-flex flex-column">
+                <div class="d-flex-column justify-content-center mt-2">
+                    <!-- <div id="avalia">
+                        <h4>AVALIAÇÕES</h4>
+                    </div> -->
+                </div>
+                <form id="form_comentario" style="width: 100%;" class="d-flex flex-column align-items-center">
+                    <div class="comentarios">
+                        <div class="usuario_estrelas">
+                            <div class="nome_usuario"><strong id="nomeUsuarioComentario"></strong></div>
+                            <div id="avaliacao_estrelas" style="font-size: 1.5rem; cursor: pointer;">
+                                <span data-estrela="1">☆</span>
+                                <span data-estrela="2">☆</span>
+                                <span data-estrela="3">☆</span>
+                                <span data-estrela="4">☆</span>
+                                <span data-estrela="5">☆</span>
+                            </div>
+
+                            <input type="hidden" id="quant_estrelas" name="quant_estrelas" value="0">
+                        </div>
+
+                        <div class="form-group">
+                            <textarea class="form-control" id="comentario_texto" rows="7" placeholder="ESCREVA AQUI"
+                                maxlength="250"></textarea>
+                        </div>
+                    </div>
+                    <button id="button_enviar" class="btn btn-primary">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="assets/scripts/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        fetch('http://localhost:3000/roteirosProntos')
+            .then(res => res.json())
+            .then(roteirosProntos => {
+                let params = new URLSearchParams(location.search)
+                let id = params.get('id')
+                let cidade = roteirosProntos.find(elem => elem.id == id)
+                let tela = document.getElementById('conteudo-rot')
+                if (cidade) {
+                    tela.innerHTML = `
+            <h2 class="tituloRot m-0">${cidade.nome}</h2>
+            
+            <div class="text-end" id="btnfav">
+                <button id="fav-` + cidade.id + `"class="btn btn-sm" onclick="alternarFavorito('` + cidade.id + `')" style="font-size:1.5rem; border-width: 2px; border-color: red">Favoritar</button>
+            </div>
+            <article>
+                <div class="sem-tema">
+                <div class="container-roteiro">
+                    <div class="conteudo">
+                    <h3 class="titulo2Rot">${cidade.nome}</h3>
+                    <div class="codigo2">CÓDIGO: #${cidade.id}</div>
+                    <div class="acomodacao">
+                        <div class="bloco">
+                            <div class="texto">
+                                <h2>ACOMODAÇÃO</h2>
+                                <text><h3 class="hotelTit">${cidade.acomodacao}  ${cidade.estrelas}</h3>
+                                <h4>Preço por noite: R$${cidade.precoPorNoite},00</h4>
+                                <h4>${cidade.garagem}</h4></text>
+                            </div>
+                            <img src="${cidade.imagem1}" alt="${cidade.descricaoimg1}">
+                        </div>
+                        <div class="bloco">
+                            <div class="texto">
+                                <h3 class="subTits">LOCALIZAÇÃO</h3>
+                                <p class="textP">${cidade.localizacao}</p>
+                            </div>
+                            <img src="${cidade.imagem2}" alt="${cidade.descricaoimg2}">
+                        </div>
+                        <div class="bloco">
+                            <div class="texto">
+                                <h3 class="subTits">ALIMENTAÇÃO</h3>
+                                <p class="textP">${cidade.alimentacao.cafe}</p>
+                                <p class="textP">${cidade.alimentacao.restaurante}</p>
+                            </div>
+                            <img src="${cidade.imagem3}" alt="${cidade.descricaoimg3}">
+                        </div>
+                        <div class="bloco">
+                            <div class="texto">
+                                <h3 class="subTits">QUARTOS</h3>
+                                <p class="textP">${cidade.quartos}</p>
+                            </div>
+                            <img src="${cidade.imagem4}" alt="${cidade.descricaoimg4}">
+                        </div>
+                    </div>
+                    <div class="passeios">
+                        <h2>PASSEIOS</h2>
+                        <div class="passeio">
+                            <div class="passeioTexto">
+                                <text><strong> ${cidade.passeios[0].passeio}</strong><br>
+                                ${cidade.passeios[0].descricao}<br>
+                                <i class='fas fa-map-marker-alt'></i> ${cidade.passeios[0].endereco}</text>
+                            </div>
+                            <img src="${cidade.imagem5}" alt="${cidade.descricaoimg5}" >
+                        </div>
+                        <div class="passeio">
+                            <div class="passeioTexto">
+                                <text><strong> ${cidade.passeios[1].passeio}</strong><br>
+                                ${cidade.passeios[1].descricao}<br>
+                                <i class='fas fa-map-marker-alt'></i> ${cidade.passeios[1].endereco}</text>
+                            </div>
+                            <img src="${cidade.imagem6}" alt="${cidade.descricaoimg6}">
+                        </div>
+                    </div>
+                    <div class="restaurantes">
+                        <h2>RESTAURANTES</h2>
+                        <div class="restaurante">
+                            <div class="restauranteTexto">
+                                <text><strong> ${cidade.restaurantes[0].restaurante}</strong><br>
+                                ${cidade.restaurantes[0].servicos}<br>
+                                <i class='fas fa-map-marker-alt'></i> ${cidade.restaurantes[0].endereco}<br>
+                                <strong>Preço Médio:</strong>${cidade.restaurantes[0].precoMedio}</text>
+                            </div>
+                            <img src="${cidade.imagem7}" alt="${cidade.descricaoimg7}" >
+                        </div>
+                        <div class="restaurante">
+                            <div class="restauranteTexto">
+                                <text><strong> ${cidade.restaurantes[1].restaurante}</strong><br>
+                                ${cidade.restaurantes[1].servicos}<br>
+                                <i class='fas fa-map-marker-alt'></i> ${cidade.restaurantes[1].endereco}<br>
+                                <strong>Preço Médio:</strong>${cidade.restaurantes[1].precoMedio}</text>
+                            </div>
+                            <img src="${cidade.imagem8}" alt="${cidade.descricaoimg8}">
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </article>
+            <section>
+                <div class="btns">
+                    <button id="baixapdf" class="btnBaixar"><i class="fa-solid fa-download"> </i> BAIXAR</button>
+                </div>
+            </section>
+            `;
+  const botaoPdf = document.querySelector('#baixapdf');
+
+  if (botaoPdf) {
+    botaoPdf.addEventListener('click', () => {
+      const elemento = document.getElementById('conteudo-rot');
+      if (!elemento) {
+        alert("Conteúdo não encontrado para gerar o PDF.");
+        return;
+      }
+
+      // Esconde os botões
+      document.querySelector('#baixapdf')?.classList.add('hide-pdf');
+      document.querySelector('#buttoncomment')?.classList.add('hide-pdf');
+      document.querySelector(`[id^=fav-]`)?.classList.add('hide-pdf');
+
+      const opt = {
+        margin: [5, 5, 5, 5],
+        filename: 'meu-roteiro.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+      };
+
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          html2pdf().set(opt).from(elemento).save().then(() => {
+            // Mostra os botões novamente
+            document.querySelector('#baixapdf')?.classList.remove('hide-pdf');
+            document.querySelector('#buttoncomment')?.classList.remove('hide-pdf');
+            document.querySelector(`[id^=fav-]`)?.classList.remove('hide-pdf');
+          }).catch((err) => {
+            alert('Erro ao gerar PDF: ' + err.message);
+            console.error(err);
+          });
+        }, 500);
+      });
+    });
+  }
+
+
+            
+    const usuarioCorrente = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+    const idCidade = new URLSearchParams(window.location.search).get('id');
+
+    if (usuarioCorrente) {
+        const btn = document.getElementById(`fav-${idCidade}`);
+        const favoritos = usuarioCorrente.favoritos || [];
+
+        if (btn) {
+            if (favoritos.includes(idCidade)) {
+                btn.classList.remove('btn-outline-danger');
+                btn.classList.add('btn-danger');
+                btn.innerText = "Nos Favoritos";
+            } else {
+                btn.classList.remove('btn-danger');
+                btn.classList.add('btn-outline-danger');
+                btn.innerText = "FAVORITAR";
+            }
+        }
+    }
+
+                    document.querySelector("#buttoncomment").addEventListener("click", function () {
+                        document.getElementById('secaocomentarios').style.display = 'block';
+                    });
+                } else {
+                    tela.innerHTML = 'Não encontrado'
+                }
+            });
+    </script>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id'); // ID do roteiro vindo da URL
+
+    fetch(`http://localhost:3000/roteirosProntos/${id}`)
+        .then(res => res.json())
+        .then(roteiro => {
+            const comentarios = roteiro.avaliacoes || [];
+            const container = document.getElementById('comentarios_container');
+
+            container.innerHTML = '';
+
+            if (comentarios.length === 0) {
+                container.innerHTML = '<p>Sem comentários ainda.</p>';
+                return;
+            }
+
+            comentarios.forEach(comentario => {
+                const blocoComentario = document.createElement('div');
+                blocoComentario.classList.add('mb-5');
+
+                const cabecalho = document.createElement('div');
+                cabecalho.classList.add('usuario_data_estrelas');
+
+                const divUsuario = document.createElement('div');
+                divUsuario.classList.add('usuario');
+                divUsuario.innerHTML = `<strong>${comentario.usuario}</strong>`;
+
+                const divData = document.createElement('div');
+                divData.classList.add('data_publicao');
+                divData.textContent = comentario.data_publicacao || comentario.data;
+
+                const divEstrelas = document.createElement('div');
+                divEstrelas.classList.add('quant_estrelas');
+                const estrelas = '★'.repeat(comentario.quant_estrelas) + '☆'.repeat(5 - comentario.quant_estrelas);
+                divEstrelas.innerHTML = `<span style="color: #ffc107; font-size: 1.2rem;">${estrelas}</span>`;
+
+                cabecalho.appendChild(divUsuario);
+                cabecalho.appendChild(divData);
+                cabecalho.appendChild(divEstrelas);
+
+                const divConteudo = document.createElement('div');
+                divConteudo.classList.add('conteudo');
+                divConteudo.textContent = comentario.conteudo;
+
+                blocoComentario.appendChild(cabecalho);
+                blocoComentario.appendChild(divConteudo);
+
+                container.appendChild(blocoComentario);
+            });
+
+            // Mostra a seção com os comentários
+            document.getElementById('secaocomentarios').style.display = 'block';
+        })
+    </script>
+    <script>
+        const estrelasDiv = document.getElementById('avaliacao_estrelas');
+        const inputEstrelas = document.getElementById('quant_estrelas');
+        const form = document.getElementById('form_comentario');
+
+        // Estrelas
+        estrelasDiv.addEventListener('click', function (event) {
+            if (event.target.tagName === 'SPAN') {
+                const valor = Number(event.target.getAttribute('data-estrela'));
+                inputEstrelas.value = valor;
+
+                const estrelas = estrelasDiv.querySelectorAll('span');
+                estrelas.forEach((estrela, index) => {
+                    estrela.textContent = index < valor ? '★' : '☆';
+                });
+            }
+        });
+
+        // Envio do formulário
+        form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const comentario = document.getElementById('comentario_texto').value.trim();
+    const numeroEstrelas = parseInt(document.getElementById('quant_estrelas').value);
+    const idRoteiro = new URLSearchParams(window.location.search).get('id');
+
+    if (!comentario || numeroEstrelas === 0) {
+        alert('Por favor, escreva um comentário e selecione uma quantidade de estrelas.');
+        return;
+    }
+
+    const usuarioInfo = JSON.parse(localStorage.getItem('usuarioLogado'));
+
+    fetch('http://localhost:3000/usuarios')
+        .then(res => res.json())
+        .then(usuarios => {
+            const dadosUsuario = sessionStorage.getItem("usuarioCorrente");
+            const usuario = JSON.parse(dadosUsuario);
+            const nome_login = (usuario.login).toUpperCase();
+            // const usuario = usuarios.find(u => u.email === usuarioInfo?.email);
+            // const login = usuario ? usuario.login : 'Desconhecido';
+
+            // 1. Busca o roteiro atual
+            return fetch(`http://localhost:3000/roteirosProntos/${idRoteiro}`)
+                .then(res => res.json())
+                .then(roteiro => {
+                    // 2. Gera novo ID
+                    const avaliacoes = roteiro.avaliacoes || [];
+                    const ultimoComentario = avaliacoes[avaliacoes.length - 1];
+                    const novoId = ultimoComentario ? Number(ultimoComentario.id) + 1 : 1;
+
+                    // 3. Cria novo comentário
+                    const novoComentario = {
+                        id: novoId,
+                        usuario: nome_login,
+                        data_publicacao: new Date().toLocaleDateString('pt-BR'),
+                        conteudo: comentario,
+                        quant_estrelas: numeroEstrelas
+                    };
+
+                    // 4. Adiciona ao array e envia PUT com o roteiro atualizado
+                    const novoRoteiro = {
+                        ...roteiro,
+                        avaliacoes: [...avaliacoes, novoComentario]
+                    };
+
+                    return fetch(`http://localhost:3000/roteirosProntos/${idRoteiro}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(novoRoteiro)
+                    });
+                });
+        })
+        .then(res => {
+            if (!res.ok) throw new Error('Erro ao salvar');
+            return res.json();
+        })
+        .then(() => {
+            // alert('Comentário enviado com sucesso! Recarregue a página para vê-lo.');
+            location.reload();
+        })
+        .catch(err => {
+            console.error(err);
+            alert('Erro ao enviar comentário.');
+        });
+});
+    </script>
+   
+    
+
+    <footer>
+        <div class="d-flex align-items-center">
+            <div class="rodape">
+                <i class="fa-solid fa-copyright"></i>
+                <p style="margin: 0;">Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/scripts/usuario.js"></script>
+    <script src="assets/scripts/favoritos.js"></script>
+       <script src="assets/scripts/script.js"></script>
+
+</body>
+
+</html>

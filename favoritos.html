@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Favoritos</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/favoritos.css">
+        <link rel="shortcut icon" type="imagex/png" href="assets/img/aviaoeseta.png">
+            <style>
+    
+    /* AQUIIIIIIIII */
+    body {
+      font-family: Arial;
+      background-color: white;
+      color: black;
+    }
+
+    #botao-modo {
+      /* position: fixed; */
+      display: flex;
+
+      top: 10px;
+      right: 10px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+    </head>
+
+    <body>
+        <header class="sem-tema d-flex cab position-relative container-fluid">
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars" style="color: white;"></i>
+        </button>
+        <nav id="sideMenu" class="side-menu">
+            <div class="menu-content">
+
+                <!-- <div class="dark-mode-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="modo-escuro">Modo escuro</span>
+                </div> -->
+
+                <ul class="menu-list">
+                                <button id="botao-modo" class="btn btn-primary">MODO ESCURO</button>
+
+                    <a href="PerfilUsuario.html"><li><i class="fa-regular fa-user"></i> Minha conta</li></a>
+                    <a href="favoritos.html"><li><i class="fa-regular fa-heart"></i> Favoritos</li></a>
+                    <a href="meusroteiros.html"><li><i class="fa-regular fa-map"></i> Meus roteiros</li></a>
+                    <li><a href="faq.html"><i class="fa-regular fa-circle-question"></i> FAQ</li></a>
+                    <li><a href="duvida.html"><i class="fa-regular fa-comment-dots"></i> Minhas dúvidas</li></a>
+                              <li id="painellink"><a href="painel.html"><i class="fa-regular fa-star"></i> Painel adminstrador</li></a>
+
+                </ul>
+
+                <a href="cadastros_recomen.html"><button class="recom-btn"><i class="fa-solid fa-plus"></i> CADASTRAR RECOMENDAÇÕES
+                </button></a>
+
+                <div class="footer-menu">
+                    <button class="sair-btn" onclick="toggleMenu()">
+                        FECHAR MENU
+                    </button>
+                </div>
+                <div class="footer-menu">
+                    <button id="sair_conta" style="background-color: #f57c00; color: black; margin-top: 15%;" class="sair-btn" onclick="toggleMenu()">
+                        SAIR DA CONTA
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- MUDANÇAS!!!!!!!!! ALTERAR O CAMINHO DA IMAGEM -->
+        <img src="assets/img/logoST.PNG" id="logo">
+
+        
+    <p class="sem-tema position-absolute py-1 px-3" id="nomelogin">LOGIN</p>
+        <a href="PerfilUsuario.html"><i class="fa-regular fa-user fa-2x position-absolute" id="iconuser"></i></a>
+    </header>
+        <div id="msgFav"></div>
+        <div id="divbtnvoltar">
+            <button id="button_voltar" class="btn btn-primary" onclick="history.back()">VOLTAR</button>
+        </div>
+        <div class="container">
+            <div class="row row-cols-1 g-4 row-cols-xxl-4 row-cols-xl-4 row-cols-md-2  row-cols-sm-2 row-cols-xs-1 "
+                id="favoritos"></div>
+        </div>
+        <footer>
+            <div class="d-flex align-items-center">
+                <div class="rodape">
+                    <i class="fa-solid fa-copyright"></i>
+                    <p style="margin: 0;">Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+
+<script>
+window.addEventListener('DOMContentLoaded', async () => {
+  // 1. Elementos e Variáveis Iniciais
+  const botao = document.getElementById('botao-modo');
+  if (!botao) {
+    console.error('Botão não encontrado! Verifique o ID "botao-modo" no HTML.');
+    return;
+  }
+
+  // 2. Obter dados do usuário
+  const usuario = JSON.parse(sessionStorage.getItem("usuarioCorrente")) || {};
+  const login = usuario?.login?.toLowerCase();
+
+  if (!login) {
+    console.warn('Nenhum usuário logado encontrado.');
+    return;
+  }
+
+  // 3. Variável para armazenar preferência
+  let prefUsuario = null;
+
+  // 4. Função para aplicar tema (versão melhorada)
+  function aplicarModo(tema) {
+    const estiloId = 'modo-escuro-estilos';
+    const body = document.body;
+
+    // Remove estilo existente para evitar duplicação
+    const estiloExistente = document.getElementById(estiloId);
+    if (estiloExistente) estiloExistente.remove();
+
+    if (tema === 'dark') {
+      // Cria novo estilo
+      const estiloEscuro = document.createElement('style');
+      estiloEscuro.id = estiloId;
+estiloEscuro.textContent = `
+  body.dark-mode {
+    background-color: #121212 !important;
+    color: #f0f0f0 !important;
+    transition: all 0.3s ease;
+  }
+
+  body.dark-mode a {
+    color: #90caf9 !important;
+  }
+
+  body.dark-mode button {
+    background-color: #333 !important;
+    color: white !important;
+    border-color: #555 !important;
+  }
+
+  body.dark-mode input,
+  body.dark-mode select,
+  body.dark-mode textarea {
+    background-color: #252525 !important;
+    color: white !important;
+    border-color: #444 !important;
+  }
+
+  /* Exclusão do modo escuro na área "sem-tema" */
+  body.dark-mode .sem-tema,
+  body.dark-mode .sem-tema * {
+    background-color: white !important;
+    color: black !important;
+    border-color: #ccc !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+
+
+
+`;
+
+      document.head.appendChild(estiloEscuro);
+      body.classList.add('dark-mode');
+      botao.textContent = 'MODO CLARO';
+      console.log('Modo escuro ativado');
+    } else {
+      body.classList.remove('dark-mode');
+      botao.textContent = 'MODO ESCURO';
+      console.log('Modo claro ativado');
+    }
+  }
+
+  // 5. Função para salvar preferência (com tratamento de erro)
+  async function salvarPreferencia(tema) {
+    try {
+      if (!login) {
+        console.error('Tentativa de salvar preferência sem login');
+        return;
+      }
+
+      const payload = {
+        login: login,
+        theme: tema
+      };
+
+      if (prefUsuario) {
+        // Atualização existente
+        const response = await fetch(`http://localhost:3000/DarkLight/${prefUsuario.id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...payload, id: prefUsuario.id })
+        });
+        
+        if (!response.ok) throw new Error('Falha ao atualizar preferência');
+        console.log('Preferência atualizada com sucesso');
+      } else {
+        // Nova entrada
+        const response = await fetch('http://localhost:3000/DarkLight', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        
+        if (!response.ok) throw new Error('Falha ao criar preferência');
+        prefUsuario = await response.json();
+        console.log('Preferência criada com sucesso');
+      }
+    } catch (error) {
+      console.error('Erro ao salvar preferência:', error);
+    }
+  }
+
+  // 6. Carregar preferência inicial (com fallback)
+  async function carregarPreferenciaInicial() {
+    try {
+      const response = await fetch(`http://localhost:3000/DarkLight?login=${login}`);
+      if (!response.ok) throw new Error('Falha na requisição');
+      
+      const prefs = await response.json();
+      console.log('Preferências encontradas:', prefs);
+
+      if (prefs.length > 0 && prefs[0].theme) {
+        prefUsuario = prefs[0];
+        aplicarModo(prefUsuario.theme);
+      } else {
+        // Fallback: usar preferência do sistema ou light mode
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        aplicarModo(prefersDark ? 'dark' : 'light');
+        console.log('Usando preferência do sistema:', prefersDark ? 'dark' : 'light');
+      }
+    } catch (error) {
+      console.error('Erro ao carregar preferência:', error);
+      aplicarModo('light'); // Fallback seguro
+    }
+  }
+
+  // 7. Evento do botão (com tratamento de erro)
+  botao.addEventListener('click', async () => {
+    try {
+      const modoAtual = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      const novoTema = modoAtual === 'dark' ? 'light' : 'dark';
+      
+      aplicarModo(novoTema);
+      await salvarPreferencia(novoTema);
+    } catch (error) {
+      console.error('Erro ao alternar modo:', error);
+    }
+  });
+
+  // 8. Inicialização
+  await carregarPreferenciaInicial();
+});
+</script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const usuarioCorrente = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+                if (!usuarioCorrente) {
+                    alert('Você precisa estar logado para ver os favoritos.');
+                    window.location.href = 'login.html';
+                    return;
+                }
+
+                fetch('http://localhost:3000/roteirosProntos')
+                    .then(res => res.json())
+                    .then(cidades => {
+                        const favoritos = usuarioCorrente.favoritos || [];
+                        const cidadesFavoritas = cidades.filter(cidade => favoritos.includes(cidade.id));
+                        const container = document.getElementById('favoritos')
+                        const divmsg = document.getElementById('msgFav');
+                        divmsg.innerHTML = '';
+
+                        if (cidadesFavoritas.length === 0) {
+                            divmsg.innerHTML =
+                                '<h2 style="text-align: center">Você ainda não tem roteiros favoritos.</h2>';
+                            return;
+                        } else {
+                            divmsg.innerHTML =
+                                '<h2 style="text-align: center; margin: 2rem">Roteiros Favoritos</h2>';
+                        }
+                        cidadesFavoritas.forEach(cidade => {
+                            container.innerHTML += `
+                    
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <a href="detalhesRot.html?id=${cidade.id}" class="text-decoration-none text-dark">
+                            <img src="${cidade.imgPrinc}" class="card-img-top img-fluid" alt="${cidade.nome}" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">${cidade.nome}</h5>
+                                <p class="card-text">${cidade.descricao}</p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                `;
+                        });
+                    })
+                    .catch(err => {
+                        console.error(err);
+                        document.getElementById('favoritos').innerHTML = '<p>Erro ao carregar favoritos.</p>';
+                    });
+            });
+        </script>
+        <script>
+            function getUsuarioCorrente() {
+                return JSON.parse(sessionStorage.getItem('usuarioCorrente')) || null;
+            }
+
+            function logoutUser() {
+                sessionStorage.removeItem('usuarioCorrente');
+                location.reload();
+            }
+
+            
+        </script>
+        <script>
+function sairConta() {
+  // Verificar se existe um usuário logado
+  const usuario = sessionStorage.getItem("usuarioCorrente");
+
+  if (!usuario) {
+    alert("Nenhum usuário está logado no momento.");
+    return;
+  }
+
+  // Limpar o sessionStorage e variáveis
+  sessionStorage.removeItem("usuarioCorrente");
+  usuarioCorrente = null;
+
+  // Limpar campos se existirem
+  if (document.getElementById("login")) document.getElementById("login").value = "";
+  if (document.getElementById("nomecompleto")) document.getElementById("nomecompleto").value = "";
+  if (document.getElementById("email")) document.getElementById("email").value = "";
+  if (document.getElementById("senha")) document.getElementById("senha").value = "";
+
+  // Limpar textos e imagens do perfil, se existirem
+  if (document.getElementById("nome-usuario")) document.getElementById("nome-usuario").textContent = "";
+  if (document.getElementById("usuario-nome-topo")) document.getElementById("usuario-nome-topo").textContent = "";
+  if (document.getElementById("avatar")) document.getElementById("avatar").src = "assets/img/imglogin.png";
+  if (document.getElementById("avatar-topo")) document.getElementById("avatar-topo").src = "assets/img/imglogin.png";
+
+  alert("Você saiu da conta.");
+  window.location.href = "index.html";
+}
+
+function toggleMenu() {
+  const menu = document.getElementById('sideMenu');
+  menu.classList.toggle('open');
+}
+
+document.getElementById('darkModeToggle')?.addEventListener('change', function () {
+  document.body.classList.toggle('dark-mode', this.checked);
+});
+
+const botaoSair = document.getElementById("sair_conta");
+if (botaoSair) {
+  botaoSair.addEventListener("click", sairConta);
+}
+</script>
+        <script src="assets/scripts/usuario.js"></script>
+           <script src="assets/scripts/script.js"></script>
+
+    </body>
+
+    </html>

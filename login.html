@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartTravel</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+  <script src="assets/scripts/script.js"></script>
+
+  <link rel="shortcut icon" type="imagex/png" href="assets/img/aviaoeseta.png">
+</head>
+
+<body>
+
+  <header class="d-flex cab position-relative container-fluid">
+
+    <img src="assets/img/logoST.PNG" id="logo">
+    <div class="container" id="container_cabe">
+      <h4 class="text-white text-center text-md-start m-0" id="tituloHeaderlogcad">
+        O JEITO <span class="text-primary">INTELIGENTE</span> DE VIAJAR
+      </h4>
+    </div> 
+  </header>
+  
+<section id="section1">
+    <div class="container d-flex flex-column justify-content-center align-items-center" style="margin-top: 7%;">
+
+    <div class="row w-100 justify-content-center align-items-center g-5 flex-column flex-lg-row text-center text-lg-start">
+
+      <!-- Texto -->
+      <div class="col-lg-6 px-4" style="margin-top: 0%;">
+        <p class="fs-5 fw-medium text-center">
+          A SmartTravel é a plataforma ideal para<br />
+          quem quer explorar o mundo sem<br />
+          preocupações.<br /><br />
+
+          Criamos o seu roteiro com sugestões<br />
+          personalizadas, dicas exclusivas e<br />
+          informações detalhadas sobre destinos,<br />
+          hospedagens, passeios e gastronomia,<br />
+          transformamos o planejamento da sua<br />
+          viagem em uma experiência simples<br />
+          e prazerosa.<br /><br />
+
+          Viaje com mais inteligência e aproveite<br />
+          ao máximo cada destino.<br /><br />
+
+          <span class="text-primary">
+            O JEITO <span style="background-color: #f57c00; color: white; border-radius: 5px; padding: 0.5%;">SMART</span>
+            DE VIAJAR!
+          </span>
+        </p>
+      </div>
+
+      <!-- Login -->
+       <!-- Login -->
+<div class="col-lg-5 px-4" style="flex: 0 0 auto; width: auto;">
+  <div class="login-box mx-auto" style="width: 500px; height: 450px;">
+    <img src="assets/img/logoST.PNG" alt="Logo SmartTravel" />
+    <h5 class="text-white text-center mt-4">LOGIN</h5>
+
+    <form id="login-form">
+      <div class="mt-4">
+        <label class="text-white mb-1">EMAIL</label>
+        <input type="text" id="email" />
+      </div>
+
+      <div class="mt-4">
+        <label class="text-white mb-1">SENHA</label>
+        <input type="password" id="password" />
+      </div>
+
+      <div class="text-center">
+        <button type="submit" id="botao_entrar">ENTRAR</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="text-center mt-3">
+    <div class="mb-1" style="color: black;">AINDA NÃO TEM CONTA?</div>
+    <button id="botao_cadastrar" style="width: 120px; border-radius: 10px; background-color: #f57c00; color: white; border: none;">
+      CADASTRE-SE
+    </button>
+  </div>
+
+  <div class="text-center mt-3">
+    <button id="botao_semlogin" style="width: auto; min-width: 160px; white-space: nowrap; color: black; background-color: transparent; padding: 6px 12px; border: none; font-size: 0.9rem;">
+      CONTINUAR SEM LOGIN
+    </button>
+  </div>
+</div>
+
+</div>
+
+  </div>
+
+  </section>
+
+  <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleCheckbox = document.getElementById("darkModeToggle");
+            const userId = 1;
+
+            function applyTheme(theme) {
+                document.body.classList.remove("light", "dark");
+                document.body.classList.add(theme);
+                toggleCheckbox.checked = theme === "dark";
+            }
+
+            fetch(`http://localhost:3000/userPreferences/${userId}`)
+                .then(res => res.json())
+                .then(data => {
+                    applyTheme(data.theme || "light");
+                })
+                .catch(err => {
+                    console.error("Erro ao carregar tema:", err);
+                    applyTheme("light");
+                });
+
+            toggleCheckbox.addEventListener("change", () => {
+                const newTheme = toggleCheckbox.checked ? "dark" : "light";
+                applyTheme(newTheme);
+
+                fetch(`http://localhost:3000/userPreferences/${userId}`, {
+                    method: "PATCH",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ theme: newTheme })
+                });
+            });
+        });
+    </script>
+
+
+
+  <script src="assets/scripts/usuario.js"></script>
+  <script src="assets/scripts/login.js"></script>
+  <script>
+    document.getElementById('botao_cadastrar').addEventListener('click', function() {
+      window.location.href = 'cadastro.html';
+    });
+
+    document.getElementById('botao_semlogin').addEventListener('click', function() {
+      window.location.href = 'index.html';
+    });
+
+    // Função para processar o login
+    function processaFormLogin(event) {
+  event.preventDefault();
+
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+
+  resultadoLogin = loginUser(email, password);
+  if (resultadoLogin) {
+    window.location.href = 'index.html';
+  } else {
+    alert('Email ou senha incorretos');
+  }
+}
+
+document.getElementById('login-form').addEventListener('submit', processaFormLogin);
+
+    document.getElementById('login-form').addEventListener('submit', processaFormLogin);
+  </script>
+<script>
+    document.getElementById("formLogin").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const emailDigitado = document.getElementById("email").value;
+      const senhaDigitada = document.getElementById("senha").value;
+
+      // Pegando os usuários do localStorage
+      const usuarios = JSON.parse(localStorage.getItem("usuarios") || "[]");
+
+      // Encontrar usuário correspondente
+      const usuario = usuarios.find(
+        u => u.email === emailDigitado && u.senha === senhaDigitada
+      );
+
+      if (usuario) {
+        // SALVA O LOGIN (ou email) no localStorage
+        localStorage.setItem("usuarioLogado", usuario.email); // ou usuario.login se existir esse campo
+
+        alert("Login realizado com sucesso!");
+        window.location.href = "crud.html"; // ou página principal
+      } else {
+        alert("Usuário ou senha inválidos.");
+      }
+    });
+  </script>
+   <script src="assets/scripts/script.js"></script>
+
+  
+</body>
+
+</html>
