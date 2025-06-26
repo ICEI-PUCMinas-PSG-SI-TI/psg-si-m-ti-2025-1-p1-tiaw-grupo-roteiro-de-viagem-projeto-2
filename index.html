@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTravel</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+    <script src="assets/scripts/script.js"></script>
+
+    <link rel="shortcut icon" type="imagex/png" href="assets/img/aviaoeseta.png">
+    <style>
+    
+    /* AQUIIIIIIIII */
+    body {
+      font-family: Arial;
+      background-color: white;
+      color: black;
+    }
+
+    #botao-modo {
+      /* position: fixed; */
+      display: flex;
+
+      top: 10px;
+      right: 10px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+    <header class="sem-tema d-flex cab position-relative container-fluid">
+
+
+    <button class="menu-btn" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars" style="color: white;"></i>
+    </button>
+    <nav id="sideMenu" class="side-menu">
+      <div class="menu-content">
+
+
+        <!-- <div class="dark-mode-toggle">
+          <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider round"></span>
+          </label>
+          <span class="modo-escuro">Modo escuro</span>
+        </div> -->
+
+
+        <ul class="menu-list">
+               <!-- /* AQUIIIIIIIII */ -->
+            <button id="botao-modo" class="btn btn-primary">MODO ESCURO</button>
+          <a href="index.html">
+                        <li>Página inicial</li>
+                    </a>
+          <a href="PerfilUsuario.html">
+            <li><i class="fa-regular fa-user"></i> Minha conta</li>
+          </a>
+          <a href="favoritos.html">
+            <li><i class="fa-regular fa-heart"></i> Favoritos</li>
+          </a>
+          <a href="meusroteiros.html">
+            <li><i class="fa-regular fa-map"></i> Meus roteiros</li>
+          </a>
+          <li><a href="faq.html"><i class="fa-regular fa-circle-question"></i> FAQ</li></a>
+          <li><a href="minhasduvidas.html"><i class="fa-regular fa-comment-dots"></i> Minhas dúvidas</li></a>
+                    <li id="painellink"><a href="painel.html"><i class="fa-regular fa-star"></i> Painel adminstrador</li></a>
+
+        </ul>
+
+
+        <a href="cadastros_recomen.html"><button class="recom-btn"><i class="fa-solid fa-plus"></i> CADASTRAR RECOMENDAÇÕES
+          </button></a>
+
+
+        <div class="footer-menu">
+          <button class="sair-btn" onclick="toggleMenu()">
+            FECHAR MENU
+          </button>
+        </div>
+        <div class="footer-menu">
+          <button id="sair_conta" style="background-color: #f57c00; color: black; margin-top: 15%;" class="sair-btn"
+            onclick="toggleMenu()">
+            SAIR DA CONTA
+          </button>
+        </div>
+      </div>
+    </nav>
+
+       <!-- /* AQUIIIIIIIII */ -->
+<script>
+window.addEventListener('DOMContentLoaded', async () => {
+  // 1. Elementos e Variáveis Iniciais
+  const botao = document.getElementById('botao-modo');
+  if (!botao) {
+    console.error('Botão não encontrado! Verifique o ID "botao-modo" no HTML.');
+    return;
+  }
+
+  // 2. Obter dados do usuário
+  const usuario = JSON.parse(sessionStorage.getItem("usuarioCorrente")) || {};
+  const login = usuario?.login?.toLowerCase();
+
+  if (!login) {
+    console.warn('Nenhum usuário logado encontrado.');
+    return;
+  }
+
+  // 3. Variável para armazenar preferência
+  let prefUsuario = null;
+
+  // 4. Função para aplicar tema (versão melhorada)
+  function aplicarModo(tema) {
+    const estiloId = 'modo-escuro-estilos';
+    const body = document.body;
+
+    // Remove estilo existente para evitar duplicação
+    const estiloExistente = document.getElementById(estiloId);
+    if (estiloExistente) estiloExistente.remove();
+
+    if (tema === 'dark') {
+      // Cria novo estilo
+      const estiloEscuro = document.createElement('style');
+      estiloEscuro.id = estiloId;
+estiloEscuro.textContent = `
+  body.dark-mode {
+    background-color: #121212 !important;
+    color: #f0f0f0 !important;
+    transition: all 0.3s ease;
+  }
+
+  body.dark-mode a {
+    color: #90caf9 !important;
+  }
+
+  body.dark-mode button {
+    background-color: #333 !important;
+    color: white !important;
+    border-color: #555 !important;
+  }
+
+  body.dark-mode input,
+  body.dark-mode select,
+  body.dark-mode textarea {
+    background-color: #252525 !important;
+    color: white !important;
+    border-color: #444 !important;
+  }
+
+  /* Exclusão do modo escuro na área "sem-tema" */
+  body.dark-mode .sem-tema,
+  body.dark-mode .sem-tema * {
+    background-color: white !important;
+    color: black !important;
+    border-color: #ccc !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+
+
+
+
+
+`;
+
+      document.head.appendChild(estiloEscuro);
+      body.classList.add('dark-mode');
+      botao.textContent = 'MODO CLARO';
+      console.log('Modo escuro ativado');
+    } else {
+      body.classList.remove('dark-mode');
+      botao.textContent = 'MODO ESCURO';
+      console.log('Modo claro ativado');
+    }
+  }
+
+  // 5. Função para salvar preferência (com tratamento de erro)
+  async function salvarPreferencia(tema) {
+    try {
+      if (!login) {
+        console.error('Tentativa de salvar preferência sem login');
+        return;
+      }
+
+      const payload = {
+        login: login,
+        theme: tema
+      };
+
+      if (prefUsuario) {
+        // Atualização existente
+        const response = await fetch(`http://localhost:3000/DarkLight/${prefUsuario.id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...payload, id: prefUsuario.id })
+        });
+        
+        if (!response.ok) throw new Error('Falha ao atualizar preferência');
+        console.log('Preferência atualizada com sucesso');
+      } else {
+        // Nova entrada
+        const response = await fetch('http://localhost:3000/DarkLight', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        
+        if (!response.ok) throw new Error('Falha ao criar preferência');
+        prefUsuario = await response.json();
+        console.log('Preferência criada com sucesso');
+      }
+    } catch (error) {
+      console.error('Erro ao salvar preferência:', error);
+    }
+  }
+
+  // 6. Carregar preferência inicial (com fallback)
+  async function carregarPreferenciaInicial() {
+    try {
+      const response = await fetch(`http://localhost:3000/DarkLight?login=${login}`);
+      if (!response.ok) throw new Error('Falha na requisição');
+      
+      const prefs = await response.json();
+      console.log('Preferências encontradas:', prefs);
+
+      if (prefs.length > 0 && prefs[0].theme) {
+        prefUsuario = prefs[0];
+        aplicarModo(prefUsuario.theme);
+      } else {
+        // Fallback: usar preferência do sistema ou light mode
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        aplicarModo(prefersDark ? 'dark' : 'light');
+        console.log('Usando preferência do sistema:', prefersDark ? 'dark' : 'light');
+      }
+    } catch (error) {
+      console.error('Erro ao carregar preferência:', error);
+      aplicarModo('light'); // Fallback seguro
+    }
+  }
+
+  // 7. Evento do botão (com tratamento de erro)
+  botao.addEventListener('click', async () => {
+    try {
+      const modoAtual = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      const novoTema = modoAtual === 'dark' ? 'light' : 'dark';
+      
+      aplicarModo(novoTema);
+      await salvarPreferencia(novoTema);
+    } catch (error) {
+      console.error('Erro ao alternar modo:', error);
+    }
+  });
+
+  // 8. Inicialização
+  await carregarPreferenciaInicial();
+});
+</script>
+    <!-- MUDANÇAS!!!!!!!!! ALTERAR O CAMINHO DA IMAGEM -->
+    <img src="assets/img/logoST.PNG" id="logo">
+
+
+       <!-- /* AQUIIIIIIIII */ -->
+    <p class="sem-tema position-absolute py-1 px-3" id="nomelogin">LOGIN</p>
+    <a href="PerfilUsuario.html"><i class="fa-regular fa-user fa-2x position-absolute" id="iconuser"></i></a>
+
+
+  </header>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            menu.classList.toggle('open');
+        }
+
+        document.getElementById('darkModeToggle')?.addEventListener('change', function () {
+            document.body.classList.toggle('dark-mode', this.checked);
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleCheckbox = document.getElementById("darkModeToggle");
+            const userId = 1;
+
+            function applyTheme(theme) {
+                document.body.classList.remove("light", "dark");
+                document.body.classList.add(theme);
+                toggleCheckbox.checked = theme === "dark";
+            }
+
+            fetch(`http://localhost:3000/userPreferences/${userId}`)
+                .then(res => res.json())
+                .then(data => {
+                    applyTheme(data.theme || "light");
+                })
+                .catch(err => {
+                    console.error("Erro ao carregar tema:", err);
+                    applyTheme("light");
+                });
+
+            toggleCheckbox.addEventListener("change", () => {
+                const newTheme = toggleCheckbox.checked ? "dark" : "light";
+                applyTheme(newTheme);
+
+                fetch(`http://localhost:3000/userPreferences/${userId}`, {
+                    method: "PATCH",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ theme: newTheme })
+                });
+            });
+        });
+    </script>
+
+    <div class="d-flex justify-content-center mt-5">
+        <h4 id="titlesection">BUSCA POR ROTEIROS PRONTOS</h4>
+    </div>
+
+    <section class="d-block d-lg-flex mt-4 py-lg-1 container d-block align-items-center" id="sectionfilter"
+        style="overflow-x: scroll; scroll-behavior: smooth;">
+        <div class="d-flex align-items-center ps-sm-3 pe-sm-3 divfilter filterborderright">
+            <i class="fa-solid fa-magnifying-glass iconfilter"></i>
+            <div class="ps-2 selectfilter">
+                <h6>DESTINOS</h6>
+                <input type="text" class="selectfilter" id="inputdestinos">
+                <ul id="sugestoes"
+                    style="position: absolute;background: white;z-index: 1000; list-style: none; padding: 0; margin: 0;">
+                </ul>
+            </div>
+
+        </div>
+        <script>
+            let destinos = [];
+
+            fetch("http://localhost:3000/roteirosProntos")
+                .then(res => res.json())
+                .then(data => {
+                    destinos = data;
+                });
+
+            const input = document.getElementById("inputdestinos");
+            const sugestoes = document.getElementById("sugestoes");
+
+            input.addEventListener("input", () => {
+                const termo = input.value.toLowerCase();
+                sugestoes.innerHTML = "";
+
+                if (termo === "") return;
+
+                const filtrados = destinos.filter(destino =>
+                    destino.cidade.toLowerCase().includes(termo)
+                );
+
+                filtrados.forEach(destino => {
+                    const li = document.createElement("li");
+                    li.textContent = destino.cidade;
+                    li.style.padding = "5px 10px";
+                    li.style.cursor = "pointer";
+
+                    li.addEventListener("click", () => {
+                        input.value = destino.cidade;
+                        sugestoes.innerHTML = "";
+                    });
+
+                    sugestoes.appendChild(li);
+                });
+            });
+        </script>
+
+        <div class="d-flex align-items-center ps-sm-3 pe-sm-3 divfilter filterborderright">
+            <i class="fa-solid fa-users iconfilter"></i>
+            <div class="ps-2 selectfilter">
+                <h6>HÓSPEDES</h6>
+                <form>
+                    <select class="selectfilter" id="inputpessoas">
+                        <option disabled selected></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center ps-sm-3 pe-sm-3 divfilter filterborderright">
+
+            <i class="fa-solid fa-plane iconfilter" style="transform: rotate(-45deg);"></i>
+            <div class="ps-2 selectfilter">
+                <h6>TRANSPORTE</h6>
+                <form>
+                    <select class="inputfilter selectfilter" id="transportechoice">
+                        <option disabled selected></option>
+                        <option>Carro</option>
+                        <option>Avião</option>
+                        <option>Ambos</option>
+                    </select>
+                </form>
+            </div>
+
+        </div>
+        <div class="d-flex align-items-center ps-sm-3 pe-sm-3 divfilter filterborderright">
+            <i class="fa-solid fa-tree iconfilter"></i>
+            <div class="ps-2 selectfilter">
+                <h6>Estação do</h6>
+                <form action="">
+                    <select class="selectfilter" style="width: 100%;" id="inputestacao">
+                        <option disabled selected></option>
+                        <option>Verão</option>
+                        <option>Primavera</option>
+                        <option>Outono</option>
+                        <option>Inverno</option>
+                    </select>
+                </form>
+            </div>
+
+        </div>
+        <div class="d-flex align-items-center divfilter ps-sm-3 pe-sm-3">
+            <i class="fa-solid fa-dollar-sign iconfilter"></i>
+            <div class="ps-2 selectfilter">
+                <h6>Preço p/ noite</h6>
+                <input type="text" placeholder="R$" class="selectfilter" id="inputpreco">
+                <ul id="listaprecos"
+                    style="display: block; position: absolute;background: white;z-index: 1000; list-style: none; padding: 0; margin: 0; width: 100px;">
+                </ul>
+            </div>
+        </div>
+        <script>
+            const inputPreco = document.getElementById('inputpreco');
+            const listaPrecos = document.getElementById('listaprecos');
+
+            async function buscarPrecos() {
+                try {
+                    const response = await fetch('http://localhost:3000/roteirosProntos');
+                    const dados = await response.json();
+                    return dados.map(item => item.precoPorNoite); // usa 'precoPorNoite' do JSON
+                } catch (error) {
+                    console.error('Erro ao buscar preços:', error);
+                    return [];
+                }
+            }
+
+            inputPreco.addEventListener('input', async () => {
+                const valor = inputPreco.value.trim();
+                listaPrecos.innerHTML = '';
+
+                if (valor === '') return;
+
+                const precos = await buscarPrecos();
+                const precosUnicos = [...new Set(precos)];
+                const filtrados = precosUnicos.filter(p => p.toString().startsWith(valor));
+
+                if (filtrados.length === 0) {
+                    const li = document.createElement('li');
+                    li.textContent = 'Nenhum preço encontrado';
+                    li.style.padding = '5px';
+                    listaPrecos.appendChild(li);
+                    return;
+                }
+
+                filtrados.forEach(p => {
+                    const li = document.createElement('li');
+                    li.textContent = `R$ ${p},00`;
+                    li.style.padding = '5px';
+                    li.style.cursor = 'pointer';
+
+                    li.addEventListener('click', () => {
+                        inputPreco.value = p;
+                        listaPrecos.innerHTML = '';
+                    });
+
+                    listaPrecos.appendChild(li);
+                });
+            });
+        </script>
+        </script>
+
+        <a id="detalheslink"><button id="buttonsearch" class="my-2" style="width: 100%;">PESQUISAR</button></a>
+
+    </section>
+
+
+
+    <main>
+        <div id="compartimento1" class=" container text-center mt-5" style="position: relative;">
+            <div>
+                <h4 id="titlesection" style="margin-bottom: 40px;">CRIE SEU PRÓPRIO ROTEIRO</h4>
+                <a href="crud.html"><button id="buttoncomecar" class="mt-3" style="margin-bottom: 50px;">COMEÇAR</button></a>
+                <!-- <img src="assets/img/aviaocriar.jpg" id="aviaocriar" style="position: absolute; width: 150px;" alt=""> -->
+            </div>
+            <h4 id="titlesection" class="mt-3">RECOMENDAÇÕES</h4>
+        </div>
+        <section class="d-flex container-fluid mt-3 p-3 gap-4 position-relative" id="secaorecomendados">
+            <div id="recomendados" style="overflow: auto; scrollbar-width: none;" class="d-flex gap-4">
+
+            </div>
+            <div>
+                <i class="fa-solid fa-arrow-right position-absolute controls" style="right: 2%;bottom: 50%; opacity: 0;"
+                    id="gonext"></i>
+                <i class="fa-solid fa-arrow-left position-absolute controls" id="goprev"
+                    style="left: 2%; bottom: 50% ;opacity: 0;"></i>
+            </div>
+
+
+        </section>
+
+        <script>
+            let dadosCidades = [];
+            fetch("http://localhost:3000/roteirosProntos")
+                .then(res => res.json())
+                .then(data => {
+                    dadosCidades = data;
+                    exibirCidades(dadosCidades);
+                })
+                .catch(err => console.error("Erro ao buscar roteiros:", err));
+
+            function exibirCidades(lista) {
+                const usuarioCorrente = JSON.parse(sessionStorage.getItem('usuarioCorrente')) || {
+                    favoritos: []
+                };
+                const rowCidades = document.getElementById('recomendados');
+                rowCidades.innerHTML = "";
+
+                lista.forEach(roteiro => {
+                    const estaNosFavoritos = usuarioCorrente.favoritos.includes(roteiro.id.toString());
+
+                    rowCidades.innerHTML += `
+                <div style="border: 1px solid black" class="justify-content-center">
+                    <a href="detalhesRot.html?id=${roteiro.id}" style="text-decoration: none; color:black;">
+                        <img src="${roteiro.imgPrinc}" class="imagemrecomendados" style="width:300px; height:200px; border-radius:10px;">
+                        <div class="position-relative d-flex justify-content-center">
+                            <p class="titulorecomendados">${roteiro.nome}</p>
+                        </div>
+                        <p class="descricaorecomendados" style="padding: 0 5px">${roteiro.descricao}</p> 
+                    </a>  
+                    <button id="fav-${roteiro.id}" 
+                        class="btn ${estaNosFavoritos ? 'btn-danger' : 'btn-outline-danger'} btn-sm" 
+                        onclick="alternarFavorito('${roteiro.id}')">
+                        ${estaNosFavoritos ? 'Nos Favoritos' : 'Favoritar'}
+                    </button>
+                    <div class="card-footer text-end"></div>
+                </div>
+            `;
+                });
+
+                // Scroll apenas uma vez, fora do forEach
+                const goNext = document.getElementById('gonext');
+                const goPrev = document.getElementById('goprev');
+                const recomendados = document.getElementById('recomendados');
+
+                goNext.addEventListener('click', function () {
+                    recomendados.scrollBy({
+                        left: 300
+                    });
+                });
+
+                goPrev.addEventListener('click', () => recomendados.scrollBy({
+                    left: -300
+                }));
+
+                function AtualizarSetas() {
+                    if (recomendados.scrollLeft <= 0)
+                        goPrev.style.opacity = '0';
+                    else
+                        goPrev.style.opacity = '1';
+
+                    if (recomendados.scrollLeft + recomendados.offsetWidth >= recomendados.scrollWidth)
+                        goNext.style.opacity = '0';
+                    else
+                        goNext.style.opacity = '1';
+                }
+
+                recomendados.addEventListener('scroll', AtualizarSetas);
+                AtualizarSetas();
+            };
+
+            let dados = {};
+
+            document.getElementById('buttonsearch').addEventListener('click', function () {
+                let cidade = document.getElementById('inputdestinos').value;
+                let preco = parseInt(document.getElementById('inputpreco').value);
+                let pessoas = parseInt(document.getElementById('inputpessoas').value);
+                let transporte = document.getElementById('transportechoice').value;
+                let estacao = document.getElementById('inputestacao').value;
+
+                // ✅ Validação básica antes de buscar
+                if (!cidade || isNaN(preco) || isNaN(pessoas) || !transporte || !estacao) {
+                    return alert('Favor preencher todos os campos corretamente');
+                }
+
+                // ✅ Busca os dados do JSON Server
+                fetch('http://localhost:3000/roteirosProntos')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Erro na requisição: " + response.status);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        const objeto = data.find(objeto =>
+                            objeto.cidade === cidade &&
+                            objeto.pessoas >= pessoas &&
+                            objeto.transporte === transporte &&
+                            objeto.estacao === estacao &&
+                            objeto.precoPorNoite >= preco
+                        );
+
+                        if (objeto) {
+                            dados.roteiro = objeto;
+                            // Exemplo: redireciona com o ID
+                            document.getElementById('detalheslink').setAttribute('href',
+                                `detalhesRot.html?id=${dados.roteiro.id}`);
+                        } else {
+                            alert('Roteiro não encontrado');
+                        }
+                    })
+            });
+        </script>
+        <footer>
+            <div class="d-flex align-items-center">
+                <div class="rodape">
+                    <i class="fa-solid fa-copyright"></i>
+                    <p style="margin: 0;">Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            function sairConta() {
+                // Verificar se existe um usuário logado
+                const usuario = sessionStorage.getItem("usuarioCorrente");
+
+                if (!usuario) {
+                    alert("Nenhum usuário está logado no momento.");
+                    return;
+                }
+
+                // Limpar o sessionStorage e variáveis
+                sessionStorage.removeItem("usuarioCorrente");
+                usuarioCorrente = null;
+
+                // Limpar campos se existirem
+                if (document.getElementById("login")) document.getElementById("login").value = "";
+                if (document.getElementById("nomecompleto")) document.getElementById("nomecompleto").value = "";
+                if (document.getElementById("email")) document.getElementById("email").value = "";
+                if (document.getElementById("senha")) document.getElementById("senha").value = "";
+
+                // Limpar textos e imagens do perfil, se existirem
+                if (document.getElementById("nome-usuario")) document.getElementById("nome-usuario").textContent = "";
+                if (document.getElementById("usuario-nome-topo")) document.getElementById("usuario-nome-topo").textContent = "";
+                if (document.getElementById("avatar")) document.getElementById("avatar").src = "assets/img/imglogin.png";
+                if (document.getElementById("avatar-topo")) document.getElementById("avatar-topo").src = "assets/img/imglogin.png";
+
+                alert("Você saiu da conta.");
+                window.location.href = "index.html";
+            }
+
+            function toggleMenu() {
+                const menu = document.getElementById('sideMenu');
+                menu.classList.toggle('open');
+            }
+
+            document.getElementById('darkModeToggle')?.addEventListener('change', function () {
+                document.body.classList.toggle('dark-mode', this.checked);
+            });
+
+            const botaoSair = document.getElementById("sair_conta");
+            if (botaoSair) {
+                botaoSair.addEventListener("click", sairConta);
+            }
+        </script>
+
+        <script src="assets/scripts/usuario.js"></script>
+        <script src="assets/scripts/favoritos.js"></script>
+           <script src="assets/scripts/script.js"></script>
+
+
+</body>
+
+</html>
