@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartTravel</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+  <script src="assets/scripts/script.js"></script>
+
+  <link rel="shortcut icon" type="imagex/png" href="assets/img/aviaoeseta.png">
+  
+</head>
+
+<body>
+
+  <header class="d-flex cab position-relative container-fluid">
+
+    <img src="assets/img/logoST.PNG" id="logo">
+    <div class="container" id="container_cabe">
+      <h4 class="text-white text-center text-md-start m-0" id="tituloHeaderlogcad">
+        O JEITO <span class="text-primary">INTELIGENTE</span> DE VIAJAR
+      </h4>
+    </div>
+  </header>
+
+  <section id="section1">
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+
+      <div
+        class="row w-100 justify-content-center align-items-center g-5 flex-column flex-lg-row text-center text-lg-start">
+
+        <!-- Texto -->
+        <div class="col-lg-6 px-4" style="margin-right: 7%; margin-top: -90px;">
+          <p class="fs-5 fw-medium text-center">
+            A SmartTravel é a plataforma ideal para<br />
+            quem quer explorar o mundo sem<br />
+            preocupações.<br /><br />
+
+            Criamos o seu roteiro com sugestões<br />
+            personalizadas, dicas exclusivas e<br />
+            informações detalhadas sobre destinos,<br />
+            hospedagens, passeios e gastronomia,<br />
+            transformamos o planejamento da sua<br />
+            viagem em uma experiência simples<br />
+            e prazerosa.<br /><br />
+
+            Viaje com mais inteligência e aproveite<br />
+            ao máximo cada destino.<br /><br />
+
+            <span class="text-primary">
+              O JEITO <span
+                style="background-color: #f57c00; color: white; border-radius: 5px; padding: 0.5%;">SMART</span>
+              DE VIAJAR!
+            </span>
+          </p>
+        </div>
+
+        <!-- Login -->
+        <div class="col-lg-4 px-4" style="flex: 0 0 auto; width: auto;">
+          <div class="login-box mx-auto" style="max-width: 500px; height: 640px;">
+            <img src="assets/img/logoST.PNG" alt="Logo SmartTravel" />
+            <h5 class="text-white text-center mt-4">CADASTRO</h5>
+
+            <div class="nome_sobrenome  d-flex justify-content-between gap-3">
+              <div id="nome_cad" class="mt-4">
+                <label class="text-white mb-1">NOME</label>
+                <input style="margin-right: 20%;" type="text" id="txt_nome" />
+              </div>
+
+              <div class="mt-4">
+                <label id="sobrenome_cad" class="text-white mb-1">SOBRENOME</label>
+                <input type="text" id="txt_sobrenome" />
+              </div>
+            </div>
+
+
+            <div class="mt-4">
+              <label class="text-white mb-1">EMAIL</label>
+              <input type="text" id="txt_email" />
+            </div>
+
+            <div class="mt-4">
+              <label class="text-white mb-1">SENHA</label>
+              <input type="password" id="txt_senha" />
+            </div>
+
+            <div class="mt-4">
+              <label class="text-white mb-1">CONFIRME SUA SENHA</label>
+              <input type="password" id="txt_senha2" />
+            </div>
+
+            <div class="text-center">
+              <button type="button" id="botao_cadastrar">CADASTRAR</button>
+            </div>
+          </div>
+
+          <div class="text-center mt-3">
+            <div class="mb-1" style="color: black;">JÁ TEM UMA CONTA?</div>
+            <button id="botao_entre"
+              style="width: 80px; border-radius: 10px; background-color: #f57c00; color: white; border: none;">
+              ENTRE
+            </button>
+          </div>
+
+          <div class="text-center mt-3">
+            <button id="botao_semlogin"
+              style="width: auto; min-width: 160px; white-space: nowrap; color: black; background-color: transparent; padding: 6px 12px; border: none; font-size: 0.9rem;">
+              CONTINUAR SEM LOGIN
+            </button>
+          </div>
+        </div> <!-- Fechamento correto da login-box -->
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="assets/scripts/usuario.js"></script>
+  <script src="assets/scripts/login.js"></script>
+  <script>
+
+    function salvaLogin() {
+      // Pega os dados do formulário
+      let nome = document.getElementById('txt_nome').value + ' ' + document.getElementById('txt_sobrenome').value;
+      let email = document.getElementById('txt_email').value;
+      let senha = document.getElementById('txt_senha').value;
+      let senha2 = document.getElementById('txt_senha2').value;
+      let login = document.getElementById('txt_nome').value;
+      let admin = false;
+
+      // Validação simples de senha
+      if (senha !== senha2) {
+        alert('As senhas informadas não conferem.');
+        return;
+      }
+
+      // Chama a função que adiciona no JSON Server
+      addUser(nome, login, senha, email, admin);
+      alert('Usuário cadastrado com sucesso!');
+
+      // Redireciona pra página de login
+      window.location.href = 'login.html';
+
+    }
+    document.getElementById('botao_cadastrar').addEventListener('click', salvaLogin);
+
+    // Botões de navegação
+    document.getElementById('botao_entre').addEventListener('click', function () {
+      window.location.href = 'login.html';
+    });
+
+    document.getElementById('botao_semlogin').addEventListener('click', function () {
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+
+   <script src="assets/scripts/script.js"></script>
+
+</html>
