@@ -1,0 +1,5742 @@
+{
+  "roteirosProntos": [
+    {
+      "id": "0",
+      "nome": "ROTEIRO - UBATUBA, SP",
+      "cidade": "Ubatuba, SP",
+      "descricao": "Ubatuba é o destino perfeito para quem busca praias paradisíacas, trilhas incríveis e contato com a natureza!",
+      "acomodacao": "Hotel Recanto das Toninhas",
+      "garagem": "Possui garagem",
+      "precoPorNoite": 680,
+      "faixa": "R$600-799,99",
+      "localizacao": "<i class='fas fa-map-marker-alt'></i> Avenida das Toninhas, 60 - Praia das Toninhas, Ubatuba - SP, próximo à Praia das Toninhas, com acesso fácil a várias praias de Ubatuba.",
+      "alimentacao": {
+        "cafe": "<i class='fas fa-coffee'></i> Café da manhã incluso com variedade de frutas tropicais, pães e bolos.",
+        "restaurante": "<i class='fa-solid fa-utensils'></i> Restaurante Ita Coffee Shop: especializado em frutos do mar frescos, massas artesanais e pizzas gourmet, com vista panorâmica para a Praia das Toninhas."
+      },
+      "quartos": "<i class='fas fa-bed'></i> Suítes com varanda, ar-condicionado, frigobar e TV a cabo. <br> <i class='fa-solid fa-circle'></i> Quartos para até 6 pessoas.",
+      "pessoas": 5,
+      "estrelas": "⭐⭐⭐⭐",
+      "estrelasN": 4,
+      "passeios": [
+        {
+          "passeio": "Praia das Toninhas",
+          "descricao": "Praia tranquila, ideal para quem busca sossego e boas opções de restaurantes.  ",
+          "endereco": "Praia das Toninhas, Ubatuba - SP"
+        },
+        {
+          "passeio": "Ilha do Cardoso",
+          "descricao": "Passeio de barco até a ilha, com praias desertas e natureza preservada.",
+          "endereco": "Saída: Píer de Ubatuba"
+        }
+      ],
+      "restaurantes": [
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Restaurante e Pizzaria Mar e Terra",
+          "servicos": "Frutos do mar, pizzas e pratos típicos brasileiros",
+          "endereco": "Av. Leovigildo Dias Vieira, 1382 - Praia do Itaguá, Ubatuba - SP",
+          "precoMedio": "R$ 75,00"
+        },
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Raízes Restaurante",
+          "servicos": "Frutos do mar, culinária caiçara e ambiente à beira-mar",
+          "endereco": "Av. Leovigildo Dias Vieira, 860 - Itaguá, Ubatuba - SP",
+          "precoMedio": "R$ 90,00"
+        }
+      ],
+      "avaliacoes": [
+        {
+          "id": "1500",
+          "usuario": "CAROLINE V.",
+          "data_publicacao": "02/01/2025",
+          "conteudo": "Fomos em 5 pessoas e ficamos numa casa na Praia da Fortaleza. Lugar tranquilo, limpo, com mar calmo e natureza por todos os lados. Melhor escolha pra descansar de verdade!",
+          "quant_estrelas": 5
+        },
+        {
+          "id": "1501",
+          "usuario": "JOÃO F.",
+          "data_publicacao": "15/03/2025",
+          "conteudo": "É uma casa de temporada super aconchegante, com vista para o mar e churrasqueira. A Praia da Fortaleza é perfeita pra quem quer sossego. Fizemos um passeio de caiaque e ainda visitamos a Gruta do Pirata!",
+          "quant_estrelas": 4
+        },
+        {
+          "id": "1502",
+          "usuario": "LETÍCIA S.",
+          "data_publicacao": "17/03/2025",
+          "conteudo": "O hotel é pé na areia, com acesso fácil à praia. A piscina é ótima e o atendimento foi muito atencioso. Fizemos trilha até o mirante da Fortaleza e o hotel nos orientou super bem.",
+          "quant_estrelas": 5
+        }
+      ],
+      "estacao": "Verão",
+      "transporte": "Ambos",
+      "imgPrinc": "assets/img/1princ.jpg",
+      "imagem1": "assets/img/imghotelton.jpeg",
+      "descricaoimg1": "Hotel Recanto das Toninhas",
+      "imagem2": "assets/img/locubatuba.jpeg",
+      "descricaoimg2": "Hotel Recanto das Toninhas",
+      "imagem3": "assets/img/resthotelubatuba.jpg",
+      "descricaoimg3": "Restaurante Hotel Recanto das Toninhas",
+      "imagem4": "assets/img/quartotoninhas.jpeg",
+      "descricaoimg4": "Quarto Hotel Recanto das Toninhas",
+      "imagem5": "assets/img/praiatoninhas.jpg",
+      "descricaoimg5": "Praia das Toninhas",
+      "imagem6": "assets/img/ilhacardoso.jpg",
+      "descricaoimg6": "Ilha Cardoso",
+      "imagem7": "assets/img/restmareterra.jpeg",
+      "descricaoimg7": "Restaurante Mar e Terra",
+      "imagem8": "assets/img/restraizes.jpg",
+      "descricaoimg8": "Raízes Restaurante"
+    },
+    {
+      "id": "1",
+      "nome": "ROTEIRO - Curitiba, PR",
+      "cidade": "Curitiba, PR",
+      "descricao": "Curitiba encanta com seus parques, arquitetura europeia e uma gastronomia rica, unindo modernidade e natureza!",
+      "acomodacao": "Bourbon Curitiba Convention Hotel",
+      "garagem": "Possui garagem",
+      "precoPorNoite": 520,
+      "faixa": "R$400-599,99",
+      "localizacao": "<i class='fas fa-map-marker-alt'></i> Rua Cândido Lopes, 102 - Centro, Curitiba - PR, próximo ao Teatro Guaíra e Shopping Mueller.",
+      "alimentacao": {
+        "cafe": "<i class='fas fa-coffee'></i> Café da manhã incluso, servido em estilo buffet com opções regionais e internacionais.",
+        "restaurante": "<i class='fa-solid fa-utensils'></i> Tom Espaço Gastronômico: destaque para pratos da cozinha brasileira contemporânea, como barreado paranaense e carnes nobres grelhadas."
+      },
+      "quartos": "<i class='fas fa-bed'></i> Suítes com TV, Wi-Fi gratuito e frigobar. <br> <i class='fa-solid fa-circle'></i> Quartos para até 6 pessoas.",
+      "pessoas": 5,
+      "estrelas": "⭐⭐⭐⭐",
+      "estrelasN": 4,
+      "passeios": [
+        {
+          "passeio": "Jardim Botânico",
+          "descricao": "O principal cartão-postal da cidade com estufa de vidro e jardins inspirados nos franceses.",
+          "endereco": "Av. Prefeito Lothário Meissner, 3164 - Jardim Botânico, Curitiba - PR"
+        },
+        {
+          "passeio": "Ópera de Arame",
+          "descricao": "Um teatro construído com estrutura metálica em meio a um lago e vegetação.",
+          "endereco": "Rua João Gava, 920 - Abranches, Curitiba - PR"
+        }
+      ],
+      "restaurantes": [
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Bar do Alemão",
+          "servicos": "Comida típica alemã e chope artesanal",
+          "endereco": "Rua Doutor Claudino dos Santos, 63 - São Francisco, Curitiba - PR",
+          "precoMedio": "R$ 70,00"
+        },
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Bella Banoffi",
+          "servicos": "Sobremesas famosas e pratos contemporâneos",
+          "endereco": "Rua Itupava, 1091 - Alto da XV, Curitiba - PR",
+          "precoMedio": "R$ 80,00"
+        }
+      ],
+      "avaliacoes": [
+        {
+          "id": "1550",
+          "usuario": "ANA P.",
+          "data_publicacao": "05/01/2025",
+          "conteudo": "Foi uma das melhores viagens que já fizemos! A região é linda, com muitas opções de passeios e trilhas. O local da hospedagem era muito bem cuidado, limpo e com equipe super atenciosa. Ficamos encantados com a vista e a tranquilidade. Ideal para quem quer relaxar e esquecer da correria do dia a dia.",
+          "quant_estrelas": 5
+        },
+        {
+          "id": "1551",
+          "usuario": "PEDRO L.",
+          "data_publicacao": "06/01/2025",
+          "conteudo": "Passamos quatro dias maravilhosos em um lugar simplesmente encantador. As praias são limpas, a natureza ao redor transmite uma paz indescritível, e a estrutura do local superou nossas expectativas. Café da manhã bem servido, quartos confortáveis e ótima localização.",
+          "quant_estrelas": 4
+        },
+        {
+          "id": "1552",
+          "usuario": "LARA M.",
+          "data_publicacao": "07/01/2025",
+          "conteudo": "Adorei, com certeza voltaria!",
+          "quant_estrelas": 5
+        }
+      ],
+      "estacao": "Primavera",
+      "transporte": "Ambos",
+      "imgPrinc": "assets/img/2princ.jpg",
+      "imagem1": "assets/img/2hot.jpg",
+      "descricaoimg1": "Bourbon Curitiba Convention Hotel",
+      "imagem2": "assets/img/2hotcuritiba.jpg",
+      "descricaoimg2": "Bourbon Curitiba Convention Hotel",
+      "imagem3": "assets/img/2resthot.jpeg",
+      "descricaoimg3": "Restaurante Bourbon Curitiba Convention Hotel",
+      "imagem4": "assets/img/2quarto.jpeg",
+      "descricaoimg4": "Quarto Bourbon Curitiba Convention Hotel",
+      "imagem5": "assets/img/2jardim.jpg",
+      "descricaoimg5": "Jardim Botânico",
+      "imagem6": "assets/img/2opera.jpg",
+      "descricaoimg6": "Ópera de Arame",
+      "imagem7": "assets/img/2bardoal.jpeg",
+      "descricaoimg7": "Bar do Alemão",
+      "imagem8": "assets/img/2banoffi.jpg",
+      "descricaoimg8": "Bella Banoffi"
+    },
+    {
+      "id": "2",
+      "nome": "ROTEIRO - OURO PRETO, MG",
+      "cidade": "Ouro Preto, MG",
+      "descricao": "Ouro Preto é um mergulho na história do Brasil! Com suas ladeiras de pedra, igrejas barrocas e arte mineira, encanta quem busca cultura e charme colonial.",
+      "acomodacao": "Hotel Solar do Rosário",
+      "garagem": "Possui garagem",
+      "precoPorNoite": 600,
+      "faixa": "R$600-799,99",
+      "localizacao": "<i class='fas fa-map-marker-alt'></i> Rua São José, 73 - Centro, Ouro Preto - MG, próximo à Praça Tiradentes e Museu da Inconfidência.",
+      "alimentacao": {
+        "cafe": "<i class='fas fa-coffee'></i> Café da manhã mineiro incluso, com pão de queijo artesanal, quitandas típicas e doces caseiros.",
+        "restaurante": "<i class='fa-solid fa-utensils'></i> Restaurante Senhora do Rosário: cozinha contemporânea mineira, com pratos autorais como filé ao molho de jabuticaba e truta com amêndoas."
+      },
+      "quartos": "<i class='fas fa-bed'></i> Suítes históricas com vista para o centro da cidade. <br> <i class='fa-solid fa-circle'></i> Quartos para até 6 pessoas.",
+      "pessoas": 5,
+      "estrelas": "⭐⭐⭐⭐",
+      "estrelasN": 4,
+      "passeios": [
+        {
+          "passeio": "Museu da Inconfidência",
+          "descricao": "Museu instalado em prédio colonial que conta a história da Inconfidência Mineira.",
+          "endereco": "Praça Tiradentes - Centro, Ouro Preto - MG"
+        },
+        {
+          "passeio": "Mina da Passagem",
+          "descricao": "Antiga mina de ouro com passeio guiado subterrâneo.",
+          "endereco": "Rodovia MG-129 - Ouro Preto - MG"
+        }
+      ],
+      "restaurantes": [
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> O Passo Pizza Jazz",
+          "servicos": "Pizza artesanal e música ao vivo",
+          "endereco": "Rua São José, 56 - Centro, Ouro Preto - MG",
+          "precoMedio": "R$ 75,00"
+        },
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Casa do Ouvidor",
+          "servicos": "Culinária mineira em casarão histórico",
+          "endereco": "Praça Tiradentes, 30 - Centro, Ouro Preto - MG",
+          "precoMedio": "R$ 85,00"
+        }
+      ],
+      "avaliacoes": [
+        {
+          "id": "1600",
+          "usuario": "CARLOS S.",
+          "data_publicacao": "10/02/2025",
+          "conteudo": "Muito bom, só senti falta de mais opções no café.",
+          "quant_estrelas": 4
+        },
+        {
+          "id": "1601",
+          "usuario": "MARIANA K.",
+          "data_publicacao": "11/02/2025",
+          "conteudo": "O roteiro é super bem planejado e inclui tudo o que a gente precisa pra curtir sem estresse: praia, trilha, boa comida e hospedagem confortável. As indicações foram muito úteis e nos sentimos super acolhidos por todos. Vale muito a pena!",
+          "quant_estrelas": 5
+        },
+        {
+          "id": "1602",
+          "usuario": "JOÃO M.",
+          "data_publicacao": "12/02/2025",
+          "conteudo": "Foi uma boa escolha. Recomendo.",
+          "quant_estrelas": 4
+        },
+        {
+          "id": 1603,
+          "usuario": "LUCAS",
+          "data_publicacao": "25/06/2025",
+          "conteudo": "muito bom, nota 2",
+          "quant_estrelas": 2
+        }
+      ],
+      "estacao": "Outono",
+      "transporte": "Carro",
+      "imgPrinc": "assets/img/3princ.jpg",
+      "imagem1": "assets/img/3hot.jpeg",
+      "descricaoimg1": "Hotel Solar do Rosário",
+      "imagem2": "assets/img/3hotloc.jpg",
+      "descricaoimg2": "Hotel Solar do Rosário",
+      "imagem3": "assets/img/3resthot.jpg",
+      "descricaoimg3": "Restaurante Hotel Solar do Rosário",
+      "imagem4": "assets/img/3quarto.jpg",
+      "descricaoimg4": "Quarto Hotel Solar do Rosário",
+      "imagem5": "assets/img/3passeio1.jpg",
+      "descricaoimg5": "Museu da Inconfidência",
+      "imagem6": "assets/img/3passeio2.jpg",
+      "descricaoimg6": "Mina da Passagem",
+      "imagem7": "assets/img/3rest1.jpg",
+      "descricaoimg7": "O Passo Pizza Jazz",
+      "imagem8": "assets/img/3rest2.jpg",
+      "descricaoimg8": "Casa do Ouvidor"
+    },
+    {
+      "id": "3",
+      "nome": "ROTEIRO - Jericoacoara, CE",
+      "cidade": "Jericoacoara, CE",
+      "descricao": "Com dunas douradas, pôr do sol espetacular e um clima relax, Jeri é o refúgio ideal para quem quer sol, mar e boas energias o ano inteiro!",
+      "acomodacao": "Pousada Jeribá",
+      "garagem": "Não possui garagem",
+      "precoPorNoite": 720,
+      "faixa": "R$600-799,99",
+      "localizacao": "<i class='fas fa-map-marker-alt'></i> Rua da Dunas, 27 - Jericoacoara - CE, próxima à Praia Principal e Duna do Pôr do Sol.",
+      "alimentacao": {
+        "cafe": "<i class='fas fa-coffee'></i> Café da manhã incluso, com frutas da estação, tapiocas feitas na hora e sucos naturais.",
+        "restaurante": "<i class='fa-solid fa-utensils'></i> Restaurante da Pousada: especializado em frutos do mar, com camarão grelhado na manteiga de garrafa e moqueca de peixe local."
+      },
+      "quartos": "<i class='fas fa-bed'></i> Suítes elegantes com varanda e vista para o mar. <br> <i class='fa-solid fa-circle'></i> Quartos para até 6 pessoas.",
+      "pessoas": 4,
+      "estrelas": "⭐⭐⭐⭐",
+      "estrelasN": 4,
+      "passeios": [
+        {
+          "passeio": "Pedra Furada",
+          "descricao": "Formação rochosa icônica à beira-mar, acessível por caminhada ou buggy.",
+          "endereco": "Trilha pela praia ou morro, saída de Jericoacoara - CE"
+        },
+        {
+          "passeio": "Lagoa do Paraíso",
+          "descricao": "Lagoa de água cristalina com redes dentro d’água e restaurantes flutuantes.",
+          "endereco": "Vila de Jijoca de Jericoacoara - CE"
+        }
+      ],
+      "restaurantes": [
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Na Casa Dela",
+          "servicos": "Culinária brasileira em ambiente temático e aconchegante",
+          "endereco": "Rua Principal - Jijoca de Jericoacoara - CE",
+          "precoMedio": "R$ 90,00"
+        },
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Tamarindo",
+          "servicos": "Alta gastronomia com frutos do mar",
+          "endereco": "Rua da Igreja - Jijoca de Jericoacoara - CE",
+          "precoMedio": "R$ 100,00"
+        }
+      ],
+      "avaliacoes": [
+        {
+          "id": "1650",
+          "usuario": "FERNANDA G.",
+          "data_publicacao": "01/03/2025",
+          "conteudo": "Saímos revigorados dessa viagem! O local é tranquilo, rodeado de verde, com diversas opções para explorar a região. A estrutura da hospedagem foi excelente, com bom custo-benefício. Ideal para famílias, casais ou até mesmo quem viaja sozinho.",
+          "quant_estrelas": 5
+        },
+        {
+          "id": "1651",
+          "usuario": "ROBERTO C.",
+          "data_publicacao": "02/03/2025",
+          "conteudo": "Tudo certo, mas poderia ser mais organizado.",
+          "quant_estrelas": 3
+        },
+        {
+          "id": "1652",
+          "usuario": "JULIANA T.",
+          "data_publicacao": "03/03/2025",
+          "conteudo": "Simples, mas atendeu bem às expectativas.",
+          "quant_estrelas": 4
+        },
+        {
+          "id": 1653,
+          "usuario": "BRUNO",
+          "data_publicacao": "23/06/2025",
+          "conteudo": "muito ruim kraiiiiiiiiiiii",
+          "quant_estrelas": 1
+        },
+        {
+          "id": 1654,
+          "usuario": "LIONEL",
+          "data_publicacao": "24/06/2025",
+          "conteudo": "mano que lugar lixooooooooooooooooooooo",
+          "quant_estrelas": 1
+        },
+        {
+          "id": 1655,
+          "usuario": "BRUNO",
+          "data_publicacao": "24/06/2025",
+          "conteudo": "cu de lugar do krl",
+          "quant_estrelas": 1
+        }
+      ],
+      "estacao": "Verão",
+      "transporte": "Ambos",
+      "imgPrinc": "assets/img/4princ.jpg",
+      "imagem1": "assets/img/4hot.jpg",
+      "descricaoimg1": "Pousada Jeribá",
+      "imagem2": "assets/img/4hotloc.jpg",
+      "descricaoimg2": "Pousada Jeribá",
+      "imagem3": "assets/img/4resthot.jpg",
+      "descricaoimg3": "Restaurante Pousada Jeribá",
+      "imagem4": "assets/img/4quarto.jpg",
+      "descricaoimg4": "Quarto Pousada Jeribá",
+      "imagem5": "assets/img/4passeio1.jpeg",
+      "descricaoimg5": "Pedra Furada",
+      "imagem6": "assets/img/4passeio2.jpeg",
+      "descricaoimg6": "Lagoa do Paraíso",
+      "imagem7": "assets/img/4rest1.jpg",
+      "descricaoimg7": "Restaurante Na Casa Dela",
+      "imagem8": "assets/img/4rest2.jpg",
+      "descricaoimg8": "Restaurante Tamarindo"
+    },
+    {
+      "id": "4",
+      "nome": "ROTEIRO - Chapada dos Veadeiros, GO",
+      "cidade": "Chapada dos Veadeiros, GO",
+      "descricao": "Natureza exuberante, cachoeiras deslumbrantes e uma energia única: a Chapada dos Veadeiros é um destino encantador no coração do Brasil!",
+      "acomodacao": "Pousada Sertão",
+      "garagem": "Possui garagem",
+      "precoPorNoite": 650,
+      "faixa": "R$600-799,99",
+      "localizacao": "<i class='fas fa-map-marker-alt'></i> Rua Francisco Salermo, 545 - Alto Paraíso de Goiás - GO, a menos de 1 km da Estação Rodoviária e próximo ao Parque Nacional da Chapada dos Veadeiros.",
+      "alimentacao": {
+        "cafe": "<i class='fas fa-coffee'></i> Café da manhã continental incluso, com bolos caseiros, pão de queijo e produtos orgânicos locais.",
+        "restaurante": "<i class='fa-solid fa-utensils'></i> Restaurantes regionais nas proximidades oferecem pratos típicos goianos como galinhada, arroz com pequi e opções vegetarianas."
+      },
+      "quartos": "<i class='fas fa-bed'></i> Quartos confortáveis com banheiro privativo, Wi-Fi gratuito e varanda com vista para o jardim. <br> <i class='fa-solid fa-circle'></i> Quartos para até 4 pessoas.",
+      "pessoas": 5,
+      "estrelas": "⭐⭐⭐⭐",
+      "estrelasN": 4,
+      "passeios": [
+        {
+          "passeio": "Cachoeira Santa Bárbara",
+          "descricao": "Famosa pelas águas azuis turquesa, é uma das mais lindas do Brasil.",
+          "endereco": "Comunidade Kalunga - Cavalcante - GO"
+        },
+        {
+          "passeio": "Vale da Lua",
+          "descricao": "Formações rochosas esculpidas pela água, com piscinas naturais.",
+          "endereco": "Vila de São Jorge - Alto Paraíso de Goiás - GO"
+        }
+      ],
+      "restaurantes": [
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Santo Cerrado",
+          "servicos": "Culinária goiana contemporânea e drinks autorais",
+          "endereco": "Rua Principal - Vila de São Jorge, Alto Paraíso de Goiás - GO",
+          "precoMedio": "R$ 90,00"
+        },
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Jambalaya Bistrô",
+          "servicos": "Gastronomia regional com toque internacional",
+          "endereco": "Rua Joaquim de Almeida, 18 - Centro, Alto Paraíso de Goiás - GO",
+          "precoMedio": "R$ 100,00"
+        }
+      ],
+      "avaliacoes": [
+        {
+          "id": "1700",
+          "usuario": "DAVI B.",
+          "data_publicacao": "10/04/2025",
+          "conteudo": "Viajar pra esse destino foi uma das melhores decisões que tomamos no ano! Conectamos com a natureza, comemos muito bem e ainda descansamos de verdade. O quarto era ótimo, com vista linda, e a limpeza era feita diariamente com muito capricho.",
+          "quant_estrelas": 5
+        },
+        {
+          "id": "1701",
+          "usuario": "SANDRA A.",
+          "data_publicacao": "11/04/2025",
+          "conteudo": "Experiência tranquila, tudo conforme o esperado.",
+          "quant_estrelas": 4
+        },
+        {
+          "id": "1702",
+          "usuario": "HUGO R.",
+          "data_publicacao": "12/04/2025",
+          "conteudo": "Valeu a pena. Boa relação custo-benefício.",
+          "quant_estrelas": 4
+        }
+      ],
+      "estacao": "Outono",
+      "transporte": "Carro",
+      "imgPrinc": "assets/img/5princ.jpg",
+      "imagem1": "assets/img/5hot.jpg",
+      "descricaoimg1": "Pousada Sertão ",
+      "imagem2": "assets/img/5hotloc.jpeg",
+      "descricaoimg2": "Pousada Sertão ",
+      "imagem3": "assets/img/5resthot.jpg",
+      "descricaoimg3": "Restaurante Pousada Sertão",
+      "imagem4": "assets/img/5quarto.jpg",
+      "descricaoimg4": "Quarto Pousada Sertão",
+      "imagem5": "assets/img/5passeio1.jpeg",
+      "descricaoimg5": "Cachoeira Santa Bárbara ",
+      "imagem6": "assets/img/5passeio2.jpg",
+      "descricaoimg6": "Vale da Lua ",
+      "imagem7": "assets/img/5rest1.jpg",
+      "descricaoimg7": "Restaurante Santo Cerrado",
+      "imagem8": "assets/img/5rest2.jpg",
+      "descricaoimg8": "Restaurante Jambalaya Bistrô"
+    },
+    {
+      "id": "5",
+      "nome": "ROTEIRO - Gramado, RS",
+      "cidade": "Gramado, RS",
+      "descricao": "Charmosa e acolhedora, Gramado encanta com seu clima europeu, boa comida e paisagens de tirar o fôlego!",
+      "acomodacao": "Hotel Laghetto Stilo Borges",
+      "garagem": "Possui garagem",
+      "precoPorNoite": 1200,
+      "faixa": "R$1200-1499,99",
+      "localizacao": "<i class='fas fa-map-marker-alt'></i>Rua Borges de Medeiros, 3200 - Centro, Gramado - RS, próximo ao Lago Joaquina Bier e Mini Mundo.",
+      "alimentacao": {
+        "cafe": "<i class='fas fa-coffee'></i> Café da manhã colonial incluso, com variedade de queijos, embutidos, pães e geleias artesanais.",
+        "restaurante": "<i class='fa-solid fa-utensils'></i> Restaurante Maximilia: especializado em fondue suíço, carnes nobres e pratos europeus tradicionais."
+      },
+      "quartos": "<i class='fas fa-bed'></i> Suítes luxuosas com lareira, banheira de hidromassagem e vista panorâmica. <br> <i class='fa-solid fa-circle'></i> Quartos para até 4 pessoas.",
+      "pessoas": 4,
+      "estrelas": "⭐⭐⭐⭐⭐",
+      "estrelasN": 5,
+      "passeios": [
+        {
+          "passeio": "Mini Mundo",
+          "descricao": "Parque temático com réplicas em miniatura de cidades e construções do mundo.",
+          "endereco": "Rua Horácio Cardoso, 291 - Planalto, Gramado - RS"
+        },
+        {
+          "passeio": "Lago Negro",
+          "descricao": "Passeios de pedalinho e caminhada entre pinheiros importados da Alemanha.",
+          "endereco": "Rua A. J. Renner - Bairro Planalto, Gramado - RS"
+        }
+      ],
+      "restaurantes": [
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Cantina Pastasciutta",
+          "servicos": "Massas artesanais e fondues em ambiente rústico",
+          "endereco": "Avenida Borges de Medeiros, 2083 - Centro, Gramado - RS",
+          "precoMedio": "R$ 110,00"
+        },
+        {
+          "restaurante": "<i class='fas fa-utensils'></i> Belle Du Valais",
+          "servicos": "Alta gastronomia suíça com pratos sofisticados",
+          "endereco": "Rua Bela Vista, 465 - Gramado - RS",
+          "precoMedio": "R$ 160,00"
+        }
+      ],
+      "avaliacoes": [
+        {
+          "id": "1750",
+          "usuario": "BÁRBARA F.",
+          "data_publicacao": "01/05/2025",
+          "conteudo": "Gostei, mas esperava um pouco mais.",
+          "quant_estrelas": 3
+        },
+        {
+          "id": "1751",
+          "usuario": "RICARDO T.",
+          "data_publicacao": "02/05/2025",
+          "conteudo": "Tudo impecável! Desde o momento da chegada fomos muito bem recebidos. A localização é excelente, o ambiente é familiar e sentimos muita segurança durante toda a estadia. Curtimos cada passeio e voltamos renovados.",
+          "quant_estrelas": 4
+        },
+        {
+          "id": "1752",
+          "usuario": "NATÁLIA H.",
+          "data_publicacao": "03/05/2025",
+          "conteudo": "Muito bom! Voltaria com certeza.",
+          "quant_estrelas": 5
+        }
+      ],
+      "estacao": "Inverno",
+      "transporte": "Ambos",
+      "imgPrinc": "assets/img/6princ.jpg",
+      "imagem1": "assets/img/6hotloc.jpg",
+      "descricaoimg1": "Hotel Laghetto Stilo Borges",
+      "imagem2": "assets/img/6hot.jpeg",
+      "descricaoimg2": "Hotel Laghetto Stilo Borges",
+      "imagem3": "assets/img/6resthot.jpeg",
+      "descricaoimg3": "Restaurante Hotel Laghetto Stilo Borges",
+      "imagem4": "assets/img/6quarto.jpg",
+      "descricaoimg4": "Quarto Hotel Laghetto Stilo Borges",
+      "imagem5": "assets/img/6passeio1.jpeg",
+      "descricaoimg5": "Mini Mundo",
+      "imagem6": "assets/img/6passeio2.jpg",
+      "descricaoimg6": "Lago Negro",
+      "imagem7": "assets/img/6rest1.png",
+      "descricaoimg7": "Restaurante Cantina Pastasciutta ",
+      "imagem8": "assets/img/6rest2.jpg",
+      "descricaoimg8": "Restaurante Belle Du Valais"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "1",
+      "nomecompleto": "Marta Scalzo",
+      "login": "MartaS",
+      "email": "marta.scalzo@gmail.com",
+      "favoritos": [],
+      "senha": "senha1234567",
+      "admin": true
+    },
+    {
+      "id": "2",
+      "nomecompleto": "João Ferreira",
+      "login": "João",
+      "email": "joao.ferreira@gmail.com",
+      "favoritos": [],
+      "senha": "joaopedefeijao",
+      "admin": false
+    },
+    {
+      "id": "3",
+      "nomecompleto": "Larissa Menezes",
+      "login": "Larissa",
+      "email": "larissa.menezes@gmail.com",
+      "favoritos": [],
+      "senha": "lirili2014",
+      "admin": false
+    },
+    {
+      "id": "4",
+      "nomecompleto": "Carlos Oliveira",
+      "login": "carlos",
+      "email": "carlos.oliveira@gmail.com",
+      "favoritos": [],
+      "senha": "hebreus127",
+      "admin": false
+    },
+    {
+      "id": "5",
+      "nomecompleto": "Ana Pereira",
+      "login": "Ana",
+      "email": "ana.pereira@gmail.com",
+      "foto_perfil": "img/foto5.jpg",
+      "favoritos": [],
+      "senha": "123",
+      "admin": false
+    },
+    {
+      "id": "caf4f276-2e53-461d-aeb0-9044f7205363",
+      "login": "lucas",
+      "senha": "123",
+      "nomecompleto": "Lucas Loiolla Gomes",
+      "email": "loiollalucas@gmail.com",
+      "admin": true,
+      "favoritos": [
+        "1",
+        "3"
+      ],
+      "foto_perfil": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI-jMevLhyvpy5fmB7bqCX5yp71Zgqs-M91A&s"
+    },
+    {
+      "id": "2df2b8a8-8c59-45ba-878c-669998b1ff7b",
+      "login": "Lionel",
+      "senha": "cr7chorao",
+      "nomecompleto": "Lionel Messi",
+      "email": "messi@gmail.com",
+      "admin": true,
+      "favoritos": [
+        "3"
+      ],
+      "foto_perfil": "data:image/webp;base64,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AAAAAFhNUCCLBgAAaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/Pgo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIj4KCTxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CgkJPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczpJcHRjNHhtcENvcmU9Imh0dHA6Ly9pcHRjLm9yZy9zdGQvSXB0YzR4bXBDb3JlLzEuMC94bWxucy8iICAgeG1sbnM6R2V0dHlJbWFnZXNHSUZUPSJodHRwOi8veG1wLmdldHR5aW1hZ2VzLmNvbS9naWZ0LzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGx1cz0iaHR0cDovL25zLnVzZXBsdXMub3JnL2xkZi94bXAvMS4wLyIgIHhtbG5zOmlwdGNFeHQ9Imh0dHA6Ly9pcHRjLm9yZy9zdGQvSXB0YzR4bXBFeHQvMjAwOC0wMi0yOS8iIHhtbG5zOnhtcFJpZ2h0cz0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3JpZ2h0cy8iIGRjOlJpZ2h0cz0iMjAyNSBTZWJhc3RpYW4gRnJlaiIgcGhvdG9zaG9wOkNyZWRpdD0iR2V0dHkgSW1hZ2VzIiBHZXR0eUltYWdlc0dJRlQ6QXNzZXRJRD0iMjIxOTUwNDMxMCIgeG1wUmlnaHRzOldlYlN0YXRlbWVudD0iaHR0cHM6Ly93d3cuZ2V0dHlpbWFnZXMuY29tL2V1bGE/dXRtX21lZGl1bT1vcmdhbmljJmFtcDt1dG1fc291cmNlPWdvb2dsZSZhbXA7dXRtX2NhbXBhaWduPWlwdGN1cmwiIHBsdXM6RGF0YU1pbmluZz0iaHR0cDovL25zLnVzZXBsdXMub3JnL2xkZi92b2NhYi9ETUktUFJPSElCSVRFRC1FWENFUFRTRUFSQ0hFTkdJTkVJTkRFWElORyIgPgo8ZGM6Y3JlYXRvcj48cmRmOlNlcT48cmRmOmxpPlNlYmFzdGlhbiBGcmVqPC9yZGY6bGk+PC9yZGY6U2VxPjwvZGM6Y3JlYXRvcj48ZGM6ZGVzY3JpcHRpb24+PHJkZjpBbHQ+PHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ij5NSUFNSSBHQVJERU5TLCBGTE9SSURBIC0gSlVORSAxNDogTGlvbmVsIE1lc3NpIG9mIEludGVyIE1pYW1pIGxvb2tzIG9uIGR1cmluZyB0aGUgRklGQSBDbHViIFdvcmxkIEN1cCAyMDI1IGdyb3VwIEEgbWF0Y2ggYmV0d2VlbiBBbCBBaGx5IFNDIGFuZCBJbnRlcm5hY2lvbmFsIENGIE1pYW1pIGF0IEhhcmQgUm9jayBTdGFkaXVtIG9uIEp1bmUgMTQsIDIwMjUgaW4gTWlhbWkgR2FyZGVucywgVW5pdGVkIFN0YXRlcy4gKFBob3RvIGJ5IFNlYmFzdGlhbiBGcmVqL0dldHR5IEltYWdlcyk8L3JkZjpsaT48L3JkZjpBbHQ+PC9kYzpkZXNjcmlwdGlvbj4KPHBsdXM6TGljZW5zb3I+PHJkZjpTZXE+PHJkZjpsaSByZGY6cGFyc2VUeXBlPSdSZXNvdXJjZSc+PHBsdXM6TGljZW5zb3JVUkw+aHR0cHM6Ly93d3cuZ2V0dHlpbWFnZXMuY29tL2RldGFpbC8yMjE5NTA0MzEwP3V0bV9tZWRpdW09b3JnYW5pYyZhbXA7dXRtX3NvdXJjZT1nb29nbGUmYW1wO3V0bV9jYW1wYWlnbj1pcHRjdXJsPC9wbHVzOkxpY2Vuc29yVVJMPjwvcmRmOmxpPjwvcmRmOlNlcT48L3BsdXM6TGljZW5zb3I+CgkJPC9yZGY6RGVzY3JpcHRpb24+Cgk8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJ3Ij8+CgA="
+    },
+    {
+      "id": "0aa2e67b-e58c-4809-bc1e-ec40789c525f",
+      "login": "Bruno",
+      "senha": "12",
+      "nomecompleto": "Bruno Marinho",
+      "email": "1",
+      "admin": true,
+      "favoritos": [
+        "1"
+      ],
+      "foto_perfil": "data:image/webp;base64,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AAAAAFhNUCCLBgAAaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/Pgo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIj4KCTxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CgkJPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczpJcHRjNHhtcENvcmU9Imh0dHA6Ly9pcHRjLm9yZy9zdGQvSXB0YzR4bXBDb3JlLzEuMC94bWxucy8iICAgeG1sbnM6R2V0dHlJbWFnZXNHSUZUPSJodHRwOi8veG1wLmdldHR5aW1hZ2VzLmNvbS9naWZ0LzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGx1cz0iaHR0cDovL25zLnVzZXBsdXMub3JnL2xkZi94bXAvMS4wLyIgIHhtbG5zOmlwdGNFeHQ9Imh0dHA6Ly9pcHRjLm9yZy9zdGQvSXB0YzR4bXBFeHQvMjAwOC0wMi0yOS8iIHhtbG5zOnhtcFJpZ2h0cz0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3JpZ2h0cy8iIGRjOlJpZ2h0cz0iMjAyNSBTZWJhc3RpYW4gRnJlaiIgcGhvdG9zaG9wOkNyZWRpdD0iR2V0dHkgSW1hZ2VzIiBHZXR0eUltYWdlc0dJRlQ6QXNzZXRJRD0iMjIxOTUwNDMxMCIgeG1wUmlnaHRzOldlYlN0YXRlbWVudD0iaHR0cHM6Ly93d3cuZ2V0dHlpbWFnZXMuY29tL2V1bGE/dXRtX21lZGl1bT1vcmdhbmljJmFtcDt1dG1fc291cmNlPWdvb2dsZSZhbXA7dXRtX2NhbXBhaWduPWlwdGN1cmwiIHBsdXM6RGF0YU1pbmluZz0iaHR0cDovL25zLnVzZXBsdXMub3JnL2xkZi92b2NhYi9ETUktUFJPSElCSVRFRC1FWENFUFRTRUFSQ0hFTkdJTkVJTkRFWElORyIgPgo8ZGM6Y3JlYXRvcj48cmRmOlNlcT48cmRmOmxpPlNlYmFzdGlhbiBGcmVqPC9yZGY6bGk+PC9yZGY6U2VxPjwvZGM6Y3JlYXRvcj48ZGM6ZGVzY3JpcHRpb24+PHJkZjpBbHQ+PHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ij5NSUFNSSBHQVJERU5TLCBGTE9SSURBIC0gSlVORSAxNDogTGlvbmVsIE1lc3NpIG9mIEludGVyIE1pYW1pIGxvb2tzIG9uIGR1cmluZyB0aGUgRklGQSBDbHViIFdvcmxkIEN1cCAyMDI1IGdyb3VwIEEgbWF0Y2ggYmV0d2VlbiBBbCBBaGx5IFNDIGFuZCBJbnRlcm5hY2lvbmFsIENGIE1pYW1pIGF0IEhhcmQgUm9jayBTdGFkaXVtIG9uIEp1bmUgMTQsIDIwMjUgaW4gTWlhbWkgR2FyZGVucywgVW5pdGVkIFN0YXRlcy4gKFBob3RvIGJ5IFNlYmFzdGlhbiBGcmVqL0dldHR5IEltYWdlcyk8L3JkZjpsaT48L3JkZjpBbHQ+PC9kYzpkZXNjcmlwdGlvbj4KPHBsdXM6TGljZW5zb3I+PHJkZjpTZXE+PHJkZjpsaSByZGY6cGFyc2VUeXBlPSdSZXNvdXJjZSc+PHBsdXM6TGljZW5zb3JVUkw+aHR0cHM6Ly93d3cuZ2V0dHlpbWFnZXMuY29tL2RldGFpbC8yMjE5NTA0MzEwP3V0bV9tZWRpdW09b3JnYW5pYyZhbXA7dXRtX3NvdXJjZT1nb29nbGUmYW1wO3V0bV9jYW1wYWlnbj1pcHRjdXJsPC9wbHVzOkxpY2Vuc29yVVJMPjwvcmRmOmxpPjwvcmRmOlNlcT48L3BsdXM6TGljZW5zb3I+CgkJPC9yZGY6RGVzY3JpcHRpb24+Cgk8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJ3Ij8+CgA="
+    },
+    {
+      "id": "d953856a-1d1a-48f6-b138-539b2b117aed",
+      "login": "CR7",
+      "senha": "123",
+      "nomecompleto": "CR7 CHORAO",
+      "email": "cr7",
+      "admin": false,
+      "favoritos": []
+    },
+    {
+      "id": "e3f3b6bd-bcf6-4be3-be90-edc0ddbfdea7",
+      "login": "Iago",
+      "senha": "123",
+      "nomecompleto": "Iago Dias",
+      "email": "iagosilvadiass@gmail.com",
+      "admin": false,
+      "favoritos": []
+    },
+    {
+      "id": "311b8224-4ee9-4f7f-ba1b-0ff3147615fa",
+      "login": "karen",
+      "senha": "123",
+      "nomecompleto": "karen dornas",
+      "email": "karen@gmail.com",
+      "admin": false,
+      "favoritos": []
+    },
+    {
+      "id": "a25f5026-1f5d-4ccb-bd91-f6d65449330d",
+      "login": "oi",
+      "senha": "123",
+      "nomecompleto": "oi oi",
+      "email": "a@gmail.com",
+      "admin": false,
+      "favoritos": [
+        "2"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "pergunta": "Como funciona o processo de criação do roteiro?",
+      "resposta": "Após preencher o formulario, analisamos suas preferências e necessidades. Em seguida, montamos um itinerário completo com sugestões de passeios, hospedagem, transporte e restaurantes locais.",
+      "id": "a311"
+    },
+    {
+      "pergunta": "E se eu tiver um imprevisto ou quiser mudar o roteiro durante a viagem?",
+      "resposta": "O roteiro é flexível e sugerimos sempre ter margem para adaptações. Se precisar de ajuda para ajustes de última hora, faremos o possível para auxiliar, dependendo da nossa disponibilidade.",
+      "id": "72a7"
+    },
+    {
+      "pergunta": "Vocês oferecem suporte durante a viagem?",
+      "resposta": "Oferecemos suporte pré-viagem para esclarecer dúvidas. Durante a viagem, não fazemos acompanhamento em tempo real, mas o roteiro já vem com tudo planejado para que você se sinta seguro e independente.",
+      "id": "73c8"
+    },
+    {
+      "pergunta": "Preciso seguir o roteiro à risca durante a viagem?",
+      "resposta": "Não! O roteiro é uma sugestão otimizada com base nas suas preferências. Você pode adaptar conforme o seu ritmo e imprevistos. Ele serve para facilitar, não para limitar.",
+      "id": "0fbb"
+    },
+    {
+      "pergunta": "Tenho um orçamento apertado. Vale a pena fazer um roteiro personalizado?",
+      "resposta": "Sim! Um roteiro bem planejado pode te ajudar a economizar, evitar gastos desnecessários e aproveitar melhor o seu dinheiro. Adaptamos tudo ao seu orçamento.",
+      "id": "c395"
+    },
+    {
+      "pergunta": "Quais informações preciso fornecer para começarem meu roteiro?",
+      "resposta": "Vamos precisar de dados como destino(s), datas, número de pessoas, perfil dos viajantes, interesses, orçamento aproximado, estilo de hospedagem preferido e se já tem algo reservado.",
+      "id": "fb2c"
+    },
+    {
+      "pergunta": "O roteiro é adequado para quem viaja com crianças ou idosos?",
+      "resposta": "Totalmente! Levamos em conta todas as necessidades especiais, como deslocamentos tranquilos, atrações adequadas e horários mais flexíveis.",
+      "id": "cac1"
+    },
+    {
+      "pergunta": "Vocês atendem viagens internacionais e nacionais?",
+      "resposta": "Criamos roteiros apenas para destinos nacionais, sempre respeitando seu estilo de viagem e as características de cada lugar.",
+      "id": "24b4"
+    },
+    {
+      "pergunta": "Nunca viajei por conta própria. O roteiro ajuda nisso?",
+      "resposta": "Sim! Nossos roteiros são ideais para quem deseja autonomia, mas com segurança. Incluímos instruções claras, dicas práticas e todas as orientações para facilitar sua viagem.",
+      "id": "189b"
+    },
+    {
+      "pergunta": "Como alterar minha senha?",
+      "resposta": "Vá até seu perfil e clique para alterar sua senha e salve suas alterações.",
+      "id": "66e9"
+    }
+  ],
+  "recomendacoes": [
+    {
+      "id": "15001",
+      "usuario": "MARTA S.",
+      "data_solicitacao": "30/05/2025",
+      "hosp_rest_pass": "RESTAURANTE",
+      "nome_local": "PÔR DO SOL",
+      "nome_estado": "RIO DE JANEIRO",
+      "nome_cidade": "ANGRA DOS REIS",
+      "nome_rua": "SERRANO",
+      "nome_bairro": "CENTRO",
+      "num": 121,
+      "complemento": "",
+      "preco_pessoa": 150,
+      "status": "aceito"
+    },
+    {
+      "id": 15002,
+      "usuario": "Bruno",
+      "data_solicitacao": "25/06/2025",
+      "hosp_rest_pass": "HOSPEDAGEM",
+      "nome_local": "JDSFADF",
+      "nome_estado": "ASDFASDF",
+      "nome_cidade": "ASDFASFASDF",
+      "nome_rua": "ASDFASFADS",
+      "nome_bairro": "ASDFASDFASD",
+      "num": 21313,
+      "complemento": "SADFASDF",
+      "preco_pessoa": 234124,
+      "status": "aceito"
+    }
+  ],
+  "duvidas": [
+    {
+      "texto": "Como faço para favoritar roteiros?",
+      "contato": "21983723984",
+      "data": "2025-06-25T12:32:11.010Z",
+      "usuario": {
+        "id": "0aa2e67b-e58c-4809-bc1e-ec40789c525f",
+        "nome": "Bruno Marinho",
+        "login": "Bruno"
+      },
+      "id": 1
+    }
+  ],
+  "userPreferences": [
+    {
+      "id": 1,
+      "login": "bruno",
+      "theme": "light"
+    },
+    {
+      "id": 2,
+      "login": "iago",
+      "theme": "light"
+    },
+    {
+      "id": 3,
+      "login": "ana",
+      "theme": "dark"
+    }
+  ],
+  "roteiros": [
+    {
+      "ida": "2025-06-27",
+      "volta": "2025-06-28",
+      "pessoas": 2,
+      "orcamento": 2,
+      "estado": "PE",
+      "cidade": "Recife",
+      "pet": "nao",
+      "piscina": "sim",
+      "quartos": "2-3",
+      "garagem": "sim",
+      "login": "karen",
+      "id": 8
+    },
+    {
+      "ida": "2025-06-26",
+      "volta": "2025-06-27",
+      "pessoas": 1,
+      "orcamento": 2,
+      "estado": "PE",
+      "cidade": "Olinda",
+      "pet": "nao",
+      "piscina": "sim",
+      "quartos": "2-3",
+      "garagem": "sim",
+      "login": "oi",
+      "id": 9
+    },
+    {
+      "ida": "2025-06-28",
+      "volta": "2025-06-30",
+      "pessoas": 1,
+      "orcamento": 2,
+      "estado": "AL",
+      "cidade": "Palmeira dos Índios",
+      "pet": "nao",
+      "piscina": "nao",
+      "quartos": "2-3",
+      "garagem": "sim",
+      "login": "oi",
+      "id": 10
+    },
+    {
+      "ida": "2025-06-25",
+      "volta": "2025-06-28",
+      "pessoas": 1,
+      "orcamento": 1,
+      "estado": "PI",
+      "cidade": "Piripiri",
+      "pet": "sim",
+      "piscina": "sim",
+      "quartos": "1",
+      "garagem": "sim",
+      "login": "oi",
+      "id": 11
+    },
+    {
+      "ida": "2025-06-28",
+      "volta": "2025-07-12",
+      "pessoas": 2,
+      "orcamento": 6000,
+      "estado": "MG",
+      "cidade": "Juiz de Fora",
+      "pet": "nao",
+      "piscina": "sim",
+      "quartos": "1",
+      "garagem": "sim",
+      "login": "carlos",
+      "id": 13
+    }
+  ],
+  "recomendacoes_crud": [
+    {
+      "id": 1,
+      "cidade": "Rio Branco",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 2,
+      "cidade": "Rio Branco",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 3,
+      "cidade": "Rio Branco",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 4,
+      "cidade": "Rio Branco",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 5,
+      "cidade": "Rio Branco",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 6,
+      "cidade": "Rio Branco",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 7,
+      "cidade": "Cruzeiro do Sul",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 8,
+      "cidade": "Cruzeiro do Sul",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 9,
+      "cidade": "Cruzeiro do Sul",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 10,
+      "cidade": "Cruzeiro do Sul",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 11,
+      "cidade": "Cruzeiro do Sul",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 12,
+      "cidade": "Cruzeiro do Sul",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 13,
+      "cidade": "Sena Madureira",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 14,
+      "cidade": "Sena Madureira",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 15,
+      "cidade": "Sena Madureira",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 16,
+      "cidade": "Sena Madureira",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 17,
+      "cidade": "Sena Madureira",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 18,
+      "cidade": "Sena Madureira",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 19,
+      "cidade": "Tarauacá",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 20,
+      "cidade": "Tarauacá",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 21,
+      "cidade": "Tarauacá",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 22,
+      "cidade": "Tarauacá",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 23,
+      "cidade": "Tarauacá",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 24,
+      "cidade": "Tarauacá",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 25,
+      "cidade": "Feijó",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 26,
+      "cidade": "Feijó",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 27,
+      "cidade": "Feijó",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 28,
+      "cidade": "Feijó",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 29,
+      "cidade": "Feijó",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 30,
+      "cidade": "Feijó",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 31,
+      "cidade": "Maceió",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 32,
+      "cidade": "Maceió",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 33,
+      "cidade": "Maceió",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 34,
+      "cidade": "Maceió",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 35,
+      "cidade": "Maceió",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 36,
+      "cidade": "Maceió",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 37,
+      "cidade": "Arapiraca",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 38,
+      "cidade": "Arapiraca",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 39,
+      "cidade": "Arapiraca",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 40,
+      "cidade": "Arapiraca",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 41,
+      "cidade": "Arapiraca",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 42,
+      "cidade": "Arapiraca",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 43,
+      "cidade": "Palmeira dos Índios",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 44,
+      "cidade": "Palmeira dos Índios",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 45,
+      "cidade": "Palmeira dos Índios",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 46,
+      "cidade": "Palmeira dos Índios",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 47,
+      "cidade": "Palmeira dos Índios",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 48,
+      "cidade": "Palmeira dos Índios",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 49,
+      "cidade": "Rio Largo",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 50,
+      "cidade": "Rio Largo",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 51,
+      "cidade": "Rio Largo",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 52,
+      "cidade": "Rio Largo",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 53,
+      "cidade": "Rio Largo",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 54,
+      "cidade": "Rio Largo",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 55,
+      "cidade": "Penedo",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 56,
+      "cidade": "Penedo",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 57,
+      "cidade": "Penedo",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 58,
+      "cidade": "Penedo",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 59,
+      "cidade": "Penedo",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 60,
+      "cidade": "Penedo",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 61,
+      "cidade": "Macapá",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 62,
+      "cidade": "Macapá",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 63,
+      "cidade": "Macapá",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 64,
+      "cidade": "Macapá",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 65,
+      "cidade": "Macapá",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 66,
+      "cidade": "Macapá",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 67,
+      "cidade": "Santana",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 68,
+      "cidade": "Santana",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 69,
+      "cidade": "Santana",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 70,
+      "cidade": "Santana",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 71,
+      "cidade": "Santana",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 72,
+      "cidade": "Santana",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 73,
+      "cidade": "Laranjal do Jari",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 74,
+      "cidade": "Laranjal do Jari",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 75,
+      "cidade": "Laranjal do Jari",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 76,
+      "cidade": "Laranjal do Jari",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 77,
+      "cidade": "Laranjal do Jari",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 78,
+      "cidade": "Laranjal do Jari",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 79,
+      "cidade": "Oiapoque",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 80,
+      "cidade": "Oiapoque",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 81,
+      "cidade": "Oiapoque",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 82,
+      "cidade": "Oiapoque",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 83,
+      "cidade": "Oiapoque",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 84,
+      "cidade": "Oiapoque",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 85,
+      "cidade": "Mazagão",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 86,
+      "cidade": "Mazagão",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 87,
+      "cidade": "Mazagão",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 88,
+      "cidade": "Mazagão",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 89,
+      "cidade": "Mazagão",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 90,
+      "cidade": "Mazagão",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 91,
+      "cidade": "Manaus",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 92,
+      "cidade": "Manaus",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 93,
+      "cidade": "Manaus",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 94,
+      "cidade": "Manaus",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 95,
+      "cidade": "Manaus",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 96,
+      "cidade": "Manaus",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 97,
+      "cidade": "Parintins",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 98,
+      "cidade": "Parintins",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 99,
+      "cidade": "Parintins",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 100,
+      "cidade": "Parintins",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 101,
+      "cidade": "Parintins",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 102,
+      "cidade": "Parintins",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 103,
+      "cidade": "Itacoatiara",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 104,
+      "cidade": "Itacoatiara",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 105,
+      "cidade": "Itacoatiara",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 106,
+      "cidade": "Itacoatiara",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 107,
+      "cidade": "Itacoatiara",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 108,
+      "cidade": "Itacoatiara",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 109,
+      "cidade": "Manacapuru",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 110,
+      "cidade": "Manacapuru",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 111,
+      "cidade": "Manacapuru",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 112,
+      "cidade": "Manacapuru",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 113,
+      "cidade": "Manacapuru",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 114,
+      "cidade": "Manacapuru",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 115,
+      "cidade": "Coari",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 116,
+      "cidade": "Coari",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 117,
+      "cidade": "Coari",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 118,
+      "cidade": "Coari",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 119,
+      "cidade": "Coari",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 120,
+      "cidade": "Coari",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 121,
+      "cidade": "Salvador",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 122,
+      "cidade": "Salvador",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 123,
+      "cidade": "Salvador",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 124,
+      "cidade": "Salvador",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 125,
+      "cidade": "Salvador",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 126,
+      "cidade": "Salvador",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 127,
+      "cidade": "Feira de Santana",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 128,
+      "cidade": "Feira de Santana",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 129,
+      "cidade": "Feira de Santana",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 130,
+      "cidade": "Feira de Santana",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 131,
+      "cidade": "Feira de Santana",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 132,
+      "cidade": "Feira de Santana",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 133,
+      "cidade": "Vitória da Conquista",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 134,
+      "cidade": "Vitória da Conquista",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 135,
+      "cidade": "Vitória da Conquista",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 136,
+      "cidade": "Vitória da Conquista",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 137,
+      "cidade": "Vitória da Conquista",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 138,
+      "cidade": "Vitória da Conquista",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 139,
+      "cidade": "Itabuna",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 140,
+      "cidade": "Itabuna",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 141,
+      "cidade": "Itabuna",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 142,
+      "cidade": "Itabuna",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 143,
+      "cidade": "Itabuna",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 144,
+      "cidade": "Itabuna",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 145,
+      "cidade": "Ilhéus",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 146,
+      "cidade": "Ilhéus",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 147,
+      "cidade": "Ilhéus",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 148,
+      "cidade": "Ilhéus",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 149,
+      "cidade": "Ilhéus",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 150,
+      "cidade": "Ilhéus",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 151,
+      "cidade": "Fortaleza",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 152,
+      "cidade": "Fortaleza",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 153,
+      "cidade": "Fortaleza",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 154,
+      "cidade": "Fortaleza",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 155,
+      "cidade": "Fortaleza",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 156,
+      "cidade": "Fortaleza",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 157,
+      "cidade": "Caucaia",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 158,
+      "cidade": "Caucaia",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 159,
+      "cidade": "Caucaia",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 160,
+      "cidade": "Caucaia",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 161,
+      "cidade": "Caucaia",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 162,
+      "cidade": "Caucaia",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 163,
+      "cidade": "Juazeiro do Norte",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 164,
+      "cidade": "Juazeiro do Norte",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 165,
+      "cidade": "Juazeiro do Norte",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 166,
+      "cidade": "Juazeiro do Norte",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 167,
+      "cidade": "Juazeiro do Norte",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 168,
+      "cidade": "Juazeiro do Norte",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 169,
+      "cidade": "Maracanaú",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 170,
+      "cidade": "Maracanaú",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 171,
+      "cidade": "Maracanaú",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 172,
+      "cidade": "Maracanaú",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 173,
+      "cidade": "Maracanaú",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 174,
+      "cidade": "Maracanaú",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 175,
+      "cidade": "Sobral",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 176,
+      "cidade": "Sobral",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 177,
+      "cidade": "Sobral",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 178,
+      "cidade": "Sobral",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 179,
+      "cidade": "Sobral",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 180,
+      "cidade": "Sobral",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 181,
+      "cidade": "Brasília",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 182,
+      "cidade": "Brasília",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 183,
+      "cidade": "Brasília",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 184,
+      "cidade": "Brasília",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 185,
+      "cidade": "Brasília",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 186,
+      "cidade": "Brasília",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 187,
+      "cidade": "Ceilândia",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 188,
+      "cidade": "Ceilândia",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 189,
+      "cidade": "Ceilândia",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 190,
+      "cidade": "Ceilândia",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 191,
+      "cidade": "Ceilândia",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 192,
+      "cidade": "Ceilândia",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 193,
+      "cidade": "Taguatinga",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 194,
+      "cidade": "Taguatinga",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 195,
+      "cidade": "Taguatinga",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 196,
+      "cidade": "Taguatinga",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 197,
+      "cidade": "Taguatinga",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 198,
+      "cidade": "Taguatinga",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 199,
+      "cidade": "Samambaia",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 200,
+      "cidade": "Samambaia",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 201,
+      "cidade": "Samambaia",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 202,
+      "cidade": "Samambaia",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 203,
+      "cidade": "Samambaia",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 204,
+      "cidade": "Samambaia",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 205,
+      "cidade": "Planaltina",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 206,
+      "cidade": "Planaltina",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 207,
+      "cidade": "Planaltina",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 208,
+      "cidade": "Planaltina",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 209,
+      "cidade": "Planaltina",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 210,
+      "cidade": "Planaltina",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 211,
+      "cidade": "Vitória",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 212,
+      "cidade": "Vitória",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 213,
+      "cidade": "Vitória",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 214,
+      "cidade": "Vitória",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 215,
+      "cidade": "Vitória",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 216,
+      "cidade": "Vitória",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 217,
+      "cidade": "Vila Velha",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 218,
+      "cidade": "Vila Velha",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 219,
+      "cidade": "Vila Velha",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 220,
+      "cidade": "Vila Velha",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 221,
+      "cidade": "Vila Velha",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 222,
+      "cidade": "Vila Velha",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 223,
+      "cidade": "Serra",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 224,
+      "cidade": "Serra",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 225,
+      "cidade": "Serra",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 226,
+      "cidade": "Serra",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 227,
+      "cidade": "Serra",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 228,
+      "cidade": "Serra",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 229,
+      "cidade": "Cariacica",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 230,
+      "cidade": "Cariacica",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 231,
+      "cidade": "Cariacica",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 232,
+      "cidade": "Cariacica",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 233,
+      "cidade": "Cariacica",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 234,
+      "cidade": "Cariacica",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 235,
+      "cidade": "Cachoeiro de Itapemirim",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 236,
+      "cidade": "Cachoeiro de Itapemirim",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 237,
+      "cidade": "Cachoeiro de Itapemirim",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 238,
+      "cidade": "Cachoeiro de Itapemirim",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 239,
+      "cidade": "Cachoeiro de Itapemirim",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 240,
+      "cidade": "Cachoeiro de Itapemirim",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 241,
+      "cidade": "Goiânia",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 242,
+      "cidade": "Goiânia",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 243,
+      "cidade": "Goiânia",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 244,
+      "cidade": "Goiânia",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 245,
+      "cidade": "Goiânia",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 246,
+      "cidade": "Goiânia",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 247,
+      "cidade": "Aparecida de Goiânia",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 248,
+      "cidade": "Aparecida de Goiânia",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 249,
+      "cidade": "Aparecida de Goiânia",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 250,
+      "cidade": "Aparecida de Goiânia",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 251,
+      "cidade": "Aparecida de Goiânia",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 252,
+      "cidade": "Aparecida de Goiânia",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 253,
+      "cidade": "Anápolis",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 254,
+      "cidade": "Anápolis",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 255,
+      "cidade": "Anápolis",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 256,
+      "cidade": "Anápolis",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 257,
+      "cidade": "Anápolis",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 258,
+      "cidade": "Anápolis",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 259,
+      "cidade": "Rio Verde",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 260,
+      "cidade": "Rio Verde",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 261,
+      "cidade": "Rio Verde",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 262,
+      "cidade": "Rio Verde",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 263,
+      "cidade": "Rio Verde",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 264,
+      "cidade": "Rio Verde",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 265,
+      "cidade": "Luziânia",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 266,
+      "cidade": "Luziânia",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 267,
+      "cidade": "Luziânia",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 268,
+      "cidade": "Luziânia",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 269,
+      "cidade": "Luziânia",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 270,
+      "cidade": "Luziânia",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 271,
+      "cidade": "São Luís",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 272,
+      "cidade": "São Luís",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 273,
+      "cidade": "São Luís",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 274,
+      "cidade": "São Luís",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 275,
+      "cidade": "São Luís",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 276,
+      "cidade": "São Luís",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 277,
+      "cidade": "Imperatriz",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 278,
+      "cidade": "Imperatriz",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 279,
+      "cidade": "Imperatriz",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 280,
+      "cidade": "Imperatriz",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 281,
+      "cidade": "Imperatriz",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 282,
+      "cidade": "Imperatriz",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 283,
+      "cidade": "Caxias",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 284,
+      "cidade": "Caxias",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 285,
+      "cidade": "Caxias",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 286,
+      "cidade": "Caxias",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 287,
+      "cidade": "Caxias",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 288,
+      "cidade": "Caxias",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 289,
+      "cidade": "Timon",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 290,
+      "cidade": "Timon",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 291,
+      "cidade": "Timon",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 292,
+      "cidade": "Timon",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 293,
+      "cidade": "Timon",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 294,
+      "cidade": "Timon",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 295,
+      "cidade": "Bacabal",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 296,
+      "cidade": "Bacabal",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 297,
+      "cidade": "Bacabal",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 298,
+      "cidade": "Bacabal",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 299,
+      "cidade": "Bacabal",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 300,
+      "cidade": "Bacabal",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 301,
+      "cidade": "Cuiabá",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 302,
+      "cidade": "Cuiabá",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 303,
+      "cidade": "Cuiabá",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 304,
+      "cidade": "Cuiabá",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 305,
+      "cidade": "Cuiabá",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 306,
+      "cidade": "Cuiabá",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 307,
+      "cidade": "Várzea Grande",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 308,
+      "cidade": "Várzea Grande",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 309,
+      "cidade": "Várzea Grande",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 310,
+      "cidade": "Várzea Grande",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 311,
+      "cidade": "Várzea Grande",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 312,
+      "cidade": "Várzea Grande",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 313,
+      "cidade": "Rondonópolis",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 314,
+      "cidade": "Rondonópolis",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 315,
+      "cidade": "Rondonópolis",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 316,
+      "cidade": "Rondonópolis",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 317,
+      "cidade": "Rondonópolis",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 318,
+      "cidade": "Rondonópolis",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 319,
+      "cidade": "Sinop",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 320,
+      "cidade": "Sinop",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 321,
+      "cidade": "Sinop",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 322,
+      "cidade": "Sinop",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 323,
+      "cidade": "Sinop",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 324,
+      "cidade": "Sinop",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 325,
+      "cidade": "Tangará da Serra",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 326,
+      "cidade": "Tangará da Serra",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 327,
+      "cidade": "Tangará da Serra",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 328,
+      "cidade": "Tangará da Serra",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 329,
+      "cidade": "Tangará da Serra",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 330,
+      "cidade": "Tangará da Serra",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 331,
+      "cidade": "Campo Grande",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 332,
+      "cidade": "Campo Grande",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 333,
+      "cidade": "Campo Grande",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 334,
+      "cidade": "Campo Grande",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 335,
+      "cidade": "Campo Grande",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 336,
+      "cidade": "Campo Grande",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 337,
+      "cidade": "Dourados",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 338,
+      "cidade": "Dourados",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 339,
+      "cidade": "Dourados",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 340,
+      "cidade": "Dourados",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 341,
+      "cidade": "Dourados",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 342,
+      "cidade": "Dourados",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 343,
+      "cidade": "Três Lagoas",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 344,
+      "cidade": "Três Lagoas",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 345,
+      "cidade": "Três Lagoas",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 346,
+      "cidade": "Três Lagoas",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 347,
+      "cidade": "Três Lagoas",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 348,
+      "cidade": "Três Lagoas",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 349,
+      "cidade": "Corumbá",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 350,
+      "cidade": "Corumbá",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 351,
+      "cidade": "Corumbá",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 352,
+      "cidade": "Corumbá",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 353,
+      "cidade": "Corumbá",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 354,
+      "cidade": "Corumbá",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 355,
+      "cidade": "Ponta Porã",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 356,
+      "cidade": "Ponta Porã",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 357,
+      "cidade": "Ponta Porã",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 358,
+      "cidade": "Ponta Porã",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 359,
+      "cidade": "Ponta Porã",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 360,
+      "cidade": "Ponta Porã",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 361,
+      "cidade": "Belo Horizonte",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 362,
+      "cidade": "Belo Horizonte",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 363,
+      "cidade": "Belo Horizonte",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 364,
+      "cidade": "Belo Horizonte",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 365,
+      "cidade": "Belo Horizonte",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 366,
+      "cidade": "Belo Horizonte",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 367,
+      "cidade": "Contagem",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 368,
+      "cidade": "Contagem",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 369,
+      "cidade": "Contagem",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 370,
+      "cidade": "Contagem",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 371,
+      "cidade": "Contagem",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 372,
+      "cidade": "Contagem",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 373,
+      "cidade": "Uberlândia",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 374,
+      "cidade": "Uberlândia",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 375,
+      "cidade": "Uberlândia",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 376,
+      "cidade": "Uberlândia",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 377,
+      "cidade": "Uberlândia",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 378,
+      "cidade": "Uberlândia",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 379,
+      "cidade": "Juiz de Fora",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 380,
+      "cidade": "Juiz de Fora",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 381,
+      "cidade": "Juiz de Fora",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 382,
+      "cidade": "Juiz de Fora",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 383,
+      "cidade": "Juiz de Fora",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 384,
+      "cidade": "Juiz de Fora",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 385,
+      "cidade": "Montes Claros",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 386,
+      "cidade": "Montes Claros",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 387,
+      "cidade": "Montes Claros",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 388,
+      "cidade": "Montes Claros",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 389,
+      "cidade": "Montes Claros",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 390,
+      "cidade": "Montes Claros",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 391,
+      "cidade": "Belém",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 392,
+      "cidade": "Belém",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 393,
+      "cidade": "Belém",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 394,
+      "cidade": "Belém",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 395,
+      "cidade": "Belém",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 396,
+      "cidade": "Belém",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 397,
+      "cidade": "Ananindeua",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 398,
+      "cidade": "Ananindeua",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 399,
+      "cidade": "Ananindeua",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 400,
+      "cidade": "Ananindeua",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 401,
+      "cidade": "Ananindeua",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 402,
+      "cidade": "Ananindeua",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 403,
+      "cidade": "Santarém",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 404,
+      "cidade": "Santarém",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 405,
+      "cidade": "Santarém",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 406,
+      "cidade": "Santarém",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 407,
+      "cidade": "Santarém",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 408,
+      "cidade": "Santarém",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 409,
+      "cidade": "Marabá",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 410,
+      "cidade": "Marabá",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 411,
+      "cidade": "Marabá",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 412,
+      "cidade": "Marabá",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 413,
+      "cidade": "Marabá",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 414,
+      "cidade": "Marabá",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 415,
+      "cidade": "Castanhal",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 416,
+      "cidade": "Castanhal",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 417,
+      "cidade": "Castanhal",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 418,
+      "cidade": "Castanhal",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 419,
+      "cidade": "Castanhal",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 420,
+      "cidade": "Castanhal",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 421,
+      "cidade": "João Pessoa",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 422,
+      "cidade": "João Pessoa",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 423,
+      "cidade": "João Pessoa",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 424,
+      "cidade": "João Pessoa",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 425,
+      "cidade": "João Pessoa",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 426,
+      "cidade": "João Pessoa",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 427,
+      "cidade": "Campina Grande",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 428,
+      "cidade": "Campina Grande",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 429,
+      "cidade": "Campina Grande",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 430,
+      "cidade": "Campina Grande",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 431,
+      "cidade": "Campina Grande",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 432,
+      "cidade": "Campina Grande",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 433,
+      "cidade": "Santa Rita",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 434,
+      "cidade": "Santa Rita",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 435,
+      "cidade": "Santa Rita",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 436,
+      "cidade": "Santa Rita",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 437,
+      "cidade": "Santa Rita",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 438,
+      "cidade": "Santa Rita",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 439,
+      "cidade": "Patos",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 440,
+      "cidade": "Patos",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 441,
+      "cidade": "Patos",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 442,
+      "cidade": "Patos",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 443,
+      "cidade": "Patos",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 444,
+      "cidade": "Patos",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 445,
+      "cidade": "Bayeux",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 446,
+      "cidade": "Bayeux",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 447,
+      "cidade": "Bayeux",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 448,
+      "cidade": "Bayeux",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 449,
+      "cidade": "Bayeux",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 450,
+      "cidade": "Bayeux",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 451,
+      "cidade": "Curitiba",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 452,
+      "cidade": "Curitiba",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 453,
+      "cidade": "Curitiba",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 454,
+      "cidade": "Curitiba",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 455,
+      "cidade": "Curitiba",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 456,
+      "cidade": "Curitiba",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 457,
+      "cidade": "Londrina",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 458,
+      "cidade": "Londrina",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 459,
+      "cidade": "Londrina",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 460,
+      "cidade": "Londrina",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 461,
+      "cidade": "Londrina",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 462,
+      "cidade": "Londrina",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 463,
+      "cidade": "Maringá",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 464,
+      "cidade": "Maringá",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 465,
+      "cidade": "Maringá",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 466,
+      "cidade": "Maringá",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 467,
+      "cidade": "Maringá",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 468,
+      "cidade": "Maringá",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 469,
+      "cidade": "Ponta Grossa",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 470,
+      "cidade": "Ponta Grossa",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 471,
+      "cidade": "Ponta Grossa",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 472,
+      "cidade": "Ponta Grossa",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 473,
+      "cidade": "Ponta Grossa",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 474,
+      "cidade": "Ponta Grossa",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 475,
+      "cidade": "Cascavel",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 476,
+      "cidade": "Cascavel",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 477,
+      "cidade": "Cascavel",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 478,
+      "cidade": "Cascavel",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 479,
+      "cidade": "Cascavel",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 480,
+      "cidade": "Cascavel",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 481,
+      "cidade": "Recife",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 482,
+      "cidade": "Recife",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 483,
+      "cidade": "Recife",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 484,
+      "cidade": "Recife",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 485,
+      "cidade": "Recife",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 486,
+      "cidade": "Recife",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 487,
+      "cidade": "Jaboatão",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 488,
+      "cidade": "Jaboatão",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 489,
+      "cidade": "Jaboatão",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 490,
+      "cidade": "Jaboatão",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 491,
+      "cidade": "Jaboatão",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 492,
+      "cidade": "Jaboatão",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 493,
+      "cidade": "Olinda",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 494,
+      "cidade": "Olinda",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 495,
+      "cidade": "Olinda",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 496,
+      "cidade": "Olinda",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 497,
+      "cidade": "Olinda",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 498,
+      "cidade": "Olinda",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 499,
+      "cidade": "Caruaru",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 500,
+      "cidade": "Caruaru",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 501,
+      "cidade": "Caruaru",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 502,
+      "cidade": "Caruaru",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 503,
+      "cidade": "Caruaru",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 504,
+      "cidade": "Caruaru",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 505,
+      "cidade": "Petrolina",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 506,
+      "cidade": "Petrolina",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 507,
+      "cidade": "Petrolina",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 508,
+      "cidade": "Petrolina",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 509,
+      "cidade": "Petrolina",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 510,
+      "cidade": "Petrolina",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 511,
+      "cidade": "Teresina",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 512,
+      "cidade": "Teresina",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 513,
+      "cidade": "Teresina",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 514,
+      "cidade": "Teresina",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 515,
+      "cidade": "Teresina",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 516,
+      "cidade": "Teresina",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 517,
+      "cidade": "Parnaíba",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 518,
+      "cidade": "Parnaíba",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 519,
+      "cidade": "Parnaíba",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 520,
+      "cidade": "Parnaíba",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 521,
+      "cidade": "Parnaíba",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 522,
+      "cidade": "Parnaíba",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 523,
+      "cidade": "Picos",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 524,
+      "cidade": "Picos",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 525,
+      "cidade": "Picos",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 526,
+      "cidade": "Picos",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 527,
+      "cidade": "Picos",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 528,
+      "cidade": "Picos",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 529,
+      "cidade": "Floriano",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 530,
+      "cidade": "Floriano",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 531,
+      "cidade": "Floriano",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 532,
+      "cidade": "Floriano",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 533,
+      "cidade": "Floriano",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 534,
+      "cidade": "Floriano",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 535,
+      "cidade": "Piripiri",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 536,
+      "cidade": "Piripiri",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 537,
+      "cidade": "Piripiri",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 538,
+      "cidade": "Piripiri",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 539,
+      "cidade": "Piripiri",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 540,
+      "cidade": "Piripiri",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 541,
+      "cidade": "Rio de Janeiro",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 542,
+      "cidade": "Rio de Janeiro",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 543,
+      "cidade": "Rio de Janeiro",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 544,
+      "cidade": "Rio de Janeiro",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 545,
+      "cidade": "Rio de Janeiro",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 546,
+      "cidade": "Rio de Janeiro",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 547,
+      "cidade": "Niterói",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 548,
+      "cidade": "Niterói",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 549,
+      "cidade": "Niterói",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 550,
+      "cidade": "Niterói",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 551,
+      "cidade": "Niterói",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 552,
+      "cidade": "Niterói",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 553,
+      "cidade": "Duque de Caxias",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 554,
+      "cidade": "Duque de Caxias",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 555,
+      "cidade": "Duque de Caxias",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 556,
+      "cidade": "Duque de Caxias",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 557,
+      "cidade": "Duque de Caxias",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 558,
+      "cidade": "Duque de Caxias",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 559,
+      "cidade": "Nova Iguaçu",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 560,
+      "cidade": "Nova Iguaçu",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 561,
+      "cidade": "Nova Iguaçu",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 562,
+      "cidade": "Nova Iguaçu",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 563,
+      "cidade": "Nova Iguaçu",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 564,
+      "cidade": "Nova Iguaçu",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 565,
+      "cidade": "Petrópolis",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 566,
+      "cidade": "Petrópolis",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 567,
+      "cidade": "Petrópolis",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 568,
+      "cidade": "Petrópolis",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 569,
+      "cidade": "Petrópolis",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 570,
+      "cidade": "Petrópolis",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 571,
+      "cidade": "Natal",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 572,
+      "cidade": "Natal",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 573,
+      "cidade": "Natal",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 574,
+      "cidade": "Natal",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 575,
+      "cidade": "Natal",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 576,
+      "cidade": "Natal",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 577,
+      "cidade": "Mossoró",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 578,
+      "cidade": "Mossoró",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 579,
+      "cidade": "Mossoró",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 580,
+      "cidade": "Mossoró",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 581,
+      "cidade": "Mossoró",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 582,
+      "cidade": "Mossoró",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 583,
+      "cidade": "Parnamirim",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 584,
+      "cidade": "Parnamirim",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 585,
+      "cidade": "Parnamirim",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 586,
+      "cidade": "Parnamirim",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 587,
+      "cidade": "Parnamirim",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 588,
+      "cidade": "Parnamirim",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 589,
+      "cidade": "Caicó",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 590,
+      "cidade": "Caicó",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 591,
+      "cidade": "Caicó",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 592,
+      "cidade": "Caicó",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 593,
+      "cidade": "Caicó",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 594,
+      "cidade": "Caicó",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 595,
+      "cidade": "Assu",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 596,
+      "cidade": "Assu",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 597,
+      "cidade": "Assu",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 598,
+      "cidade": "Assu",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 599,
+      "cidade": "Assu",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 600,
+      "cidade": "Assu",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 601,
+      "cidade": "Porto Alegre",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 602,
+      "cidade": "Porto Alegre",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 603,
+      "cidade": "Porto Alegre",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 604,
+      "cidade": "Porto Alegre",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 605,
+      "cidade": "Porto Alegre",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 606,
+      "cidade": "Porto Alegre",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 607,
+      "cidade": "Caxias do Sul",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 608,
+      "cidade": "Caxias do Sul",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 609,
+      "cidade": "Caxias do Sul",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 610,
+      "cidade": "Caxias do Sul",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 611,
+      "cidade": "Caxias do Sul",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 612,
+      "cidade": "Caxias do Sul",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 613,
+      "cidade": "Pelotas",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 614,
+      "cidade": "Pelotas",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 615,
+      "cidade": "Pelotas",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 616,
+      "cidade": "Pelotas",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 617,
+      "cidade": "Pelotas",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 618,
+      "cidade": "Pelotas",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 619,
+      "cidade": "Santa Maria",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 620,
+      "cidade": "Santa Maria",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 621,
+      "cidade": "Santa Maria",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 622,
+      "cidade": "Santa Maria",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 623,
+      "cidade": "Santa Maria",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 624,
+      "cidade": "Santa Maria",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 625,
+      "cidade": "Canoas",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 626,
+      "cidade": "Canoas",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 627,
+      "cidade": "Canoas",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 628,
+      "cidade": "Canoas",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 629,
+      "cidade": "Canoas",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 630,
+      "cidade": "Canoas",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 631,
+      "cidade": "Porto Velho",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 632,
+      "cidade": "Porto Velho",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 633,
+      "cidade": "Porto Velho",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 634,
+      "cidade": "Porto Velho",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 635,
+      "cidade": "Porto Velho",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 636,
+      "cidade": "Porto Velho",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 637,
+      "cidade": "Ji-Paraná",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 638,
+      "cidade": "Ji-Paraná",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 639,
+      "cidade": "Ji-Paraná",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 640,
+      "cidade": "Ji-Paraná",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 641,
+      "cidade": "Ji-Paraná",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 642,
+      "cidade": "Ji-Paraná",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 643,
+      "cidade": "Ariquemes",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 644,
+      "cidade": "Ariquemes",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 645,
+      "cidade": "Ariquemes",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 646,
+      "cidade": "Ariquemes",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 647,
+      "cidade": "Ariquemes",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 648,
+      "cidade": "Ariquemes",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 649,
+      "cidade": "Vilhena",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 650,
+      "cidade": "Vilhena",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 651,
+      "cidade": "Vilhena",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 652,
+      "cidade": "Vilhena",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 653,
+      "cidade": "Vilhena",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 654,
+      "cidade": "Vilhena",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 655,
+      "cidade": "Cacoal",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 656,
+      "cidade": "Cacoal",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 657,
+      "cidade": "Cacoal",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 658,
+      "cidade": "Cacoal",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 659,
+      "cidade": "Cacoal",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 660,
+      "cidade": "Cacoal",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 661,
+      "cidade": "Boa Vista",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 662,
+      "cidade": "Boa Vista",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 663,
+      "cidade": "Boa Vista",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 664,
+      "cidade": "Boa Vista",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 665,
+      "cidade": "Boa Vista",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 666,
+      "cidade": "Boa Vista",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 667,
+      "cidade": "Rorainópolis",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 668,
+      "cidade": "Rorainópolis",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 669,
+      "cidade": "Rorainópolis",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 670,
+      "cidade": "Rorainópolis",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 671,
+      "cidade": "Rorainópolis",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 672,
+      "cidade": "Rorainópolis",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 673,
+      "cidade": "Caracaraí",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 674,
+      "cidade": "Caracaraí",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 675,
+      "cidade": "Caracaraí",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 676,
+      "cidade": "Caracaraí",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 677,
+      "cidade": "Caracaraí",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 678,
+      "cidade": "Caracaraí",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 679,
+      "cidade": "Alto Alegre",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 680,
+      "cidade": "Alto Alegre",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 681,
+      "cidade": "Alto Alegre",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 682,
+      "cidade": "Alto Alegre",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 683,
+      "cidade": "Alto Alegre",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 684,
+      "cidade": "Alto Alegre",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 685,
+      "cidade": "Mucajaí",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 686,
+      "cidade": "Mucajaí",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 687,
+      "cidade": "Mucajaí",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 688,
+      "cidade": "Mucajaí",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 689,
+      "cidade": "Mucajaí",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 690,
+      "cidade": "Mucajaí",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 691,
+      "cidade": "Florianópolis",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 692,
+      "cidade": "Florianópolis",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 693,
+      "cidade": "Florianópolis",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 694,
+      "cidade": "Florianópolis",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 695,
+      "cidade": "Florianópolis",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 696,
+      "cidade": "Florianópolis",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 697,
+      "cidade": "Joinville",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 698,
+      "cidade": "Joinville",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 699,
+      "cidade": "Joinville",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 700,
+      "cidade": "Joinville",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 701,
+      "cidade": "Joinville",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 702,
+      "cidade": "Joinville",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 703,
+      "cidade": "Blumenau",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 704,
+      "cidade": "Blumenau",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 705,
+      "cidade": "Blumenau",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 706,
+      "cidade": "Blumenau",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 707,
+      "cidade": "Blumenau",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 708,
+      "cidade": "Blumenau",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 709,
+      "cidade": "Chapecó",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 710,
+      "cidade": "Chapecó",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 711,
+      "cidade": "Chapecó",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 712,
+      "cidade": "Chapecó",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 713,
+      "cidade": "Chapecó",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 714,
+      "cidade": "Chapecó",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 715,
+      "cidade": "Criciúma",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 716,
+      "cidade": "Criciúma",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 717,
+      "cidade": "Criciúma",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 718,
+      "cidade": "Criciúma",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 719,
+      "cidade": "Criciúma",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 720,
+      "cidade": "Criciúma",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 721,
+      "cidade": "São Paulo",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 722,
+      "cidade": "São Paulo",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 723,
+      "cidade": "São Paulo",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 724,
+      "cidade": "São Paulo",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 725,
+      "cidade": "São Paulo",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 726,
+      "cidade": "São Paulo",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 727,
+      "cidade": "Campinas",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 728,
+      "cidade": "Campinas",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 729,
+      "cidade": "Campinas",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 730,
+      "cidade": "Campinas",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 731,
+      "cidade": "Campinas",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 732,
+      "cidade": "Campinas",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 733,
+      "cidade": "Santos",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 734,
+      "cidade": "Santos",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 735,
+      "cidade": "Santos",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 736,
+      "cidade": "Santos",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 737,
+      "cidade": "Santos",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 738,
+      "cidade": "Santos",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 739,
+      "cidade": "São Bernardo",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 740,
+      "cidade": "São Bernardo",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 741,
+      "cidade": "São Bernardo",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 742,
+      "cidade": "São Bernardo",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 743,
+      "cidade": "São Bernardo",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 744,
+      "cidade": "São Bernardo",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 745,
+      "cidade": "Ribeirão Preto",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 746,
+      "cidade": "Ribeirão Preto",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 747,
+      "cidade": "Ribeirão Preto",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 748,
+      "cidade": "Ribeirão Preto",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 749,
+      "cidade": "Ribeirão Preto",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 750,
+      "cidade": "Ribeirão Preto",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 751,
+      "cidade": "Aracaju",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 752,
+      "cidade": "Aracaju",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 753,
+      "cidade": "Aracaju",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 754,
+      "cidade": "Aracaju",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 755,
+      "cidade": "Aracaju",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 756,
+      "cidade": "Aracaju",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 757,
+      "cidade": "Nossa Senhora do Socorro",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 758,
+      "cidade": "Nossa Senhora do Socorro",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 759,
+      "cidade": "Nossa Senhora do Socorro",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 760,
+      "cidade": "Nossa Senhora do Socorro",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 761,
+      "cidade": "Nossa Senhora do Socorro",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 762,
+      "cidade": "Nossa Senhora do Socorro",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 763,
+      "cidade": "Lagarto",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 764,
+      "cidade": "Lagarto",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 765,
+      "cidade": "Lagarto",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 766,
+      "cidade": "Lagarto",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 767,
+      "cidade": "Lagarto",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 768,
+      "cidade": "Lagarto",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 769,
+      "cidade": "Itabaiana",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 770,
+      "cidade": "Itabaiana",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 771,
+      "cidade": "Itabaiana",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 772,
+      "cidade": "Itabaiana",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 773,
+      "cidade": "Itabaiana",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 774,
+      "cidade": "Itabaiana",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 775,
+      "cidade": "Estância",
+      "tipo": "passeio",
+      "nome": "Museu Histórico"
+    },
+    {
+      "id": 776,
+      "cidade": "Estância",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 777,
+      "cidade": "Estância",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 778,
+      "cidade": "Estância",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 779,
+      "cidade": "Estância",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 780,
+      "cidade": "Estância",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 781,
+      "cidade": "Palmas",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 782,
+      "cidade": "Palmas",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 783,
+      "cidade": "Palmas",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 784,
+      "cidade": "Palmas",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 785,
+      "cidade": "Palmas",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 786,
+      "cidade": "Palmas",
+      "tipo": "hospedagem",
+      "nome": "Resort do Sol"
+    },
+    {
+      "id": 787,
+      "cidade": "Araguaína",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 788,
+      "cidade": "Araguaína",
+      "tipo": "passeio",
+      "nome": "Praia Azul"
+    },
+    {
+      "id": 789,
+      "cidade": "Araguaína",
+      "tipo": "restaurante",
+      "nome": "Casa do Chef"
+    },
+    {
+      "id": 790,
+      "cidade": "Araguaína",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 791,
+      "cidade": "Araguaína",
+      "tipo": "hospedagem",
+      "nome": "Pousada Tranquila"
+    },
+    {
+      "id": 792,
+      "cidade": "Araguaína",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 793,
+      "cidade": "Gurupi",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 794,
+      "cidade": "Gurupi",
+      "tipo": "passeio",
+      "nome": "Jardim Cultural"
+    },
+    {
+      "id": 795,
+      "cidade": "Gurupi",
+      "tipo": "restaurante",
+      "nome": "Tempero Caseiro"
+    },
+    {
+      "id": 796,
+      "cidade": "Gurupi",
+      "tipo": "restaurante",
+      "nome": "Sabores da Terra"
+    },
+    {
+      "id": 797,
+      "cidade": "Gurupi",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 798,
+      "cidade": "Gurupi",
+      "tipo": "hospedagem",
+      "nome": "Chalé da Montanha"
+    },
+    {
+      "id": 799,
+      "cidade": "Porto Nacional",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 800,
+      "cidade": "Porto Nacional",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 801,
+      "cidade": "Porto Nacional",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 802,
+      "cidade": "Porto Nacional",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 803,
+      "cidade": "Porto Nacional",
+      "tipo": "hospedagem",
+      "nome": "Hotel Vista Linda"
+    },
+    {
+      "id": 804,
+      "cidade": "Porto Nacional",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 805,
+      "cidade": "Paraíso do Tocantins",
+      "tipo": "passeio",
+      "nome": "Parque das Águas"
+    },
+    {
+      "id": 806,
+      "cidade": "Paraíso do Tocantins",
+      "tipo": "passeio",
+      "nome": "Trilha Encantada"
+    },
+    {
+      "id": 807,
+      "cidade": "Paraíso do Tocantins",
+      "tipo": "restaurante",
+      "nome": "Bistrô Central"
+    },
+    {
+      "id": 808,
+      "cidade": "Paraíso do Tocantins",
+      "tipo": "restaurante",
+      "nome": "Canto do Sabor"
+    },
+    {
+      "id": 809,
+      "cidade": "Paraíso do Tocantins",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    },
+    {
+      "id": 810,
+      "cidade": "Paraíso do Tocantins",
+      "tipo": "hospedagem",
+      "nome": "Hostel Amigo"
+    }
+  ],
+  "DarkLight": [
+    {
+      "login": "karen",
+      "theme": "light",
+      "id": 1
+    },
+    {
+      "login": "oi",
+      "theme": "dark",
+      "id": 2
+    },
+    {
+      "login": "iago",
+      "theme": "dark",
+      "id": 3
+    }
+  ]
+}

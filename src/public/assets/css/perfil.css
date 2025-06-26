@@ -1,0 +1,328 @@
+html, body{
+
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.cab{
+
+    background-color: #ea8613;
+
+}
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#button_voltar{
+    margin-top: 4%;
+    margin-left: 4%;
+    color: white;
+    background-color: rgb(12, 109, 159);
+    height: 40px;  
+    border: none;
+    border-radius: 5px; 
+    padding: 10px;
+}
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    padding: 20px;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu .menu-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.side-menu ul li {
+    margin: 15px 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.recom-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #f57c00;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modo-escuro {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px; width: 14px;
+    left: 3px; bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+.sair-btn {
+    color: #f57c00;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+}
+
+.sair-btn:hover {
+    text-decoration: underline;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+h6{
+
+    margin-bottom: 3px !important;
+
+}
+
+.selectfilter{
+
+    width: 100%;
+
+}
+
+input[type="text"]{
+
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding-left: 10px;
+
+}
+
+#logo{
+
+    height: 60px; 
+    width: 100px;
+    margin-left: 20px;
+    background-color:  white;
+
+}
+
+#iconworld{
+
+    right: 300px;
+    bottom: 0;
+    margin: 0;
+    color: white;
+
+}
+
+#nomelogin{
+
+    right: 130px;
+    bottom: 0;
+    margin: 0;
+    background-color: white; font-size: 18px;
+
+}
+
+#iconuser{
+
+    right: 0;
+    top: 50%; 
+    transform: translateY(-50%);
+    color: white; 
+    margin-right: 75px;
+
+}
+#avatar-topo {
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    border-color: white;
+    object-fit: cover;
+}
+.custom-buttom2{
+    border-color: #cf5619;
+}
+.custom-buttom2:hover{
+    border-color: #1330c5;
+}
+
+
+
+#titulo {
+    align-items: baseline;
+    justify-content: space-between;
+    color: #ff8041;
+}
+#bordaFina{
+    border-bottom: 2px solid #ff8041;
+}
+.roteiros-salvos {
+    background-color: #ff8041;
+    border: #ff8041;
+    color: white;
+    border: 5px solid #ff8041;
+    text-decoration: none;
+}
+
+
+#avatar {
+    border-radius: 100%;
+    border: 5px solid #ff8041;
+    margin-top: 10px;
+    object-fit: cover;
+}
+
+#nome-usuario {
+    text-align: center;
+    text-decoration: overline;
+    color: #ff8041;
+}
+
+#login,
+#email,
+#senha,
+#nomecompleto {
+    border: 1px solid #0c6d9f;
+    color: #0c6d9f;
+}
+
+.custom-buttom {
+    background-color: #ff8041;
+}
+
+.custom-buttom:hover {
+    background-color: #cf5619;
+    border: 1px solid #ff8041;
+}
+
+
+#degrade{
+    background: linear-gradient(173deg,rgba(255, 255, 255, 1) 64%, rgba(12, 109, 159, 1) 59%);
+    margin-top: 30px;
+    padding: 45px;
+    color: rgb(155, 155, 155);
+    
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+.botao-upload {
+  background-color: #ff6600;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+}
+
+.botao-upload:hover {
+  background-color: #e65c00;
+}
+.alerta-oculto {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #ff8041;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: none;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    #avatar{
+        width:180px;
+        height:180px;
+    }
+    #usuario-nome-topo{
+        font-size: small;
+    }
+    .roteiros-salvos{
+        font-size: small;
+    }
+}

@@ -1,0 +1,274 @@
+body {
+  background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+
+}
+/*cabeçalho*/
+.cab{
+
+    background-color: #ea8613;
+
+}
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    padding: 20px;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu .menu-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.side-menu ul li {
+    margin: 15px 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.recom-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #f57c00;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modo-escuro {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px; width: 14px;
+    left: 3px; bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+.sair-btn {
+    color: #f57c00;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+}
+
+.sair-btn:hover {
+    text-decoration: underline;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+h6{
+
+    margin-bottom: 3px !important;
+
+}
+
+.selectfilter{
+
+    width: 100%;
+
+}
+
+input[type="text"]{
+
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding-left: 10px;
+
+}
+
+#logo{
+
+    height: 60px; 
+    width: 100px;
+    margin-left: 20px;
+    background-color:  white;
+
+}
+
+#iconworld{
+
+    right: 300px;
+    bottom: 0;
+    margin: 0;
+    color: white;
+
+}
+
+#nomelogin{
+
+    right: 130px;
+    bottom: 0;
+    margin: 0;
+    background-color: white; font-size: 18px;
+
+}
+
+#iconuser{
+
+    right: 0;
+    top: 50%; 
+    transform: translateY(-50%);
+    color: white; 
+    margin-right: 75px;
+
+}
+
+/*pagina FAQ*/
+.inicio{
+    color: #ea8613;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #ea8613;
+  color: white;
+}
+.accordion-button{
+    background-color: #ebebeb;
+}
+
+.btn-info {
+  background-color: #ea8613;
+  border: none;
+}
+#faqAccordion {
+  min-height: 300px
+}
+.paginaçao{
+    background-color: #ea8613;
+    border-radius: 50px;
+    color: white;
+}
+.paginaçao:hover{
+    background-color: #ffb25a;
+}
+.enviar{
+    background-color: #0C6D9F;
+    color: white;
+}
+.enviar:hover{
+    background-color: #ea8613;
+}
+.custom-buttom {
+    background-color: #ea8613;
+}
+.custom-buttom:hover{
+    background-color: #0C6D9F;
+}
+#button_voltar{
+    margin-left: 4%;
+    color: white;
+    background-color: rgb(12, 109, 159);
+    height: 40px;
+}
+/*footer*/
+footer{
+    margin-top: 7%;
+    margin-left: 1%;
+}
+
+.rodape{
+    opacity: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 9px;
+    align-items: center;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #ff8041 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ff8041;
+    border-radius: 20px;
+    border: 21px solid #ffffff;
+  }

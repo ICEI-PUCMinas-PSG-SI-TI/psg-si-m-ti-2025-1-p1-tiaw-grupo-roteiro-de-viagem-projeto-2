@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTravel</title>
+    <link rel="stylesheet" href="./assets/css/cadastro_rest.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+         <link rel="shortcut icon" type="imagex/png" href="./assets/img/aviaoeseta.png">
+    <style>
+    
+    /* AQUIIIIIIIII */
+    body {
+      font-family: Arial;
+      background-color: white;
+      color: black;
+    }
+
+    #botao-modo {
+      /* position: fixed; */
+      display: flex;
+
+      top: 10px;
+      right: 10px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header class="sem-tema d-flex cab position-relative container-fluid">
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars" style="color: white;"></i>
+        </button>
+        <nav id="sideMenu" class="side-menu">
+            <div class="menu-content">
+
+                <!-- <div class="dark-mode-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="modo-escuro">Modo escuro</span>
+                </div> -->
+
+                <ul class="menu-list">
+                                <button id="botao-modo" class="btn btn-primary">MODO ESCURO</button>
+
+                    <a href="index.html">
+                        <li>Página inicial</li>
+                    </a>
+                    <a href="PerfilUsuario.html"><li><i class="fa-regular fa-user"></i> Minha conta</li></a>
+                    <a href="favoritos.html"><li><i class="fa-regular fa-heart"></i> Favoritos</li></a>
+                    <a href="meusroteiros.html"><li><i class="fa-regular fa-map"></i> Meus roteiros</li></a>
+                    <li><a href="faq.html"><i class="fa-regular fa-circle-question"></i> FAQ</li></a>
+                    <li><a href="duvida.html"><i class="fa-regular fa-comment-dots"></i> Minhas dúvidas</li></a>
+                    <li id="painellink"><a href="painel.html"><i class="fa-regular fa-star"></i> Painel adminstrador</li></a>
+
+                </ul>
+
+                <a href="cadastros_recomen.html"><button class="recom-btn"><i class="fa-solid fa-plus"></i> CADASTRAR RECOMENDAÇÕES
+                </button></a>
+
+                <div class="footer-menu">
+                    <button class="sair-btn" onclick="toggleMenu()">
+                        FECHAR MENU
+                    </button>
+                </div>
+                <div class="footer-menu">
+                    <button id="sair_conta" style="background-color: #f57c00; color: black; margin-top: 15%;" class="sair-btn" onclick="toggleMenu()">
+                        SAIR DA CONTA
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <img src="./assets/img/logoST.PNG" id="logo">
+
+    <p class="sem-tema position-absolute py-1 px-3" id="nomelogin">LOGIN</p>
+        <a href="PerfilUsuario.html"><i class="fa-regular fa-user fa-2x position-absolute" id="iconuser"></i></a>
+    </header>
+<script>
+window.addEventListener('DOMContentLoaded', async () => {
+  // 1. Elementos e Variáveis Iniciais
+  const botao = document.getElementById('botao-modo');
+  if (!botao) {
+    console.error('Botão não encontrado! Verifique o ID "botao-modo" no HTML.');
+    return;
+  }
+
+  // 2. Obter dados do usuário
+  const usuario = JSON.parse(sessionStorage.getItem("usuarioCorrente")) || {};
+  const login = usuario?.login?.toLowerCase();
+
+  if (!login) {
+    console.warn('Nenhum usuário logado encontrado.');
+    return;
+  }
+
+  // 3. Variável para armazenar preferência
+  let prefUsuario = null;
+
+  // 4. Função para aplicar tema (versão melhorada)
+  function aplicarModo(tema) {
+    const estiloId = 'modo-escuro-estilos';
+    const body = document.body;
+
+    // Remove estilo existente para evitar duplicação
+    const estiloExistente = document.getElementById(estiloId);
+    if (estiloExistente) estiloExistente.remove();
+
+    if (tema === 'dark') {
+      // Cria novo estilo
+      const estiloEscuro = document.createElement('style');
+      estiloEscuro.id = estiloId;
+estiloEscuro.textContent = `
+  body.dark-mode {
+    background-color: #121212 !important;
+    color: #f0f0f0 !important;
+    transition: all 0.3s ease;
+  }
+
+  body.dark-mode a {
+    color: #90caf9 !important;
+  }
+
+  body.dark-mode button {
+    background-color: #333 !important;
+    color: white !important;
+    border-color: #555 !important;
+  }
+
+  body.dark-mode input,
+  body.dark-mode select,
+  body.dark-mode textarea {
+    background-color: #252525 !important;
+    color: white !important;
+    border-color: #444 !important;
+  }
+
+  /* Exclusão do modo escuro na área "sem-tema" */
+  body.dark-mode .sem-tema,
+  body.dark-mode .sem-tema * {
+    background-color: white !important;
+    color: black !important;
+    border-color: #ccc !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+
+
+
+`;
+
+      document.head.appendChild(estiloEscuro);
+      body.classList.add('dark-mode');
+      botao.textContent = 'MODO CLARO';
+      console.log('Modo escuro ativado');
+    } else {
+      body.classList.remove('dark-mode');
+      botao.textContent = 'MODO ESCURO';
+      console.log('Modo claro ativado');
+    }
+  }
+
+  // 5. Função para salvar preferência (com tratamento de erro)
+  async function salvarPreferencia(tema) {
+    try {
+      if (!login) {
+        console.error('Tentativa de salvar preferência sem login');
+        return;
+      }
+
+      const payload = {
+        login: login,
+        theme: tema
+      };
+
+      if (prefUsuario) {
+        // Atualização existente
+        const response = await fetch(`http://localhost:3000/DarkLight/${prefUsuario.id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...payload, id: prefUsuario.id })
+        });
+        
+        if (!response.ok) throw new Error('Falha ao atualizar preferência');
+        console.log('Preferência atualizada com sucesso');
+      } else {
+        // Nova entrada
+        const response = await fetch('http://localhost:3000/DarkLight', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        
+        if (!response.ok) throw new Error('Falha ao criar preferência');
+        prefUsuario = await response.json();
+        console.log('Preferência criada com sucesso');
+      }
+    } catch (error) {
+      console.error('Erro ao salvar preferência:', error);
+    }
+  }
+
+  // 6. Carregar preferência inicial (com fallback)
+  async function carregarPreferenciaInicial() {
+    try {
+      const response = await fetch(`http://localhost:3000/DarkLight?login=${login}`);
+      if (!response.ok) throw new Error('Falha na requisição');
+      
+      const prefs = await response.json();
+      console.log('Preferências encontradas:', prefs);
+
+      if (prefs.length > 0 && prefs[0].theme) {
+        prefUsuario = prefs[0];
+        aplicarModo(prefUsuario.theme);
+      } else {
+        // Fallback: usar preferência do sistema ou light mode
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        aplicarModo(prefersDark ? 'dark' : 'light');
+        console.log('Usando preferência do sistema:', prefersDark ? 'dark' : 'light');
+      }
+    } catch (error) {
+      console.error('Erro ao carregar preferência:', error);
+      aplicarModo('light'); // Fallback seguro
+    }
+  }
+
+  // 7. Evento do botão (com tratamento de erro)
+  botao.addEventListener('click', async () => {
+    try {
+      const modoAtual = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      const novoTema = modoAtual === 'dark' ? 'light' : 'dark';
+      
+      aplicarModo(novoTema);
+      await salvarPreferencia(novoTema);
+    } catch (error) {
+      console.error('Erro ao alternar modo:', error);
+    }
+  });
+
+  // 8. Inicialização
+  await carregarPreferenciaInicial();
+});
+</script>
+<script>
+function sairConta() {
+  // Verificar se existe um usuário logado
+  const usuario = sessionStorage.getItem("usuarioCorrente");
+
+  if (!usuario) {
+    alert("Nenhum usuário está logado no momento.");
+    return;
+  }
+
+  // Limpar o sessionStorage e variáveis
+  sessionStorage.removeItem("usuarioCorrente");
+  usuarioCorrente = null;
+
+  // Limpar campos se existirem
+  if (document.getElementById("login")) document.getElementById("login").value = "";
+  if (document.getElementById("nomecompleto")) document.getElementById("nomecompleto").value = "";
+  if (document.getElementById("email")) document.getElementById("email").value = "";
+  if (document.getElementById("senha")) document.getElementById("senha").value = "";
+
+  // Limpar textos e imagens do perfil, se existirem
+  if (document.getElementById("nome-usuario")) document.getElementById("nome-usuario").textContent = "";
+  if (document.getElementById("usuario-nome-topo")) document.getElementById("usuario-nome-topo").textContent = "";
+  if (document.getElementById("avatar")) document.getElementById("avatar").src = "assets/img/imglogin.png";
+  if (document.getElementById("avatar-topo")) document.getElementById("avatar-topo").src = "assets/img/imglogin.png";
+
+  alert("Você saiu da conta.");
+  window.location.href = "index.html";
+}
+
+function toggleMenu() {
+  const menu = document.getElementById('sideMenu');
+  menu.classList.toggle('open');
+}
+
+document.getElementById('darkModeToggle')?.addEventListener('change', function () {
+  document.body.classList.toggle('dark-mode', this.checked);
+});
+
+const botaoSair = document.getElementById("sair_conta");
+if (botaoSair) {
+  botaoSair.addEventListener("click", sairConta);
+}
+</script>
+
+    <div class="titulo">
+        <div class="d-flex justify-content-center mt-5">
+            <h4>RECOMENDAÇÕES</h4>
+        </div>
+    </div>
+
+    <main>
+        <div id="botoes" class="container-fluid">
+            <button id="button_voltar" class="btn btn-primary" onclick="history.back()">VOLTAR</button>
+            <button id="button_recomen" class="btn btn-primary">RECOMENDAÇÕES</button>
+        </div>
+
+        <div class="container">
+            <h4 class="text-center" style="margin-top: 1%;">O QUE DESEJA RECOMENDAR?</h4>
+
+            <div class="d-flex justify-content-center" style="margin-top: 1%;">
+                <div class="escolha_recomen text-start">
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="HOSPEDAGEM" style="cursor: pointer;">
+                    <label class="form-check-label" for="exampleRadios1">
+                        HOSPEDAGEM
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="RESTAURANTE" checked style="cursor: pointer;">
+                    <label class="form-check-label" for="exampleRadios2">
+                        RESTAURANTE
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="PASSEIO" style="cursor: pointer;">
+                    <label class="form-check-label" for="exampleRadios3">
+                        PASSEIO
+                    </label>
+                    </div>
+                </div>
+            </div>
+
+            <form id="formRecomendacao" class="my-4">
+                <div class="row justify-content-center" style="margin-top: 0.5%;">
+                    <div class="col-md-6 text-center">
+                        <label for="inputNome" class="form-label fw-bold">NOME DO LOCAL</label>
+                        <input type="text" class="form-control" id="inputNome" placeholder="ESCREVA AQUI" required>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-6" style="margin-top: 1%;">
+                        <label for="inputEstado" class="form-label fw-bold">ESTADO (EX.: MINAS GERAIS)</label>
+                        <input type="text" class="form-control" id="inputEstado" placeholder="ESCREVA AQUI" required>
+                    </div>
+                    <div class="col-md-6" style="margin-top: 1%;">
+                        <label for="inputCidade" class="form-label fw-bold">CIDADE (EX.: BELO HORIZONTE)</label>
+                        <input type="text" class="form-control" id="inputCidade" placeholder="ESCREVA AQUI" required>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-4" style="margin-top: 1%;">
+                        <label for="inputRua" class="form-label fw-bold">RUA</label>
+                        <input type="text" class="form-control" id="inputRua" placeholder="ESCREVA AQUI" required>
+                    </div>
+                    <div class="col-md-3" style="margin-top: 1%;">
+                        <label for="inputBairro" class="form-label fw-bold">BAIRRO</label>
+                        <input type="text" class="form-control" id="inputBairro" placeholder="ESCREVA AQUI" required>
+                    </div>
+                    <div class="col-md-2" style="margin-top: 1%;">
+                        <label for="inputNum" class="form-label fw-bold">Nº</label>
+                        <input type="number" class="form-control" id="inputNum" placeholder="ESCREVA AQUI">
+                    </div>
+                    <div class="col-md-3" style="margin-top: 1%;">
+                        <label for="inputComple" class="form-label fw-bold">COMPLEMENTO</label>
+                        <input type="text" class="form-control" id="inputComple" placeholder="ESCREVA AQUI">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mt-3">
+                    <div class="col-md-6 text-center" style="margin-top: 1%;">
+                        <label for="inputPreco" class="form-label fw-bold">PREÇO APROXIMADO POR PESSOA (R$)</label>
+                        <input type="number" class="form-control" id="inputPreco" placeholder="ESCREVA AQUI" required>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 2%;">
+                <button id="button_enviar" class="btn btn-primary">ENVIAR</button>
+                </div>            
+            </form>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="d-flex align-items-center">
+            <div class="rodape">
+                <i class="fa-solid fa-copyright"></i>
+                <p style="margin: 0;">Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById("button_recomen").addEventListener("click", function () {
+            window.location.href = "cadastros_recomen.html";
+        });
+        // document.getElementById("button_enviar").addEventListener("click", function () {
+        //     window.location.href = "cadastros_recomen.html";
+        // });
+
+        const radios = document.querySelectorAll('input[name="exampleRadios"]');
+
+        radios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                if (radio.checked) {
+                    if (radio.value === 'HOSPEDAGEM') {
+                        window.location.href = 'cadastro_hosp.html';
+                    } else if (radio.value === 'RESTAURANTE') {
+                        window.location.href = 'cadastro_rest.html';
+                    } else if (radio.value === 'PASSEIO') {
+                        window.location.href = 'cadastro_passeio.html';
+                    }
+                }
+            });
+        });
+
+        document.getElementById('formRecomendacao').addEventListener('submit', function(event) {
+            event.preventDefault(); // evita o recarregamento da página
+
+            fetch("http://localhost:3000/recomendacoes")
+                .then(response => response.json())
+                .then(recomendacoes => {
+                let maiorId = 15000; 
+                if (recomendacoes.length > 0) {
+                    maiorId = Math.max(...recomendacoes.map(r => r.id));
+                }
+
+                const novoId = maiorId + 1;
+
+                // pegar o tipo escolhido pelo nome correto (name="exampleRadios")
+                const tipoEscolhido = document.querySelector('input[name="exampleRadios"]:checked').value;
+
+                // Função para converter para maiúsculas e tratar valores undefined/null
+                const toUpperCaseSafe = (value) => {
+                    return value ? value.toString().toUpperCase() : '';
+                };
+
+                const dadosUsuario = sessionStorage.getItem("usuarioCorrente");
+                const usuario = JSON.parse(dadosUsuario);
+                const nome_login = usuario.login;
+
+                const novaRecomendacao = {
+                    id: novoId,
+                    usuario: nome_login,
+                    data_solicitacao: new Date().toLocaleDateString("pt-BR"),
+                    hosp_rest_pass: tipoEscolhido.toUpperCase(),
+                    nome_local: toUpperCaseSafe(document.getElementById('inputNome').value),
+                    nome_estado: toUpperCaseSafe(document.getElementById('inputEstado').value),
+                    nome_cidade: toUpperCaseSafe(document.getElementById('inputCidade').value),
+                    nome_rua: toUpperCaseSafe(document.getElementById('inputRua').value),
+                    nome_bairro: toUpperCaseSafe(document.getElementById('inputBairro').value),
+                    num: parseInt(document.getElementById('inputNum').value),
+                    complemento: toUpperCaseSafe(document.getElementById('inputComple').value),
+                    preco_pessoa: parseFloat(document.getElementById('inputPreco').value),
+                    status: "pendente"
+                };
+
+                return fetch("http://localhost:3000/recomendacoes", {
+                    method: "POST",
+                    headers: {
+                    "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(novaRecomendacao)
+                });
+                })
+                .then(response => {
+                if (response.ok) {
+                    alert("Recomendação salva com sucesso!");
+                    window.location.href = "cadastros_recomen.html";
+                } else {
+                    alert("Erro ao salvar recomendação.");
+                }
+                })
+                .catch(error => {
+                console.error("Erro:", error);
+                alert("Erro ao conectar ao servidor.");
+                });
+        });
+    </script>
+
+    <script src="assets/scripts/usuario.js"></script>
+       <script src="assets/scripts/script.js"></script>
+
+</body>
+</html>

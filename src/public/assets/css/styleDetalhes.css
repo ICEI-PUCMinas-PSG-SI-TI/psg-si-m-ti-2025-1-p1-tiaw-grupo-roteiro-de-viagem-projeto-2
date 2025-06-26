@@ -1,0 +1,577 @@
+footer{
+    margin-top: 7%;
+    margin-left: 1%;
+}
+
+html, body{
+
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+
+form{
+
+ width: 100px;
+
+}
+#btnfav{
+    border-width: 5px;
+    border-color: red;
+}
+.rodape{
+    opacity: 70%;
+    display: flex;
+    flex-direction: row;
+    gap: 9px;
+    align-items: center;
+}
+/* Containers principais */
+.container-roteiro {
+    border: 1px solid black;
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 15px;
+}
+
+.conteudo-rot {
+    margin: 0 15px;
+}
+
+/* Títulos */
+.tituloRot {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2rem;
+}
+
+.codigo {
+    margin: 30px 0 50px 70px;
+    color: #00000066;
+    font-size: 1.8rem;
+}
+
+.titulo2Rot {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.codigo2 {
+    color: #00000066;
+    font-size: 0.9rem;
+    margin: 10px 0 30px;
+}
+
+/* Seções flexíveis */
+.acomodacao, .passeios, .restaurantes {
+    margin-top: 40px;
+}
+
+.bloco, .passeio, .restaurante {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.texto, .passeioTexto, .restauranteTexto {
+    flex: 1;
+    font-size: 1.2rem;
+}
+
+/* Imagens */
+.conteudo img {
+    width: 300px;
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 45px;
+}
+#button_comentar{
+    margin-top: 3%;
+    color: white;
+    font-size: 12px;
+    background-color: rgb(12, 109, 159);
+    height: 40px;
+    max-width: 100%;
+    width: 200px;
+}
+#avaliacao_estrelas{
+    margin-right: 5%;
+    padding-top: 1.7%;
+    color: #ffc107; 
+    font-size: 1.2rem;
+}
+.nome_usuario{
+    padding-left: 5%;
+    margin-top: 3%;
+    font-size: 20px;
+}
+
+.comentarios{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 2%;
+    margin-top: 7.5%;
+    height: auto;
+    width: 100%;
+}
+.col-md-4{
+    width: 100%;
+}
+.usuario_estrelas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#button_enviar{
+    margin-top: 12%;
+    color: white;
+    background-color: rgb(12, 109, 159);
+    height: 40px;
+    font-size: 20px;
+}
+#button_voltar{
+    margin-left: 4%;
+    color: white;
+    background-color: rgb(12, 109, 159);
+    height: 40px;
+}
+
+main{
+    margin-top: 1%;
+}
+
+#comentarios_container{
+    border: 1px solid black;
+    border-radius: 2%;
+    padding: 3% 3%;
+    height: 550px;
+    margin-top: 1.5%;
+    overflow-y: auto;
+}
+.usuario_data_estrelas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.conteudo-comentarios{
+    margin-top: 3%;
+}
+.avalia{
+    margin-top: 1.5%;
+}
+/* Botões */
+.btns {
+    
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: nowrap; /* aqui evita quebra de linha */
+    flex-direction: row;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    padding: 13px 25px;
+    font-size: 1.5rem;
+    width: 150px; /* largura fixa para caber lado a lado sempre */
+    transition: background-color 0.2s, color 0.2s, border 0.2s;
+}
+
+.btnBaixar {
+    background-color: rgb(244, 134, 19);
+    color: white;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.btnBaixar:hover {
+    background-color: white;
+    color: rgb(244, 134, 19);
+    border: 1px solid rgb(244, 134, 19);
+}
+
+.btnAvaliacoes {
+    background-color: #0C6D9F;
+    color: white;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.btnAvaliacoes:hover {
+    background-color: white;
+    color: #0C6D9F;
+    border: 1px solid #0C6D9F;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .conteudo-rot img {
+        width: 250px;
+        height: 150px;
+        border-radius: 30px;
+    }
+    .texto, .passeioTexto, .restauranteTexto {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .bloco, .passeio, .restaurante {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+.conteudo img {
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 45px;
+}
+    .codigo {
+        margin-left: 20px;
+        font-size: 1.4rem;
+    }
+    .btns {
+        gap: 20px;
+    }
+    button {
+        width: 100%;
+        font-size: 1.3rem;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .tituloRot {
+        font-size: 1.5rem;
+    }
+    .titulo2Rot {
+        font-size: 1.2rem;
+    }
+    .texto, .passeioTexto, .restauranteTexto {
+        font-size: 1rem;
+    }
+    .codigo {
+        margin-left: 10px;
+        font-size: 1.2rem;
+    }
+
+    button {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+    }
+}
+@media screen and (max-width: 991px){
+
+    #enviarcomentario{
+
+
+        
+    }
+    h6{
+
+        font-size: 12px !important;
+
+    }
+    .divfilter.filterborderright{
+
+        border-right: none;
+        border-bottom: 1px solid black;
+
+    }
+    .divfilter{
+
+        padding: 5px 0;
+
+    }
+
+}
+@media screen and (min-width: 992px){
+
+
+    #sectionfilter{
+
+        justify-content: center;
+
+    }
+
+
+}
+@media screen and (max-width: 575px){
+
+    #aviaocriar{
+
+        width: 100px !important;
+        margin-top: 10px;
+        position: relative;
+
+    }
+    #titlesection{
+
+        font-size: 16px;
+
+    }
+    #iconworld{
+
+        right: 170px;
+
+    }
+    #logo{
+
+        margin-left: 20px;
+        height: 50px;
+        width: 100px;
+
+    }
+    #iconuser{
+
+        margin-right: 20px;
+
+    }
+    #nomelogin{
+
+        right: 70px;
+
+    }
+    .imagemrecomendados{
+
+        width: 250px !important;
+        height: 150px !important;
+
+    }
+    .titulorecomendados{
+
+        font-size: 12px;
+    }
+    .descricaorecomendados{
+
+        font-size: 12px;
+
+    }
+    
+}
+@media screen and (max-width: 450px){
+
+    #logo{
+
+        width: 70px;
+        height: 40px;
+
+    }
+    #nomelogin{
+
+        font-size: 12px;
+        right: 55px;
+
+    }
+    #iconworld{
+
+        font-size: 12px;
+        right: 130px;
+
+    }
+
+}
+@media screen and (max-width: 360px){
+
+    #aviaocriar{
+
+        width: 80px !important;
+        margin-top: 15px;
+
+
+    }
+
+
+}
+.cab{
+
+    background-color: #ea8613;
+
+}
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    padding: 20px;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu .menu-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.side-menu ul li {
+    margin: 15px 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.recom-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #f57c00;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modo-escuro {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px; width: 14px;
+    left: 3px; bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+.sair-btn {
+    color: #f57c00;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+}
+
+.sair-btn:hover {
+    text-decoration: underline;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+h6{
+
+    margin-bottom: 3px !important;
+
+}
+
+.selectfilter{
+
+    width: 100%;
+
+}
+
+input[type="text"]{
+
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding-left: 10px;
+
+}
+
+#logo{
+
+    height: 60px; 
+    width: 100px;
+    background-color:  white;
+
+}
+
+#iconworld{
+
+    right: 300px;
+    bottom: 0;
+    margin: 0;
+    color: white;
+
+}
+
+#nomelogin{
+
+    right: 130px;
+    bottom: 0;
+    margin: 0;
+    background-color: white; font-size: 18px;
+
+}
+
+#iconuser{
+
+    right: 0;
+    top: 50%; 
+    transform: translateY(-50%);
+    color: white; 
+    margin-right: 75px;
+
+}
